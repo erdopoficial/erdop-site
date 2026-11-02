@@ -1,0 +1,873 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ERDOP | Rock Industrial de Ubá-MG — Ecos da Minha Mente</title>
+<meta name="description" content="Rock industrial de Ubá-MG desde 2002, Zona da Mata. Ouça Ecos da Minha Mente, leia as letras e contrate a ERDOP: shows em Juiz de Fora, Cataguases e região.">
+<link rel="canonical" href="https://erdop.com.br/">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="theme-color" content="#000000">
+<meta name="author" content="ERDOP">
+<meta name="geo.region" content="BR-MG"><meta name="geo.placename" content="Ubá">
+<meta property="og:type" content="music.musician"><meta property="og:site_name" content="ERDOP">
+<meta property="og:locale" content="pt_BR"><meta property="og:url" content="https://erdop.com.br/">
+<meta property="og:title" content="ERDOP | Rock Industrial de Ubá-MG — Ecos da Minha Mente">
+<meta property="og:description" content="Rock industrial de Ubá-MG desde 2002. Ouça Ecos da Minha Mente, leia as letras e leve a ERDOP ao seu palco — Zona da Mata, Juiz de Fora e região.">
+<meta property="og:image" content="https://static.wixstatic.com/media/3a294f_2d2d7a2251614745bcef9a0c48dbbc5f~mv2.png/v1/fill/w_1200,h_630,q_85,enc_jpg/erdop-og.jpg"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Warurase, da ERDOP, de boné da banda segurando o baixo">
+<meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="https://static.wixstatic.com/media/3a294f_2d2d7a2251614745bcef9a0c48dbbc5f~mv2.png/v1/fill/w_1200,h_630,q_85,enc_jpg/erdop-og.jpg">
+<link rel="icon" type="image/png" href="/favicon.png"><link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"MusicGroup","name":"ERDOP","alternateName":"Erdop","url":"https://erdop.com.br/","image":"https://static.wixstatic.com/media/3a294f_2d2d7a2251614745bcef9a0c48dbbc5f~mv2.png/v1/fill/w_1200,h_630,q_85,enc_jpg/erdop-og.jpg","logo":"https://erdop.com.br/favicon.png","foundingDate":"2002","foundingLocation":{"@type":"Place","name":"Ubá, Minas Gerais, Brasil"},"genre":["Rock industrial","Metal industrial","Grunge","Rock nacional"],"description":"ERDOP é uma banda de rock industrial de Ubá, Zona da Mata mineira, criada em 2002 por Warurase. Álbum: Ecos da Minha Mente.","member":{"@type":"Person","name":"Warurase"},"email":"erdop.oficial@gmail.com","areaServed":["Ubá","Juiz de Fora","Cataguases","Zona da Mata","Minas Gerais"],"sameAs":["https://www.instagram.com/erdop.oficial/","https://www.youtube.com/@erdop.oficial","https://www.tiktok.com/@erdop.oficial","https://soundcloud.com/erdop-701366304"],"album":{"@type":"MusicAlbum","name":"Ecos da Minha Mente","byArtist":{"@type":"MusicGroup","name":"ERDOP"},"numTracks":9,"track":[{"@type":"MusicRecording","position":1,"name":"Armadilha"},{"@type":"MusicRecording","position":2,"name":"Gato de Rua"},{"@type":"MusicRecording","position":3,"name":"Cinzas de Ouro"},{"@type":"MusicRecording","position":4,"name":"Beijo na Pele"},{"@type":"MusicRecording","position":5,"name":"Resista"},{"@type":"MusicRecording","position":6,"name":"Nunca Fui Seu"},{"@type":"MusicRecording","position":7,"name":"Veneno"},{"@type":"MusicRecording","position":8,"name":"Fica Bem"},{"@type":"MusicRecording","position":9,"name":"Farsa Fama"}]}}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{--black:#000;--red:#CC0000;--white:#E8E8E8;--gray:#888888;--line:#262626}
+*{box-sizing:border-box;margin:0;padding:0}
+html{background:#000}
+body{background:#000;color:var(--white);font-family:'Oswald',sans-serif;overflow-x:hidden;-webkit-tap-highlight-color:transparent}
+canvas#gl{position:fixed;inset:0;width:100%;height:100%;display:block;z-index:0}
+.fx{position:fixed;inset:0;pointer-events:none}
+.grain{inset:-50%;opacity:.09;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");animation:grain 1s steps(6) infinite;z-index:6}
+@keyframes grain{0%{transform:translate(0,0)}25%{transform:translate(-4%,3%)}50%{transform:translate(3%,-5%)}75%{transform:translate(-2%,6%)}100%{transform:translate(0,0)}}
+.scan{background:repeating-linear-gradient(0deg,rgba(0,0,0,.2) 0 1px,transparent 1px 3px);mix-blend-mode:multiply;z-index:6}
+.vig{background:radial-gradient(ellipse at 50% 45%,transparent 40%,rgba(0,0,0,.8) 100%);z-index:1}
+.shade{background:linear-gradient(90deg,rgba(0,0,0,.75),rgba(0,0,0,.25) 45%,transparent 70%),linear-gradient(0deg,rgba(0,0,0,.75),transparent 35%);z-index:1;transition:opacity .6s}
+.dip{background:#000;opacity:0;z-index:5}
+.flash{background:var(--red);mix-blend-mode:screen;opacity:0;z-index:5}
+.lasers{z-index:1;mix-blend-mode:screen;overflow:hidden;transition:opacity .8s}
+.lasers i{position:absolute;top:-10%;width:2px;height:140%;background:linear-gradient(180deg,rgba(204,0,0,.9),rgba(204,0,0,0) 70%);transform-origin:top center;filter:blur(.6px);opacity:.3;animation:sweep 7s ease-in-out infinite alternate}
+.lasers i:nth-child(1){left:12%;animation-duration:6.2s}.lasers i:nth-child(2){left:38%;animation-delay:-2s;animation-duration:8.4s}.lasers i:nth-child(3){left:66%;animation-delay:-4s}.lasers i:nth-child(4){left:90%;animation-delay:-1s;animation-duration:9.1s}
+@keyframes sweep{0%{transform:rotate(-28deg)}100%{transform:rotate(28deg)}}
+header{position:fixed;top:0;left:0;right:0;display:flex;justify-content:space-between;align-items:center;padding:18px 26px;z-index:8;pointer-events:none}
+header a{pointer-events:auto;line-height:0}
+.meta{font-family:'Space Mono',monospace;font-size:10px;letter-spacing:3px;color:var(--gray);text-transform:uppercase;text-align:right;line-height:1.7}
+/* progress rail */
+.rail{position:fixed;left:26px;top:50%;transform:translateY(-50%);z-index:8;display:flex;flex-direction:column;gap:10px}
+.rail button{all:unset;cursor:pointer;display:flex;align-items:center;gap:10px;font-family:'Space Mono',monospace;font-size:9px;letter-spacing:2px;text-transform:uppercase;color:#555}
+.rail button i{width:14px;height:2px;background:#333;transition:width .3s,background .3s}
+.rail button.on{color:var(--white)}.rail button.on i{width:34px;background:var(--red)}
+.rail button span{opacity:0;transition:opacity .3s}.rail:hover button span,.rail button.on span{opacity:1}
+/* copy layer */
+.copy{position:fixed;left:9vw;bottom:calc(13vh + 58px);max-width:min(560px,82vw);z-index:4;pointer-events:none}
+.copy .num{font-family:'Space Mono',monospace;font-size:11px;letter-spacing:4px;color:var(--red);text-transform:uppercase;margin-bottom:12px;display:flex;gap:12px;align-items:center}
+.copy .num:after{content:"";height:1px;width:60px;background:var(--red)}
+.copy h2{font-weight:700;font-size:clamp(38px,6vw,86px);line-height:.9;text-transform:uppercase;letter-spacing:-1px}
+.copy p{font-weight:300;font-size:clamp(16px,1.8vw,22px);line-height:1.45;margin-top:16px;white-space:pre-line}
+.copy cite{display:block;margin-top:12px;font-style:normal;font-family:'Space Mono',monospace;font-size:10px;letter-spacing:3px;color:var(--gray);text-transform:uppercase}
+.copy .tagbg{position:absolute;left:-2vw;bottom:100%;line-height:0;opacity:.0;transform:rotate(-8deg) translateY(20px);transition:opacity 1s,transform 1.2s cubic-bezier(.2,.8,.2,1);mix-blend-mode:screen;z-index:-1}
+.copy.on .tagbg{opacity:.4;transform:rotate(-8deg)}
+.copy .ln{display:block;overflow:hidden}.copy .ln>span{display:inline-block;transform:translateY(110%);transition:transform .9s cubic-bezier(.2,.8,.2,1)}
+.copy.on .ln>span{transform:none}
+.copy.glitch h2{animation:jit .18s steps(2) infinite}
+@keyframes jit{0%{text-shadow:3px 0 var(--red),-3px 0 #fff3}50%{text-shadow:-4px 0 var(--red),2px 0 #fff3;transform:translate(2px,-1px)}}
+.copy.story{max-width:min(520px,86vw)}
+.copy.story p b{font-weight:700}.copy.story p em{font-style:normal;color:var(--red)}
+.copy.top{bottom:auto;top:16vh}
+/* encarte ui */
+.encui{position:fixed;left:50%;bottom:calc(6vh + 58px);transform:translateX(-50%);z-index:7;display:flex;gap:10px;align-items:center;opacity:0;pointer-events:none;transition:opacity .4s}
+.encui.on{opacity:1;pointer-events:auto}
+.btn{font-family:'Space Mono',monospace;font-size:11px;letter-spacing:3px;text-transform:uppercase;color:var(--white);background:rgba(0,0,0,.6);border:1px solid var(--red);padding:12px 18px;cursor:pointer;text-decoration:none;display:inline-block;transition:background .25s}
+.btn:hover,.btn:focus-visible{background:var(--red);outline:none}
+.btn.ghost{border-color:#444}
+.enctitle{position:fixed;left:50%;top:9vh;transform:translateX(-50%);text-align:center;z-index:4;opacity:0;transition:opacity .5s;pointer-events:none}
+.enctitle.on{opacity:1}
+.enctitle .num{font-family:'Space Mono',monospace;font-size:11px;letter-spacing:4px;color:var(--red);text-transform:uppercase}
+.enctitle h3{font-weight:700;font-size:clamp(22px,3vw,34px);text-transform:uppercase;letter-spacing:1px;margin-top:6px}
+/* lyrics modal */
+.modal{position:fixed;inset:0;z-index:20;background:rgba(0,0,0,.92);display:none;align-items:center;justify-content:center;padding:20px}
+.modal.on{display:flex}
+.sheet{width:min(720px,100%);max-height:88vh;overflow:auto;border:1px solid var(--line);background:#070707;padding:34px 34px 50px;position:relative;scrollbar-width:thin;scrollbar-color:var(--red) #111}
+.sheet .x{position:sticky;top:0;float:right;font-family:'Space Mono',monospace;background:#000;border:1px solid #444;color:var(--white);padding:8px 12px;cursor:pointer;font-size:11px;letter-spacing:2px}
+.sheet .x:hover{border-color:var(--red)}
+.sheet .k{font-family:'Space Mono',monospace;font-size:11px;letter-spacing:4px;color:var(--red);text-transform:uppercase}
+.sheet h4{font-weight:700;font-size:clamp(32px,5vw,52px);text-transform:uppercase;line-height:1;margin:8px 0 6px}
+.sheet .note{font-weight:300;color:#aaa;font-size:16px;margin-bottom:20px;font-style:italic}
+.sheet .sec{font-family:'Space Mono',monospace;font-size:10px;letter-spacing:3px;color:var(--red);text-transform:uppercase;margin:22px 0 6px}
+.sheet p{font-weight:300;font-size:19px;line-height:1.5;white-space:pre-line}
+.sheet p.ch{font-weight:400;color:#fff}
+/* stage HUD */
+.hud{position:fixed;inset:0;z-index:6;pointer-events:none;opacity:0;transition:opacity .5s;font-family:'Space Mono',monospace}
+.hud.on{opacity:1}
+.hud .mission{position:absolute;left:26px;top:74px;border:1px solid rgba(204,0,0,.6);background:rgba(0,0,0,.55);padding:14px 16px;min-width:260px;backdrop-filter:blur(4px)}
+.hud .mission .t{font-size:10px;letter-spacing:3px;color:var(--red);text-transform:uppercase}
+.hud .mission .h{font-family:'Oswald',sans-serif;font-weight:700;font-size:22px;text-transform:uppercase;margin:4px 0 10px}
+.hud ul{list-style:none;font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:#666;line-height:2}
+.hud li.ok{color:var(--white)}.hud li:before{content:"[ ] ";color:#444}.hud li.ok:before{content:"[■] ";color:var(--red)}
+.hud li.cur{color:var(--white)}.hud li.cur:before{content:"[>] ";color:var(--red)}
+.hud .bar{margin-top:12px;height:6px;background:#1a1a1a;border:1px solid #333}.hud .bar b{display:block;height:100%;width:0;background:var(--red);box-shadow:0 0 10px var(--red);transition:width .2s}
+.hud .pct{font-size:10px;letter-spacing:2px;color:var(--gray);margin-top:6px}
+.hud .card{position:absolute;right:26px;bottom:calc(9vh + 58px);width:min(360px,80vw);border:1px solid rgba(204,0,0,.6);background:rgba(0,0,0,.65);padding:16px 18px;backdrop-filter:blur(4px)}
+.hud .card .t{font-size:10px;letter-spacing:3px;color:var(--red);text-transform:uppercase}
+.hud .card .n{font-family:'Oswald',sans-serif;font-weight:700;font-size:28px;text-transform:uppercase;line-height:1;margin:6px 0 8px}
+.hud .card .d{font-size:12px;line-height:1.6;color:#cfcfcf}
+.hud .card .src{margin-top:10px;font-size:9px;letter-spacing:2px;color:var(--gray);text-transform:uppercase}
+.hud .win{position:absolute;left:50%;top:18vh;transform:translateX(-50%);text-align:center;opacity:0;transition:opacity .6s;line-height:0}
+.hud .win.on{opacity:1}
+/* final */
+.final{position:fixed;inset:0;z-index:7;display:flex;align-items:center;padding:0 9vw;opacity:0;pointer-events:none;transition:opacity .6s}
+.final.on{opacity:1;pointer-events:auto}
+.final .box{max-width:620px}
+.final h2{font-weight:700;font-size:clamp(40px,6vw,84px);line-height:.9;text-transform:uppercase}
+.final p{font-weight:300;font-size:18px;line-height:1.5;color:#cfcfcf;margin:16px 0 22px}
+.final .row{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:12px}
+.final .term{font-family:'Space Mono',monospace;font-size:12px;color:var(--gray);line-height:1.9;margin:20px 0 14px}
+.final .term b{color:var(--white);font-weight:400}
+.final .cur{display:inline-block;width:8px;height:14px;background:var(--red);vertical-align:-2px;animation:blink 1s steps(2) infinite}
+@keyframes blink{50%{opacity:0}}
+.final .down{margin-top:28px;font-family:'Space Mono',monospace;font-size:11px;letter-spacing:3px;color:var(--red);text-transform:uppercase}
+.final small{display:block;margin-top:26px;font-family:'Space Mono',monospace;font-size:9px;letter-spacing:2px;color:#555;text-transform:uppercase}
+.final small a{color:#777;text-decoration:none;margin-right:14px}
+.toast{position:fixed;left:50%;bottom:24px;transform:translate(-50%,40px);opacity:0;background:var(--red);color:#fff;font-family:'Space Mono',monospace;font-size:11px;letter-spacing:2px;padding:10px 16px;text-transform:uppercase;transition:.3s;z-index:30}
+.toast.on{opacity:1;transform:translate(-50%,0)}
+.hint{position:fixed;left:50%;bottom:calc(3vh + 58px);transform:translateX(-50%);z-index:8;font-family:'Space Mono',monospace;font-size:10px;letter-spacing:3px;color:var(--gray);text-transform:uppercase;transition:opacity .5s;text-align:center}
+.hint i{display:block;width:1px;height:26px;margin:8px auto 0;background:linear-gradient(var(--red),transparent);animation:drop 1.6s ease-in-out infinite}
+@keyframes drop{0%{transform:scaleY(0);transform-origin:top}50%{transform:scaleY(1);transform-origin:top}51%{transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
+#loader{position:fixed;inset:0;z-index:40;background:#000;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:16px;font-family:'Space Mono',monospace;font-size:10px;letter-spacing:4px;color:var(--gray);transition:opacity .8s}
+#loader b{display:block;width:180px;height:2px;background:#1a1a1a;position:relative;overflow:hidden}
+#loader b:after{content:"";position:absolute;inset:0;background:var(--red);animation:load 1.2s ease-in-out infinite}
+@keyframes load{0%{transform:translateX(-100%)}100%{transform:translateX(100%)}}
+@media (max-width:760px){
+  header{padding:14px 16px}.meta{font-size:8px;letter-spacing:2px}
+  .rail{display:none}
+  .copy{left:18px;right:18px;bottom:13vh;max-width:none}
+  .copy.top{top:12vh}
+  .hud .mission{left:12px;top:60px;min-width:0;width:calc(100% - 24px);padding:10px 12px}
+  .hud ul{display:none}.hud .mission .h{font-size:18px;margin-bottom:4px}
+  .hud .card{right:12px;left:12px;width:auto;bottom:7vh}
+  .final{padding:0 18px;align-items:flex-end;padding-bottom:10vh}
+  .encui{bottom:4vh;flex-wrap:wrap;justify-content:center;width:92%}
+  .enctitle{top:10vh}
+}
+@media (prefers-reduced-motion:reduce){.grain,.lasers i,.copy.glitch h2{animation:none}}
+
+
+
+
+.led{width:7px;height:7px;border-radius:50%;background:var(--red);box-shadow:0 0 10px var(--red);animation:pulse 1.4s ease-in-out infinite}
+@keyframes pulse{50%{opacity:.25;box-shadow:none}}
+a.s{position:relative;z-index:1;width:34px;height:34px;flex:none;display:grid;place-items:center;border:1px solid #2a2a2a;background:#000;color:var(--white);text-decoration:none;transition:border-color .2s,background .2s,transform .2s}
+a.s svg{width:18px;height:18px;fill:currentColor}
+a.s:hover,a.s:focus-visible{border-color:var(--red);background:rgba(204,0,0,.18);outline:none;transform:scale(1.06)}
+a.s .bars{position:absolute;right:3px;bottom:3px;display:flex;gap:1px;align-items:flex-end;height:7px}
+a.s .bars i{width:2px;background:var(--red);height:30%;animation:b 0.9s ease-in-out infinite alternate}
+a.s .bars i:nth-child(2){animation-delay:-.3s}a.s .bars i:nth-child(3){animation-delay:-.6s}
+@keyframes b{to{height:100%}}
+a.s .tip{position:absolute;right:46px;white-space:nowrap;font-size:9px;letter-spacing:2px;color:var(--white);background:#000;border:1px solid var(--red);padding:4px 6px;opacity:0;pointer-events:none;transition:opacity .2s}
+@media (prefers-reduced-motion:reduce){.led,a.s .bars i{animation:none}}
+.pbar{position:fixed;left:0;right:0;bottom:0;z-index:12;display:flex;align-items:center;gap:14px;padding:10px 18px;background:linear-gradient(0deg,rgba(0,0,0,.92),rgba(0,0,0,.72));border-top:1px solid #222;backdrop-filter:blur(8px);font-family:'Space Mono',monospace}
+.pbar .ctl{display:flex;gap:6px;flex:none}
+.pbar button.c{all:unset;cursor:pointer;width:34px;height:34px;display:grid;place-items:center;border:1px solid #333;color:var(--white);font-size:12px}
+.pbar button.c:hover,.pbar button.c:focus-visible{border-color:var(--red)}
+.pbar button.play{border-color:var(--red);background:rgba(204,0,0,.18)}
+.pbar .now{flex:none;width:190px;overflow:hidden}
+.pbar .now .k{font-size:9px;letter-spacing:3px;color:var(--red);text-transform:uppercase}
+.pbar .now .t{font-family:'Oswald',sans-serif;font-size:16px;text-transform:uppercase;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.pbar .wave{flex:1;min-width:60px;height:38px;cursor:pointer;position:relative}
+.pbar .wave canvas{width:100%;height:100%;display:block}
+.pbar .tm{flex:none;font-size:10px;letter-spacing:1px;color:var(--gray);width:84px;text-align:right}
+.pbar .soc{display:flex;gap:6px;flex:none;align-items:center;padding-left:12px;border-left:1px solid #222}
+.pbar .led{width:7px;height:7px;border-radius:50%;background:#444;margin-right:4px}
+.pbar.on .led{background:var(--red);box-shadow:0 0 10px var(--red);animation:pulse 1.4s ease-in-out infinite}
+@keyframes pulse{50%{opacity:.3;box-shadow:none}}
+@media (max-width:760px){.pbar .now .k{display:none}.pbar{gap:8px;padding:8px 10px;flex-wrap:wrap}.pbar .now{width:auto;flex:1}.pbar .tm{display:none}.pbar .wave{order:5;flex:1 1 100%;height:26px}.pbar .soc{padding-left:6px}.pbar .soc a.s{width:28px;height:28px}.pbar .soc a.s .bars{display:none}.pbar button.c{width:30px;height:30px}}
+
+
+
+:root{--pb:58px}
+.copy{bottom:calc(13vh + var(--pb))}
+.hint{bottom:calc(3vh + var(--pb))}
+.encui{bottom:calc(5vh + var(--pb))}
+.copy h2{line-height:1;padding-top:.06em}
+.hb .pbar{padding-right:262px}
+@media (max-width:760px){
+ .copy{bottom:calc(3vh + var(--pb));top:auto}
+ .copy.top{top:auto;bottom:calc(3vh + var(--pb))}
+ .hint{display:none}
+ .hud .card{bottom:calc(1.5vh + var(--pb))}
+ .encui{bottom:calc(1.5vh + var(--pb))}
+ .enctitle{top:62px}
+ .final{padding-bottom:calc(3vh + var(--pb))}
+ .hb .pbar{padding-right:10px;padding-bottom:72px}
+}
+@media (max-height:620px){.copy h2{font-size:clamp(30px,5vw,60px)}.copy p{font-size:14px}}
+@media (max-width:760px),(max-height:700px){
+ .final{align-items:flex-start;padding-top:58px}
+ .final h2{font-size:clamp(28px,8vw,46px)}
+ .final p{font-size:14px;margin:10px 0 12px}
+ .final .term{margin:10px 0 8px;font-size:11px}
+ .final .down{margin-top:10px}.final small{margin-top:12px}
+ .final .row{gap:6px;margin-bottom:6px}.final .btn{padding:9px 12px;font-size:10px}
+}
+
+/* player destacado */
+.pbar{flex-direction:column;align-items:stretch;gap:8px;padding:12px 18px 10px;border-top:1px solid var(--red);box-shadow:0 -10px 40px rgba(204,0,0,.18);background:linear-gradient(0deg,rgba(0,0,0,.96),rgba(10,0,0,.9))}
+.pbar .pmain{display:flex;align-items:center;gap:14px}
+.pbar button.c.play{width:46px;height:46px;font-size:15px;box-shadow:0 0 18px rgba(204,0,0,.35)}
+.pbar .now{width:230px}.pbar .now .t{font-size:20px;letter-spacing:.5px}
+.pbar .ptl{display:flex;gap:6px;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch;padding-bottom:2px}
+.pbar .ptl::-webkit-scrollbar{display:none}
+.pbar .ptl button{all:unset;cursor:pointer;flex:none;font-family:'Oswald',sans-serif;font-size:13px;letter-spacing:.6px;text-transform:uppercase;color:#bbb;border:1px solid #2a2a2a;padding:5px 10px;background:rgba(255,255,255,.02);transition:.2s;white-space:nowrap}
+.pbar .ptl button b{font-family:'Space Mono',monospace;font-weight:400;font-size:10px;color:var(--red);margin-right:6px}
+.pbar .ptl button:hover,.pbar .ptl button:focus-visible{border-color:var(--red);color:#fff}
+.pbar .ptl button.on{border-color:var(--red);background:rgba(204,0,0,.22);color:#fff}
+.pbar .psoc{display:flex;align-items:center;gap:10px;border-top:1px solid #1c1c1c;padding-top:7px}
+.pbar .psoc .lbl{font-size:9px;letter-spacing:3px;color:var(--gray);text-transform:uppercase}
+.pbar .psoc .soc{border-left:0;padding-left:0}
+.pbar .psoc .soc a.s{width:28px;height:28px}.pbar .psoc .soc a.s svg{width:15px;height:15px}
+@media (max-width:760px){
+ .pbar{gap:6px;padding:8px 10px 6px;flex-wrap:nowrap}
+ .pbar .pmain{gap:8px;flex-wrap:wrap}
+ .pbar button.c.play{width:38px;height:38px}
+ .pbar .now{flex:1;width:auto}.pbar .now .t{font-size:16px}
+ .pbar .wave{order:0;flex:1 1 100%;height:20px}
+ .pbar .ptl button{font-size:12px;padding:4px 8px}
+ .pbar .psoc{padding-top:5px}.pbar .psoc .lbl{font-size:8px;letter-spacing:2px}
+ .pbar .psoc .soc a.s{width:26px;height:26px}
+ .hb .pbar{padding-bottom:70px}
+}
+
+@media (min-width:761px){.hb .pbar{padding-right:18px}.hb .pbar .psoc{padding-right:250px}}
+@media (max-width:760px){.pbar .wave{height:14px}}
+
+/* ===== leitura do final ===== */
+.final:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.92) 0%,rgba(0,0,0,.8) 45%,rgba(0,0,0,.35) 80%,transparent);pointer-events:none}
+.final .box{position:relative;background:rgba(0,0,0,.62);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);border:1px solid rgba(204,0,0,.35);border-left:2px solid #ff1a1a;box-shadow:-6px 0 22px -10px #ff1a1a,0 20px 60px rgba(0,0,0,.6);padding:28px 30px}
+.final h2{text-shadow:0 2px 0 #000,0 0 24px rgba(0,0,0,.9)}
+.final p,.final .term{color:#e2e2e2;text-shadow:0 1px 2px #000}
+.final .btn{background:rgba(0,0,0,.85)}
+@media (max-width:760px),(max-height:700px){.final:before{background:rgba(0,0,0,.78)}.final .box{padding:16px 14px;backdrop-filter:blur(6px)}}
+
+/* ===== player néon ===== */
+@keyframes neonflick{0%,19%,21%,23%,25%,54%,56%,100%{opacity:1}20%,24%,55%{opacity:.55}}
+@keyframes neonpulse{50%{box-shadow:0 0 6px #ff2a2a,0 0 16px #ff1a1a,0 0 34px rgba(255,0,0,.55),inset 0 0 10px rgba(255,40,40,.45)}}
+.pbar{background:radial-gradient(120% 140% at 50% 120%,rgba(120,0,0,.35),transparent 60%),linear-gradient(0deg,rgba(2,0,0,.97),rgba(8,0,0,.92));border-top:0;box-shadow:0 -1px 0 #ff2a2a,0 -2px 10px #ff1a1a,0 -10px 50px rgba(255,0,0,.22)}
+.pbar:before{content:"";position:absolute;left:0;right:0;top:0;height:1px;background:linear-gradient(90deg,transparent,#fff 50%,transparent);opacity:.55;pointer-events:none}
+.pbar button.c{border:1.5px solid #ff2a2a;color:#ffe9e9;background:rgba(40,0,0,.35);border-radius:6px;text-shadow:0 0 6px #ff2a2a,0 0 14px #ff0000;box-shadow:0 0 4px #ff2a2a,0 0 12px rgba(255,0,0,.45),inset 0 0 6px rgba(255,40,40,.3);transition:box-shadow .2s,transform .15s}
+.pbar button.c:hover,.pbar button.c:focus-visible{transform:scale(1.06);box-shadow:0 0 6px #ff4040,0 0 22px #ff1a1a,0 0 44px rgba(255,0,0,.55),inset 0 0 10px rgba(255,60,60,.5)}
+.pbar button.c.play{border-radius:50%;border-width:2px;background:rgba(80,0,0,.4)}
+.pbar.on button.c.play{animation:neonpulse 1.2s ease-in-out infinite}
+.pbar .now .k{color:#ff3b3b;text-shadow:0 0 6px #ff1a1a;animation:neonflick 7s infinite}
+.pbar .now .t{color:#fff3f3;text-shadow:0 0 2px #fff,0 0 8px #ff2a2a,0 0 18px #ff0000,0 0 36px rgba(255,0,0,.6)}
+.pbar .tm{color:#ff8080;text-shadow:0 0 6px rgba(255,0,0,.7)}
+.pbar .ptl button{border:1px solid rgba(255,42,42,.35);border-radius:999px;color:#d9b3b3;background:rgba(30,0,0,.4);transition:.25s}
+.pbar .ptl button b{color:#ff4d4d;text-shadow:0 0 6px #ff1a1a}
+.pbar .ptl button:hover,.pbar .ptl button:focus-visible{border-color:#ff2a2a;color:#fff;box-shadow:0 0 8px rgba(255,30,30,.6),inset 0 0 6px rgba(255,30,30,.3);text-shadow:0 0 8px #ff2a2a}
+.pbar .ptl button.on{border-color:#ff3333;color:#fff;background:rgba(120,0,0,.35);text-shadow:0 0 4px #fff,0 0 12px #ff1a1a;box-shadow:0 0 6px #ff2a2a,0 0 18px rgba(255,0,0,.55),inset 0 0 8px rgba(255,40,40,.4)}
+.pbar.on .ptl button.on{animation:neonpulse 1.2s ease-in-out infinite}
+.pbar .psoc{border-top:1px solid rgba(255,42,42,.18)}
+.pbar .psoc .lbl{color:#ff6b6b;text-shadow:0 0 6px rgba(255,0,0,.8)}
+.pbar .psoc .soc a.s{border:1px solid rgba(255,42,42,.5);border-radius:6px;background:rgba(30,0,0,.4);color:#ffe0e0;filter:drop-shadow(0 0 4px rgba(255,30,30,.7))}
+.pbar .psoc .soc a.s:hover,.pbar .psoc .soc a.s:focus-visible{border-color:#ff2a2a;box-shadow:0 0 14px #ff1a1a}
+.pbar .led{background:#5a0000}.pbar.on .led{background:#ff2a2a;box-shadow:0 0 6px #ff2a2a,0 0 14px #ff0000}
+@media (prefers-reduced-motion:reduce){.pbar .now .k,.pbar.on button.c.play,.pbar.on .ptl button.on{animation:none}}
+
+@media (min-width:761px){.final{padding-bottom:calc(var(--pb) + 2vh);padding-top:70px}.final .box{max-width:720px}.final h2{font-size:clamp(34px,4.4vw,62px)}}
+@media (min-width:761px) and (max-height:820px){.final p{margin:10px 0 14px}.final .term{margin:10px 0 8px}.final .down,.final small{margin-top:10px}}
+
+/* modal de letra néon (player continua visível embaixo) */
+.modal{bottom:var(--pb);z-index:11;background:rgba(0,0,0,.86);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px)}
+.modal .sheet{border:1px solid rgba(255,42,42,.55);border-radius:10px;background:linear-gradient(180deg,rgba(18,0,0,.96),rgba(5,0,0,.97));box-shadow:0 0 6px #ff2a2a,0 0 26px rgba(255,0,0,.35),inset 0 0 30px rgba(255,0,0,.08);max-height:calc(100% - 24px)}
+.modal .sheet h4{color:#fff4f4;text-shadow:0 0 2px #fff,0 0 10px #ff2a2a,0 0 26px rgba(255,0,0,.6)}
+.modal .sheet .k,.modal .sheet .sec{color:#ff4d4d;text-shadow:0 0 6px rgba(255,0,0,.8)}
+.modal .sheet p.ch{color:#fff;text-shadow:0 0 10px rgba(255,40,40,.45)}
+.modal .sheet .x{border:1px solid #ff2a2a;border-radius:6px;background:rgba(30,0,0,.9);box-shadow:0 0 8px rgba(255,30,30,.6);color:#ffe9e9}
+@media (max-width:760px){.modal{padding:10px}.modal .sheet{padding:18px 16px 30px}.modal .sheet h4{font-size:30px}.modal .sheet p{font-size:16px}.modal .sheet .note{font-size:14px;margin-bottom:10px}}
+
+/* final nunca prende a rolagem */
+.final,.final.on{pointer-events:none}
+.final.on .box{pointer-events:auto;max-height:calc(100% - 8px);overflow-y:auto;overscroll-behavior:auto;scrollbar-width:thin;scrollbar-color:#ff2a2a transparent}
+.final .totop{margin-top:12px;font-size:10px;padding:8px 12px}
+.sr{position:absolute!important;width:1px!important;height:1px!important;overflow:hidden!important;clip:rect(0 0 0 0)!important;white-space:nowrap}
+</style>
+</head>
+<body>
+<article class="sr" id="sobre">
+<h1>ERDOP — rock industrial de Ubá, MG</h1>
+<p>ERDOP é uma banda de rock industrial de Ubá, Minas Gerais, criada em 2002 por Warurase — a máscara, a voz e a mão por trás de tudo. O nome é PODRE lido ao contrário. O som mistura metal industrial, grunge e a força do rock nacional dos anos 90, com influências de Nine Inch Nails, Marilyn Manson e Alice in Chains. Ecos da Minha Mente, o álbum de estreia, fala do que nos possui — o trabalho, o vício, outra pessoa, o desejo — e da única saída: resistir. Shows e booking em Ubá, Juiz de Fora, Cataguases, Zona da Mata e todo o Brasil.</p>
+<h2>Ecos da Minha Mente — faixas</h2><ol><li>Armadilha — vício</li><li>Gato de Rua — rua</li><li>Cinzas de Ouro — trabalho</li><li>Beijo na Pele — desejo</li><li>Resista — resistência</li><li>Nunca Fui Seu — ruptura</li><li>Veneno — desejo</li><li>Fica Bem — esperança</li><li>Farsa Fama — sombra</li></ol>
+<p>Booking, imprensa e collabs: <a href="mailto:erdop.oficial@gmail.com">erdop.oficial@gmail.com</a> · Instagram, YouTube e TikTok: @erdop.oficial.</p>
+</article>
+<noscript><style>.sr{position:static!important;width:auto!important;height:auto!important;clip:auto!important;padding:24px;color:#e8e8e8}</style></noscript>
+
+<div id="loader"><span>ERDOP · carregando</span><b></b></div>
+<canvas id="gl" aria-hidden="true"></canvas>
+<div class="fx lasers" id="lasers" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+<div class="fx vig"></div><div class="fx shade" id="shade"></div>
+<div class="fx dip" id="dip"></div><div class="fx flash" id="flash"></div>
+<div class="fx scan"></div><div class="fx grain"></div>
+<header><a href="/" aria-label="ERDOP" id="logo"></a><div class="meta">Ecos da Minha Mente<br>Ubá · MG · desde 2002</div></header>
+<div class="pbar" id="pbar" role="region" aria-label="Player ERDOP e redes">
+  <div class="pmain"><div class="ctl"><button class="c" id="pprev" type="button" aria-label="Faixa anterior">◄</button><button class="c play" id="pplay" type="button" aria-label="Tocar">▶</button><button class="c" id="pnext" type="button" aria-label="Próxima faixa">►</button></div>
+  <div class="now"><div class="k" id="pk">Ecos da Minha Mente</div><div class="t" id="pt">01 · Armadilha</div></div>
+  <div class="wave" id="pwave" title="Clique para avançar na música"><canvas id="pcv"></canvas></div>
+  <div class="tm" id="ptm">0:00 / 0:00</div></div>
+  <div class="ptl" id="ptl" role="list" aria-label="Faixas do álbum Ecos da Minha Mente"></div>
+  <div class="psoc"><span class="lbl">Siga @erdop.oficial</span><div class="soc"><span class="led" aria-hidden="true"></span><a class="s" href="https://www.instagram.com/erdop.oficial/" target="_blank" rel="noopener" aria-label="Instagram @erdop.oficial" title="Instagram · @erdop.oficial"><svg viewBox="0 0 24 24"><path d="M12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm0 8.2A3.2 3.2 0 1 1 12 8.8a3.2 3.2 0 0 1 0 6.4zM17.3 5.5a1.2 1.2 0 1 0 0 2.4 1.2 1.2 0 0 0 0-2.4zM12 2c-2.7 0-3 0-4.1.1C4.3 2.2 2.2 4.3 2.1 7.9 2 9 2 9.3 2 12s0 3 .1 4.1c.1 3.6 2.2 5.7 5.8 5.8 1.1.1 1.4.1 4.1.1s3 0 4.1-.1c3.6-.1 5.7-2.2 5.8-5.8.1-1.1.1-1.4.1-4.1s0-3-.1-4.1c-.1-3.6-2.2-5.7-5.8-5.8C15 2 14.7 2 12 2zm0 1.8c2.7 0 3 0 4 .1 2.6.1 3.9 1.4 4 4 .1 1 .1 1.3.1 4s0 3-.1 4c-.1 2.6-1.4 3.9-4 4-1 .1-1.3.1-4 .1s-3 0-4-.1c-2.6-.1-3.9-1.4-4-4C3.8 15 3.8 14.7 3.8 12s0-3 .1-4c.1-2.6 1.4-3.9 4-4 1-.1 1.3-.1 4.1-.1z"/></svg><span class="bars"><i></i><i></i><i></i></span></a><a class="s" href="https://www.youtube.com/@erdop.oficial" target="_blank" rel="noopener" aria-label="YouTube @erdop.oficial" title="YouTube · @erdop.oficial"><svg viewBox="0 0 24 24"><path d="M23 7.2a3 3 0 0 0-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 0 0 1 7.2 31 31 0 0 0 .5 12a31 31 0 0 0 .5 4.8 3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1 31 31 0 0 0 .5-4.8 31 31 0 0 0-.5-4.8zM9.7 15.1V8.9L15.5 12z"/></svg><span class="bars"><i></i><i></i><i></i></span></a><a class="s" href="https://www.tiktok.com/@erdop.oficial" target="_blank" rel="noopener" aria-label="TikTok @erdop.oficial" title="TikTok · @erdop.oficial"><svg viewBox="0 0 24 24"><path d="M16.6 2h-3.3v13.4a2.9 2.9 0 1 1-2-2.8V9.2a6.2 6.2 0 1 0 5.3 6.2V8.6a7.6 7.6 0 0 0 4.4 1.4V6.7a4.4 4.4 0 0 1-4.4-4.7z"/></svg><span class="bars"><i></i><i></i><i></i></span></a><a class="s" href="https://soundcloud.com/erdop-701366304" target="_blank" rel="noopener" aria-label="SoundCloud ERDOP" title="SoundCloud · ERDOP"><svg viewBox="0 0 24 24"><path d="M1 14.5l.4 2.1-.4 2c0 .2-.2.2-.2 0l-.3-2 .3-2.1c0-.2.2-.2.2 0zm1.8-1.3l.5 3.4-.5 3.3c0 .2-.3.2-.3 0l-.4-3.3.4-3.4c0-.2.3-.2.3 0zm1.9-.8l.4 4.2-.4 4c0 .3-.4.3-.4 0l-.4-4 .4-4.2c0-.3.4-.3.4 0zm1.9-.3l.4 4.5-.4 4.2c0 .3-.5.3-.5 0l-.3-4.2.3-4.5c0-.3.5-.3.5 0zm1.9-1l.3 5.5-.3 4.3c0 .4-.6.4-.6 0l-.3-4.3.3-5.5c0-.4.6-.4.6 0zm2-1.8l.3 7.3-.3 4.3c0 .4-.7.4-.7 0l-.3-4.3.3-7.3c0-.4.7-.4.7 0zm1.4-.8a6.5 6.5 0 0 1 6.4 5.9 3.8 3.8 0 1 1 1 7.4h-7.5c-.3 0-.5-.2-.5-.5V9c0-.3.2-.4.6-.5z"/></svg><span class="bars"><i></i><i></i><i></i></span></a></div></div>
+</div>
+<nav class="rail" id="rail" aria-label="Capítulos"></nav>
+<section class="copy" id="copy" aria-live="polite"></section>
+<div class="enctitle" id="enctitle"><div class="num" id="encnum"></div><h3 id="encname"></h3></div>
+<div class="encui" id="encui"><button class="btn" id="listenbtn" type="button">▶ Ouvir esta faixa</button><button class="btn ghost" id="readbtn" type="button">Ler a letra</button><button class="btn ghost" id="skipenc" type="button">Pular encarte ↓</button></div>
+<div class="hud" id="hud">
+  <div class="mission"><div class="t">Missão · leve a ERDOP para o palco</div><div class="h">Montando o palco</div><ul id="checklist"></ul><div class="bar"><b id="xp"></b></div><div class="pct" id="pct">0%</div></div>
+  <div class="card" id="card"><div class="t" id="cardt"></div><div class="n" id="cardn"></div><div class="d" id="cardd"></div><div class="src" id="cards"></div></div>
+  <div class="win" id="win"></div>
+</div>
+<section class="final" id="final" aria-label="Contato">
+  <div class="box">
+    <div class="copy-num" style="font-family:'Space Mono',monospace;font-size:11px;letter-spacing:4px;color:var(--red);text-transform:uppercase;margin-bottom:12px">Fim do lado A</div>
+    <h2>Leve a ERDOP<br>para o seu palco</h2>
+    <p>Casas, festivais e noites de rock: conte o evento, a cidade e a data. O press kit tem release e fotos oficiais.</p>
+    <div class="row">
+      <a class="btn" href="mailto:erdop.oficial@gmail.com?subject=Booking%20-%20ERDOP&body=Evento%3A%0ACidade%3A%0AData%3A%0AFormato%3A">Booking</a>
+      <a class="btn ghost" href="https://bfbefead-ba51-4342-bb99-79e1256138fc.filesusr.com/ugd/3a294f_8d207f1e10714eaf92fc03a973e50062.pdf" target="_blank" rel="noopener">Press kit (PDF)</a>
+      <a class="btn ghost" href="mailto:erdop.oficial@gmail.com?subject=Rider%20t%C3%A9cnico%20-%20ERDOP">Pedir rider</a>
+    </div>
+    <div class="term">&gt; canal aberto · <b>erdop.oficial@gmail.com</b> <span class="cur"></span></div>
+    <div class="row">
+      <a class="btn ghost" href="mailto:erdop.oficial@gmail.com?subject=Imprensa%20-%20ERDOP">Imprensa</a>
+      <a class="btn ghost" href="mailto:erdop.oficial@gmail.com?subject=Collab%20-%20ERDOP">Collab</a>
+      <a class="btn ghost" href="https://ig.me/m/erdop.oficial" target="_blank" rel="noopener">Direct</a>
+      <button class="btn ghost" id="copy-mail" type="button">Copiar e-mail</button>
+    </div>
+    <div class="down">↓ agora, ouça o álbum no player logo abaixo</div><button class="btn ghost totop" id="totop" type="button">↑ Voltar ao início</button>
+    <small>© <span id="yr"></span> ERDOP · Ubá, MG</small>
+  </div>
+</section>
+<div class="hint" id="hint">role para desdobrar<i></i></div>
+<div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="mt"><div class="sheet"><button class="x" id="mx" type="button">Fechar ×</button><div class="k" id="mk"></div><h4 id="mt"></h4><div class="note" id="mn"></div><div id="mb"></div></div></div>
+<div class="toast" id="toast">E-mail copiado</div>
+<div id="spacer"></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script>
+const ATLAS={"W":1024,"H":1520,"tags":{"erdop":[0,100,277,165],"podre":[277,100,294,165],"origem":[571,100,350,156],"cinzas":[0,265,316,133],"sombra":[316,265,333,162],"labirinto":[0,427,431,157],"veneno":[431,427,375,133],"ruptura":[0,584,393,156],"resista":[393,584,359,156],"luz":[752,584,239,125],"t1":[0,740,347,127],"t2":[347,740,418,141],"t3":[0,881,511,127],"t4":[511,881,460,124],"t5":[0,1008,274,131],"t6":[274,1008,493,123],"t7":[0,1139,282,104],"t8":[282,1139,319,122],"t9":[601,1139,365,125],"palco":[0,1264,440,131],"ecos":[0,1395,666,125]}};const ATLAS_URL='erdop-atlas.png';const ENC_URL='erdop-encarte.jpg';const BG_URL='https://static.wixstatic.com/media/3a294f_67d75a250f144c488a3513c603cc35c4~mv2.png/v1/fill/w_1920,h_1072,q_85,enc_jpg/erdop-janela.jpg';const PHOTO_URL='https://static.wixstatic.com/media/3a294f_2d2d7a2251614745bcef9a0c48dbbc5f~mv2.png/v1/fill/w_1920,h_1124,q_85,enc_jpg/erdop-hero.jpg';
+const TRACKS=[{"t":"ARMADILHA","theme":"vício","l":"[Verse]\nPreso no vício\nComo um salto no vazio\nMeu cérebro é um labirinto\nSem começo, sem destino\n\nFarto de estar disperso\nAgora eu sou o pássaro\nVoando baixo sobre as cinzas\nSem saber onde pousar\n\n[Pre-Chorus]\nToda porta se fecha\nQuando eu penso em voltar\nToda sombra me chama\nPra nunca mais acordar\n\n[Chorus]\nFarto...\nIsso é um fato...\nUm fato...\n\nEstou vivendo\nNo mundo real\n\nAndar com a equipe errada\nPode ser uma armadilha mortal\nUma armadilha mortal...\n(Pode ser!)\n\n[Verse]\nEstou perdido\nNum mundo cinza\nCada esquina que eu viro\nLeva um pedaço da minha vida\n\nOs monstros continuam\nMesmo depois de acordar\nFecho os olhos\nMas eles ainda estão lá\n\n[Bridge]\nSe tudo muda\nPor que eu continuo igual?\n\nSe tudo passa\nPor que isso não vai passar?\n\n[Chorus]\nFarto...\nIsso é um fato...\nUm fato...\n\nEstou vivendo\nNo mundo real\n\nAndar com a equipe errada\nPode ser uma armadilha mortal\n\nUma armadilha...\nUma armadilha...\nMortal...\n\n(Pode ser!)\n\n[Outro]\nFarto...\nFato...\nMundo real..."},{"t":"GATO DE RUA","theme":"rua","l":"[Verse 1]\nJuntos somos um\nForça da unidade\nLealdade, amizade\nNa unidade a gente\nJuntos somos um só\nHistórias nas ruas em cada esquina\nUm lugar\n\n[Chorus]\nCada queda você levanta\nUm ciclo sem fim\nNão cabe desistir\n\nCada queda você levanta\nUm ciclo sem fim\nNão cabe desistir\n\n[Bridge]\nUm simples abraço\nOlhares que se batem sem sentido algum\nHistória junta, um grito nas ruas\nA vida corre sem descansar\nCada sonho perdido\n\n[Chorus]\nAté o fim\nAté o fim\nCada queda você levanta\nUm ciclo sem fim\nNão cabe desistir\n\n[Outro]\nNão cabe desistir\nNão cabe desistir"},{"t":"CINZAS DE OURO","theme":"trabalho","l":"[Verse 1]\nAcordo cansado\nCom o rosto pesado\nUm café, um cigarro\n\n[Chorus]\nPra quê? Pra quê?\nA troco de quê?\nA gente vende o tempo pra poder esquecer\n\nPra quê? Pra quê?\nA troco de quê?\nAs cinzas de ouro queimam você\n\n[Verse 2]\nO relógio me prende\nE o tempo me entende\n\n[Chorus]\nPra quê? Pra quê?\nA troco de quê?\nA gente vende o corpo pra não enlouquecer\n\nPra quê? Pra quê?\nA troco de quê?\nAs cinzas de ouro vão te corroer\n\n[Bridge]\nSomos só números\nSomos só máquinas\nNão tem quem domine\n\n[Chorus]\nPra quê? Pra quê?\nA troco de quê?\nA gente morre vivo pra sobreviver\n\nPra quê? Pra quê?\nA troco de quê?\nAs cinzas de ouro brilham e somem\n\nBrilham e somem\nBrilham e somem\nA troco de quê?\nA troco de quê?\n\n[Outro]\nCinzas de ouro\nCinzas de ouro"},{"t":"BEIJO NA PELE","theme":"desejo","l":"[Verse]\nEu vejo você na noite que cai\nSeu medo dança e você não sai\nNo brilho pálido da lua cheia\nA sede escorre como areia\n\nVem cá, baby, sente o frio\nA gente dança nesse vazio\nSede não é só de sangue, é de querer\nE quem tá perdido sabe o que é viver\n\n[Pre-Chorus]\nSe entrega no escuro, você vai ver\nQue às vezes morrer é só renascer\n\n[Chorus]\nSente o beijo na pele (vai, vai)\nÉ doce e cruel, não sai (não sai)\nNa sombra se aprende que o prazer só acende\nQuando tudo é pra sempre, nunca mais\n\n[Chorus]\nSente o beijo na pele (vai, vai)\nÉ doce e cruel, não sai (não sai)\nNa sombra se aprende que o prazer só acende\nQuando tudo é pra sempre, nunca mais\n\n[Bridge]\nO mundo é nosso, a noite é lei\nNa dança lenta você se perde, eu sei\nNos olhos um convite que não dá pra negar\nQuem prova do veneno nunca quer voltar\n\nChama isso de perigo, eu chamo de lar\nO vazio me preenche, eu vou te ensinar\n\n[Chorus]\nSente o beijo na pele (vai, vai)\nÉ doce e cruel, não sai (não sai)\nNa sombra se aprende que o prazer só acende\nQuando tudo é pra sempre, nunca mais\n\n[Outro]\nNunca mais\nNunca mais\nPra sempre"},{"t":"RESISTA","theme":"resistência","l":"[Intro]\nJOGAI!\n\n[Verse 1]\nDesce o sol\nLevante o peso de um dia\nCada marca no meu corpo\nA história que construiu\n\n[Chorus]\nNÃO CAIA! NADA VAI!\nSEGURA! TODO EM FORÇA!\nVOCÊ VAI! SEGURA!\n\n[Verse]\nTraz o bem do aprendizado\nSonho de levar a mais\nSe tudo desmorona\nQuem você se torna?\n\n[Bridge]\nACREDITAR!\nNUNCA DEIXE DE ACREDITAR!\n\n[Chorus]\nNÃO CAIA! NADA VAI!\nSEGURA! TODO EM FORÇA!\nVOCÊ VAI! SEGURA!\n\n[Outro]\nVocê sente\nVocê vê\nO futuro é seu\nE você quem vai fazer\n\nDESCE O SOL\nLEVANTE!"},{"t":"NUNCA FUI SEU","theme":"ruptura","l":"[Verse]\nVejo quebrado\nde tudo errado\nA dor me consome...\n\n(yeah!)\n\n[Chorus]\nMas você não\nme deixou ser...\n\nEu sei que errei.\nMas você não\nme deixou ser...\n\nnunca fui seu!\nnunca fui seu!\n\n[Verse]\nAs palavras se perdem\nO tempo se vai\nE o meu passo\ne você não vai?\n\n[Chorus]\nSei que errei.\nMas você não\nme deixou ser...\n\nnunca fui seu!\nnunca fui seu!\n\n[Outro]\nVocê não vê?\nA realidade!\n\n[Chorus]\nMas você não\nme deixou ser...\n\nnunca fui seu!\nnunca fui seu!\n\nVocê não vê?\nA realidade!"},{"t":"VENENO","theme":"desejo","l":"[Verse]\nO espelho reflete\no que passou\nMas eu gosto\ndo que diz\nReflete o teu mistério\nA beleza e o que me diz\nTeu perfume é promessa\nSua sombra é tentação\nVocê fala com os olhos\nE o tempo perde a razão\n\n[Chorus]\nQuando o paraíso chegar\nEu já sei não é dor de febre\nMe faz acreditar\n(Acreditar)\n\n[Verse]\nO mundo gira lento\nmas teu corpo não\nCada passo teu\né pura combustão\nTua pele tem um ritmo\nque só eu sei seguir\nTeu sorriso é perigo\nmas eu quero cair\n\n[Chorus]\nSem medo e o tempo esquece de girar\nTeu toque é o início e o lugar\nVocê é meu veneno e me faz\nMe faz acreditar\nQue viver é sentir\ne sentir é queimar\n(Aaah)"},{"t":"FICA BEM","theme":"esperança","l":"[Intro]\n(Oh-oh-oh-oh)\n(Muda... muda...)\n\n[Verse 1]\nLembro quando a gente dizia\nQue ia mudar o mundo\nLembro quando a gente dizia\nQue ia mudar o mundo\n\nÀs vezes eu me perco\nNo que eu queria ser\nEu falo com o nada às vezes\nSerá que alguém ainda olhou por mim?\nSerá que alguém ainda olhou por mim?\n\n[Pre-Chorus]\nEu te vejo ainda aí\nAinda aí...\nAinda aí...\nEu te vejo ainda aí\nSem medo...\nSem medo de ser quem você é hoje!\n\n[Chorus]\nEu ainda vejo uma luz lá no fim\nMesmo quando o mundo cai em mim\nCai em mim...\nCai em mim...\n\nEu só rezo pra ficar bem\nE pra não esquecer de quem eu fui também\n\nEu só rezo pra ficar bem\nPra ficar bem...\nE pra não me perder também\n\n[Bridge]\nVocê jurava que ia mudar o mundo\nMudar o mundo...\nMal sabia que o mundo ia mudar você\nMudar você...\nJá acreditei demais...\nJá acreditei demais...\nE o amor morreu de tédio...\nMas você sabe...\nVocê sabe, né...\n\n[Chorus]\nEu ainda vejo uma luz lá no fim\nMesmo quando o mundo cai em mim\nCai em mim...\nCai em mim...\n\nEu só rezo pra ficar bem\nPra ficar bem...\nE pra não esquecer de quem eu fui também\n\nEu só rezo pra ficar bem\nPra ficar bem...\nE pra não me perder\nPra não me perder\nPra não me perder também!\n\n[Outro]\nEu ainda vejo uma luz lá no fim\nMesmo quando o mundo cai em mim\n\nEu só rezo...\nPra ficar bem...\n\nE pra não me perder também...\n\n(Oh-oh-oh-oh)\nFica bem...\nFica bem..."},{"t":"FARSA FAMA","theme":"sombra","l":"[Verse 1]\nA sombra no corpo sangrou\nAs preces que fiz ninguém escutou\nCaminhei entre anjos queimados\nBeijei a boca de santos quebrados\n\n[Pre-Chorus]\nE no fundo da queda meu corpo voltou\n\n[Chorus]\nEu sou a sombra\nEu sou a dor\nEu sou o grito que ninguém guardou\nEu sou a sombra\nEu sou a dor\nEu sou o resto do que já passou\n\n[Bridge]\nE no fundo da queda meu corpo voltou\n\n[Chorus]\nEu sou a sombra\nEu sou a dor\nEu sou o grito que ninguém guardou\nEu sou a sombra\nEu sou a dor\nEu sou o resto do que já passou\n\n[Outro]\nPai, perdoe-me pois eu não sei quem sou"}];
+const NOTES=[
+ {note:"Sobre o vício: a porta que só abre para dentro.",ex:["Preso no vício","Como um salto no vazio","Meu cérebro é um labirinto","Sem começo, sem destino"],hl:2},
+ {note:"Sobre a rua — e quem estende a mão quando você cai.",ex:["Juntos somos um","Histórias nas ruas em cada esquina","Cada queda você levanta","Não cabe desistir"],hl:2},
+ {note:"Sobre vender o tempo: o relógio, o café, o cigarro — a troco de quê?",ex:["Acordo cansado","Com o rosto pesado","A gente vende o tempo pra poder esquecer","As cinzas de ouro queimam você"],hl:3},
+ {note:"Sobre o desejo que se veste de noite.",ex:["Eu vejo você na noite que cai","Sente o beijo na pele","É doce e cruel, não sai","Quando tudo é pra sempre, nunca mais"],hl:1},
+ {note:"A virada do disco. A única faixa que devolve você a você mesmo.",ex:["Desce o sol","Levante o peso de um dia","NÃO CAIA! NADA VAI!","SEGURA! TODO EM FORÇA!"],hl:2},
+ {note:"Sobre pertencer a outra pessoa — e dizer não.",ex:["Vejo quebrado","de tudo errado","Eu sei que errei.","nunca fui seu!"],hl:3},
+ {note:"Sobre a tentação que a gente escolhe beber.",ex:["Teu perfume é promessa","Sua sombra é tentação","Você é meu veneno e me faz","acreditar que sentir é queimar"],hl:2},
+ {note:"Sobre quem você jurou que seria — e a luz que ainda resta.",ex:["Lembro quando a gente dizia","Que ia mudar o mundo","Eu ainda vejo uma luz lá no fim","Mesmo quando o mundo cai em mim"],hl:2},
+ {note:"Sobre a sombra que sobra quando a fama é farsa.",ex:["Caminhei entre anjos queimados","Beijei a boca de santos quebrados","Eu sou a sombra","Eu sou o grito que ninguém guardou"],hl:2}
+];
+const TAGS=['labirinto','origem','cinzas','veneno','resista','ruptura','veneno','luz','sombra'];
+function spr(k,h){const r=ATLAS.tags[k],s=h/r[3],e=document.createElement('span');e.setAttribute('aria-hidden','true');Object.assign(e.style,{display:'inline-block',width:(r[2]*s)+'px',height:h+'px',backgroundImage:`url(${ATLAS_URL})`,backgroundRepeat:'no-repeat',backgroundSize:`${ATLAS.W*s}px ${ATLAS.H*s}px`,backgroundPosition:`${-r[0]*s}px ${-r[1]*s}px`,verticalAlign:'middle'});return e;}
+const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+const isMob=()=>innerWidth<760;
+function loadImg(src){return new Promise((ok,no)=>{const im=new Image();im.crossOrigin='anonymous';im.onload=()=>ok(im);im.onerror=no;im.src=src;});}
+
+/* ===== scenes (lengths in viewport heights) ===== */
+const SC=[
+ {id:'origem',len:1.3,lab:'Origem'},
+ {id:'sombra',len:1.1,lab:'Sombra'},
+ {id:'labirinto',len:1.0,lab:'Labirinto'},
+ {id:'veneno',len:1.1,lab:'Veneno'},
+ {id:'resista',len:1.0,lab:'Resista'},
+ {id:'nome',len:1.8,lab:'ERDOP'},
+ {id:'encarte',len:6.5,lab:'Encarte'},
+ {id:'palco',len:6.0,lab:'Palco'},
+ {id:'final',len:1.2,lab:'Contato'}
+];
+let acc=0;SC.forEach(s=>{s.start=acc;acc+=s.len;});const TOTAL=acc;
+document.getElementById('spacer').style.height=(TOTAL*100+100)+'vh';
+const rail=document.getElementById('rail');
+SC.forEach((s,i)=>{const b=document.createElement('button');b.innerHTML=`<i></i><span>${String(i).padStart(2,'0')} ${s.lab}</span>`;b.onclick=()=>scrollTo({top:(s.start+.02)*innerHeight,behavior:reduce?'auto':'smooth'});rail.appendChild(b);});
+
+/* ===== copy (text per scene) ===== */
+const COPY={
+ origem:{k:'00',tag:'origem',t:['Rock industrial','brasileiro'],p:'Ubá, MG — desde 2002.\nPor trás da máscara, uma história.',c:'ERDOP'},
+ sombra:{k:'01',tag:'sombra',t:['Eu sou','a sombra'],p:'Eu sou a dor.\nEu sou o grito que ninguém guardou.',c:'Farsa Fama'},
+ labirinto:{k:'02',tag:'labirinto',t:['Preso','no vício'],p:'Meu cérebro é um labirinto\nsem começo, sem destino.',c:'Armadilha',g:1},
+ veneno:{k:'03',tag:'veneno',t:['Doce e','cruel'],p:'Você é meu veneno —\nviver é sentir, e sentir é queimar.',c:'Veneno · Beijo na Pele'},
+ resista:{k:'04',tag:'resista',t:['Não','caia'],p:'Segura! Toda a força!\nDesce o sol — LEVANTE!',c:'Resista'},
+ nome:{k:'05',tag:null,t:['PODRE','ao contrário'],story:1,c:'ERDOP'}
+};
+const copyEl=document.getElementById('copy');let copyId=null;
+function setCopy(id){
+  if(id===copyId)return;copyId=id;const a=COPY[id];
+  copyEl.classList.remove('on');
+  if(!a){copyEl.innerHTML='';return;}
+  setTimeout(()=>{if(copyId!==id)return;
+    copyEl.className='copy'+(a.g?' glitch':'')+(a.story?' story':'');
+    let body;
+    if(a.story){body=`<div class="num">${a.k} — O nome</div><h2><span class="ln"><span>PODRE</span></span><span class="ln"><span>ao contrário</span></span></h2><p class="ln"><span>Nascida na virada dos anos 2000, a <b>ERDOP</b> liga o underground a um som industrial intenso — Grunge e Metal Industrial com a força do Rock Nacional dos anos 90. O nome é <em>PODRE</em> lido ao contrário: uma visão alternativa do mundo. À frente, <b>Warurase</b>: a voz, a máscara e a mão por trás de tudo.</span></p><cite class="ln"><span>— Ecos da Minha Mente · álbum de estreia · 9 faixas</span></cite>`;}
+    else body=`<div class="tagbg"></div><div class="num">${a.k} — ${id}</div><h2>${a.t.map(t=>`<span class="ln"><span>${t}</span></span>`).join('')}</h2><p class="ln"><span>${a.p}</span></p><cite class="ln"><span>— ${a.c}</span></cite>`;
+    copyEl.innerHTML=body;
+    if(a.tag)copyEl.querySelector('.tagbg').appendChild(spr(a.tag,Math.round(Math.min(200,Math.max(84,innerWidth*.13)))));
+    requestAnimationFrame(()=>requestAnimationFrame(()=>copyEl.classList.add('on')));
+  },320);
+}
+
+/* ===== boot ===== */
+(async()=>{
+const [atlasImg,encImg]=await Promise.all([loadImg(ATLAS_URL),loadImg(ENC_URL)]);
+try{await Promise.all([document.fonts.load('700 40px Oswald'),document.fonts.load('300 30px Oswald'),document.fonts.load('400 20px "Space Mono"')]);}catch(e){}
+document.getElementById('logo').appendChild(spr('erdop',isMob()?28:36));
+document.getElementById('yr').textContent=new Date().getFullYear();
+
+/* -- particle data -- */
+const cv=document.createElement('canvas');cv.width=ATLAS.W;cv.height=ATLAS.H;const cx=cv.getContext('2d');cx.drawImage(atlasImg,0,0);
+const pd=cx.getImageData(0,0,160,100).data;const N=16000;
+function wordPts(key,scale){const r=ATLAS.tags[key];const d=cx.getImageData(r[0],r[1],r[2],r[3]).data;const pts=[];
+  for(let y=0;y<r[3];y+=1)for(let x=0;x<r[2];x+=1){if(d[(y*r[2]+x)*4+3]>140)pts.push([x,y]);}
+  const out=new Float32Array(N*3);const asp=r[2]/r[3];
+  for(let i=0;i<N;i++){const p=pts[(Math.random()*pts.length)|0];out[i*3]=((p[0]+Math.random())/r[2]-.5)*scale*asp;out[i*3+1]=-((p[1]+Math.random())/r[3]-.5)*scale;out[i*3+2]=(Math.random()-.5)*.08;}
+  return out;}
+const face=new Float32Array(N*3),scat=new Float32Array(N*3),rnd=new Float32Array(N*3),bone=new Float32Array(N);
+for(let i=0;i<N;i++){
+  const J=()=>(Math.random()-.5)/255;
+  face[i*3]=(pd[i*4]/255+J())*2.4-1.2;face[i*3+1]=(pd[i*4+1]/255+J())*2-1;face[i*3+2]=((pd[i*4+2]>>4)/15)*.55;
+  bone[i]=Math.min(1,Math.max(0,(pd[i*4+2]&15)/15+(Math.random()-.5)/15));
+  const r=2.2+Math.random()*3.5,a=Math.random()*Math.PI*2;scat[i*3]=Math.cos(a)*r;scat[i*3+1]=(Math.random()-.5)*4.5;scat[i*3+2]=Math.sin(a)*r*.6-1;
+  rnd[i*3]=Math.random();rnd[i*3+1]=Math.random();rnd[i*3+2]=Math.random();
+}
+const wA=wordPts('podre',.9),wB=wordPts('erdop',.9);
+
+/* -- three -- */
+const canvas=document.getElementById('gl');
+const renderer=new THREE.WebGLRenderer({canvas,antialias:true,powerPreference:'high-performance'});
+renderer.setPixelRatio(Math.min(devicePixelRatio,isMob()?1.5:2));renderer.setClearColor(0,1);
+renderer.outputEncoding=THREE.sRGBEncoding;
+const scene=new THREE.Scene();scene.fog=new THREE.Fog(0x000000,8,26);
+const camera=new THREE.PerspectiveCamera(40,1,.05,80);camera.position.set(0,0,3.4);
+
+/* particles */
+const geo=new THREE.BufferGeometry();
+geo.setAttribute('position',new THREE.BufferAttribute(face,3));geo.setAttribute('aScat',new THREE.BufferAttribute(scat,3));
+geo.setAttribute('aRnd',new THREE.BufferAttribute(rnd,3));geo.setAttribute('aBone',new THREE.BufferAttribute(bone,1));
+geo.setAttribute('aWA',new THREE.BufferAttribute(wA,3));geo.setAttribute('aWB',new THREE.BufferAttribute(wB,3));
+const U={uTime:{value:0},uBeat:{value:0},uAsm:{value:0},uWord:{value:0},uGlitch:{value:0},uWind:{value:0},uBurst:{value:0},uRed:{value:.25},uFade:{value:1},
+ uSize:{value:2.8*Math.min(devicePixelRatio,2)},uMouse:{value:new THREE.Vector2()}};
+const pmat=new THREE.ShaderMaterial({uniforms:U,transparent:true,depthWrite:false,blending:THREE.AdditiveBlending,
+vertexShader:`uniform float uTime,uAsm,uWord,uGlitch,uWind,uBurst,uSize,uBeat;uniform vec2 uMouse;
+attribute vec3 aScat,aRnd,aWA,aWB;attribute float aBone;varying float vB,vA;
+float h(float n){return fract(sin(n)*43758.5453);}
+void main(){vB=aBone;float t=uTime;
+ vec3 s=aScat+vec3(sin(t*.15+aRnd.x*6.28)*.3,0.,cos(t*.12+aRnd.y*6.28)*.3);s.y=mod(aScat.y+2.25+t*.08*(.3+aRnd.z),4.5)-2.25;
+ float wa=clamp(uWord*1.5-aRnd.y*.5,0.,1.);wa=wa*wa*(3.-2.*wa);float wb=clamp((uWord-1.)*1.5-aRnd.y*.5,0.,1.);wb=wb*wb*(3.-2.*wb);
+ vec3 tg=mix(mix(position,aWA,wa),aWB,wb);
+ float d=clamp(uAsm*1.6-aRnd.x*.6,0.,1.);d=d*d*(3.-2.*d);
+ vec3 p=mix(s,tg,d);p.z+=sin(t*1.3+tg.y*3.)*.012*d;
+ float band=floor((p.y+2.)*14.);float fr=floor(t*9.);float g=step(.72,h(band*1.7+fr))*(h(band+fr*3.1)-.5);p.x+=uGlitch*g*.55;p.z+=uGlitch*g*.3;
+ float w=clamp(uWind*1.8-(aRnd.z*.5+(1.-(position.x+1.2)/2.4)*.6),0.,1.);p+=vec3(w*w*3.2,w*sin(t*.7+aRnd.x*9.)*.6+w*.4,w*(aRnd.y-.5)*1.5);
+ p+=normalize(tg+vec3(0.,0.,.001))*uBurst*aRnd.y*.22*(.5+.5*sin(t*2.5+aRnd.x*6.));
+ p.x+=uMouse.x*.06*tg.z;p.y+=uMouse.y*.04*tg.z;
+ vec4 mv=modelViewMatrix*vec4(p,1.);gl_Position=projectionMatrix*mv;
+ float sz=uSize*(.6+aBone*1.3)*(1.+aRnd.z*.6)*mix(2.2,1.,d)*(1.+uBeat*.18);gl_PointSize=sz*(3./-mv.z);
+ vA=mix(1.3,1.,d)*(1.-w*.6);}`,
+fragmentShader:`uniform float uRed,uFade;varying float vB,vA;
+void main(){vec2 c=gl_PointCoord-.5;float r=length(c);if(r>.5)discard;float a=smoothstep(.5,0.,r);
+ vec3 col=mix(mix(vec3(.533)*.6,vec3(.8,0.,0.),smoothstep(0.,.45,vB)),vec3(.91),smoothstep(.45,.95,vB));
+ col=mix(col,vec3(.8,0.,0.)*(.6+vB),uRed*.55*(1.-smoothstep(.75,1.,vB)));
+ gl_FragColor=vec4(col,a*vA*(.35+vB*.75)*uFade);}`});
+const pts=new THREE.Points(geo,pmat);pts.frustumCulled=false;const pgroup=new THREE.Group();pgroup.add(pts);scene.add(pgroup);
+
+/* photo dissolve (screen-space) */
+const PU={uTex:{value:null},uD:{value:1},uTime:U.uTime,uAspect:{value:1},uImgAspect:{value:1.708},uBeat:{value:0}};
+const photo=new THREE.Mesh(new THREE.PlaneGeometry(2,2),new THREE.ShaderMaterial({uniforms:PU,transparent:true,depthWrite:false,depthTest:false,
+vertexShader:`varying vec2 vUv;void main(){vUv=uv;gl_Position=vec4(position.xy,0.,1.);}`,
+fragmentShader:`uniform sampler2D uTex;uniform float uD,uTime,uAspect,uImgAspect,uBeat;varying vec2 vUv;
+float h(vec2 p){return fract(sin(dot(p,vec2(127.1,311.7)))*43758.5453);}
+float n(vec2 p){vec2 i=floor(p),f=fract(p);f=f*f*(3.-2.*f);return mix(mix(h(i),h(i+vec2(1,0)),f.x),mix(h(i+vec2(0,1)),h(i+1.),f.x),f.y);}
+float fbm(vec2 p){float v=0.,a=.5;for(int i=0;i<5;i++){v+=a*n(p);p*=2.03;a*=.5;}return v;}
+void main(){vec2 uv=vUv;float r=uAspect/uImgAspect;if(r>1.){uv.y=(uv.y-.5)/r+.5;}else{uv.x=(uv.x-.5)*r+.5;}
+ uv=(uv-.5)/(1.04+.02*sin(uTime*.1))+.5;vec3 c=texture2D(uTex,uv).rgb;float l=dot(c,vec3(.3,.59,.11));
+ vec3 duo=mix(vec3(0.),vec3(.8,0.,0.),smoothstep(.05,.6,l));duo=mix(duo,vec3(.91),smoothstep(.55,.95,l));vec3 col=mix(c*.75,duo,.55);
+ float k=fbm(vUv*vec2(uAspect,1.)*3.2+vec2(0.,-uTime*.03));float th=1.-uD;float m=smoothstep(th-.02,th+.02,k);
+ float e=smoothstep(th-.05,th,k)*(1.-smoothstep(th,th+.05,k))*step(.001,uD)*(1.-step(.999,uD));col+=vec3(.9,.05,0.)*e*1.4;
+ float vig=smoothstep(1.2,.35,length(vUv-.5)*1.6);gl_FragColor=vec4(col*vig*(.85+.15*uBeat),max(m,e)*.92*step(.001,uD));}`}));
+photo.frustumCulled=false;photo.renderOrder=-10;scene.add(photo);
+new THREE.TextureLoader().setCrossOrigin('anonymous').load(PHOTO_URL,t=>{t.minFilter=THREE.LinearFilter;PU.uTex.value=t;PU.uImgAspect.value=t.image.width/t.image.height;});
+
+/* ===== ENCARTE: 3D booklet ===== */
+const TS=isMob()?512:768;const PANEL=560;
+function pageCanvas(){const c=document.createElement('canvas');c.width=c.height=TS;const g=c.getContext('2d');
+  g.fillStyle='#0b0b0b';g.fillRect(0,0,TS,TS);
+  const id=g.getImageData(0,0,TS,TS);for(let i=0;i<id.data.length;i+=4){const v=(Math.random()-.5)*14;id.data[i]+=v;id.data[i+1]+=v;id.data[i+2]+=v;}g.putImageData(id,0,0);
+  return [c,g];}
+function drawPanel(g,idx,x,y,w,h){g.drawImage(encImg,(idx%4)*PANEL,Math.floor(idx/4)*PANEL,PANEL,PANEL,x,y,w,h);}
+function drawSpr(g,key,x,y,h,alpha,rot){const r=ATLAS.tags[key];const w=r[2]*h/r[3];g.save();g.globalAlpha=alpha||1;g.translate(x,y);g.rotate(rot||0);g.drawImage(atlasImg,r[0],r[1],r[2],r[3],0,0,w,h);g.restore();return w;}
+function tape(g,x,y,w,h,rot){g.save();g.translate(x,y);g.rotate(rot);g.fillStyle='rgba(200,200,200,.22)';g.fillRect(-w/2,-h/2,w,h);g.strokeStyle='rgba(255,255,255,.08)';g.strokeRect(-w/2,-h/2,w,h);g.restore();}
+function marks(g){const s=TS;g.strokeStyle='rgba(136,136,136,.5)';g.lineWidth=1;[[18,18],[s-18,18],[18,s-18],[s-18,s-18]].forEach(([x,y])=>{g.beginPath();g.moveTo(x-8,y);g.lineTo(x+8,y);g.moveTo(x,y-8);g.lineTo(x,y+8);g.stroke();});}
+const F=k=>Math.round(TS*k);
+function imagePage(i){const [c,g]=pageCanvas();drawPanel(g,i,F(.06),F(.06),F(.88),F(.88));
+  tape(g,F(.18),F(.07),F(.22),F(.05),-.12);tape(g,F(.84),F(.92),F(.24),F(.05),.18);
+  g.save();g.translate(F(.78),F(.14));g.rotate(.12);g.strokeStyle='#CC0000';g.lineWidth=F(.006);g.strokeRect(-F(.11),-F(.045),F(.22),F(.09));g.fillStyle='#CC0000';g.font=`700 ${F(.04)}px "Space Mono",monospace`;g.textAlign='center';g.textBaseline='middle';g.fillText('FAIXA '+String(i+1).padStart(2,'0'),0,0);g.restore();
+  drawSpr(g,TAGS[i],F(.08),F(.74),F(.15),.85,-.1);marks(g);return c;}
+function wrap(g,text,x,y,maxW,lh){const words=text.split(' ');let line='';for(const w of words){const t=line?line+' '+w:w;if(g.measureText(t).width>maxW&&line){g.fillText(line,x,y);y+=lh;line=w;}else line=t;}g.fillText(line,x,y);return y+lh;}
+function textPage(i){const [c,g]=pageCanvas();const t=TRACKS[i],n=NOTES[i];
+  g.fillStyle='#CC0000';g.font=`700 ${F(.2)}px Oswald,sans-serif`;g.textBaseline='top';g.fillText(String(i+1).padStart(2,'0'),F(.07),F(.04));
+  g.fillStyle='#888';g.font=`400 ${F(.022)}px "Space Mono",monospace`;g.fillText(('ECOS DA MINHA MENTE · '+t.theme).toUpperCase(),F(.07),F(.27));
+  const tw=ATLAS.tags['t'+(i+1)];let th=F(.12);if(tw[2]*th/tw[3]>F(.86))th=F(.86)*tw[3]/tw[2];drawSpr(g,'t'+(i+1),F(.06),F(.31),th,1,0);
+  let y=F(.31)+th+F(.05);g.font=`300 ${F(.045)}px Oswald,sans-serif`;
+  n.ex.forEach((l,k)=>{g.fillStyle=k===n.hl?'#CC0000':'#E8E8E8';g.font=`${k===n.hl?400:300} ${F(.045)}px Oswald,sans-serif`;g.fillText(l,F(.07),y);y+=F(.06);});
+  g.fillStyle='#CC0000';g.fillRect(F(.07),y+F(.02),F(.08),F(.004));
+  g.fillStyle='#9a9a9a';g.font=`italic 300 ${F(.032)}px Oswald,sans-serif`;y=wrap(g,n.note,F(.07),y+F(.05),F(.84),F(.042));
+  g.fillStyle='#555';g.font=`400 ${F(.02)}px "Space Mono",monospace`;g.fillText('LETRA COMPLETA ↓ BOTÃO ABAIXO',F(.07),F(.92));
+  for(let k=0;k<40;k++){g.fillStyle=Math.random()>.5?'#E8E8E8':'#0b0b0b';g.fillRect(F(.72)+k*F(.005),F(.9),F(.004)*(1+Math.random()*1.5),F(.04));}
+  marks(g);return c;}
+function coverPage(){const [c,g]=pageCanvas();drawPanel(g,9,0,0,TS,TS);g.fillStyle='rgba(0,0,0,.35)';g.fillRect(0,F(.74),TS,F(.26));
+  drawSpr(g,'ecos',F(.05),F(.78),F(.09),1,0);drawSpr(g,'erdop',F(.05),F(.04),F(.12),1,0);
+  g.fillStyle='#CC0000';g.font=`700 ${F(.024)}px "Space Mono",monospace`;g.textBaseline='top';g.fillText('ÁLBUM DE ESTREIA · 9 FAIXAS',F(.06),F(.9));marks(g);return c;}
+function backPage(){const [c,g]=pageCanvas();drawPanel(g,10,F(.55),F(.08),F(.38),F(.38));
+  g.fillStyle='#888';g.font=`400 ${F(.022)}px "Space Mono",monospace`;g.textBaseline='top';g.fillText('LADO A',F(.07),F(.08));
+  g.font=`400 ${F(.042)}px Oswald,sans-serif`;TRACKS.forEach((t,i)=>{g.fillStyle=i===4?'#CC0000':'#E8E8E8';g.fillText(String(i+1).padStart(2,'0')+'  '+t.t,F(.07),F(.14)+i*F(.06));});
+  drawSpr(g,'erdop',F(.07),F(.78),F(.1),.9,0);g.fillStyle='#666';g.font=`400 ${F(.018)}px "Space Mono",monospace`;g.fillText('UBÁ · MG · DESDE 2002 · ERDOP.OFICIAL',F(.07),F(.92));marks(g);return c;}
+function tex(c){const t=new THREE.CanvasTexture(c);t.encoding=THREE.sRGBEncoding;t.anisotropy=4;t.minFilter=THREE.LinearMipmapLinearFilter;return t;}
+const book=new THREE.Group();scene.add(book);book.visible=false;
+const PS=1.6;const pages=[];
+const fronts=[coverPage()];for(let i=0;i<9;i++)fronts.push(textPage(i));
+const backs=[];for(let i=0;i<9;i++)backs.push(imagePage(i));backs.push(backPage());
+// relief (normal map) + gloss from each page canvas
+function normalFrom(c,strength,paper){const W=384;const t=document.createElement('canvas');t.width=t.height=W;const g=t.getContext('2d');g.drawImage(c,0,0,W,W);const d=g.getImageData(0,0,W,W).data;const h=new Float32Array(W*W);
+  for(let i=0;i<W*W;i++){h[i]=(d[i*4]*.3+d[i*4+1]*.59+d[i*4+2]*.11)/255+(Math.random()-.5)*paper;}
+  const o=g.createImageData(W,W);for(let y=0;y<W;y++)for(let x=0;x<W;x++){const i=y*W+x;const l=h[y*W+Math.max(0,x-1)],r=h[y*W+Math.min(W-1,x+1)],u=h[Math.max(0,y-1)*W+x],dn=h[Math.min(W-1,y+1)*W+x];
+    let nx=(l-r)*strength,ny=(dn-u)*strength,nz=1;const L=Math.hypot(nx,ny,nz);o.data[i*4]=(nx/L*.5+.5)*255;o.data[i*4+1]=(ny/L*.5+.5)*255;o.data[i*4+2]=(nz/L*.5+.5)*255;o.data[i*4+3]=255;}
+  g.putImageData(o,0,0);const tx=new THREE.CanvasTexture(t);return tx;}
+const pageGeo=()=>{const g=new THREE.PlaneGeometry(PS,PS,24,1);g.translate(PS/2,0,0);g.userData.base=Float32Array.from(g.attributes.position.array);return g;};
+function bend(geo,amt,sign){const p=geo.attributes.position,b=geo.userData.base;for(let i=0;i<p.count;i++){const x=b[i*3];const k=x/PS;p.setZ(i,sign*amt*(k*k)*.55);}p.needsUpdate=true;geo.computeVertexNormals();}
+const bookEnv={value:null};
+for(let i=0;i<10;i++){const pv=new THREE.Group();
+  const isPhotoF=i===0,isPhotoB=i<9;
+  const fm=new THREE.MeshStandardMaterial({map:tex(fronts[i]),normalMap:normalFrom(fronts[i],isPhotoF?4:6,.02),normalScale:new THREE.Vector2(.9,.9),roughness:isPhotoF?.32:.72,metalness:0,envMapIntensity:isPhotoF?1.1:.35});
+  const bm=new THREE.MeshStandardMaterial({map:tex(backs[i]),normalMap:normalFrom(backs[i],isPhotoB?4:6,.02),normalScale:new THREE.Vector2(.9,.9),roughness:isPhotoB?.3:.72,metalness:0,envMapIntensity:isPhotoB?1.1:.35});
+  const fg=pageGeo(),bg=pageGeo();const f=new THREE.Mesh(fg,fm);const b=new THREE.Mesh(bg,bm);b.rotation.y=Math.PI;b.position.set(PS,0,-.002);
+  pv.add(f,b);book.add(pv);pages.push({pv,fm,bm,fg,bg,bent:0});}
+// booklet lights: key light follows the pointer so gloss slides over the photos
+const encLights=new THREE.Group();scene.add(encLights);encLights.visible=false;
+const eAmb=new THREE.AmbientLight(0x2a2a2a,.6);const eKey=new THREE.PointLight(0xfff4ee,2.2,9,1.6);eKey.position.set(.6,1.2,2.2);const eRed=new THREE.PointLight(0xcc0000,2.4,8,1.4);eRed.position.set(-2.4,-1,1.4);const eFlash=new THREE.PointLight(0xffffff,0,12,1);eFlash.position.set(0,3,1);
+encLights.add(eAmb,eKey,eRed,eFlash);
+// spine + shadow
+const shadow=new THREE.Mesh(new THREE.PlaneGeometry(PS*2.3,PS*1.25),new THREE.MeshBasicMaterial({color:0x000000,transparent:true,opacity:.6}));shadow.position.set(0,-.02,-.05);book.add(shadow);
+const spine=new THREE.Mesh(new THREE.BoxGeometry(.03,PS,.06),new THREE.MeshBasicMaterial({color:0x220000}));book.add(spine);
+
+
+/* rain on a window over the city (Gemini image) */
+const city=new THREE.Group();scene.add(city);city.visible=false;
+const WU={uTex:{value:null},uTime:U.uTime,uFlash:{value:0},uAsp:{value:1.79},uMouse:{value:new THREE.Vector2()}};
+const winMat=new THREE.ShaderMaterial({uniforms:WU,depthWrite:false,fog:false,
+vertexShader:`varying vec2 vUv;void main(){vUv=uv;gl_Position=projectionMatrix*modelViewMatrix*vec4(position,1.);}`,
+fragmentShader:`uniform sampler2D uTex;uniform float uTime,uFlash,uAsp;uniform vec2 uMouse;varying vec2 vUv;
+float h21(vec2 p){p=fract(p*vec2(123.34,456.21));p+=dot(p,p+45.32);return fract(p.x*p.y);}
+vec3 slide(vec2 uv,float t,float sc){vec2 a=vec2(uAsp,1.)*sc;vec2 st=uv*a;st.y+=t*.25;vec2 id=floor(st);float n=h21(id+.3);st.y+=n;id=floor(st);vec2 f=fract(st)-.5;n=h21(id);
+  float x=(n-.5)*.6+sin(uv.y*30.+n*6.)*.04;float y=fract(-t*.8*(.4+n)+n*7.)-.5;y=y*1.6;vec2 d=f-vec2(x,y);d.x*=1.6;float m=smoothstep(.12,.0,length(d*vec2(1.,.8)))*step(.35,n);
+  float trail=smoothstep(.05,.0,abs(f.x-x))*smoothstep(-.5,.5,f.y-y)*step(y,f.y)*step(.35,n)*.6;float td=smoothstep(.04,.0,length(vec2(f.x-x,fract((f.y)*6.)-.5)*vec2(1.,.4)))*trail;
+  return vec3(d*m,max(m,td));}
+vec3 still(vec2 uv,float t){vec2 st=uv*vec2(uAsp,1.)*26.;vec2 id=floor(st);vec2 f=fract(st)-.5;float n=h21(id);vec2 p=(vec2(h21(id+1.7),h21(id+3.1))-.5)*.6;float life=fract(t*.07+n);float r=.18*smoothstep(0.,.2,life)*smoothstep(1.,.8,life)*step(.55,n);
+  vec2 d=f-p;float m=smoothstep(r,r*.6,length(d));return vec3(d*m*2.,m);}
+void main(){vec2 uv=vUv;float t=uTime;vec3 a=slide(uv,t,3.),b=slide(uv*1.7+.3,t*1.1,3.5),c=still(uv,t);
+  vec2 off=(a.xy+b.xy)*.06+c.xy*.02;float drop=clamp(a.z+b.z+c.z,0.,1.);
+  vec2 tuv=uv+off+uMouse*.012;tuv=(tuv-.5)*.94+.5;
+  vec3 fog=texture2D(uTex,tuv,4.).rgb;vec3 sharp=texture2D(uTex,tuv).rgb;vec3 col=mix(fog*.85,sharp*1.1,drop);
+  col+=vec3(.9,.9,.95)*uFlash*(.25+drop*.6);
+  float v=smoothstep(1.1,.3,length(uv-.5));col*=v*.5;
+  gl_FragColor=vec4(col,1.);}`});
+const winPlane=new THREE.Mesh(new THREE.PlaneGeometry(1,1),winMat);winPlane.position.z=-5;city.add(winPlane);
+new THREE.TextureLoader().setCrossOrigin('anonymous').load(BG_URL,tx=>{tx.encoding=THREE.sRGBEncoding;tx.minFilter=THREE.LinearMipmapLinearFilter;tx.generateMipmaps=true;WU.uTex.value=tx;WU.uAsp.value=tx.image.width/tx.image.height;
+  try{const pm=new THREE.PMREMGenerator(renderer);const env=pm.fromEquirectangular(tx).texture;pages.forEach(p=>{p.fm.envMap=env;p.bm.envMap=env;p.fm.needsUpdate=p.bm.needsUpdate=true;});}catch(e){}});
+let nextBolt=6,bolt=0;
+
+/* ===== PALCO: stage builder ===== */
+const stage=new THREE.Group();scene.add(stage);stage.visible=false;
+// environment for metal/gloss reflections
+const pmrem=new THREE.PMREMGenerator(renderer);const envScene=new THREE.Scene();
+[[0xffffff,3,[0,6,0],[8,.2,8]],[0xcc0000,4,[-6,2,0],[.2,4,8]],[0xcc0000,4,[6,2,0],[.2,4,8]],[0x888888,1.5,[0,2,-6],[8,4,.2]]].forEach(([c,i,p,s])=>{const m=new THREE.Mesh(new THREE.BoxGeometry(...s),new THREE.MeshBasicMaterial({color:new THREE.Color(c).multiplyScalar(i)}));m.position.set(...p);envScene.add(m);});
+const envTex=pmrem.fromScene(envScene,.04).texture;
+const amb=new THREE.HemisphereLight(0x553333,0x080808,.55);const key=new THREE.DirectionalLight(0xffffff,.6);key.position.set(3,6,5);
+const rim=new THREE.PointLight(0xcc0000,2.2,14);rim.position.set(0,3,-3);stage.add(amb,key,rim);
+const grid=new THREE.GridHelper(40,40,0xcc0000,0x330000);grid.material.transparent=true;grid.material.opacity=.4;grid.position.y=-.01;stage.add(grid);
+const M=(c,o={})=>new THREE.MeshStandardMaterial(Object.assign({color:c,roughness:.55,metalness:.15,envMap:envTex,envMapIntensity:.9},o));
+const MB=c=>new THREE.MeshBasicMaterial({color:c});
+const box=(w,h,d,m)=>new THREE.Mesh(new THREE.BoxGeometry(w,h,d),m);
+const cyl=(r1,r2,h,m,s=24)=>new THREE.Mesh(new THREE.CylinderGeometry(r1,r2,h,s),m);
+const chrome=M(0xcfcfcf,{metalness:1,roughness:.18}),blackMetal=M(0x1b1b1b,{metalness:.8,roughness:.35}),rubber=M(0x0c0c0c,{roughness:.9,metalness:0});
+const tube=(a,b,r,m)=>{const v=new THREE.Vector3().subVectors(b,a);const c=cyl(r,r,v.length(),m,10);c.position.copy(a).addScaledVector(v,.5);c.quaternion.setFromUnitVectors(new THREE.Vector3(0,1,0),v.clone().normalize());return c;};
+const V=(x,y,z)=>new THREE.Vector3(x,y,z);
+// --- guitar family (body outline -> extrude, pickups, bridge, knobs, neck with frets, headstock + tuners, strings)
+function bodyShape(kind){const s=new THREE.Shape();
+  if(kind==='lp'){s.moveTo(0,-.46);s.bezierCurveTo(.34,-.46,.38,-.15,.25,-.02);s.bezierCurveTo(.2,.05,.3,.18,.24,.3);s.bezierCurveTo(.18,.4,.04,.36,0,.3);s.bezierCurveTo(-.06,.36,-.2,.42,-.26,.3);s.bezierCurveTo(-.33,.16,-.22,.04,-.27,-.04);s.bezierCurveTo(-.4,-.18,-.34,-.46,0,-.46);}
+  else if(kind==='jb'){s.moveTo(0,-.5);s.bezierCurveTo(.36,-.5,.4,-.18,.26,-.05);s.bezierCurveTo(.22,.02,.34,.22,.3,.42);s.bezierCurveTo(.26,.5,.16,.44,.12,.3);s.bezierCurveTo(.06,.26,-.06,.26,-.12,.3);s.bezierCurveTo(-.16,.56,-.3,.56,-.31,.36);s.bezierCurveTo(-.32,.18,-.24,.04,-.28,-.06);s.bezierCurveTo(-.42,-.2,-.36,-.5,0,-.5);}
+  else{s.moveTo(0,-.52);s.bezierCurveTo(.44,-.52,.46,-.12,.3,.0);s.bezierCurveTo(.26,.06,.34,.22,.28,.34);s.bezierCurveTo(.2,.46,.06,.42,0,.4);s.bezierCurveTo(-.06,.42,-.2,.46,-.28,.34);s.bezierCurveTo(-.34,.22,-.26,.06,-.3,0);s.bezierCurveTo(-.46,-.12,-.44,-.52,0,-.52);}
+  return s;}
+function guitar(kind,color,strings){const g=new THREE.Group();const depth=kind==='ac'?.14:.06;
+  const paint=M(color,{metalness:.25,roughness:.22});
+  const body=new THREE.Mesh(new THREE.ExtrudeGeometry(bodyShape(kind),{depth,bevelEnabled:true,bevelSize:.012,bevelThickness:.012,bevelSegments:3,curveSegments:24}),paint);g.add(body);
+  const fz=depth+.014;
+  if(kind==='ac'){const hole=cyl(.075,.075,.004,MB(0x050505),32);hole.rotation.x=Math.PI/2;hole.position.set(0,.14,fz);const ring=new THREE.Mesh(new THREE.TorusGeometry(.085,.006,8,40),M(0xe8e8e8));ring.position.set(0,.14,fz);const br=box(.18,.03,.012,M(0x1a0e08));br.position.set(0,-.25,fz);g.add(hole,ring,br);}
+  else{const pc=kind==='lp'?M(0xe8e8e8,{metalness:.9,roughness:.25}):M(0x111111);[[-.03,-.06],[0,-.24]].forEach(([dx,y])=>{const p=box(kind==='jb'?.16:.1,.045,.018,pc);p.position.set(dx*0,y,fz);g.add(p);});
+    const br=box(.13,.035,.02,chrome);br.position.set(0,-.36,fz);g.add(br);
+    [[.17,-.3],[.21,-.38],[.12,-.4],[.16,-.46]].slice(0,kind==='lp'?4:3).forEach(([x,y])=>{const k=cyl(.022,.022,.03,kind==='lp'?M(0xb8962e,{metalness:.6}):chrome,16);k.rotation.x=Math.PI/2;k.position.set(x,y,fz);g.add(k);});}
+  const nl=kind==='jb'?1.05:.82;const neck=box(.065,nl,.035,M(0x2a1a0f,{roughness:.5}));neck.position.set(0,.3+nl/2,depth*.6);g.add(neck);
+  for(let i=1;i<14;i++){const f=box(.066,.004,.004,chrome);f.position.set(0,.32+i*nl/15,depth*.6+.02);g.add(f);}
+  const hy=.32+nl+.1;const head=box(kind==='jb'?.09:.12,.22,.03,kind==='lp'?M(0x111111,{roughness:.3}):paint);head.position.set(kind==='jb'?.02:0,hy,depth*.6);g.add(head);
+  for(let i=0;i<strings;i++){const side=kind==='jb'?1:(i<strings/2?-1:1);const y=hy-.07+(kind==='jb'?i*.045:(i%(strings/2))*.06);const t=cyl(.012,.012,.04,chrome,8);t.rotation.z=Math.PI/2;t.position.set((kind==='jb'?.05:.06)*side+ (kind==='jb'?.02:0),y,depth*.6);g.add(t);}
+  const sm=new THREE.LineBasicMaterial({color:0xdddddd,transparent:true,opacity:.7});
+  for(let i=0;i<strings;i++){const x=(i-(strings-1)/2)*.011;const geo=new THREE.BufferGeometry().setFromPoints([V(x,-.36,fz+.012),V(x*.7,hy-.1,depth*.6+.022)]);g.add(new THREE.Line(geo,sm));}
+  return g;}
+function stand(obj,lean=.12){const g=new THREE.Group();[0,2.09,4.19].forEach(a=>g.add(tube(V(0,.02,0),V(Math.cos(a)*.22,0,Math.sin(a)*.22),.008,blackMetal)));g.add(tube(V(0,0,0),V(0,.32,0),.012,blackMetal));const cradle=box(.22,.02,.08,rubber);cradle.position.set(0,.32,.04);g.add(cradle);obj.scale.setScalar(.62);obj.rotation.x=-lean;obj.position.set(0,.33+.5*.62,-.02);g.add(obj);return g;}
+const ITEMS=[];
+function addItem(name,src,desc,obj,pos,from='sky',rot=0){obj.position.copy(pos);obj.rotation.y=rot;obj.userData.home=pos.clone();obj.userData.rot=rot;obj.visible=false;stage.add(obj);ITEMS.push({name,src,desc,obj,from});}
+// 1 platform + truss
+const plat=new THREE.Group();const deck=box(7,.35,3.8,M(0x0b0b0b,{roughness:.95,metalness:0}));deck.position.y=.175;const skirt=box(7.02,.33,.01,M(0x050505,{roughness:1}));skirt.position.set(0,.17,1.91);const edge=box(7.02,.03,.03,MB(0xcc0000));edge.position.set(0,.36,1.9);plat.add(deck,skirt,edge);
+const truss=new THREE.Group();const tm=M(0x8a8a8a,{metalness:.9,roughness:.3});
+function trussBeam(a,b){const g=new THREE.Group();const d=.11;[[d,d],[-d,d],[d,-d],[-d,-d]].forEach(([ox,oz])=>g.add(tube(V(a.x+ox*(a.x===b.x?1:0),a.y+(a.x===b.x?0:ox),a.z+oz),V(b.x+ox*(a.x===b.x?1:0),b.y+(a.x===b.x?0:ox),b.z+oz),.012,tm)));const n=Math.round(a.distanceTo(b)/.25);for(let i=0;i<n;i++){const p=a.clone().lerp(b,i/n),q=a.clone().lerp(b,(i+1)/n);g.add(tube(V(p.x+(a.x===b.x?d:0),p.y+(a.x===b.x?0:d),p.z+d),V(q.x-(a.x===b.x?d:0),q.y-(a.x===b.x?0:d),q.z-d),.006,tm));}return g;}
+truss.add(trussBeam(V(-3.4,.35,-1.7),V(-3.4,3.7,-1.7)),trussBeam(V(3.4,.35,-1.7),V(3.4,3.7,-1.7)),trussBeam(V(-3.4,3.7,-1.7),V(3.4,3.7,-1.7)));plat.add(truss);
+addItem('Palco','Estrutura','Plataforma e treliça: o mapa onde o show acontece.',plat,V(0,0,0),'ground');
+// 2 electronic drums
+const drums=new THREE.Group();const rackT=[[V(-.7,.75,.15),V(.7,.75,.15)],[V(-.7,.0,.15),V(-.7,.75,.15)],[V(.7,0,.15),V(.7,.75,.15)],[V(-.7,.75,.15),V(-.7,.75,-.25)],[V(.7,.75,.15),V(.7,.75,-.25)],[V(-.7,.75,-.25),V(.7,.75,-.25)]];rackT.forEach(([a,b])=>drums.add(tube(a,b,.022,chrome)));
+const pad=(x,y,z,r,tilt)=>{const g=new THREE.Group();const p=cyl(r,r,.05,rubber,32);const rimm=new THREE.Mesh(new THREE.TorusGeometry(r,.012,8,40),M(0x222222,{metalness:.6}));rimm.rotation.x=Math.PI/2;rimm.position.y=.026;const led=new THREE.Mesh(new THREE.TorusGeometry(r*.92,.004,6,40),MB(0xcc0000));led.rotation.x=Math.PI/2;led.position.y=.03;g.add(p,rimm,led);g.position.set(x,y,z);g.rotation.x=tilt;g.add(tube(V(0,-.02,0),V(0,-.18,-.05),.01,chrome));return g;};
+drums.add(pad(-.32,.86,.32,.15,.3),pad(.12,.9,.3,.16,.3),pad(.5,.86,.25,.17,.25),pad(-.1,.55,.45,.17,.2));
+const cym=(x,y,z,r)=>{const g=new THREE.Group();const c=cyl(r,r*.98,.012,M(0x161616,{metalness:.4,roughness:.5}),40);c.position.y=y;c.rotation.z=.15;g.add(c,tube(V(0,0,0),V(0,y,0),.01,chrome));[0,2.09,4.19].forEach(a=>g.add(tube(V(0,.3,0),V(Math.cos(a)*.18,0,Math.sin(a)*.18),.007,chrome)));g.position.set(x,0,z);return g;};
+drums.add(cym(-.85,1.3,.1,.2),cym(.85,1.4,0,.22),cym(.25,1.45,-.25,.2));
+const kickT=new THREE.Group();const kp=cyl(.14,.14,.05,rubber,32);kp.rotation.x=Math.PI/2;kp.position.set(0,.28,.32);const kst=box(.3,.04,.2,blackMetal);kst.position.set(0,.02,.3);kickT.add(kp,kst,tube(V(0,.02,.3),V(0,.28,.32),.02,chrome));const pedal=box(.08,.02,.24,chrome);pedal.position.set(0,.02,.55);kickT.add(pedal);drums.add(kickT);
+const modl=box(.26,.16,.12,M(0x202020,{roughness:.3}));modl.position.set(.82,.98,.25);const scr=box(.12,.04,.002,MB(0x5a0000));scr.position.set(.82,1.0,.312);drums.add(modl,scr);
+const throne=new THREE.Group();const seat=cyl(.17,.17,.08,M(0x111111,{roughness:.8}),24);seat.position.y=.5;throne.add(seat,tube(V(0,0,0),V(0,.48,0),.02,chrome));throne.position.set(0,0,-.35);drums.add(throne);
+addItem('Bateria','Yamaha DTXplorer','Pads com aro de LED, pratos eletrônicos, torre de bumbo e módulo com MIDI OUT: o pulso industrial.',drums,V(0,.35,-.85));
+// 3 amp (tolex, piping, grille, panel, knobs, handle)
+const amp=new THREE.Group();const cab=box(.92,.72,.4,M(0x131313,{roughness:.85}));cab.position.y=.36;const pipe=box(.94,.012,.405,M(0xcc0000));pipe.position.y=.56;
+const gtex=document.createElement('canvas');gtex.width=gtex.height=64;const gg=gtex.getContext('2d');gg.fillStyle='#2b1d14';gg.fillRect(0,0,64,64);gg.strokeStyle='#4a3424';for(let i=-64;i<64;i+=6){gg.beginPath();gg.moveTo(i,0);gg.lineTo(i+64,64);gg.stroke();gg.beginPath();gg.moveTo(i+64,0);gg.lineTo(i,64);gg.stroke();}
+const gt2=new THREE.CanvasTexture(gtex);gt2.wrapS=gt2.wrapT=THREE.RepeatWrapping;gt2.repeat.set(4,2.5);
+const grille=box(.84,.48,.01,new THREE.MeshStandardMaterial({map:gt2,roughness:1}));grille.position.set(0,.3,.205);
+const panel=box(.84,.1,.01,M(0x0a0a0a,{metalness:.5}));panel.position.set(0,.64,.205);amp.add(cab,pipe,grille,panel);
+for(let i=0;i<7;i++){const k=cyl(.018,.02,.03,M(0xe8e8e8,{metalness:.7,roughness:.3}),16);k.rotation.x=Math.PI/2;k.position.set(-.3+i*.08,.64,.22);amp.add(k);}
+const handle=box(.3,.03,.05,rubber);handle.position.y=.735;const badge=box(.16,.03,.005,MB(0xcc0000));badge.position.set(.3,.5,.215);amp.add(handle,badge);
+addItem('Amplificador','Meteoro','Tolex, tela e painel cromado — com a ferrugem que só a estrada dá.',amp,V(-2.35,.35,-.95),'sky',.15);
+// 4 bass / 5 guitar / 6 acoustic
+addItem('Baixo','Tagima Jazz Bass · sunburst','4 cordas, dois captadores single: o grave que segura a pista.',stand(guitar('jb',0x7a2408,4)),V(-1.45,.35,.25),'sky',.25);
+addItem('Guitarra','Washburn Les Paul · goldtop','Dois humbuckers e distorção suja — herança grunge.',stand(guitar('lp',0xb8962e,6)),V(1.45,.35,.25),'sky',-.25);
+addItem('Violão','Di Giorgio · eletroacústico','Para os momentos em que a máscara cai.',stand(guitar('ac',0x6b4626,6),.1),V(2.4,.35,.55),'sky',-.4);
+// 7 pedalboard
+const pb=new THREE.Group();const board=box(.95,.05,.34,M(0x1a1a1a,{roughness:.7}));board.rotation.x=-.08;pb.add(board);
+[[0xff6a00,'ST-2'],[0x00a651,'OD-3'],[0xdddddd,'DD100'],[0x1e6fd9,'Chorus'],[0xcc0000,'Boozter'],[0x777777,'Comp']].forEach(([c],k)=>{const p=new THREE.Group();const b=box(.12,.055,.2,M(c,{roughness:.35,metalness:.3}));const sw=cyl(.014,.014,.025,chrome,12);sw.position.set(0,.04,.05);const kn=cyl(.012,.012,.02,MB(0x111111),10);kn.position.set(-.03,.04,-.05);const kn2=kn.clone();kn2.position.x=.03;const ledp=cyl(.006,.006,.01,MB(0xff2020),8);ledp.position.set(0,.035,-.02);p.add(b,sw,kn,kn2,ledp);p.position.set(-.39+k*.155,.055,0);pb.add(p);});
+addItem('Pedalboard','Boss ST-2 · OD-3 · Behringer DD100 · NUX Chorus · Fire Boozter · compressor','Seis pedais em linha: a assinatura do timbre.',pb,V(.25,.37,1.15));
+// 8 vocal fx
+const vfx=new THREE.Group();const v1=box(.2,.06,.15,M(0x262626,{roughness:.4}));v1.position.x=-.13;const v2=box(.13,.06,.18,M(0xcc0000,{roughness:.35}));v2.position.x=.13;vfx.add(v1,v2);[-.17,-.09].forEach(x=>{const f=cyl(.02,.02,.02,chrome,12);f.position.set(x,.04,.03);vfx.add(f);});
+addItem('Voz & loop','Boss VE-20 · Boss RC-20','Processador de voz e loop station: camadas ao vivo.',vfx,V(-.55,.37,1.3));
+// 9 midi controller on X-stand
+const midi=new THREE.Group();const kb=box(.5,.05,.2,M(0x111111,{roughness:.4}));midi.add(kb);for(let i=0;i<25;i++){const k=box(.016,.012,.07,M(i%7===2||i%7===6?0x111111:0xe8e8e8,{roughness:.3}));k.position.set(-.21+i*.0175,.03,.055);midi.add(k);}
+for(let i=0;i<8;i++){const p=box(.035,.01,.035,MB(i<4?0xcc0000:0x550000));p.position.set(-.2+(i%4)*.045,.03,-.04-Math.floor(i/4)*.045);midi.add(p);}
+midi.add(tube(V(-.2,-.02,0),V(.2,-.95,0),.012,blackMetal),tube(V(.2,-.02,0),V(-.2,-.95,0),.012,blackMetal));
+addItem('Synth','Akai MPK Mini','25 teclas e 8 pads: as texturas industriais.',midi,V(1.95,1.32,-.55),'sky',-.3);
+// 10 mic on boom stand
+const mic=new THREE.Group();[0,2.09,4.19].forEach(a=>mic.add(tube(V(0,.25,0),V(Math.cos(a)*.28,0,Math.sin(a)*.28),.01,blackMetal)));mic.add(tube(V(0,.25,0),V(0,1.35,0),.013,blackMetal),tube(V(0,1.35,0),V(0,1.52,.38),.01,blackMetal));
+const cap=cyl(.04,.032,.17,M(0xb8b8b8,{metalness:1,roughness:.22}),24);cap.position.set(0,1.5,.42);cap.rotation.x=.9;const mesh=new THREE.Mesh(new THREE.SphereGeometry(.042,20,14),M(0xd0d0d0,{metalness:1,roughness:.4,wireframe:true}));mesh.position.set(0,1.56,.47);mic.add(cap,mesh);
+addItem('Microfone','Condensador + pedestal girafa','A voz de Warurase no centro do palco.',mic,V(0,.35,.85));
+// 11 lighting rig
+const rig=new THREE.Group();const heads=[];
+const movingHead=(x)=>{const g=new THREE.Group();const base=box(.26,.1,.2,M(0x151515));const yoke=new THREE.Group();[-.11,.11].forEach(dx=>{const a=box(.03,.2,.08,M(0x151515));a.position.set(dx,-.14,0);yoke.add(a);});
+  const head=cyl(.09,.11,.2,M(0x101010),24);head.rotation.x=Math.PI/2;head.position.y=-.2;const lens=cyl(.07,.07,.01,new THREE.MeshBasicMaterial({color:0x330000}),24);lens.rotation.x=Math.PI/2;lens.position.set(0,-.2,.105);yoke.add(head,lens);g.add(base,yoke);g.position.set(x,3.55,-1.7);g.userData={yoke,lens};heads.push(g);return g;};
+[-2.6,-1.3,0,1.3,2.6].forEach(x=>rig.add(movingHead(x)));
+const pars=[];[-2,-.7,.7,2].forEach(x=>{const p=cyl(.09,.11,.22,M(0x111111),16);p.position.set(x,.48,-1.55);p.rotation.x=-1.1;const l=cyl(.08,.08,.01,new THREE.MeshBasicMaterial({color:0x330000}),16);l.position.set(x,.56,-1.47);l.rotation.x=-1.1+Math.PI/2*0;rig.add(p,l);pars.push(l);});
+const strobes=[];[-3.2,3.2].forEach(x=>{const s=box(.32,.1,.08,M(0x111111));s.position.set(x,3.3,-1.55);const f=box(.28,.06,.01,new THREE.MeshBasicMaterial({color:0x222222}));f.position.set(x,3.3,-1.505);rig.add(s,f);strobes.push(f);});
+const hazer=box(.35,.22,.25,M(0x1a1a1a));hazer.position.set(-3.1,.47,1.2);rig.add(hazer);
+addItem('Iluminação','5 moving heads · 4 PAR LED · 2 strobos · hazer','Feixes vermelhos na treliça, contra-luz no chão e strobo nos picos — rig do rider.',rig,V(0,0,0),'fade');
+// 12 LED panels + VJ
+const vj=new THREE.Group();const PCV=document.createElement('canvas');PCV.width=512;PCV.height=256;const pg=PCV.getContext('2d');const ptex=new THREE.CanvasTexture(PCV);ptex.encoding=THREE.sRGBEncoding;
+const panelMat=new THREE.MeshBasicMaterial({map:ptex,toneMapped:false});
+const mkPanel=(w,h,x,y,z,uo,us)=>{const g=new THREE.Group();const fr=box(w+.08,h+.08,.06,M(0x111111,{metalness:.7}));const sc=new THREE.Mesh(new THREE.PlaneGeometry(w,h),panelMat.clone());sc.material.map=ptex.clone();sc.material.map.needsUpdate=true;sc.material.map.offset.set(uo,0);sc.material.map.repeat.set(us,1);sc.position.z=.032;g.add(fr,sc);g.position.set(x,y,z);return [g,sc];};
+const [pC,sC]=mkPanel(2.6,1.46,0,2.15,-1.85,.25,.5);const [pL,sL]=mkPanel(.9,1.6,-2.45,2.15,-1.8,0,.25);const [pR,sR]=mkPanel(.9,1.6,2.45,2.15,-1.8,.75,.25);
+vj.add(pC,pL,pR);const screens=[sC,sL,sR];
+const table=new THREE.Group();const ttop=box(.8,.04,.45,M(0x151515));ttop.position.y=.8;table.add(ttop);[[-.35,-.18],[.35,-.18],[-.35,.18],[.35,.18]].forEach(([x,z])=>table.add(tube(V(x,0,z),V(x,.78,z),.015,blackMetal)));
+const lap=box(.34,.015,.24,M(0x2a2a2a,{metalness:.6}));lap.position.set(-.12,.83,.02);const lid=box(.34,.22,.01,M(0x2a2a2a,{metalness:.6}));lid.position.set(-.12,.94,-.1);lid.rotation.x=-.25;const lsc=new THREE.Mesh(new THREE.PlaneGeometry(.31,.19),new THREE.MeshBasicMaterial({map:ptex}));lsc.position.set(-.12,.94,-.093);lsc.rotation.x=-.25;
+const ctrl=box(.22,.03,.16,M(0x111111));ctrl.position.set(.22,.835,.04);table.add(lap,lid,lsc,ctrl);for(let i=0;i<8;i++){const b=box(.03,.01,.03,MB(i%3?0x550000:0xcc0000));b.position.set(.15+(i%4)*.045,.855,.0+Math.floor(i/4)*.05);table.add(b);}
+table.position.set(4.3,0,1.6);table.rotation.y=-.6;vj.add(table);
+addItem('Painéis + VJ','Painel central + 2 laterais · estação de VJ','Cada faixa dispara um cue: fundo, figura e frase — a mesma estrutura do rider.',vj,V(0,0,0),'fade');
+// 13 venue sound
+const venue=new THREE.Group();const spk=(x,y,z,w,h,d,cones)=>{const g=new THREE.Group();const c=box(w,h,d,M(0x0d0d0d,{roughness:.9}));g.add(c);cones.forEach(([cx,cy,r])=>{const cn=new THREE.Mesh(new THREE.ConeGeometry(r,.06,32,1,true),M(0x1c1c1c,{roughness:.6,side:THREE.DoubleSide}));cn.rotation.x=-Math.PI/2;cn.position.set(cx,cy,d/2-.02);const dc=new THREE.Mesh(new THREE.SphereGeometry(r*.25,12,8),M(0x2a2a2a));dc.position.set(cx,cy,d/2-.03);const rg=new THREE.Mesh(new THREE.TorusGeometry(r,.008,8,32),blackMetal);rg.position.set(cx,cy,d/2+.005);g.add(cn,dc,rg);});g.position.set(x,y,z);return g;};
+[-3.95,3.95].forEach(x=>{venue.add(spk(x,.35,.7,.8,.7,.65,[[0,0,.26]]),spk(x,.98,.7,.8,.55,.6,[[-.18,0,.12],[.18,0,.12]]),spk(x,1.5,.7,.8,.45,.55,[[0,0,.09]]));});
+[-.8,.8].forEach(x=>{const w=spk(x,.5,1.6,.6,.26,.42,[[-.12,0,.08]]);w.rotation.x=-.55;venue.add(w);});
+addItem('Som da casa','PA · subgraves · retornos','Pedimos à produção do evento — quantidades no rider.',venue,V(0,0,0),'fade');
+// beams for final
+const beams=new THREE.Group();const beamMat=new THREE.MeshBasicMaterial({color:0xcc0000,transparent:true,opacity:0,blending:THREE.AdditiveBlending,depthWrite:false,side:THREE.DoubleSide});
+heads.forEach((h,k)=>{const b=new THREE.Mesh(new THREE.ConeGeometry(.5,4,24,1,true),beamMat.clone());b.geometry.translate(0,-2,0);b.position.set(h.position.x,3.35,-1.55);b.userData.k=k;beams.add(b);});stage.add(beams);
+const spot=new THREE.SpotLight(0xffffff,0,12,.5,.6);spot.position.set(0,4,3);spot.target.position.set(0,.4,.6);stage.add(spot,spot.target);
+// cue sheet (same structure as the rider)
+const CUES=[
+ {t:'ARMADILHA',fundo:'labirinto',fig:0,txt:'Meu cérebro é um labirinto',luz:'vermelho + strobo'},
+ {t:'GATO DE RUA',fundo:'rua',fig:1,txt:'Cada queda você levanta',luz:'branco frio, contra-luz'},
+ {t:'CINZAS DE OURO',fundo:'cinzas',fig:2,txt:'A troco de quê?',luz:'cinza → vermelho'},
+ {t:'BEIJO NA PELE',fundo:'lua',fig:3,txt:'É doce e cruel',luz:'vermelho baixo, fumaça'},
+ {t:'RESISTA',fundo:'explosao',fig:4,txt:'NÃO CAIA! LEVANTE!',luz:'branco total + flash'},
+ {t:'NUNCA FUI SEU',fundo:'vidro',fig:5,txt:'Nunca fui seu!',luz:'contra-luz vermelha'},
+ {t:'VENENO',fundo:'fumaca',fig:6,txt:'Você é meu veneno',luz:'vermelho no grave'},
+ {t:'FICA BEM',fundo:'tunel',fig:7,txt:'Eu ainda vejo uma luz lá no fim',luz:'branco baixo, fade'},
+ {t:'FARSA FAMA',fundo:'anjos',fig:8,txt:'Eu sou a sombra',luz:'contra-luz + strobo final'}];
+let cueIdx=0,lastPanelDraw=0;
+function drawPanels(t,lvl){const W=512,H=256,g=pg,c=CUES[cueIdx];g.fillStyle='#000';g.fillRect(0,0,W,H);g.save();
+  const red='#CC0000';
+  if(c.fundo==='labirinto'){g.strokeStyle=red;g.lineWidth=2;for(let i=0;i<14;i++){const r=i*20+(t*30)%20;g.strokeRect(W/2-r,H/2-r*.5,r*2,r);}}
+  else if(c.fundo==='rua'){for(let i=0;i<24;i++){const x=(i*37+t*40)%W;g.fillStyle=i%5?'#1a1a1a':'#333';g.fillRect(x,H*.35,22,H*.65);g.fillStyle=Math.sin(i*7+Math.floor(t*2))>.6?red:'#444';g.fillRect(x+6,H*.45,4,4);}}
+  else if(c.fundo==='cinzas'){for(let i=0;i<180;i++){const x=(i*53.3)%W,y=((i*29.7)+t*40*(.5+(i%5)/5))%H;g.fillStyle=i%7?'#888':red;g.fillRect(x,y,2,2);}}
+  else if(c.fundo==='lua'){g.fillStyle=red;g.beginPath();g.arc(W*.72,H*.4,60+lvl*20,0,7);g.fill();}
+  else if(c.fundo==='explosao'){for(let i=0;i<220;i++){const a=i*2.39,r=((t*120+i*9)%300);g.fillStyle=i%4?'#E8E8E8':red;g.fillRect(W/2+Math.cos(a)*r,H/2+Math.sin(a)*r*.6,2,2);}}
+  else if(c.fundo==='vidro'){g.strokeStyle='#E8E8E8';g.lineWidth=1;for(let i=0;i<16;i++){const a=i*.39+.1;g.beginPath();g.moveTo(W/2,H/2);g.lineTo(W/2+Math.cos(a)*400,H/2+Math.sin(a)*400);g.stroke();}}
+  else if(c.fundo==='fumaca'){for(let i=0;i<10;i++){const gr=g.createRadialGradient(W*(i/10)+Math.sin(t+i)*40,H*.7,0,W*(i/10),H*.7,120);gr.addColorStop(0,'rgba(204,0,0,.5)');gr.addColorStop(1,'rgba(0,0,0,0)');g.fillStyle=gr;g.fillRect(0,0,W,H);}}
+  else if(c.fundo==='tunel'){for(let i=12;i>0;i--){const s=((i/12)+t*.15)%1;g.strokeStyle=`rgba(232,232,232,${s})`;g.strokeRect(W/2-W*s/2,H/2-H*s/2,W*s,H*s);}}
+  else{for(let i=0;i<40;i++){g.fillStyle=i%3?'#222':red;const x=(i*61)%W,y=(i*37)%H;g.fillRect(x,y,3,40);}}
+  g.restore();
+  // figure from encarte atlas
+  g.globalAlpha=.85+lvl*.15;g.drawImage(encImg,(c.fig%4)*PANEL,Math.floor(c.fig/4)*PANEL,PANEL,PANEL,W/2-H*.5,0,H,H);g.globalAlpha=1;
+  // scanlines + text
+  g.fillStyle='rgba(0,0,0,.25)';for(let y=0;y<H;y+=3)g.fillRect(0,y,W,1);
+  g.fillStyle='#E8E8E8';g.font='700 26px Oswald,sans-serif';g.textAlign='center';g.fillText(c.txt.toUpperCase(),W/2,H-22);
+  g.fillStyle=red;g.font='400 12px "Space Mono",monospace';g.fillText('CUE '+String(cueIdx+1).padStart(2,'0')+' · '+c.t,W/2,22);
+  screens.forEach(s=>s.material.map.needsUpdate=true);lsc.material.map.needsUpdate=true;}
+const checklist=document.getElementById('checklist');ITEMS.forEach(it=>{const li=document.createElement('li');li.textContent=it.name;checklist.appendChild(li);});
+document.getElementById('win').appendChild(spr('palco',isMob()?60:96));
+
+/* ===== layout / resize ===== */
+let ZF=1.24;
+function resize(){const w=innerWidth,h=innerHeight;ZF=w<h?1.12:1.24;renderer.setSize(w,h,false);camera.aspect=w/h;camera.fov=w<h?58:40;camera.updateProjectionMatrix();PU.uAspect.value=w/h;}
+addEventListener('resize',resize);resize();
+
+/* ===== interactions ===== */
+let camX=0;const mouse={x:0,y:0};addEventListener('pointermove',e=>{mouse.x=e.clientX/innerWidth*2-1;mouse.y=-(e.clientY/innerHeight*2-1);});
+const modal=document.getElementById('modal');let curTrack=0;
+const LBL={verse:'Verso','verse 1':'Verso','verse 2':'Verso',chorus:'Refrão','pre-chorus':'Pré-refrão',bridge:'Ponte',outro:'Final',intro:'Intro'};
+function openLyrics(i){const t=TRACKS[i];document.getElementById('mk').textContent='Faixa '+String(i+1).padStart(2,'0')+' · '+t.theme;document.getElementById('mt').textContent=t.t;document.getElementById('mn').textContent=NOTES[i].note;
+  const parts=t.l.split(/\n?\[([^\]]+)\]\n?/).filter((x,k)=>k>0);let h='';for(let k=0;k<parts.length;k+=2){const key=parts[k].trim().toLowerCase();const txt=(parts[k+1]||'').trim().replace(/&/g,'&amp;').replace(/</g,'&lt;');h+=`<div class="sec">${LBL[key]||parts[k]}</div><p class="${key==='chorus'?'ch':''}">${txt}</p>`;}
+  document.getElementById('mb').innerHTML=h;const sh=modal.querySelector('.sheet');if(sh)sh.scrollTop=0;const was=modal.classList.contains('on');modal.classList.add('on');modal.dataset.i=i;if(!was)document.getElementById('mx').focus();}
+document.getElementById('readbtn').onclick=()=>openLyrics(curTrack);{const ptE=document.getElementById('pt');ptE.style.cursor='pointer';ptE.title='Ler a letra';ptE.setAttribute('role','button');ptE.tabIndex=0;ptE.onclick=()=>openLyrics(AUD.idx);ptE.onkeydown=e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();openLyrics(AUD.idx);}};}
+
+document.getElementById('mx').onclick=()=>modal.classList.remove('on');
+modal.addEventListener('click',e=>{if(e.target===modal)modal.classList.remove('on');});
+addEventListener('keydown',e=>{if(e.key==='Escape')modal.classList.remove('on');});
+document.getElementById('skipenc').onclick=()=>scrollTo({top:SC[7].start*innerHeight,behavior:'smooth'});
+document.getElementById('copy-mail').onclick=async()=>{try{await navigator.clipboard.writeText('erdop.oficial@gmail.com');}catch(e){}const t=document.getElementById('toast');t.classList.add('on');setTimeout(()=>t.classList.remove('on'),1600);};
+
+
+/* ===== player (Wix Music streams) + social bar ===== */
+const MP3=['afab9efe50ac46a787b0b910ea19413b','33a9ffcfd64f4599ac0dd01eb20d3017','80d4960d545a4039af6cf924a6e921a3','a289e2e5bacb45719d22638e52373e49','1070edc71d61488aa5d3a37b83618acd','04facb6bfb23427ab0d4f6db8eeaa4be','b2cddf49f25d4a13b9c05487a610f33c','b41f798ee65441db851d131b4cff7948','8f6d90e35a7b47e494f7bfcd6d7eda8d'].map(h=>`https://static.wixstatic.com/preview/3a294f_${h}-128.mp3`);
+const AUD={on:false,lvl:0,idx:0,an:null,td:null,fd:null,cors:true};const audio=new Audio();audio.crossOrigin='anonymous';audio.preload='none';audio.setAttribute('playsinline','');
+const pbar=document.getElementById('pbar'),pplay=document.getElementById('pplay'),pt=document.getElementById('pt'),ptm=document.getElementById('ptm'),pcv=document.getElementById('pcv'),pwave=document.getElementById('pwave');const pcx=pcv.getContext('2d');
+const fmt=x=>isFinite(x)?Math.floor(x/60)+':'+String(Math.floor(x%60)).padStart(2,'0'):'0:00';
+const ptl=document.getElementById('ptl');TRACKS.forEach((tr,i)=>{const b=document.createElement('button');b.type='button';b.setAttribute('role','listitem');b.setAttribute('aria-label','Tocar '+tr.t);b.innerHTML='<b>'+String(i+1).padStart(2,'0')+'</b>'+tr.t;b.onclick=()=>{play(i);openLyrics(i);};b.setAttribute('aria-label','Tocar e ler a letra de '+tr.t);ptl.appendChild(b);});
+function setTrack(i){AUD.idx=(i+9)%9;audio.src=MP3[AUD.idx];pt.textContent=String(AUD.idx+1).padStart(2,'0')+' · '+TRACKS[AUD.idx].t;[...ptl.children].forEach((b,k)=>{b.classList.toggle('on',k===AUD.idx);if(k===AUD.idx)b.setAttribute('aria-current','true');else b.removeAttribute('aria-current');});if(typeof modal!=='undefined'&&modal.classList.contains('on')&&+modal.dataset.i!==AUD.idx)openLyrics(AUD.idx);const cb=ptl.children[AUD.idx];if(cb)ptl.scrollTo({left:cb.offsetLeft-ptl.clientWidth/2+cb.clientWidth/2,behavior:'smooth'});}
+function ensureCtx(){if(AUD.an||!AUD.cors)return;try{const C=new (window.AudioContext||window.webkitAudioContext)();const src=C.createMediaElementSource(audio);const an=C.createAnalyser();an.fftSize=1024;src.connect(an);an.connect(C.destination);AUD.ctx=C;AUD.an=an;AUD.td=new Uint8Array(an.fftSize);AUD.fd=new Uint8Array(an.frequencyBinCount);}catch(e){}}
+async function play(i){if(i!==undefined&&i!==AUD.idx||!audio.src)setTrack(i===undefined?AUD.idx:i);ensureCtx();try{if(AUD.ctx&&AUD.ctx.state==='suspended')await AUD.ctx.resume();await audio.play();}catch(e){if(AUD.cors){AUD.cors=false;audio.removeAttribute('crossorigin');audio.src=MP3[AUD.idx];audio.load();try{await audio.play();}catch(e2){toastMsg('Toque bloqueado neste navegador — abra no site');}}else toastMsg('Toque bloqueado neste navegador — abra no site');}}
+audio.addEventListener('error',()=>{if(AUD.cors&&!AUD.an){AUD.cors=false;audio.removeAttribute('crossorigin');const tm=audio.currentTime;audio.src=MP3[AUD.idx];audio.load();audio.play().catch(()=>{});}});
+function toastMsg(m){const t=document.getElementById('toast');t.textContent=m;t.classList.add('on');setTimeout(()=>{t.classList.remove('on');t.textContent='E-mail copiado';},2600);}
+audio.addEventListener('play',()=>{AUD.on=true;pbar.classList.add('on');pplay.textContent='❚❚';pplay.setAttribute('aria-label','Pausar');});
+audio.addEventListener('pause',()=>{AUD.on=false;pbar.classList.remove('on');pplay.textContent='▶';pplay.setAttribute('aria-label','Tocar');});
+audio.addEventListener('ended',()=>play(AUD.idx+1));
+pplay.onclick=()=>audio.paused?play():audio.pause();
+document.getElementById('pnext').onclick=()=>play(AUD.idx+1);document.getElementById('pprev').onclick=()=>play(AUD.idx-1);
+pwave.onclick=e=>{if(!audio.duration)return;const r=pwave.getBoundingClientRect();audio.currentTime=audio.duration*(e.clientX-r.left)/r.width;};
+setTrack(0);
+function drawWave(t){const w=pcv.clientWidth*devicePixelRatio,h=pcv.clientHeight*devicePixelRatio;if(pcv.width!==w||pcv.height!==h){pcv.width=w;pcv.height=h;}
+  pcx.clearRect(0,0,w,h);const prog=audio.duration?audio.currentTime/audio.duration:0;const n=96;const pts=[];
+  for(let i=0;i<=n;i++){let v;if(AUD.on&&AUD.an){v=(AUD.td[Math.floor(i/n*(AUD.td.length-1))]-128)/128;}else v=Math.sin(i*.5+t*2)*.04+Math.sin(i*.13+t)*.03;pts.push([i/n*w,h/2+v*h*.45]);}
+  const line=(from,to,col,wid)=>{pcx.beginPath();pts.slice(from,to+1).forEach(([x,y],k)=>k?pcx.lineTo(x,y):pcx.moveTo(x,y));pcx.strokeStyle=col;pcx.lineWidth=wid*devicePixelRatio;pcx.stroke();};
+  const cut=Math.round(prog*n);pcx.shadowColor='#ff1a1a';pcx.shadowBlur=(AUD.on?16:8)*devicePixelRatio;line(0,cut,'#ff2a2a',2.6);pcx.shadowBlur=0;line(0,cut,'#ffe5e5',.8);pcx.shadowBlur=4*devicePixelRatio;line(cut,n,'rgba(255,60,60,.38)',1.2);pcx.shadowBlur=0;
+  ptm.textContent=fmt(audio.currentTime)+' / '+fmt(audio.duration);}
+function audioFrame(t){if(AUD.on&&AUD.an){AUD.an.getByteTimeDomainData(AUD.td);AUD.an.getByteFrequencyData(AUD.fd);let s=0;for(let i=1;i<12;i++)s+=AUD.fd[i];const v=s/11/255;AUD.lvl+= (Math.max(0,(v-.45)*2.2)-AUD.lvl)*.35;}else AUD.lvl*=.9;drawWave(t);}
+
+document.getElementById('listenbtn').onclick=()=>play(curTrack);
+/* ===== scroll → state ===== */
+const S={asm:0,word:0,glitch:0,wind:0,burst:0,red:.25,photo:1,zoom:3.6,fade:1};
+const cl=(x,a=0,b=1)=>Math.min(b,Math.max(a,x)),ss=(a,b,x)=>{const t=cl((x-a)/(b-a));return t*t*(3-2*t);};
+const els={dip:document.getElementById('dip'),flash:document.getElementById('flash'),hud:document.getElementById('hud'),final:document.getElementById('final'),encui:document.getElementById('encui'),enct:document.getElementById('enctitle'),hint:document.getElementById('hint'),lasers:document.getElementById('lasers'),shade:document.getElementById('shade')};
+let flashed=false,lastItem=-1;
+function frame(dt,t){
+  const y=scrollY/innerHeight;let si=0;for(let i=0;i<SC.length;i++)if(y>=SC[i].start)si=i;
+  const sc=SC[si],lp=cl((y-sc.start)/sc.len);
+  [...rail.children].forEach((b,i)=>b.classList.toggle('on',i===si));
+  els.hint.style.opacity=y<.15?1:0;
+  // dip to black around big transitions
+  const bnd=[SC[6].start,SC[7].start,SC[8].start];let dip=0;bnd.forEach(b=>{dip=Math.max(dip,1-cl(Math.abs(y-b)/.18));});els.dip.style.opacity=dip;
+  // targets
+  const T={asm:0,word:0,glitch:0,wind:0,burst:0,red:.25,photo:0,zoom:3.4,fade:1};
+  if(sc.id==='origem'){T.photo=1-ss(.35,.95,lp);T.asm=0;T.zoom=3.6;}
+  else if(sc.id==='sombra'){T.asm=ss(0,.6,lp);T.red=.35;T.zoom=3.2-lp*.3;}
+  else if(sc.id==='labirinto'){T.asm=1;T.glitch=.4+.6*Math.sin(lp*Math.PI);T.red=.55;T.zoom=2.7;}
+  else if(sc.id==='veneno'){T.asm=1;T.red=1;T.zoom=2.1+lp*.5;T.wind=ss(.55,1,lp)*.6;T.glitch=.1;}
+  else if(sc.id==='resista'){T.asm=1;T.burst=Math.sin(lp*Math.PI);T.red=.45;T.zoom=2.4;if(lp>.15&&lp<.5&&!flashed&&!reduce){flashed=true;els.flash.style.transition='none';els.flash.style.opacity=.55;requestAnimationFrame(()=>{els.flash.style.transition='opacity 1.2s';els.flash.style.opacity=0;});}}
+  else if(sc.id==='nome'){T.asm=1;T.word=ss(.05,.35,lp)+ss(.5,.8,lp);T.red=.2;T.zoom=2.6;}
+  else {T.asm=0;T.fade=sc.id==='final'?.18:.35;T.zoom=3.4;}
+  if(sc.id!=='resista')flashed=false;
+  for(const k in S){const sp=k==='photo'?6:k==='asm'?3:k==='word'?4:5;S[k]+=(T[k]-S[k])*Math.min(1,dt*sp);}
+  U.uAsm.value=S.asm;U.uWord.value=S.word;U.uGlitch.value=reduce?0:S.glitch;U.uWind.value=S.wind;U.uBurst.value=S.burst;U.uRed.value=S.red;U.uFade.value=S.fade;
+  PU.uD.value=S.photo<.01?0:S.photo;
+  audioFrame(t);const beat=reduce?0:(AUD.on?Math.min(1,AUD.lvl*1.6):Math.pow(1-((t*128/60)%1),4)*.6);U.uBeat.value=beat;PU.uBeat.value=beat;
+  U.uMouse.value.lerp(new THREE.Vector2(mouse.x,mouse.y),.05);
+  // copy
+  setCopy(si<=5?sc.id:null);
+  els.shade.style.opacity=si<=5?1:.0;els.lasers.style.opacity=si<=5?1:(si===7?.5:(si===8?.25:0));
+  const particlesOn=si<=5||si>=8;pgroup.visible=true;
+  // booklet
+  const inEnc=sc.id==='encarte';book.visible=inEnc;city.visible=inEnc;
+  encLights.visible=inEnc;if(inEnc){const dist=5;const vh=2*Math.tan(camera.fov*Math.PI/360)*(camera.position.z+dist);winPlane.scale.set(vh*camera.aspect*1.15,vh*1.15,1);winPlane.position.set(camera.position.x,camera.position.y,-dist);
+    WU.uMouse.value.set(mouse.x,mouse.y);eKey.position.set(mouse.x*2.2,mouse.y*1.4+.6,2.2);eRed.intensity=2+beat*2;
+    if(t>nextBolt){bolt=1;nextBolt=t+6+Math.random()*8;}bolt*=Math.pow(.02,dt);const fl=bolt*(.6+.4*Math.sin(t*60));WU.uFlash.value=fl;eFlash.intensity=fl*3;}
+  if(inEnc){
+    const flips=pages.length;const fp=cl((lp-.04)/.9)*flips; // 0..10
+    let openAmt=0;
+    pages.forEach((p,i)=>{const f=cl(fp-i);const e=f*f*(3-2*f);p.pv.rotation.y=-Math.PI*e;
+      const lift=Math.sin(Math.PI*e)*.25;p.pv.position.z=(e>.5?(i*.004):-(i*.004))+lift;
+      const sh=1-.25*Math.sin(Math.PI*e);p.fm.color.setScalar(sh);p.bm.color.setScalar(sh);
+      const amt=Math.sin(Math.PI*e);if(Math.abs(amt-p.bent)>.01){p.bent=amt;bend(p.fg,amt,-1);bend(p.bg,amt,1);}});
+    openAmt=cl(fp)-cl(fp-9);
+    const cur=Math.min(8,Math.max(0,Math.floor(fp-.5)));curTrack=cur;
+    const showT=fp>.6&&fp<9.4;
+    document.getElementById('encnum').textContent='Encarte · faixa '+String(cur+1).padStart(2,'0')+' de 09';document.getElementById('encname').textContent=TRACKS[cur].t;
+    const bx=-PS/2*(1-openAmt)+(fp>9?PS/2*cl(fp-9):0);book.position.x+=(bx-book.position.x)*Math.min(1,dt*6);
+    const tilt=-.18+mouse.y*.06;book.rotation.x+=(tilt-book.rotation.x)*.08;book.rotation.y+=((mouse.x*.12)-book.rotation.y)*.08;
+    const asp=innerWidth/innerHeight;
+    if(asp<.95){book.scale.setScalar(1);const u=((fp%1)+1)%1;let g;
+      if(u<.25)g=1;else if(u<.75)g=1-(u-.25)*4;else if(u<.92)g=-1;else g=-1+(u-.92)*25;g=Math.max(-1,Math.min(1,g));
+      const side=fp>9?-1:1;const tx=book.position.x+PS/2*(openAmt*g+(1-openAmt)*side);
+      const z=PS*1.1/(2*Math.tan(20*Math.PI/180)*asp);camX+=(tx-camX)*Math.min(1,dt*5);camera.position.set(camX,-.1,z);camera.lookAt(camX,-.02,0);}
+    else{book.scale.setScalar(isMob()?.78:1);const want=isMob()?(openAmt>.5?4.7:3.7):3.9;camX=0;camera.position.set(0,-.12,want);camera.lookAt(0,0,0);}
+  }
+  // stage
+  els.enct.classList.toggle('on',inEnc&&cl((lp-.04)/.9)*pages.length>.6&&cl((lp-.04)/.9)*pages.length<9.4);
+  const inStage=sc.id==='palco';stage.visible=inStage;els.hud.classList.toggle('on',inStage);
+  if(inStage){
+    const nI=ITEMS.length;const ip=cl(lp/.86)*nI;let done=0;
+    ITEMS.forEach((it,i)=>{const k=cl(ip-i);const o=it.obj;o.visible=k>0;
+      if(it.from==='fade'){o.scale.setScalar(.6+.4*k);o.position.y=it.obj.userData.home.y;}
+      else if(it.from==='ground'){o.position.y=it.obj.userData.home.y-(1-ss(0,1,k))*1.2;}
+      else{const b=k<1?(1-k):0;const bounce=k<1?Math.abs(Math.sin(k*Math.PI*2.5))*(1-k)*.3:0;o.position.y=it.obj.userData.home.y+b*b*4+bounce;o.rotation.y=(1-k)*1.4;}
+      if(k>=1)done++;});
+    const cur=Math.min(nI-1,Math.floor(ip));
+    [...checklist.children].forEach((li,i)=>{li.className=i<done?'ok':(i===cur&&done<nI?'cur':'');});
+    const pct=Math.round(cl(lp/.86)*100);document.getElementById('xp').style.width=pct+'%';document.getElementById('pct').textContent=(pct<100?'MONTAGEM ':'PALCO MONTADO · ')+pct+'%';
+    if(cur!==lastItem){lastItem=cur;const it=ITEMS[cur];document.getElementById('cardt').textContent='Item '+String(cur+1).padStart(2,'0')+'/'+String(nI).padStart(2,'0');document.getElementById('cardn').textContent=it.name;document.getElementById('cardd').textContent=it.desc;document.getElementById('cards').textContent=it.src;}
+    const win=lp>.88;document.getElementById('win').classList.toggle('on',win);
+    const lo=ss(.86,.95,lp);const lightOn=cl(ip-10),vjOn=cl(ip-11);const L=Math.max(lightOn*.55,lo);
+    beams.children.forEach(b=>{b.material.opacity=L*(.12+.14*beat);b.rotation.z=Math.sin(t*.8+b.userData.k)*.45*L;b.rotation.x=Math.sin(t*.6+b.userData.k*1.7)*.25*L;});
+    heads.forEach((h,k)=>{h.userData.yoke.rotation.y=Math.sin(t*.8+k)*.45*L;h.userData.yoke.rotation.x=Math.sin(t*.6+k*1.7)*.25*L;h.userData.lens.material.color.setHex(L>.05?0xff2020:0x330000);});
+    pars.forEach((p,k)=>p.material.color.setRGB(.2+.8*L*(.6+.4*beat),0,0));strobes.forEach(f=>f.material.color.setHex(L>.3&&beat>.85?0xffffff:0x222222));
+    spot.intensity=lo*2.2;rim.intensity=1.2+L*2+beat*L*1.5;
+    if(vjOn>0){cueIdx=AUD.on?AUD.idx:Math.floor(t/3.2)%9;if(t-lastPanelDraw>1/24){lastPanelDraw=t;drawPanels(t,beat);}}
+    if(win){const c=CUES[cueIdx];document.getElementById('cardt').textContent='Cue '+String(cueIdx+1).padStart(2,'0')+' · painéis + luz';document.getElementById('cardn').textContent=c.t;document.getElementById('cardd').textContent='Painel: '+c.txt+' · Luz: '+c.luz;document.getElementById('cards').textContent=AUD.on?'sincronizado com o player':'aperte ▶ no player para sincronizar';lastItem=-1;}
+    // orbit camera like a game
+    const ang=-.9+lp*1.5+mouse.x*.15;const rad=isMob()?10:7;const camY=isMob()?4:2.8;
+    camera.position.set(Math.sin(ang)*rad,camY-lp*.6,Math.cos(ang)*rad);camera.lookAt(0,.9,0);
+  }
+  els.final.classList.toggle('on',sc.id==='final'&&lp>.05);
+  if(!inEnc&&!inStage){camera.position.set(0,0,S.zoom*ZF);camera.lookAt(0,0,0);
+    pgroup.position.x=(innerWidth>900&&si<=5)?.55:0;pgroup.position.y=innerWidth<innerHeight?.25:.08;
+    pgroup.rotation.y=U.uMouse.value.x*.35+Math.sin(t*.2)*.08;pgroup.rotation.x=-U.uMouse.value.y*.12;}
+  pgroup.visible=!inEnc&&!inStage;photo.visible=si===0;
+}
+const clock=new THREE.Clock();let tt=0;
+function loop(){const dt=Math.min(clock.getDelta(),.05);tt+=reduce?dt*.3:dt;U.uTime.value=tt;frame(dt,tt);renderer.render(scene,camera);requestAnimationFrame(loop);}
+document.getElementById('totop').onclick=()=>scrollTo({top:0,behavior:'smooth'});
+window.__jump=v=>{scrollTo(0,v*innerHeight);};
+const ld=document.getElementById('loader');ld.style.opacity=0;setTimeout(()=>ld.remove(),900);
+loop();
+})().catch(e=>{console.error(e);const l=document.getElementById('loader');if(l)l.querySelector('span').textContent='Não foi possível carregar a experiência';});
+</script>
+<script>
+(function(){function syncPB(){var b=document.getElementById('wixheadless-banner-container');var on=!!(b&&b.getClientRects().length&&getComputedStyle(b).display!=='none'&&getComputedStyle(b).visibility!=='hidden');document.body.classList.toggle('hb',on);var pb=document.getElementById('pbar');if(pb)document.documentElement.style.setProperty('--pb',pb.offsetHeight+'px');}
+setInterval(syncPB,700);addEventListener('resize',syncPB);addEventListener('load',syncPB);})();
+</script>
+</body>
+</html>
