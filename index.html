@@ -280,6 +280,45 @@ a.s .tip{position:absolute;right:46px;white-space:nowrap;font-size:9px;letter-sp
 .final.on .box{pointer-events:auto;max-height:calc(100% - 8px);overflow-y:auto;overscroll-behavior:auto;scrollbar-width:thin;scrollbar-color:#ff2a2a transparent}
 .final .totop{margin-top:12px;font-size:10px;padding:8px 12px}
 .sr{position:absolute!important;width:1px!important;height:1px!important;overflow:hidden!important;clip:rect(0 0 0 0)!important;white-space:nowrap}
+
+/* ===== loja (vitrine) ===== */
+.shop{position:fixed;inset:0;z-index:7;display:flex;align-items:center;justify-content:center;padding:70px 6vw calc(4vh + var(--pb));opacity:0;pointer-events:none;transition:opacity .6s}
+.shop.on{opacity:1;pointer-events:auto}
+.shop .wrap>*{min-width:0}
+.shop .wrap{width:100%;max-width:1100px;display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:4vw;align-items:center}
+.shop .num{font-family:'Space Mono',monospace;font-size:11px;letter-spacing:4px;color:var(--red);text-transform:uppercase;display:flex;gap:12px;align-items:center;margin-bottom:12px}
+.shop .num:after{content:"";height:1px;width:60px;background:var(--red)}
+.shop h2{font-weight:700;font-size:clamp(40px,6vw,84px);line-height:.9;text-transform:uppercase;text-shadow:3px 0 var(--red)}
+.shop p{font-weight:300;font-size:18px;line-height:1.5;color:#cfcfcf;margin:16px 0 22px;max-width:420px}
+.shop .row{display:flex;flex-wrap:wrap;gap:10px}
+.gal{position:relative}
+.gal .track{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;padding:4px 2px 10px}
+.gal .track::-webkit-scrollbar{display:none}
+.gal .it{flex:0 0 min(300px,72vw);scroll-snap-align:center;text-decoration:none;color:var(--white);background:#0b0b0b;border:1px solid #262626;display:flex;flex-direction:column;transition:border-color .25s,transform .25s}
+.gal .it:hover,.gal .it:focus-visible{border-color:var(--red);transform:translateY(-4px);outline:none}
+.gal .ph{position:relative;aspect-ratio:1/1;overflow:hidden;background:#111}
+.gal .ph img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .6s}
+.gal .it:hover .ph img{transform:scale(1.06)}
+.gal .ph:after{content:"";position:absolute;inset:0;background:repeating-linear-gradient(0deg,rgba(0,0,0,.18) 0 1px,transparent 1px 3px);pointer-events:none}
+.gal .tag{position:absolute;left:10px;top:10px;font-family:'Space Mono',monospace;font-size:10px;letter-spacing:2px;text-transform:uppercase;background:var(--red);color:#fff;padding:4px 8px}
+.gal .tx{padding:14px 16px 16px;display:flex;flex-direction:column;gap:4px}
+.gal .tx b{font-size:22px;font-weight:700;text-transform:uppercase;line-height:1.05}
+.gal .tx span{font-family:'Space Mono',monospace;font-size:11px;letter-spacing:2px;color:var(--gray);text-transform:uppercase}
+.gal .tx em{font-style:normal;font-family:'Space Mono',monospace;font-size:11px;letter-spacing:2px;color:var(--red);text-transform:uppercase;margin-top:6px}
+.gal .nav{display:flex;gap:8px;align-items:center;margin-top:8px}
+.gal .nav button{width:44px;height:44px;background:rgba(0,0,0,.6);border:1px solid #444;color:var(--white);font-size:16px;cursor:pointer}
+.gal .nav button:hover,.gal .nav button:focus-visible{border-color:var(--red);background:var(--red);outline:none}
+.gal .dots{display:flex;gap:6px;margin-left:8px}
+.gal .dots i{width:16px;height:3px;background:#333;transition:background .25s,width .25s}
+.gal .dots i.on{background:var(--red);width:30px}
+@media (max-width:760px),(max-height:700px){
+ .shop{align-items:flex-start;padding-top:58px;overflow-y:auto}
+ .shop .wrap{grid-template-columns:1fr;gap:14px}
+ .shop h2{font-size:clamp(30px,9vw,46px)}
+ .shop p{font-size:14px;margin:8px 0 10px}
+ .gal .it{flex-basis:min(230px,64vw)}
+ .gal .tx b{font-size:18px}
+}
 </style>
 </head>
 <body>
@@ -315,6 +354,20 @@ a.s .tip{position:absolute;right:46px;white-space:nowrap;font-size:9px;letter-sp
   <div class="card" id="card"><div class="t" id="cardt"></div><div class="n" id="cardn"></div><div class="d" id="cardd"></div><div class="src" id="cards"></div></div>
   <div class="win" id="win"></div>
 </div>
+<section class="shop" id="shop" aria-label="Loja ERDOP">
+  <div class="wrap">
+    <div>
+      <div class="num">Lado B · Merch oficial</div>
+      <h2>Vista<br>a ERDOP</h2>
+      <p>Camisetas, boné, pôsteres e adesivos da ERDOP em tiragem pequena, direto da banda.</p>
+      <div class="row"><a class="btn" href="/loja/">Entrar na loja</a><a class="btn ghost" href="/loja/#camisetas">Camisetas</a></div>
+    </div>
+    <div class="gal" id="gal">
+      <div class="track" id="galtrack" tabindex="0" aria-label="Produtos em destaque"></div>
+      <div class="nav"><button type="button" id="galprev" aria-label="Produto anterior">◄</button><button type="button" id="galnext" aria-label="Próximo produto">►</button><div class="dots" id="galdots" aria-hidden="true"></div></div>
+    </div>
+  </div>
+</section>
 <section class="final" id="final" aria-label="Contato">
   <div class="box">
     <div class="copy-num" style="font-family:'Space Mono',monospace;font-size:11px;letter-spacing:4px;color:var(--red);text-transform:uppercase;margin-bottom:12px">Fim do lado A</div>
@@ -371,6 +424,7 @@ const SC=[
  {id:'resista',len:1.0,lab:'Resista'},
  {id:'nome',len:1.8,lab:'ERDOP'},
  {id:'encarte',len:6.5,lab:'Encarte'},
+ {id:'loja',len:1.6,lab:'Loja'},
  {id:'palco',len:6.0,lab:'Palco'},
  {id:'final',len:1.2,lab:'Contato'}
 ];
@@ -780,7 +834,7 @@ function frame(dt,t){
   [...rail.children].forEach((b,i)=>b.classList.toggle('on',i===si));
   els.hint.style.opacity=y<.15?1:0;
   // dip to black around big transitions
-  const bnd=[SC[6].start,SC[7].start,SC[8].start];let dip=0;bnd.forEach(b=>{dip=Math.max(dip,1-cl(Math.abs(y-b)/.18));});els.dip.style.opacity=dip;
+  const bnd=[SC[6].start,SC[7].start,SC[8].start,SC[9].start];let dip=0;bnd.forEach(b=>{dip=Math.max(dip,1-cl(Math.abs(y-b)/.18));});els.dip.style.opacity=dip;
   // targets
   const T={asm:0,word:0,glitch:0,wind:0,burst:0,red:.25,photo:0,zoom:3.4,fade:1};
   if(sc.id==='origem'){T.photo=1-ss(.35,.95,lp);T.asm=0;T.zoom=3.6;}
@@ -798,8 +852,8 @@ function frame(dt,t){
   U.uMouse.value.lerp(new THREE.Vector2(mouse.x,mouse.y),.05);
   // copy
   setCopy(si<=5?sc.id:null);
-  els.shade.style.opacity=si<=5?1:.0;els.lasers.style.opacity=si<=5?1:(si===7?.5:(si===8?.25:0));
-  const particlesOn=si<=5||si>=8;pgroup.visible=true;
+  els.shade.style.opacity=si<=5?1:.0;els.lasers.style.opacity=si<=5?1:(sc.id==='palco'?.5:(sc.id==='final'?.25:0));
+  const particlesOn=si<=5||sc.id==='final';pgroup.visible=true;
   // booklet
   const inEnc=sc.id==='encarte';book.visible=inEnc;city.visible=inEnc;
   encLights.visible=inEnc;if(inEnc){const dist=5;const vh=2*Math.tan(camera.fov*Math.PI/360)*(camera.position.z+dist);winPlane.scale.set(vh*camera.aspect*1.15,vh*1.15,1);winPlane.position.set(camera.position.x,camera.position.y,-dist);
@@ -852,6 +906,7 @@ function frame(dt,t){
     camera.position.set(Math.sin(ang)*rad,camY-lp*.6,Math.cos(ang)*rad);camera.lookAt(0,.9,0);
   }
   els.final.classList.toggle('on',sc.id==='final'&&lp>.05);
+  (window.__shop||(window.__shop=document.getElementById('shop'))).classList.toggle('on',sc.id==='loja'&&lp>.04&&lp<.97);
   if(!inEnc&&!inStage){camera.position.set(0,0,S.zoom*ZF);camera.lookAt(0,0,0);
     pgroup.position.x=(innerWidth>900&&si<=5)?.55:0;pgroup.position.y=innerWidth<innerHeight?.25:.08;
     pgroup.rotation.y=U.uMouse.value.x*.35+Math.sin(t*.2)*.08;pgroup.rotation.x=-U.uMouse.value.y*.12;}
@@ -868,6 +923,34 @@ loop();
 <script>
 (function(){function syncPB(){var b=document.getElementById('wixheadless-banner-container');var on=!!(b&&b.getClientRects().length&&getComputedStyle(b).display!=='none'&&getComputedStyle(b).visibility!=='hidden');document.body.classList.toggle('hb',on);var pb=document.getElementById('pbar');if(pb)document.documentElement.style.setProperty('--pb',pb.offsetHeight+'px');}
 setInterval(syncPB,700);addEventListener('resize',syncPB);addEventListener('load',syncPB);})();
+</script>
+<script>
+/* ===== loja: vitrine em slideshow ===== */
+(function(){
+ const shopEl=document.getElementById('shop');const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+ const P=[
+  {c:'camisetas',t:'Camisetas',n:'Beijo na Pele',p:'R$ 60',img:'/app/media/c0dcaee4983499afef0535074084e415.jpg',tag:'Nova era'},
+  {c:'camisetas',t:'Camisetas',n:'Cinzas de Ouro',p:'R$ 60',img:'/app/media/511db3d5c33549640a89eaef77d4f47d.jpg',tag:'Camiseta'},
+  {c:'camisetas',t:'Camisetas',n:'Logo ERDOP',p:'R$ 55',img:'/app/media/613e1d3135eb15f27dfce2562454ea62.jpg',tag:'Clássica'},
+  {c:'acessorios',t:'Acessórios',n:'Boné ERDOP',p:'R$ 50',img:'/app/media/803b3d145b73fd96acad49f66e8adb8d.jpg',tag:'Boné'},
+  {c:'posteres',t:'Pôsteres',n:'Pôsteres A3',p:'R$ 25',img:'/app/media/b9c77359206337f4eceeb3cba65ff365.jpg',tag:'A3'},
+  {c:'acessorios',t:'Acessórios',n:'Adesivos e chaveiro',p:'a partir de R$ 10',img:'/app/media/57d7e0a6f622707709d36b8c1dd8589f.jpg',tag:'Kit'}
+ ];
+ const tr=document.getElementById('galtrack'),dots=document.getElementById('galdots');
+ P.forEach((x,i)=>{const a=document.createElement('a');a.className='it';a.href='/loja/#'+x.c;a.setAttribute('aria-label',x.t+': '+x.n+', '+x.p);
+  a.innerHTML=`<div class="ph"><img src="${x.img}" alt="" loading="lazy"><span class="tag">${x.tag}</span></div><div class="tx"><span>${x.t}</span><b>${x.n}</b><em>${x.p} · ver na loja →</em></div>`;tr.appendChild(a);
+  const d=document.createElement('i');dots.appendChild(d);});
+ let idx=0;const items=[...tr.children];
+ function go(i){idx=(i+items.length)%items.length;const el=items[idx];tr.scrollTo({left:el.offsetLeft-tr.offsetLeft-(tr.clientWidth-el.clientWidth)/2,behavior:reduce?'auto':'smooth'});}
+ function mark(){const mid=tr.scrollLeft+tr.clientWidth/2;let best=0,bd=1e9;items.forEach((el,i)=>{const c=el.offsetLeft-tr.offsetLeft+el.clientWidth/2;const dd=Math.abs(c-mid);if(dd<bd){bd=dd;best=i;}});idx=best;[...dots.children].forEach((d,i)=>d.classList.toggle('on',i===best));}
+ tr.addEventListener('scroll',()=>requestAnimationFrame(mark),{passive:true});
+ document.getElementById('galprev').onclick=()=>{go(idx-1);hold();};
+ document.getElementById('galnext').onclick=()=>{go(idx+1);hold();};
+ let paused=0;function hold(){paused=Date.now()+8000;}
+ tr.addEventListener('pointerdown',hold);tr.addEventListener('focusin',hold);
+ setInterval(()=>{if(reduce||Date.now()<paused||!shopEl.classList.contains('on'))return;go(idx+1);},3500);
+ mark();
+})();
 </script>
 </body>
 </html>
