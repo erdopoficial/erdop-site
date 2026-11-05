@@ -573,7 +573,8 @@ function backPage(){const [c,g]=pageCanvas();drawPanel(g,10,F(.55),F(.08),F(.38)
   g.fillStyle='#888';g.font=`400 ${F(.022)}px "Space Mono",monospace`;g.textBaseline='top';g.fillText('LADO A',F(.07),F(.08));
   g.font=`400 ${F(.042)}px Oswald,sans-serif`;TRACKS.forEach((t,i)=>{g.fillStyle=i===4?'#CC0000':'#E8E8E8';g.fillText(String(i+1).padStart(2,'0')+'  '+t.t,F(.07),F(.14)+i*F(.06));});
   drawSpr(g,'erdop',F(.07),F(.78),F(.1),.9,0);g.fillStyle='#666';g.font=`400 ${F(.018)}px "Space Mono",monospace`;g.fillText('UBÁ · MG · DESDE 2002 · ERDOP.OFICIAL',F(.07),F(.92));marks(g);return c;}
-function tex(c){const t=new THREE.CanvasTexture(c);t.encoding=THREE.sRGBEncoding;t.anisotropy=4;t.minFilter=THREE.LinearMipmapLinearFilter;return t;}
+function tex(c,mir){const t=new THREE.CanvasTexture(c);t.encoding=THREE.sRGBEncoding;t.anisotropy=4;t.minFilter=THREE.LinearMipmapLinearFilter;if(mir){t.wrapS=THREE.RepeatWrapping;t.repeat.x=-1;t.offset.x=1;}return t;}
+function mirT(t){t.wrapS=THREE.RepeatWrapping;t.repeat.x=-1;t.offset.x=1;return t;}
 const book=new THREE.Group();scene.add(book);book.visible=false;
 const PS=1.6;const pages=[];
 const fronts=[coverPage()];for(let i=0;i<9;i++)fronts.push(textPage(i));
@@ -584,15 +585,21 @@ function normalFrom(c,strength,paper){const W=384;const t=document.createElement
   const o=g.createImageData(W,W);for(let y=0;y<W;y++)for(let x=0;x<W;x++){const i=y*W+x;const l=h[y*W+Math.max(0,x-1)],r=h[y*W+Math.min(W-1,x+1)],u=h[Math.max(0,y-1)*W+x],dn=h[Math.min(W-1,y+1)*W+x];
     let nx=(l-r)*strength,ny=(dn-u)*strength,nz=1;const L=Math.hypot(nx,ny,nz);o.data[i*4]=(nx/L*.5+.5)*255;o.data[i*4+1]=(ny/L*.5+.5)*255;o.data[i*4+2]=(nz/L*.5+.5)*255;o.data[i*4+3]=255;}
   g.putImageData(o,0,0);const tx=new THREE.CanvasTexture(t);return tx;}
-const pageGeo=()=>{const g=new THREE.PlaneGeometry(PS,PS,24,1);g.translate(PS/2,0,0);g.userData.base=Float32Array.from(g.attributes.position.array);return g;};
+const SXg=48,SYg=12;const pageGeo=()=>{const g=new THREE.PlaneGeometry(PS,PS,SXg,SYg);g.translate(PS/2,0,0);g.userData.base=Float32Array.from(g.attributes.position.array);return g;};
+function curl(geo,e,zo){const p=geo.attributes.position,b=geo.userData.base;const s=Math.sin(Math.PI*e);const dx=PS/SXg;
+  for(let r=0;r<=SYg;r++){const y=b[(r*(SXg+1))*3+1];const yn=y/PS;let X=0,Z=0;
+    for(let c=0;c<=SXg;c++){const idx=r*(SXg+1)+c;
+      if(c>0){const k=(c-.5)/SXg;let ph=Math.PI*e+s*(1.05*k*k+.5*k*yn);ph=Math.min(Math.PI,Math.max(0,ph));X+=Math.cos(ph)*dx;Z+=Math.sin(ph)*dx*.66;}
+      p.setXYZ(idx,X,y,Z+zo);}}
+  p.needsUpdate=true;geo.computeVertexNormals();geo.computeBoundingSphere();}
 function bend(geo,amt,sign){const p=geo.attributes.position,b=geo.userData.base;for(let i=0;i<p.count;i++){const x=b[i*3];const k=x/PS;p.setZ(i,sign*amt*(k*k)*.55);}p.needsUpdate=true;geo.computeVertexNormals();}
 const bookEnv={value:null};
 for(let i=0;i<10;i++){const pv=new THREE.Group();
   const isPhotoF=i===0,isPhotoB=i<9;
   const fm=new THREE.MeshStandardMaterial({map:tex(fronts[i]),normalMap:normalFrom(fronts[i],isPhotoF?4:6,.02),normalScale:new THREE.Vector2(.9,.9),roughness:isPhotoF?.32:.72,metalness:0,envMapIntensity:isPhotoF?1.1:.35});
-  const bm=new THREE.MeshStandardMaterial({map:tex(backs[i]),normalMap:normalFrom(backs[i],isPhotoB?4:6,.02),normalScale:new THREE.Vector2(.9,.9),roughness:isPhotoB?.3:.72,metalness:0,envMapIntensity:isPhotoB?1.1:.35});
-  const fg=pageGeo(),bg=pageGeo();const f=new THREE.Mesh(fg,fm);const b=new THREE.Mesh(bg,bm);b.rotation.y=Math.PI;b.position.set(PS,0,-.002);
-  pv.add(f,b);book.add(pv);pages.push({pv,fm,bm,fg,bg,bent:0});}
+  const bm=new THREE.MeshStandardMaterial({side:THREE.BackSide,map:tex(backs[i],1),normalMap:mirT(normalFrom(backs[i],isPhotoB?4:6,.02)),normalScale:new THREE.Vector2(.9,.9),roughness:isPhotoB?.3:.72,metalness:0,envMapIntensity:isPhotoB?1.1:.35});
+  const fg=pageGeo();const f=new THREE.Mesh(fg,fm);const b=new THREE.Mesh(fg,bm);
+  pv.add(f,b);book.add(pv);curl(fg,0,-(i*.004));pages.push({pv,fm,bm,fg,bg:fg,e:0,zo:-(i*.004)});}
 // booklet lights: key light follows the pointer so gloss slides over the photos
 const encLights=new THREE.Group();scene.add(encLights);encLights.visible=false;
 const eAmb=new THREE.AmbientLight(0x2a2a2a,.6);const eKey=new THREE.PointLight(0xfff4ee,2.2,9,1.6);eKey.position.set(.6,1.2,2.2);const eRed=new THREE.PointLight(0xcc0000,2.4,8,1.4);eRed.position.set(-2.4,-1,1.4);const eFlash=new THREE.PointLight(0xffffff,0,12,1);eFlash.position.set(0,3,1);
@@ -862,10 +869,10 @@ function frame(dt,t){
   if(inEnc){
     const flips=pages.length;const fp=cl((lp-.04)/.9)*flips; // 0..10
     let openAmt=0;
-    pages.forEach((p,i)=>{const f=cl(fp-i);const e=f*f*(3-2*f);p.pv.rotation.y=-Math.PI*e;
-      const lift=Math.sin(Math.PI*e)*.25;p.pv.position.z=(e>.5?(i*.004):-(i*.004))+lift;
-      const sh=1-.25*Math.sin(Math.PI*e);p.fm.color.setScalar(sh);p.bm.color.setScalar(sh);
-      const amt=Math.sin(Math.PI*e);if(Math.abs(amt-p.bent)>.01){p.bent=amt;bend(p.fg,amt,-1);bend(p.bg,amt,1);}});
+    pages.forEach((p,i)=>{const f=cl(fp-i);const e=f*f*(3-2*f);
+      const zo=e>.5?(i*.004):-(i*.004);
+      if(Math.abs(e-p.e)>.0008||zo!==p.zo){p.e=e;p.zo=zo;curl(p.fg,e,zo);}
+      const sh=1-.32*Math.sin(Math.PI*e);p.fm.color.setScalar(sh);p.bm.color.setScalar(sh);});
     openAmt=cl(fp)-cl(fp-9);
     const cur=Math.min(8,Math.max(0,Math.floor(fp-.5)));curTrack=cur;
     const showT=fp>.6&&fp<9.4;
