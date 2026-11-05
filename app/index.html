@@ -931,13 +931,13 @@ input::placeholder,textarea::placeholder{color:#8a8a8a;opacity:1}
 (function () {
   var h = React.createElement;
   var MEMBERS = {
-    'c376731979440114f610e0f8194215fc28dada41c626305c130097bf9455b6ad': 'warurase',
+    'c376731979440114f610e0f8194215fc28dada41c626305c130097bf9455b6ad': 'erdop',
     '8b978eca99742ede250f52ceea0d4585315cd4718f0c50c8bef0636626f2cb0f': 'jose',
     '226b7648f21ab35d0866b6c772d7084630348776c247ea00512111e4724a8596': 'uba',
-    '6974f765263a757db1077cb03ce92b36d6cb1205f02b880ec6ee53805c463a13': 'junk'
+    '6974f765263a757db1077cb03ce92b36d6cb1205f02b880ec6ee53805c463a13': 'warurase'
   };
   async function sha(t) { var d = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(t)); return Array.from(new Uint8Array(d)).map(function (x) { return x.toString(16).padStart(2, '0'); }).join(''); }
-  var BY_KEY = { warurase: 'Warurase', jose: 'José', uba: 'ubanarnia', junk: 'junkmodel' };
+  var BY_KEY = { erdop: 'ERDOP', warurase: 'Warurase', jose: 'José', uba: 'ubanarnia' };
   var SHARED = ['gastos', 'events', 'cards', 'shows', 'promoters', 'merch', 'accepted'];
   var PERSONAL = ['votes', 'reasons'];
   window.ERDOP_ME = 'Warurase';
