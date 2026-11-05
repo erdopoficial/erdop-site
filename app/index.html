@@ -84,6 +84,20 @@ input::placeholder,textarea::placeholder{color:#8a8a8a;opacity:1}
 @media (prefers-reduced-motion: reduce){.rise,.sheet,.fade,.pop,.glow{animation:none !important}}
 
 .ind-err{color:#ff6b6b!important;font-family:'JetBrains Mono',monospace!important;font-size:12px!important}
+.ind-ok{color:#7dd3a0!important;font-family:'JetBrains Mono',monospace!important;font-size:12px!important}
+.ind-or{display:flex;align-items:center;gap:12px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:#888888}
+.ind-or::before,.ind-or::after{content:"";flex:1;height:1px;background:rgba(232,232,232,.14)}
+.ind-form{display:flex;flex-direction:column;gap:8px}
+.ind-form label{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:#888888;margin-top:4px}
+.ind-form input{min-height:50px;padding:0 14px;background:#0b0b0b;border:1px solid #2a2a2a;color:#E8E8E8;font-size:16px;font-family:'Inter',Arial,sans-serif;border-radius:0;outline:none}
+.ind-form input:focus{border-color:#CC0000;box-shadow:0 0 0 1px #CC0000,0 0 18px rgba(204,0,0,.35)}
+.ind-submit{margin-top:8px;min-height:54px;border:0;background:#CC0000;color:#fff;font-family:'Anton','Impact',sans-serif;font-size:19px;letter-spacing:.08em;text-transform:uppercase;cursor:pointer;clip-path:polygon(0 0,calc(100% - 14px) 0,100% 14px,100% 100%,14px 100%,0 calc(100% - 14px));box-shadow:0 0 24px rgba(204,0,0,.45)}
+.ind-submit:hover{background:#e00000}
+.ind-submit:disabled{opacity:.6;cursor:wait}
+.ind-submit:focus-visible{outline:2px solid #fff;outline-offset:3px}
+.ind-links{display:flex;flex-wrap:wrap;gap:6px 16px;margin-top:4px}
+.ind-links button{background:none;border:0;padding:6px 0;min-height:36px;color:#b5b5b5;font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.06em;text-decoration:underline;text-underline-offset:3px;cursor:pointer}
+.ind-links button:hover{color:#fff}
 </style>
 </head>
 <body>
@@ -911,6 +925,7 @@ input::placeholder,textarea::placeholder{color:#8a8a8a;opacity:1}
 <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
 <script src="config.js"></script>
+<script src="https://accounts.google.com/gsi/client" async></script>
 <script>
 /* Mini runtime: renders the <x-dc> template with React, keeps band data in Firestore. */
 (function () {
@@ -1100,8 +1115,59 @@ input::placeholder,textarea::placeholder{color:#8a8a8a;opacity:1}
     );
   }
 
-  function Gate(props) {
-            return h('main', { className: 'ind' },
+  var GSI_CLIENT = '633108044786-a1tumualsml5mrat42kmrc4f08ej7rqs.apps.googleusercontent.com';
+  var IN_APP = /Instagram|FBAN|FBAV|FB_IAB|Line\/|WhatsApp/i.test(navigator.userAgent || '');
+
+  function EmailForm(props) {
+    var s = React.useState({ mode: 'entrar', email: '', senha: '', busy: false, msg: '', err: '' });
+    var st = s[0], set = function (o) { s[1](function (p) { return Object.assign({}, p, o); }); };
+    async function submit(e) {
+      e.preventDefault();
+      var email = st.email.trim().toLowerCase();
+      if (!MEMBERS[await sha(email)]) return set({ err: 'Esse e-mail não está liberado para a banda.', msg: '' });
+      var auth = firebase.auth();
+      set({ busy: true, err: '', msg: '' });
+      try {
+        if (st.mode === 'esqueci') {
+          await auth.sendPasswordResetEmail(email);
+          set({ busy: false, mode: 'entrar', msg: 'Mandamos um link para ' + email + ' criar uma senha nova.' });
+        } else if (st.mode === 'criar') {
+          if (st.senha.length < 6) return set({ busy: false, err: 'A senha precisa de pelo menos 6 caracteres.' });
+          var cred = await auth.createUserWithEmailAndPassword(email, st.senha);
+          await cred.user.sendEmailVerification();
+          set({ busy: false });
+        } else {
+          await auth.signInWithEmailAndPassword(email, st.senha);
+          set({ busy: false });
+        }
+      } catch (er) {
+        var c = er && er.code || '';
+        var m = c === 'auth/email-already-in-use' ? 'Esse e-mail já tem senha. Use Entrar ou Esqueci a senha.' :
+          (c === 'auth/invalid-credential' || c === 'auth/wrong-password' || c === 'auth/user-not-found' || c === 'auth/invalid-login-credentials') ? 'E-mail ou senha não conferem. Primeiro acesso? Toque em Criar senha.' :
+          c === 'auth/too-many-requests' ? 'Muitas tentativas. Espere um pouco e tente de novo.' :
+          c === 'auth/weak-password' ? 'A senha precisa de pelo menos 6 caracteres.' : 'Não deu certo agora. Tente de novo.';
+        set({ busy: false, err: m });
+      }
+    }
+    var label = st.mode === 'criar' ? 'Criar senha e entrar' : st.mode === 'esqueci' ? 'Enviar link de nova senha' : 'Entrar';
+    return h('form', { className: 'ind-form', onSubmit: submit, noValidate: true },
+      h('label', { htmlFor: 'ind-email' }, 'E-mail'),
+      h('input', { id: 'ind-email', type: 'email', autoComplete: 'username', inputMode: 'email', value: st.email, onChange: function (e) { set({ email: e.target.value }); }, placeholder: 'seu@email.com', required: true }),
+      st.mode !== 'esqueci' ? h(React.Fragment, null,
+        h('label', { htmlFor: 'ind-senha' }, st.mode === 'criar' ? 'Crie uma senha' : 'Senha'),
+        h('input', { id: 'ind-senha', type: 'password', autoComplete: st.mode === 'criar' ? 'new-password' : 'current-password', value: st.senha, onChange: function (e) { set({ senha: e.target.value }); }, placeholder: st.mode === 'criar' ? 'mínimo 6 caracteres' : '••••••', required: true })) : null,
+      h('button', { type: 'submit', className: 'ind-submit', disabled: st.busy }, st.busy ? 'Aguarde…' : label),
+      st.err ? h('p', { className: 'ind-err', role: 'alert' }, st.err) : null,
+      st.msg ? h('p', { className: 'ind-ok', role: 'status' }, st.msg) : null,
+      h('div', { className: 'ind-links' },
+        st.mode !== 'entrar' ? h('button', { type: 'button', onClick: function () { set({ mode: 'entrar', err: '', msg: '' }); } }, 'Já tenho senha') : null,
+        st.mode !== 'criar' ? h('button', { type: 'button', onClick: function () { set({ mode: 'criar', err: '', msg: '' }); } }, 'Primeiro acesso: criar senha') : null,
+        st.mode !== 'esqueci' ? h('button', { type: 'button', onClick: function () { set({ mode: 'esqueci', err: '', msg: '' }); } }, 'Esqueci a senha') : null)
+    );
+  }
+
+  function Shell(props) {
+    return h('main', { className: 'ind' },
       h(Embers),
       h('div', { className: 'ind-grid', 'aria-hidden': 'true' }),
       h('div', { className: 'ind-scan', 'aria-hidden': 'true' }),
@@ -1109,49 +1175,118 @@ input::placeholder,textarea::placeholder{color:#8a8a8a;opacity:1}
         h('div', { className: 'ind-top' }, h('span', null, 'SISTEMA // CENTRAL'), h('span', { className: 'ind-live' }, props.loading ? 'CONECTANDO' : 'ONLINE')),
         h(Logo),
         h('p', { className: 'ind-sub' }, 'Central da banda · Ubá · MG'),
-        props.loading
-          ? h('div', { className: 'ind-load', role: 'status' }, h('span', { className: 'ind-bar' }), h('span', null, 'Abrindo a central…'))
-          : props.denied
-            ? h('div', { className: 'ind-card' }, h('h1', null, 'Acesso negado'), h('p', null, 'Esta central é só de Warurase, José e ubanarnia. Saia e entre com o e-mail liberado para a banda.'), h('button', { type: 'button', onClick: props.onLogout, className: 'ind-btn' }, h('span', { className: 'ind-who' }, h('b', null, 'Trocar de conta'))))
-            : h('div', { className: 'ind-card' },
-                h('h1', null, 'Acesso da banda'),
-                h('p', null, 'Entre com a conta Google do e-mail liberado para a ERDOP.'),
-                h('button', { type: 'button', onClick: props.onLogin, className: 'ind-btn ind-google' },
-                  h('span', { className: 'ind-n' }, 'G'),
-                  h('span', { className: 'ind-who' }, h('b', null, 'Entrar com Google'), h('small', null, 'Warurase · José · ubanarnia')),
-                  h('span', { className: 'ind-arrow', 'aria-hidden': 'true' }, '→')),
-                props.error ? h('p', { className: 'ind-err', role: 'alert' }, props.error) : null,
-                h('p', { className: 'ind-note' }, 'Abrindo pelo Instagram? Toque nos três pontos e escolha abrir no navegador. O Google não deixa entrar pelo navegador do Instagram.')),
+        props.children,
         h('div', { className: 'ind-foot' }, h('span', null, 'ERDOP © ' + new Date().getFullYear()), h('span', null, 'ECOS DA MINHA MENTE'))
       )
     );
   }
 
+  function Gate(props) {
+    if (props.loading) return h(Shell, { loading: true }, h('div', { className: 'ind-load', role: 'status' }, h('span', { className: 'ind-bar' }), h('span', null, 'Abrindo a central…')));
+    if (props.denied) return h(Shell, null, h('div', { className: 'ind-card' }, h('h1', null, 'Acesso negado'),
+      h('p', null, 'Esta central é só de Warurase, José e ubanarnia. Entre com o e-mail liberado para a banda.'),
+      h('button', { type: 'button', onClick: props.onLogout, className: 'ind-submit' }, 'Trocar de conta')));
+    if (props.verify) return h(Shell, null, h('div', { className: 'ind-card' }, h('h1', null, 'Confirme seu e-mail'),
+      h('p', null, 'Mandamos um link para ' + props.verify + '. Toque nele uma vez e volte aqui.'),
+      h('button', { type: 'button', onClick: props.onCheck, className: 'ind-submit' }, 'Já confirmei'),
+      props.error ? h('p', { className: 'ind-err', role: 'alert' }, props.error) : null,
+      h('div', { className: 'ind-links' },
+        h('button', { type: 'button', onClick: props.onResend }, 'Reenviar o link'),
+        h('button', { type: 'button', onClick: props.onLogout }, 'Usar outro e-mail'))));
+    return h(Shell, null, h('div', { className: 'ind-card' },
+      h('h1', null, 'Acesso da banda'),
+      IN_APP ? null : h('button', { type: 'button', onClick: props.onLogin, className: 'ind-btn ind-google' },
+        h('span', { className: 'ind-n' }, 'G'),
+        h('span', { className: 'ind-who' }, h('b', null, 'Continuar com Google'), h('small', null, 'um toque, sem senha')),
+        h('span', { className: 'ind-arrow', 'aria-hidden': 'true' }, '→')),
+      props.error ? h('p', { className: 'ind-err', role: 'alert' }, props.error) : null,
+      IN_APP ? null : h('div', { className: 'ind-or', 'aria-hidden': 'true' }, h('span', null, 'ou com e-mail e senha')),
+      h(EmailForm)));
+  }
+
   function App() {
-    var st = React.useState({ phase: 'loading', me: null, error: '' });
+    var st = React.useState({ phase: 'loading', me: null, error: '', verify: '' });
     var state = st[0], setState = st[1];
     var compRef = React.useRef(null);
+    var gsiReady = React.useRef(false);
+
+    function gsiInit() {
+      if (gsiReady.current || !window.google || !google.accounts || !google.accounts.id) return gsiReady.current;
+      google.accounts.id.initialize({
+        client_id: GSI_CLIENT,
+        auto_select: true,
+        cancel_on_tap_outside: false,
+        use_fedcm_for_prompt: true,
+        itp_support: true,
+        context: 'signin',
+        callback: function (r) {
+          firebase.auth().signInWithCredential(firebase.auth.GoogleAuthProvider.credential(r.credential)).catch(function () {
+            setState(function (s) { return Object.assign({}, s, { error: 'Não deu para entrar com o Google agora. Tente de novo ou use e-mail e senha.' }); });
+          });
+        }
+      });
+      gsiReady.current = true;
+      return true;
+    }
+
     React.useEffect(function () {
       firebase.initializeApp(window.ERDOP_FIREBASE);
       var auth = firebase.auth();
       auth.setPersistence(firebase.auth.Auth.Persistence.LOCAL).catch(function () {});
       return auth.onAuthStateChanged(async function (u) {
-        if (!u) return setState({ phase: 'login', me: null, error: '' });
-        var key = u.email && u.emailVerified ? MEMBERS[await sha(u.email.toLowerCase())] : null;
-        if (!key) return setState({ phase: 'denied', me: null, error: '' });
-        setState({ phase: 'app', me: key, error: '' });
+        if (!u) return setState({ phase: 'login', me: null, error: '', verify: '' });
+        var key = u.email ? MEMBERS[await sha(u.email.toLowerCase())] : null;
+        if (!key) return setState({ phase: 'denied', me: null, error: '', verify: '' });
+        if (!u.emailVerified) return setState({ phase: 'verify', me: null, error: '', verify: u.email });
+        setState({ phase: 'app', me: key, error: '', verify: '' });
       });
     }, []);
-    function login() {
+
+    React.useEffect(function () {
+      if (state.phase !== 'login' || IN_APP) return;
+      var tries = 0;
+      var t = setInterval(function () {
+        tries++;
+        if (gsiInit()) { clearInterval(t); try { google.accounts.id.prompt(); } catch (e) {} }
+        else if (tries > 40) clearInterval(t);
+      }, 150);
+      return function () { clearInterval(t); try { window.google && google.accounts.id.cancel(); } catch (e) {} };
+    }, [state.phase]);
+
+    function popup() {
       var p = new firebase.auth.GoogleAuthProvider();
       p.setCustomParameters({ prompt: 'select_account' });
       firebase.auth().signInWithPopup(p).catch(function (e) {
-        var msg = e && e.code === 'auth/popup-blocked' ? 'O navegador bloqueou a janela do Google. Libere pop-ups e tente de novo.' :
-          e && e.code === 'auth/popup-closed-by-user' ? '' : 'Não deu para entrar agora. Tente de novo em alguns segundos.';
+        var msg = e && e.code === 'auth/popup-blocked' ? 'O navegador bloqueou a janela do Google. Use e-mail e senha logo abaixo.' :
+          e && e.code === 'auth/popup-closed-by-user' ? '' : 'Não deu para entrar agora. Use e-mail e senha logo abaixo.';
         setState(function (s) { return Object.assign({}, s, { error: msg }); });
       });
     }
-    function logout() { firebase.auth().signOut(); }
+    function login() {
+      setState(function (s) { return Object.assign({}, s, { error: '' }); });
+      if (!gsiInit()) return popup();
+      var done = false;
+      try {
+        google.accounts.id.prompt(function (n) {
+          if (done) return;
+          if ((n.isNotDisplayed && n.isNotDisplayed()) || (n.isSkippedMoment && n.isSkippedMoment())) { done = true; popup(); }
+        });
+      } catch (e) { popup(); }
+    }
+    function logout() { try { window.google && google.accounts.id.disableAutoSelect(); } catch (e) {} firebase.auth().signOut(); }
+    function check() {
+      var u = firebase.auth().currentUser; if (!u) return;
+      u.reload().then(function () { return u.getIdToken(true); }).then(async function () {
+        if (firebase.auth().currentUser.emailVerified) {
+          setState({ phase: 'app', me: MEMBERS[await sha(u.email.toLowerCase())], error: '', verify: '' });
+        } else setState(function (s) { return Object.assign({}, s, { error: 'Ainda não aparece como confirmado. Abra o link do e-mail e toque de novo.' }); });
+      });
+    }
+    function resend() {
+      var u = firebase.auth().currentUser; if (!u) return;
+      u.sendEmailVerification().then(function () { setState(function (s) { return Object.assign({}, s, { error: 'Link reenviado. Olhe também a caixa de spam.' }); }); })
+        .catch(function () { setState(function (s) { return Object.assign({}, s, { error: 'Espere um minuto antes de pedir outro link.' }); }); });
+    }
     window.ERDOP_LOGOUT = logout;
 
     React.useEffect(function () {
@@ -1179,6 +1314,7 @@ input::placeholder,textarea::placeholder{color:#8a8a8a;opacity:1}
 
     if (state.phase === 'loading') return h(Gate, { loading: true });
     if (state.phase === 'denied') return h(Gate, { denied: true, onLogout: logout });
+    if (state.phase === 'verify') return h(Gate, { verify: state.verify, onCheck: check, onResend: resend, onLogout: logout, error: state.error });
     if (state.phase === 'login') return h(Gate, { onLogin: login, error: state.error });
     return h(window.Component, { ref: compRef, key: state.me });
   }
