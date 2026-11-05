@@ -319,6 +319,67 @@ a.s .tip{position:absolute;right:46px;white-space:nowrap;font-size:9px;letter-sp
  .gal .it{flex-basis:min(230px,64vw)}
  .gal .tx b{font-size:18px}
 }
+
+/* hint nunca bloqueia clique */
+.hint{pointer-events:none!important}
+/* rail limpa */
+.rail{left:12px;transition:opacity .4s}
+.rail button span{opacity:0!important;background:rgba(0,0,0,.88);padding:3px 7px;border:1px solid #2a2a2a}
+.rail:hover button span{opacity:1!important}
+.rail.hide{opacity:0;pointer-events:none}
+/* banner look */
+.look{position:fixed;inset:0;z-index:7;opacity:0;pointer-events:none;transition:opacity .7s;background:#000;overflow:hidden}
+.look.on{opacity:1;pointer-events:auto}
+.look .ph{position:absolute;inset:0;background-size:cover;background-position:58% 30%;transform:scale(1.08);transition:transform 6s ease-out;filter:contrast(1.08) saturate(.9)}
+.look.on .ph{transform:scale(1)}
+.look .ph:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.92) 0%,rgba(0,0,0,.55) 42%,rgba(0,0,0,.1) 70%),linear-gradient(0deg,rgba(0,0,0,.85) 0%,transparent 45%),repeating-linear-gradient(0deg,rgba(0,0,0,.2) 0 1px,transparent 1px 3px)}
+.look .box{position:absolute;left:9vw;bottom:calc(8vh + var(--pb));max-width:min(560px,84vw)}
+.look .num{font-family:'Space Mono',monospace;font-size:11px;letter-spacing:4px;color:var(--red);text-transform:uppercase;display:flex;gap:12px;align-items:center;margin-bottom:12px}
+.look .num:after{content:"";height:1px;width:60px;background:var(--red)}
+.look h2{font-weight:700;font-size:clamp(44px,7.5vw,112px);line-height:.86;text-transform:uppercase;text-shadow:4px 0 var(--red),-2px 0 rgba(255,255,255,.2)}
+.look p{font-weight:300;font-size:18px;line-height:1.5;color:#d0d0d0;margin:16px 0 20px}
+.look .row{display:flex;flex-wrap:wrap;gap:10px}
+.look .strip{display:flex;gap:8px;margin-top:18px}
+.look .strip a{width:74px;height:74px;border:1px solid #333;display:block;overflow:hidden}
+.look .strip a:hover,.look .strip a:focus-visible{border-color:var(--red);outline:none}
+.look .strip img{width:100%;height:100%;object-fit:cover;display:block}
+.look .cred{position:absolute;right:26px;bottom:calc(3vh + var(--pb));font-family:'Space Mono',monospace;font-size:9px;letter-spacing:3px;color:#777;text-transform:uppercase}
+@media (max-width:760px){.look .ph{background-position:62% 20%}.look .box{left:18px;right:18px;bottom:calc(3vh + var(--pb))}.look p{font-size:14px;margin:10px 0 12px}.look .strip a{width:58px;height:58px}.look .cred{display:none}}
+/* palco interativo */
+.hud.on .mission{pointer-events:auto}
+.hud.on .card{pointer-events:auto}
+.hud li{cursor:pointer;transition:color .2s}
+.hud li:hover,.hud li:focus-visible{color:#fff;outline:none}
+.hud li.foc{color:#fff}.hud li.foc:before{content:"[◉] ";color:var(--red)}
+.hud .tip{font-size:9px;letter-spacing:1.5px;color:#888;text-transform:uppercase;margin-top:8px}
+.hud .card .back{margin-top:12px;display:none}
+.hud .card.foc .back{display:inline-block}
+/* modal: tema por faixa + abas */
+.modal .sheet{background-size:cover!important;background-position:center!important}
+.mtabs{display:flex;gap:6px;flex-wrap:wrap;margin:14px 0 10px;padding:0}
+.mtabs button{font-family:'Space Mono',monospace;font-size:11px;letter-spacing:2px;text-transform:uppercase;background:rgba(0,0,0,.55);color:#e8e8e8;border:1px solid #444;padding:9px 12px;cursor:pointer;min-height:40px}
+.mtabs button[aria-selected="true"]{background:var(--red);border-color:var(--red);color:#fff}
+.mpanel[hidden]{display:none!important}
+.mpanel .empty{font-family:'Space Mono',monospace;font-size:13px;line-height:1.7;color:#cfcfcf;border:1px dashed rgba(255,60,60,.5);padding:16px;background:rgba(0,0,0,.5)}
+.tabpre{font-family:'Space Mono',monospace;font-size:13px;line-height:1.5;white-space:pre;overflow-x:auto;background:rgba(0,0,0,.6);border:1px solid #333;padding:14px;color:#f2f2f2}
+.clip{position:relative;aspect-ratio:16/9;width:100%;background:#000;border:1px solid rgba(255,42,42,.5);overflow:hidden;margin-top:6px}
+.clip video{width:100%;height:100%;display:block;background:#000}
+.clip .sbimg{position:absolute;inset:-6%;background-size:cover;background-position:center;transition:transform 4.2s linear,filter .6s}
+.clip .sbtx{position:absolute;left:0;right:0;bottom:0;padding:14px 16px;background:linear-gradient(0deg,rgba(0,0,0,.9),transparent);font-family:'Space Mono',monospace}
+.clip .sbtx b{display:block;color:#ff4d4d;font-size:11px;letter-spacing:3px;text-transform:uppercase;margin-bottom:6px;font-weight:400}
+.clip .sbtx span{display:block;color:#fff;font-size:14px;line-height:1.45;font-family:'Oswald',sans-serif;font-weight:300}
+.clip .sbtx i{display:block;color:#aaa;font-size:11px;margin-top:6px;font-style:normal;letter-spacing:1px}
+.clip .badge{position:absolute;left:12px;top:12px;font-family:'Space Mono',monospace;font-size:10px;letter-spacing:2px;background:rgba(0,0,0,.7);border:1px solid #444;color:#ddd;padding:5px 8px;text-transform:uppercase}
+.sbctl{display:flex;gap:8px;align-items:center;margin:10px 0 4px;flex-wrap:wrap}
+.sbctl button{font-family:'Space Mono',monospace;font-size:11px;letter-spacing:2px;background:rgba(0,0,0,.6);color:#fff;border:1px solid #555;min-width:44px;min-height:40px;cursor:pointer;text-transform:uppercase;padding:0 12px}
+.sbctl button:hover,.sbctl button:focus-visible{border-color:var(--red);outline:none}
+.sbdots{display:flex;gap:5px;flex:1;min-width:120px}
+.sbdots i{flex:1;height:3px;background:#333}.sbdots i.on{background:var(--red)}
+.sblist{list-style:none;margin-top:10px}
+.sblist li{border-top:1px solid rgba(255,255,255,.1);padding:10px 0;display:grid;grid-template-columns:86px minmax(0,1fr);gap:10px;font-weight:300;font-size:15px;line-height:1.45}
+.sblist li b{font-family:'Space Mono',monospace;font-weight:400;font-size:11px;color:#ff4d4d;letter-spacing:1px}
+.sblist li em{display:block;font-style:normal;color:#999;font-size:12px;font-family:'Space Mono',monospace;margin-top:4px}
+.sbstat{font-family:'Space Mono',monospace;font-size:11px;letter-spacing:1px;color:#ffcf6b;margin-top:10px;line-height:1.6}
 </style>
 </head>
 <body>
@@ -351,7 +412,7 @@ a.s .tip{position:absolute;right:46px;white-space:nowrap;font-size:9px;letter-sp
 <div class="encui" id="encui"><button class="btn" id="listenbtn" type="button">▶ Ouvir esta faixa</button><button class="btn ghost" id="readbtn" type="button">Ler a letra</button><button class="btn ghost" id="skipenc" type="button">Pular encarte ↓</button></div>
 <div class="hud" id="hud">
   <div class="mission"><div class="t">Missão · leve a ERDOP para o palco</div><div class="h">Montando o palco</div><ul id="checklist"></ul><div class="bar"><b id="xp"></b></div><div class="pct" id="pct">0%</div></div>
-  <div class="card" id="card"><div class="t" id="cardt"></div><div class="n" id="cardn"></div><div class="d" id="cardd"></div><div class="src" id="cards"></div></div>
+  <div class="card" id="card"><div class="t" id="cardt"></div><div class="n" id="cardn"></div><div class="d" id="cardd"></div><div class="src" id="cards"></div><button class="btn ghost back" id="cardback" type="button">← Visão geral do palco</button></div>
   <div class="win" id="win"></div>
 </div>
 <section class="shop" id="shop" aria-label="Loja ERDOP">
@@ -367,6 +428,22 @@ a.s .tip{position:absolute;right:46px;white-space:nowrap;font-size:9px;letter-sp
       <div class="nav"><button type="button" id="galprev" aria-label="Produto anterior">◄</button><button type="button" id="galnext" aria-label="Próximo produto">►</button><div class="dots" id="galdots" aria-hidden="true"></div></div>
     </div>
   </div>
+</section>
+<section class="look" id="look" aria-label="Merch ERDOP">
+  <div class="ph" id="lookph" role="img" aria-label="Warurase com o boné da ERDOP segurando o baixo"></div>
+  <div class="box">
+    <div class="num">Merch · temporada Ecos</div>
+    <h2>Veste quem<br>resiste</h2>
+    <p>Boné, camisetas e pôsteres da era Ecos da Minha Mente. Tiragem pequena, direto da banda.</p>
+    <div class="row"><a class="btn" href="/loja/#camisetas">Comprar camisetas</a><a class="btn ghost" href="/loja/#acessorios">Boné e acessórios</a></div>
+    <div class="strip">
+      <a href="/loja/#camisetas" aria-label="Camiseta Beijo na Pele"><img src="/app/media/c0dcaee4983499afef0535074084e415.jpg" alt="" loading="lazy"></a>
+      <a href="/loja/#camisetas" aria-label="Camiseta Cinzas de Ouro"><img src="/app/media/511db3d5c33549640a89eaef77d4f47d.jpg" alt="" loading="lazy"></a>
+      <a href="/loja/#acessorios" aria-label="Boné ERDOP"><img src="/app/media/803b3d145b73fd96acad49f66e8adb8d.jpg" alt="" loading="lazy"></a>
+      <a href="/loja/#posteres" aria-label="Pôsteres"><img src="/app/media/b9c77359206337f4eceeb3cba65ff365.jpg" alt="" loading="lazy"></a>
+    </div>
+  </div>
+  <div class="cred">Warurase · boné ERDOP</div>
 </section>
 <section class="final" id="final" aria-label="Contato">
   <div class="box">
@@ -390,13 +467,14 @@ a.s .tip{position:absolute;right:46px;white-space:nowrap;font-size:9px;letter-sp
   </div>
 </section>
 <div class="hint" id="hint">role para desdobrar<i></i></div>
-<div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="mt"><div class="sheet"><button class="x" id="mx" type="button">Fechar ×</button><div class="k" id="mk"></div><h4 id="mt"></h4><div class="note" id="mn"></div><div id="mb"></div></div></div>
+<div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="mt"><div class="sheet"><button class="x" id="mx" type="button">Fechar ×</button><div class="k" id="mk"></div><h4 id="mt"></h4><div class="note" id="mn"></div><div class="mtabs" role="tablist" aria-label="Conteúdo da faixa"><button type="button" role="tab" data-p="letra" aria-selected="true">Letra</button><button type="button" role="tab" data-p="tab" aria-selected="false">Tablatura</button><button type="button" role="tab" data-p="hist" aria-selected="false">História</button><button type="button" role="tab" data-p="clipe" aria-selected="false">Clipe</button></div><div class="mpanel" data-p="letra"><div id="mb"></div></div><div class="mpanel" data-p="tab" hidden><div id="mtab"></div></div><div class="mpanel" data-p="hist" hidden><div id="mhist"></div></div><div class="mpanel" data-p="clipe" hidden><div id="mclip"></div></div></div></div>
 <div class="toast" id="toast">E-mail copiado</div>
 <div id="spacer"></div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 <script>
-const ATLAS={"W":1024,"H":1520,"tags":{"erdop":[0,100,277,165],"podre":[277,100,294,165],"origem":[571,100,350,156],"cinzas":[0,265,316,133],"sombra":[316,265,333,162],"labirinto":[0,427,431,157],"veneno":[431,427,375,133],"ruptura":[0,584,393,156],"resista":[393,584,359,156],"luz":[752,584,239,125],"t1":[0,740,347,127],"t2":[347,740,418,141],"t3":[0,881,511,127],"t4":[511,881,460,124],"t5":[0,1008,274,131],"t6":[274,1008,493,123],"t7":[0,1139,282,104],"t8":[282,1139,319,122],"t9":[601,1139,365,125],"palco":[0,1264,440,131],"ecos":[0,1395,666,125]}};const ATLAS_URL='erdop-atlas.png';const ENC_URL='erdop-encarte.jpg';const BG_URL='https://static.wixstatic.com/media/3a294f_67d75a250f144c488a3513c603cc35c4~mv2.png/v1/fill/w_1920,h_1072,q_85,enc_jpg/erdop-janela.jpg';const PHOTO_URL='https://static.wixstatic.com/media/3a294f_2d2d7a2251614745bcef9a0c48dbbc5f~mv2.png/v1/fill/w_1920,h_1124,q_85,enc_jpg/erdop-hero.jpg';
+const ATLAS={"W":1024,"H":1520,"tags":{"erdop":[0,100,277,165],"podre":[277,100,294,165],"origem":[571,100,350,156],"cinzas":[0,265,316,133],"sombra":[316,265,333,162],"labirinto":[0,427,431,157],"veneno":[431,427,375,133],"ruptura":[0,584,393,156],"resista":[393,584,359,156],"luz":[752,584,239,125],"t1":[0,740,347,127],"t2":[347,740,418,141],"t3":[0,881,511,127],"t4":[511,881,460,124],"t5":[0,1008,274,131],"t6":[274,1008,493,123],"t7":[0,1139,282,104],"t8":[282,1139,319,122],"t9":[601,1139,365,125],"palco":[0,1264,440,131],"ecos":[0,1395,666,125]}};const ATLAS_URL='erdop-atlas.png';const ENC_URL='erdop-encarte.jpg';const BG_URL='https://static.wixstatic.com/media/3a294f_67d75a250f144c488a3513c603cc35c4~mv2.png/v1/fill/w_1920,h_1072,q_85,enc_jpg/erdop-janela.jpg';setTimeout(()=>{const lp=document.getElementById('lookph');if(lp)lp.style.backgroundImage=`url(${PHOTO_URL})`;},0);
+const PHOTO_URL='https://static.wixstatic.com/media/3a294f_2d2d7a2251614745bcef9a0c48dbbc5f~mv2.png/v1/fill/w_1920,h_1124,q_85,enc_jpg/erdop-hero.jpg';
 const TRACKS=[{"t":"ARMADILHA","theme":"vício","l":"[Verse]\nPreso no vício\nComo um salto no vazio\nMeu cérebro é um labirinto\nSem começo, sem destino\n\nFarto de estar disperso\nAgora eu sou o pássaro\nVoando baixo sobre as cinzas\nSem saber onde pousar\n\n[Pre-Chorus]\nToda porta se fecha\nQuando eu penso em voltar\nToda sombra me chama\nPra nunca mais acordar\n\n[Chorus]\nFarto...\nIsso é um fato...\nUm fato...\n\nEstou vivendo\nNo mundo real\n\nAndar com a equipe errada\nPode ser uma armadilha mortal\nUma armadilha mortal...\n(Pode ser!)\n\n[Verse]\nEstou perdido\nNum mundo cinza\nCada esquina que eu viro\nLeva um pedaço da minha vida\n\nOs monstros continuam\nMesmo depois de acordar\nFecho os olhos\nMas eles ainda estão lá\n\n[Bridge]\nSe tudo muda\nPor que eu continuo igual?\n\nSe tudo passa\nPor que isso não vai passar?\n\n[Chorus]\nFarto...\nIsso é um fato...\nUm fato...\n\nEstou vivendo\nNo mundo real\n\nAndar com a equipe errada\nPode ser uma armadilha mortal\n\nUma armadilha...\nUma armadilha...\nMortal...\n\n(Pode ser!)\n\n[Outro]\nFarto...\nFato...\nMundo real..."},{"t":"GATO DE RUA","theme":"rua","l":"[Verse 1]\nJuntos somos um\nForça da unidade\nLealdade, amizade\nNa unidade a gente\nJuntos somos um só\nHistórias nas ruas em cada esquina\nUm lugar\n\n[Chorus]\nCada queda você levanta\nUm ciclo sem fim\nNão cabe desistir\n\nCada queda você levanta\nUm ciclo sem fim\nNão cabe desistir\n\n[Bridge]\nUm simples abraço\nOlhares que se batem sem sentido algum\nHistória junta, um grito nas ruas\nA vida corre sem descansar\nCada sonho perdido\n\n[Chorus]\nAté o fim\nAté o fim\nCada queda você levanta\nUm ciclo sem fim\nNão cabe desistir\n\n[Outro]\nNão cabe desistir\nNão cabe desistir"},{"t":"CINZAS DE OURO","theme":"trabalho","l":"[Verse 1]\nAcordo cansado\nCom o rosto pesado\nUm café, um cigarro\n\n[Chorus]\nPra quê? Pra quê?\nA troco de quê?\nA gente vende o tempo pra poder esquecer\n\nPra quê? Pra quê?\nA troco de quê?\nAs cinzas de ouro queimam você\n\n[Verse 2]\nO relógio me prende\nE o tempo me entende\n\n[Chorus]\nPra quê? Pra quê?\nA troco de quê?\nA gente vende o corpo pra não enlouquecer\n\nPra quê? Pra quê?\nA troco de quê?\nAs cinzas de ouro vão te corroer\n\n[Bridge]\nSomos só números\nSomos só máquinas\nNão tem quem domine\n\n[Chorus]\nPra quê? Pra quê?\nA troco de quê?\nA gente morre vivo pra sobreviver\n\nPra quê? Pra quê?\nA troco de quê?\nAs cinzas de ouro brilham e somem\n\nBrilham e somem\nBrilham e somem\nA troco de quê?\nA troco de quê?\n\n[Outro]\nCinzas de ouro\nCinzas de ouro"},{"t":"BEIJO NA PELE","theme":"desejo","l":"[Verse]\nEu vejo você na noite que cai\nSeu medo dança e você não sai\nNo brilho pálido da lua cheia\nA sede escorre como areia\n\nVem cá, baby, sente o frio\nA gente dança nesse vazio\nSede não é só de sangue, é de querer\nE quem tá perdido sabe o que é viver\n\n[Pre-Chorus]\nSe entrega no escuro, você vai ver\nQue às vezes morrer é só renascer\n\n[Chorus]\nSente o beijo na pele (vai, vai)\nÉ doce e cruel, não sai (não sai)\nNa sombra se aprende que o prazer só acende\nQuando tudo é pra sempre, nunca mais\n\n[Chorus]\nSente o beijo na pele (vai, vai)\nÉ doce e cruel, não sai (não sai)\nNa sombra se aprende que o prazer só acende\nQuando tudo é pra sempre, nunca mais\n\n[Bridge]\nO mundo é nosso, a noite é lei\nNa dança lenta você se perde, eu sei\nNos olhos um convite que não dá pra negar\nQuem prova do veneno nunca quer voltar\n\nChama isso de perigo, eu chamo de lar\nO vazio me preenche, eu vou te ensinar\n\n[Chorus]\nSente o beijo na pele (vai, vai)\nÉ doce e cruel, não sai (não sai)\nNa sombra se aprende que o prazer só acende\nQuando tudo é pra sempre, nunca mais\n\n[Outro]\nNunca mais\nNunca mais\nPra sempre"},{"t":"RESISTA","theme":"resistência","l":"[Intro]\nJOGAI!\n\n[Verse 1]\nDesce o sol\nLevante o peso de um dia\nCada marca no meu corpo\nA história que construiu\n\n[Chorus]\nNÃO CAIA! NADA VAI!\nSEGURA! TODO EM FORÇA!\nVOCÊ VAI! SEGURA!\n\n[Verse]\nTraz o bem do aprendizado\nSonho de levar a mais\nSe tudo desmorona\nQuem você se torna?\n\n[Bridge]\nACREDITAR!\nNUNCA DEIXE DE ACREDITAR!\n\n[Chorus]\nNÃO CAIA! NADA VAI!\nSEGURA! TODO EM FORÇA!\nVOCÊ VAI! SEGURA!\n\n[Outro]\nVocê sente\nVocê vê\nO futuro é seu\nE você quem vai fazer\n\nDESCE O SOL\nLEVANTE!"},{"t":"NUNCA FUI SEU","theme":"ruptura","l":"[Verse]\nVejo quebrado\nde tudo errado\nA dor me consome...\n\n(yeah!)\n\n[Chorus]\nMas você não\nme deixou ser...\n\nEu sei que errei.\nMas você não\nme deixou ser...\n\nnunca fui seu!\nnunca fui seu!\n\n[Verse]\nAs palavras se perdem\nO tempo se vai\nE o meu passo\ne você não vai?\n\n[Chorus]\nSei que errei.\nMas você não\nme deixou ser...\n\nnunca fui seu!\nnunca fui seu!\n\n[Outro]\nVocê não vê?\nA realidade!\n\n[Chorus]\nMas você não\nme deixou ser...\n\nnunca fui seu!\nnunca fui seu!\n\nVocê não vê?\nA realidade!"},{"t":"VENENO","theme":"desejo","l":"[Verse]\nO espelho reflete\no que passou\nMas eu gosto\ndo que diz\nReflete o teu mistério\nA beleza e o que me diz\nTeu perfume é promessa\nSua sombra é tentação\nVocê fala com os olhos\nE o tempo perde a razão\n\n[Chorus]\nQuando o paraíso chegar\nEu já sei não é dor de febre\nMe faz acreditar\n(Acreditar)\n\n[Verse]\nO mundo gira lento\nmas teu corpo não\nCada passo teu\né pura combustão\nTua pele tem um ritmo\nque só eu sei seguir\nTeu sorriso é perigo\nmas eu quero cair\n\n[Chorus]\nSem medo e o tempo esquece de girar\nTeu toque é o início e o lugar\nVocê é meu veneno e me faz\nMe faz acreditar\nQue viver é sentir\ne sentir é queimar\n(Aaah)"},{"t":"FICA BEM","theme":"esperança","l":"[Intro]\n(Oh-oh-oh-oh)\n(Muda... muda...)\n\n[Verse 1]\nLembro quando a gente dizia\nQue ia mudar o mundo\nLembro quando a gente dizia\nQue ia mudar o mundo\n\nÀs vezes eu me perco\nNo que eu queria ser\nEu falo com o nada às vezes\nSerá que alguém ainda olhou por mim?\nSerá que alguém ainda olhou por mim?\n\n[Pre-Chorus]\nEu te vejo ainda aí\nAinda aí...\nAinda aí...\nEu te vejo ainda aí\nSem medo...\nSem medo de ser quem você é hoje!\n\n[Chorus]\nEu ainda vejo uma luz lá no fim\nMesmo quando o mundo cai em mim\nCai em mim...\nCai em mim...\n\nEu só rezo pra ficar bem\nE pra não esquecer de quem eu fui também\n\nEu só rezo pra ficar bem\nPra ficar bem...\nE pra não me perder também\n\n[Bridge]\nVocê jurava que ia mudar o mundo\nMudar o mundo...\nMal sabia que o mundo ia mudar você\nMudar você...\nJá acreditei demais...\nJá acreditei demais...\nE o amor morreu de tédio...\nMas você sabe...\nVocê sabe, né...\n\n[Chorus]\nEu ainda vejo uma luz lá no fim\nMesmo quando o mundo cai em mim\nCai em mim...\nCai em mim...\n\nEu só rezo pra ficar bem\nPra ficar bem...\nE pra não esquecer de quem eu fui também\n\nEu só rezo pra ficar bem\nPra ficar bem...\nE pra não me perder\nPra não me perder\nPra não me perder também!\n\n[Outro]\nEu ainda vejo uma luz lá no fim\nMesmo quando o mundo cai em mim\n\nEu só rezo...\nPra ficar bem...\n\nE pra não me perder também...\n\n(Oh-oh-oh-oh)\nFica bem...\nFica bem..."},{"t":"FARSA FAMA","theme":"sombra","l":"[Verse 1]\nA sombra no corpo sangrou\nAs preces que fiz ninguém escutou\nCaminhei entre anjos queimados\nBeijei a boca de santos quebrados\n\n[Pre-Chorus]\nE no fundo da queda meu corpo voltou\n\n[Chorus]\nEu sou a sombra\nEu sou a dor\nEu sou o grito que ninguém guardou\nEu sou a sombra\nEu sou a dor\nEu sou o resto do que já passou\n\n[Bridge]\nE no fundo da queda meu corpo voltou\n\n[Chorus]\nEu sou a sombra\nEu sou a dor\nEu sou o grito que ninguém guardou\nEu sou a sombra\nEu sou a dor\nEu sou o resto do que já passou\n\n[Outro]\nPai, perdoe-me pois eu não sei quem sou"}];
 const NOTES=[
  {note:"Sobre o vício: a porta que só abre para dentro.",ex:["Preso no vício","Como um salto no vazio","Meu cérebro é um labirinto","Sem começo, sem destino"],hl:2},
@@ -425,6 +503,7 @@ const SC=[
  {id:'nome',len:1.8,lab:'ERDOP'},
  {id:'encarte',len:6.5,lab:'Encarte'},
  {id:'loja',len:1.6,lab:'Loja'},
+ {id:'look',len:1.3,lab:'Look'},
  {id:'palco',len:6.0,lab:'Palco'},
  {id:'final',len:1.2,lab:'Contato'}
 ];
@@ -657,7 +736,7 @@ function bodyShape(kind){const s=new THREE.Shape();
   else{s.moveTo(0,-.52);s.bezierCurveTo(.44,-.52,.46,-.12,.3,.0);s.bezierCurveTo(.26,.06,.34,.22,.28,.34);s.bezierCurveTo(.2,.46,.06,.42,0,.4);s.bezierCurveTo(-.06,.42,-.2,.46,-.28,.34);s.bezierCurveTo(-.34,.22,-.26,.06,-.3,0);s.bezierCurveTo(-.46,-.12,-.44,-.52,0,-.52);}
   return s;}
 function guitar(kind,color,strings){const g=new THREE.Group();const depth=kind==='ac'?.14:.06;
-  const paint=M(color,{metalness:.25,roughness:.22});
+  const paint=new THREE.MeshPhysicalMaterial({color:color,metalness:.15,roughness:.28,clearcoat:1,clearcoatRoughness:.06,envMap:envTex,envMapIntensity:1.1});
   const body=new THREE.Mesh(new THREE.ExtrudeGeometry(bodyShape(kind),{depth,bevelEnabled:true,bevelSize:.012,bevelThickness:.012,bevelSegments:3,curveSegments:24}),paint);g.add(body);
   const fz=depth+.014;
   if(kind==='ac'){const hole=cyl(.075,.075,.004,MB(0x050505),32);hole.rotation.x=Math.PI/2;hole.position.set(0,.14,fz);const ring=new THREE.Mesh(new THREE.TorusGeometry(.085,.006,8,40),M(0xe8e8e8));ring.position.set(0,.14,fz);const br=box(.18,.03,.012,M(0x1a0e08));br.position.set(0,-.25,fz);g.add(hole,ring,br);}
@@ -780,6 +859,45 @@ function drawPanels(t,lvl){const W=512,H=256,g=pg,c=CUES[cueIdx];g.fillStyle='#0
   g.fillStyle=red;g.font='400 12px "Space Mono",monospace';g.fillText('CUE '+String(cueIdx+1).padStart(2,'0')+' · '+c.t,W/2,22);
   screens.forEach(s=>s.material.map.needsUpdate=true);lsc.material.map.needsUpdate=true;}
 const checklist=document.getElementById('checklist');ITEMS.forEach(it=>{const li=document.createElement('li');li.textContent=it.name;checklist.appendChild(li);});
+/* ===== palco interativo: foco por clique + som do instrumento ===== */
+const FOC={i:null,name:'',t0:0,lp:0,c:new THREE.Vector3(),p:new THREE.Vector3(),look:new THREE.Vector3(0,.9,0),base:null,anim:()=>{}};
+let SND=null;
+function snd(){if(SND)return SND;try{SND=new (window.AudioContext||window.webkitAudioContext)();}catch(e){SND=null;}return SND;}
+function tone(C,type,f,t0,dur,vol,opts={}){const o=C.createOscillator(),g=C.createGain();o.type=type;o.frequency.setValueAtTime(f,t0);if(opts.to)o.frequency.exponentialRampToValueAtTime(opts.to,t0+dur);g.gain.setValueAtTime(0,t0);g.gain.linearRampToValueAtTime(vol,t0+.008);g.gain.exponentialRampToValueAtTime(.0001,t0+dur);let n=o;if(opts.dist){const w=C.createWaveShaper();const cv=new Float32Array(1024);for(let i=0;i<1024;i++){const x=i/512-1;cv[i]=Math.tanh(x*opts.dist);}w.curve=cv;n.connect(w);n=w;}if(opts.lp){const fl=C.createBiquadFilter();fl.type='lowpass';fl.frequency.value=opts.lp;n.connect(fl);n=fl;}if(opts.bp){const fl=C.createBiquadFilter();fl.type='bandpass';fl.frequency.value=opts.bp;fl.Q.value=4;n.connect(fl);n=fl;}n.connect(g);g.connect(opts.out||C.destination);o.start(t0);o.stop(t0+dur+.05);}
+function noise(C,t0,dur,vol,hp){const b=C.createBuffer(1,C.sampleRate*dur,C.sampleRate);const d=b.getChannelData(0);for(let i=0;i<d.length;i++)d[i]=(Math.random()*2-1)*(1-i/d.length);const s=C.createBufferSource();s.buffer=b;const f=C.createBiquadFilter();f.type='highpass';f.frequency.value=hp||1000;const g=C.createGain();g.gain.value=vol;s.connect(f);f.connect(g);g.connect(C.destination);s.start(t0);}
+function playInst(name){const C=snd();if(!C)return;if(C.state==='suspended')C.resume();const T=C.currentTime+.02;
+  if(name==='Bateria'){[0,.25,.5,.75].forEach((d,k)=>{tone(C,'sine',140,T+d,.35,.9,{to:40});if(k%2)noise(C,T+d,.18,.35,1800);noise(C,T+d+.125,.05,.15,7000);});}
+  else if(name==='Baixo'){[55,55,73.4,65.4].forEach((f,k)=>tone(C,'sawtooth',f,T+k*.28,.5,.35,{lp:420}));}
+  else if(name==='Guitarra'){[[110,165,220],[98,147,196]].forEach((ch,k)=>ch.forEach(f=>tone(C,'sawtooth',f,T+k*.45,.9,.12,{dist:6,lp:3200})));}
+  else if(name==='Violão'){[196,247,294,392,294,247].forEach((f,k)=>tone(C,'triangle',f,T+k*.12,1.2,.18,{lp:2600}));}
+  else if(name==='Amplificador'){tone(C,'sawtooth',110,T,1.6,.18,{dist:12,lp:1800});tone(C,'square',220,T+.5,1.1,.06,{dist:8,lp:2400});}
+  else if(name==='Pedalboard'){const dl=C.createDelay();dl.delayTime.value=.28;const fb=C.createGain();fb.gain.value=.45;dl.connect(fb);fb.connect(dl);dl.connect(C.destination);[[147,220,294]].forEach(ch=>ch.forEach(f=>tone(C,'sawtooth',f,T,.6,.1,{dist:5,lp:2800,out:dl})));[147,220,294].forEach(f=>tone(C,'sawtooth',f,T,.6,.1,{dist:5,lp:2800}));}
+  else if(name==='Voz & loop'){[0,.4,.8].forEach(d=>{tone(C,'sawtooth',146.8,T+d,.38,.16,{bp:800});tone(C,'sawtooth',220,T+d+.2,.18,.08,{bp:1200});});}
+  else if(name==='Synth'){[261.6,311.1,392,466.2,523.3,466.2,392,311.1].forEach((f,k)=>tone(C,'square',f,T+k*.11,.2,.08,{lp:2400}));}
+  else if(name==='Microfone'){noise(C,T,.08,.25,2500);noise(C,T+.3,.08,.25,2500);}
+  else if(name==='Iluminação'){noise(C,T,1.2,.08,400);}
+  else if(name==='Painéis + VJ'){[0,.1,.2,.35].forEach(d=>tone(C,'square',880+Math.random()*900,T+d,.06,.06));}
+  else if(name==='Som da casa'){tone(C,'sine',80,T,1.4,.9,{to:30});}
+  else{tone(C,'sine',60,T,.8,.7,{to:35});}}
+function focusOn(i){const it=ITEMS[i];if(!it)return;FOC.i=i;FOC.name=it.name;FOC.t0=tt;FOC.lp=window.__lp||0;
+  const bx=new THREE.Box3().setFromObject(it.obj);const sp=new THREE.Sphere();bx.getBoundingSphere(sp);
+  FOC.c.copy(sp.center);const r=Math.max(.35,Math.min(sp.radius,4.2));
+  const dir=new THREE.Vector3().subVectors(camera.position,FOC.c);dir.y=0;if(dir.lengthSq()<.01)dir.set(0,0,1);dir.normalize();
+  const dist=Math.max(1.15,r*2.3);FOC.p.copy(FOC.c).addScaledVector(dir,dist);FOC.p.y=FOC.c.y+Math.max(.35,r*.55);
+  const o=it.obj;FOC.base={y:o.userData.home.y,ry:o.userData.rot||0,rz:o.rotation.z,s:o.scale.x};
+  FOC.anim=(t,a)=>{const n=FOC.name;if(n==='Baixo'||n==='Guitarra'||n==='Violão'){o.rotation.z=Math.sin(t*46)*.012*a;o.position.y=FOC.base.y+Math.sin(t*9)*.01*a;}
+    else if(n==='Bateria'||n==='Som da casa'||n==='Amplificador'){const p=Math.abs(Math.sin(t*Math.PI*4))*a;o.scale.setScalar(1+p*.025);}
+    else if(n==='Pedalboard'||n==='Voz & loop'||n==='Synth'||n==='Microfone'){o.position.y=FOC.base.y+Math.abs(Math.sin(t*14))*.02*a;}
+    rim.intensity=1.2+a*3;};
+  document.getElementById('cardt').textContent='Em foco · item '+String(i+1).padStart(2,'0');document.getElementById('cardn').textContent=it.name;document.getElementById('cardd').textContent=it.desc;document.getElementById('cards').textContent=it.src;
+  document.getElementById('card').classList.add('foc');playInst(it.name);}
+function focusOff(){if(FOC.i===null)return;const o=ITEMS[FOC.i].obj;o.rotation.z=0;o.scale.setScalar(1);FOC.i=null;FOC.name='';lastItem=-1;document.getElementById('card').classList.remove('foc');}
+[...checklist.children].forEach((li,i)=>{li.tabIndex=0;li.setAttribute('role','button');li.title='Ver de perto e tocar';
+  const go=()=>{if(FOC.i===i){FOC.t0=tt;playInst(ITEMS[i].name);return;}if(FOC.i!==null)focusOff();focusOn(i);};
+  li.addEventListener('click',go);li.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();go();}});});
+{const ms=document.querySelector('.hud .mission');const tip=document.createElement('div');tip.className='tip';tip.textContent='Toque num item para ver de perto e ouvir';ms.appendChild(tip);}
+document.getElementById('cardback').onclick=focusOff;window.__FOC=FOC;window.__cam=camera;
+
 document.getElementById('win').appendChild(spr('palco',isMob()?60:96));
 
 /* ===== layout / resize ===== */
@@ -793,13 +911,55 @@ const modal=document.getElementById('modal');let curTrack=0;
 const LBL={verse:'Verso','verse 1':'Verso','verse 2':'Verso',chorus:'Refrão','pre-chorus':'Pré-refrão',bridge:'Ponte',outro:'Final',intro:'Intro'};
 function openLyrics(i){const t=TRACKS[i];document.getElementById('mk').textContent='Faixa '+String(i+1).padStart(2,'0')+' · '+t.theme;document.getElementById('mt').textContent=t.t;document.getElementById('mn').textContent=NOTES[i].note;
   const parts=t.l.split(/\n?\[([^\]]+)\]\n?/).filter((x,k)=>k>0);let h='';for(let k=0;k<parts.length;k+=2){const key=parts[k].trim().toLowerCase();const txt=(parts[k+1]||'').trim().replace(/&/g,'&amp;').replace(/</g,'&lt;');h+=`<div class="sec">${LBL[key]||parts[k]}</div><p class="${key==='chorus'?'ch':''}">${txt}</p>`;}
-  document.getElementById('mb').innerHTML=h;const sh=modal.querySelector('.sheet');if(sh)sh.scrollTop=0;const was=modal.classList.contains('on');modal.classList.add('on');modal.dataset.i=i;if(!was)document.getElementById('mx').focus();}
+  document.getElementById('mb').innerHTML=h;fillModal(i);const sh=modal.querySelector('.sheet');if(sh)sh.scrollTop=0;const was=modal.classList.contains('on');modal.classList.add('on');modal.dataset.i=i;if(!was)document.getElementById('mx').focus();}
 document.getElementById('readbtn').onclick=()=>openLyrics(curTrack);{const ptE=document.getElementById('pt');ptE.style.cursor='pointer';ptE.title='Ler a letra';ptE.setAttribute('role','button');ptE.tabIndex=0;ptE.onclick=()=>openLyrics(AUD.idx);ptE.onkeydown=e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();openLyrics(AUD.idx);}};}
 
-document.getElementById('mx').onclick=()=>modal.classList.remove('on');
+
+/* ===== modal da faixa: tema, abas, tablatura, história e clipe ===== */
+const THEME=[
+ {c:'rgba(120,0,0,.55)',g:'grayscale(.2) contrast(1.1)'},{c:'rgba(40,40,40,.6)',g:'grayscale(.7) contrast(1.15)'},{c:'rgba(90,60,0,.5)',g:'sepia(.4) contrast(1.1)'},
+ {c:'rgba(150,0,20,.55)',g:'saturate(1.2) contrast(1.1)'},{c:'rgba(200,0,0,.45)',g:'contrast(1.25)'},{c:'rgba(20,20,40,.6)',g:'grayscale(.5) hue-rotate(-10deg)'},
+ {c:'rgba(90,0,60,.55)',g:'saturate(1.1)'},{c:'rgba(60,60,60,.45)',g:'grayscale(.3) brightness(1.1)'},{c:'rgba(0,0,0,.6)',g:'grayscale(.4) contrast(1.3)'}];
+const TABS=[null,null,null,null,null,null,null,null,null]; // tablaturas: preencher quando a banda enviar (texto no formato e|---)
+const HIST=[null,null,null,null,null,null,null,null,null]; // história narrada pela banda
+const CLIPS=[null,null,null,null,null,null,null,null,null]; // URL do videoclipe quando existir
+const SB=[
+ [['0:00','Gancho','Close nos olhos de Warurase sob luz vermelha piscando; a câmera recua e revela que ele está dentro de um labirinto de grades.','close → travelling para trás'],['0:20','Verso','Corredores de metal que se repetem; ele corre e sempre volta ao mesmo ponto. Cortes secos no ritmo da batida.','câmera na mão, cortes no bumbo'],['0:45','Refrão','Saltos no vazio: ele cai em câmera lenta num poço escuro com faíscas subindo.','plongée, câmera lenta'],['1:15','Ponte','Um pássaro de papel queimado atravessa as grades; ele estende a mão.','plano detalhe'],['1:40','Final','As grades se abrem em forma de asas; ele sai para a luz branca, a banda toca no fundo.','grua subindo']],
+ [['0:00','Gancho','Rua molhada de madrugada em Ubá, poste piscando, um gato preto atravessa a frente da câmera.','plano baixo, chão'],['0:20','Verso','A banda caminha junta pela rua; muros com lambe-lambe da ERDOP.','steadicam acompanhando'],['0:45','Refrão','Alguém cai na calçada e várias mãos aparecem para levantar; contra-luz branca.','plano zenital'],['1:15','Ponte','Show improvisado numa garagem aberta, vizinhos se aproximando.','câmera na mão no meio da roda'],['1:40','Final','O gato senta no amplificador; fade com a rua vazia e a luz do dia nascendo.','plano fixo, fade']],
+ [['0:00','Gancho','Despertador às 5h; mão pesada desliga; cinzas caindo do teto.','close, luz fria'],['0:20','Verso','Linha de produção: relógios, café, cigarro, repetidos em loop.','cortes rítmicos, câmera fixa'],['0:45','Refrão','As moedas viram cinza dourada na mão de quem recebe; a banda toca em meio à poeira.','câmera lenta, partículas douradas'],['1:15','Ponte','Ele para a esteira da fábrica com um grito; tudo silencia.','plano aberto, som corta'],['1:40','Final','Pôr do sol pela janela da fábrica; ele sai sem olhar para trás.','travelling lateral']],
+ [['0:00','Gancho','Lua vermelha sobre telhados; uma silhueta de vestido escuro na janela.','plano aberto, fumaça'],['0:20','Verso','Corredor de luz baixa; o casal se aproxima sem se tocar.','câmera lenta, foco raso'],['0:45','Refrão','O beijo no pescoço revela cabos sob a pele, pulsando em vermelho.','macro, luz pulsante no bumbo'],['1:15','Ponte','A banda toca entre cortinas de fumaça vermelha.','câmera orbitando'],['1:40','Final','Ela some no espelho; fica só a marca do beijo brilhando.','push-in no espelho']],
+ [['0:00','Gancho','Sol descendo atrás de chaminés; Warurase sentado, cabeça baixa.','contra-luz, silhueta'],['0:20','Verso','Pesos amarrados às costas de várias pessoas caminhando.','travelling lateral'],['0:45','Refrão','No grito NÃO CAIA as cordas arrebentam; flash branco total.','corte no flash, câmera tremendo'],['1:15','Ponte','A banda toca no telhado, vento forte, bandeira vermelha.','drone circulando'],['1:40','Final','Todos de pé, de mãos dadas, olhando a câmera.','plano frontal fixo']],
+ [['0:00','Gancho','Vidro trincado em primeiro plano; do outro lado, alguém chama.','foco puxando do vidro para o fundo'],['0:20','Verso','Fotos antigas queimando devagar.','macro, fogo'],['0:45','Refrão','No NUNCA FUI SEU o vidro explode em câmera lenta.','câmera lenta, contra-luz vermelha'],['1:15','Ponte','Ele caminha sozinho por um corredor branco.','steadicam de costas'],['1:40','Final','Ele tira a máscara e respira; tela preta com o título.','close, corte seco']],
+ [['0:00','Gancho','Taça com líquido vermelho escuro girando sobre mesa de metal.','macro, rotação'],['0:20','Verso','Perfume em névoa vermelha envolvendo a banda.','câmera lenta, fumaça'],['0:45','Refrão','A cada gole a imagem distorce e as cores invertem.','efeito glitch no grave'],['1:15','Ponte','Sombra feminina projetada gigante na parede do palco.','plano aberto, luz dura'],['1:40','Final','A taça cai e o vermelho escorre pelo chão até a câmera.','plano baixo, câmera lenta']],
+ [['0:00','Gancho','Fotos da banda jovem em VHS, no quarto onde tudo começou.','textura VHS, plano fixo'],['0:20','Verso','Os mesmos lugares hoje, vazios; o contraste de antes e depois.','montagem paralela'],['0:45','Refrão','Túnel escuro com uma luz branca no fim; eles caminham em direção a ela.','travelling frontal'],['1:15','Ponte','Abraço da banda no palco depois do show.','câmera na mão, luz quente'],['1:40','Final','A luz invade a tela e vira o logo ERDOP.','fade para branco']],
+ [['0:00','Gancho','Tapete vermelho vazio, flashes estourando sem ninguém.','plano aberto, flashes'],['0:20','Verso','Anjos com asas queimadas posando para fotos.','câmera lenta, cinzas'],['0:45','Refrão','EU SOU A SOMBRA: Warurase surge como sombra atrás dos holofotes.','contra-luz, silhueta'],['1:15','Ponte','Troféus derretendo em metal líquido.','macro, câmera lenta'],['1:40','Final','O grito final apaga todas as luzes; só o logo vermelho fica aceso.','corte seco no grito']]];
+let panelURLs=[];
+function panelURL(i){if(panelURLs[i])return panelURLs[i];try{const c=document.createElement('canvas');c.width=c.height=560;c.getContext('2d').drawImage(encImg,(i%4)*PANEL,Math.floor(i/4)*PANEL,PANEL,PANEL,0,0,560,560);panelURLs[i]=c.toDataURL('image/jpeg',.82);}catch(e){panelURLs[i]=ENC_URL;}return panelURLs[i];}
+const esc=s=>String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;');
+let sbTimer=null,sbIdx=0,sbSong=0;
+function sbShow(k){const sc=SB[sbSong];sbIdx=(k+sc.length)%sc.length;const s=sc[sbIdx];const im=document.getElementById('sbimg');if(!im)return;
+  im.style.transition='none';im.style.transform=`scale(1.12) translate(${sbIdx%2?-2:2}%,${sbIdx%3?1:-1}%)`;im.offsetWidth;im.style.transition='transform 4.2s linear,filter .6s';im.style.transform=`scale(1) translate(0,0)`;
+  im.style.filter=THEME[sbSong].g+(sbIdx===2?' brightness(1.25)':'');
+  document.getElementById('sbtx').innerHTML=`<b>Cena ${sbIdx+1} · ${esc(s[0])} · ${esc(s[1])}</b><span>${esc(s[2])}</span><i>Câmera: ${esc(s[3])}</i>`;
+  [...document.querySelectorAll('#sbdots i')].forEach((d,j)=>d.classList.toggle('on',j<=sbIdx));}
+function sbPlay(on){clearInterval(sbTimer);sbTimer=null;const b=document.getElementById('sbplay');if(on){sbTimer=setInterval(()=>{if(sbIdx>=SB[sbSong].length-1){sbPlay(false);return;}sbShow(sbIdx+1);},4200);}if(b)b.textContent=on?'❚❚ Pausar':'▶ Assistir storyboard';}
+function fillModal(i){const sheet=modal.querySelector('.sheet');const th=THEME[i];
+  sheet.style.backgroundImage=`linear-gradient(180deg,rgba(8,0,0,.86),rgba(4,0,0,.93)),linear-gradient(0deg,${th.c},${th.c}),url(${panelURL(i)})`;
+  const tr=TRACKS[i];
+  document.getElementById('mtab').innerHTML=TABS[i]?`<pre class="tabpre">${esc(TABS[i])}</pre>`:`<div class="empty">A tablatura de <b>${esc(tr.t)}</b> ainda não foi cadastrada.<br>Quando a banda enviar, ela aparece aqui no formato de tab (e|--- B|--- G|--- D|--- A|--- E|---), com afinação e acordes de cada parte.</div>`;
+  document.getElementById('mhist').innerHTML=`<div class="sec">Sobre a faixa</div><p>${esc(NOTES[i].note)}</p>`+(HIST[i]?`<div class="sec">A história</div><p>${esc(HIST[i])}</p>`:`<div class="empty" style="margin-top:14px">Aqui a banda vai contar a história de <b>${esc(tr.t)}</b>: de onde veio, o que aconteceu e por que ela entrou no disco.</div>`);
+  sbSong=i;sbIdx=0;
+  const vid=CLIPS[i]?`<div class="clip"><video src="${esc(CLIPS[i])}" controls playsinline preload="metadata"></video></div>`:`<div class="clip"><div class="sbimg" id="sbimg" style="background-image:url(${panelURL(i)})"></div><span class="badge">Storyboard · clipe em produção</span><div class="sbtx" id="sbtx"></div></div><div class="sbctl"><button type="button" id="sbprev" aria-label="Cena anterior">◄</button><button type="button" id="sbplay">▶ Assistir storyboard</button><button type="button" id="sbnext" aria-label="Próxima cena">►</button><div class="sbdots" id="sbdots">${SB[i].map(()=>'<i></i>').join('')}</div></div>`;
+  document.getElementById('mclip').innerHTML=vid+`<div class="sec">Roteiro do clipe · ${esc(tr.t)}</div><ol class="sblist">${SB[i].map((s,k)=>`<li><b>${k+1} · ${esc(s[0])}<br>${esc(s[1])}</b><span>${esc(s[2])}<em>Câmera: ${esc(s[3])}</em></span></li>`).join('')}</ol><div class="sbstat">Status: ideia aguardando aprovação da banda. Depois de aprovada, cada cena vira um vídeo no Higgsfield e o clipe entra neste player.</div>`;
+  if(!CLIPS[i]){sbShow(0);document.getElementById('sbplay').onclick=()=>sbPlay(!sbTimer);document.getElementById('sbprev').onclick=()=>{sbPlay(false);sbShow(sbIdx-1);};document.getElementById('sbnext').onclick=()=>{sbPlay(false);sbShow(sbIdx+1);};}
+  selTab('letra');}
+function selTab(p){modal.querySelectorAll('.mtabs button').forEach(b=>b.setAttribute('aria-selected',b.dataset.p===p?'true':'false'));modal.querySelectorAll('.mpanel').forEach(x=>x.hidden=x.dataset.p!==p);if(p!=='clipe')sbPlay(false);const sh=modal.querySelector('.sheet');if(sh)sh.scrollTop=0;}
+modal.querySelectorAll('.mtabs button').forEach(b=>b.onclick=()=>selTab(b.dataset.p));
+document.getElementById('mx').onclick=()=>{modal.classList.remove('on');sbPlay(false);};
 modal.addEventListener('click',e=>{if(e.target===modal)modal.classList.remove('on');});
 addEventListener('keydown',e=>{if(e.key==='Escape')modal.classList.remove('on');});
 document.getElementById('skipenc').onclick=()=>scrollTo({top:SC[7].start*innerHeight,behavior:'smooth'});
+document.querySelectorAll('#final a[href^="mailto:"]').forEach(a=>a.addEventListener('click',()=>{try{navigator.clipboard.writeText('erdop.oficial@gmail.com');}catch(e){}const tt2=document.getElementById('toast');const old=tt2.textContent;setTimeout(()=>{if(document.visibilityState==='visible'){tt2.textContent='Se o e-mail não abriu, o endereço foi copiado';tt2.classList.add('on');setTimeout(()=>{tt2.classList.remove('on');tt2.textContent=old;},2600);}},1200);}));
 document.getElementById('copy-mail').onclick=async()=>{try{await navigator.clipboard.writeText('erdop.oficial@gmail.com');}catch(e){}const t=document.getElementById('toast');t.classList.add('on');setTimeout(()=>t.classList.remove('on'),1600);};
 
 
@@ -837,11 +997,11 @@ const els={dip:document.getElementById('dip'),flash:document.getElementById('fla
 let flashed=false,lastItem=-1;
 function frame(dt,t){
   const y=scrollY/innerHeight;let si=0;for(let i=0;i<SC.length;i++)if(y>=SC[i].start)si=i;
-  const sc=SC[si],lp=cl((y-sc.start)/sc.len);
+  const sc=SC[si],lp=cl((y-sc.start)/sc.len);window.__lp=lp;
   [...rail.children].forEach((b,i)=>b.classList.toggle('on',i===si));
   els.hint.style.opacity=y<.15?1:0;
   // dip to black around big transitions
-  const bnd=[SC[6].start,SC[7].start,SC[8].start,SC[9].start];let dip=0;bnd.forEach(b=>{dip=Math.max(dip,1-cl(Math.abs(y-b)/.18));});els.dip.style.opacity=dip;
+  const bnd=[SC[6].start,SC[7].start,SC[8].start,SC[9].start,SC[10].start];let dip=0;bnd.forEach(b=>{dip=Math.max(dip,1-cl(Math.abs(y-b)/.18));});els.dip.style.opacity=dip;
   // targets
   const T={asm:0,word:0,glitch:0,wind:0,burst:0,red:.25,photo:0,zoom:3.4,fade:1};
   if(sc.id==='origem'){T.photo=1-ss(.35,.95,lp);T.asm=0;T.zoom=3.6;}
@@ -891,29 +1051,33 @@ function frame(dt,t){
   const inStage=sc.id==='palco';stage.visible=inStage;els.hud.classList.toggle('on',inStage);
   if(inStage){
     const nI=ITEMS.length;const ip=cl(lp/.86)*nI;let done=0;
-    ITEMS.forEach((it,i)=>{const k=cl(ip-i);const o=it.obj;o.visible=k>0;
+    ITEMS.forEach((it,i)=>{const k=FOC.i===i?1:cl(ip-i);const o=it.obj;o.visible=k>0;
       if(it.from==='fade'){o.scale.setScalar(.6+.4*k);o.position.y=it.obj.userData.home.y;}
       else if(it.from==='ground'){o.position.y=it.obj.userData.home.y-(1-ss(0,1,k))*1.2;}
       else{const b=k<1?(1-k):0;const bounce=k<1?Math.abs(Math.sin(k*Math.PI*2.5))*(1-k)*.3:0;o.position.y=it.obj.userData.home.y+b*b*4+bounce;o.rotation.y=(1-k)*1.4;}
       if(k>=1)done++;});
     const cur=Math.min(nI-1,Math.floor(ip));
-    [...checklist.children].forEach((li,i)=>{li.className=i<done?'ok':(i===cur&&done<nI?'cur':'');});
+    [...checklist.children].forEach((li,i)=>{li.className=FOC.i===i?'foc':(i<done?'ok':(i===cur&&done<nI?'cur':''));});
     const pct=Math.round(cl(lp/.86)*100);document.getElementById('xp').style.width=pct+'%';document.getElementById('pct').textContent=(pct<100?'MONTAGEM ':'PALCO MONTADO · ')+pct+'%';
-    if(cur!==lastItem){lastItem=cur;const it=ITEMS[cur];document.getElementById('cardt').textContent='Item '+String(cur+1).padStart(2,'0')+'/'+String(nI).padStart(2,'0');document.getElementById('cardn').textContent=it.name;document.getElementById('cardd').textContent=it.desc;document.getElementById('cards').textContent=it.src;}
+    if(FOC.i===null&&cur!==lastItem){lastItem=cur;const it=ITEMS[cur];document.getElementById('cardt').textContent='Item '+String(cur+1).padStart(2,'0')+'/'+String(nI).padStart(2,'0');document.getElementById('cardn').textContent=it.name;document.getElementById('cardd').textContent=it.desc;document.getElementById('cards').textContent=it.src;}
     const win=lp>.88;document.getElementById('win').classList.toggle('on',win);
-    const lo=ss(.86,.95,lp);const lightOn=cl(ip-10),vjOn=cl(ip-11);const L=Math.max(lightOn*.55,lo);
+    const lo=ss(.86,.95,lp);const lightOn=cl(ip-10),vjOn=Math.max(cl(ip-11),FOC.name==='Painéis + VJ'?1:0);const act=FOC.i===null?0:Math.max(0,1-(t-FOC.t0)/2.4);const L=Math.max(lightOn*.55,lo,FOC.name==='Iluminação'?1:0,act*.6);if(FOC.i!==null)FOC.anim(t,act);
     beams.children.forEach(b=>{b.material.opacity=L*(.12+.14*beat);b.rotation.z=Math.sin(t*.8+b.userData.k)*.45*L;b.rotation.x=Math.sin(t*.6+b.userData.k*1.7)*.25*L;});
     heads.forEach((h,k)=>{h.userData.yoke.rotation.y=Math.sin(t*.8+k)*.45*L;h.userData.yoke.rotation.x=Math.sin(t*.6+k*1.7)*.25*L;h.userData.lens.material.color.setHex(L>.05?0xff2020:0x330000);});
     pars.forEach((p,k)=>p.material.color.setRGB(.2+.8*L*(.6+.4*beat),0,0));strobes.forEach(f=>f.material.color.setHex(L>.3&&beat>.85?0xffffff:0x222222));
     spot.intensity=lo*2.2;rim.intensity=1.2+L*2+beat*L*1.5;
     if(vjOn>0){cueIdx=AUD.on?AUD.idx:Math.floor(t/3.2)%9;if(t-lastPanelDraw>1/24){lastPanelDraw=t;drawPanels(t,beat);}}
-    if(win){const c=CUES[cueIdx];document.getElementById('cardt').textContent='Cue '+String(cueIdx+1).padStart(2,'0')+' · painéis + luz';document.getElementById('cardn').textContent=c.t;document.getElementById('cardd').textContent='Painel: '+c.txt+' · Luz: '+c.luz;document.getElementById('cards').textContent=AUD.on?'sincronizado com o player':'aperte ▶ no player para sincronizar';lastItem=-1;}
+    if(win&&FOC.i===null){const c=CUES[cueIdx];document.getElementById('cardt').textContent='Cue '+String(cueIdx+1).padStart(2,'0')+' · painéis + luz';document.getElementById('cardn').textContent=c.t;document.getElementById('cardd').textContent='Painel: '+c.txt+' · Luz: '+c.luz;document.getElementById('cards').textContent=AUD.on?'sincronizado com o player':'aperte ▶ no player para sincronizar';lastItem=-1;}
     // orbit camera like a game
     const ang=-.9+lp*1.5+mouse.x*.15;const rad=isMob()?10:7;const camY=isMob()?4:2.8;
-    camera.position.set(Math.sin(ang)*rad,camY-lp*.6,Math.cos(ang)*rad);camera.lookAt(0,.9,0);
+    if(FOC.i!==null&&Math.abs(lp-FOC.lp)>.035)focusOff();
+    if(FOC.i===null){camera.position.set(Math.sin(ang)*rad,camY-lp*.6,Math.cos(ang)*rad);camera.lookAt(0,.9,0);FOC.look.set(0,.9,0);}
+    else{const f=Math.min(1,dt*2.6);camera.position.lerp(FOC.p,f);FOC.look.lerp(FOC.c,f);camera.lookAt(FOC.look);}
   }
   els.final.classList.toggle('on',sc.id==='final'&&lp>.05);
   (window.__shop||(window.__shop=document.getElementById('shop'))).classList.toggle('on',sc.id==='loja'&&lp>.04&&lp<.97);
+  (window.__look||(window.__look=document.getElementById('look'))).classList.toggle('on',sc.id==='look'&&lp>.03&&lp<.97);
+  rail.classList.toggle('hide',['encarte','loja','look','palco','final'].includes(sc.id));
   if(!inEnc&&!inStage){camera.position.set(0,0,S.zoom*ZF);camera.lookAt(0,0,0);
     pgroup.position.x=(innerWidth>900&&si<=5)?.55:0;pgroup.position.y=innerWidth<innerHeight?.25:.08;
     pgroup.rotation.y=U.uMouse.value.x*.35+Math.sin(t*.2)*.08;pgroup.rotation.x=-U.uMouse.value.y*.12;}
