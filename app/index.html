@@ -659,6 +659,23 @@ input::placeholder,textarea::placeholder{color:#8a8a8a;opacity:1}
                 <span style="font-size: 13px; color: #444444; line-height: 1.45;">{{inpiNow.d}}</span>
                 <span style="font-size: 12px; color: #6b6b6b; margin-top: 6px;">Classes: 41 shows · 9 música gravada · 25 roupas · 16 pôsteres. Depois de concedido, renovar a cada 10 anos: assim nunca expira.</span>
               </div>
+              <div style="background: #111111; color: #ffffff; border-radius: 18px; padding: 16px; display: flex; flex-direction: column; gap: 12px;">
+                <div style="display: flex; justify-content: space-between; align-items: center; gap: 10px;"><span style="font-size: 12px; font-weight: 700; letter-spacing: 0.08em; color: #ff5a5a;">DOSSIÊ PRONTO PARA O PEDIDO</span><span style="font-size: 12px; color: #bdbdbd;">{{inpiDone}}</span></div>
+                <span style="font-size: 13px; color: #d6d6d6; line-height: 1.45;">Tudo separado para protocolar no e-Marcas. A guia só é gerada quando o dinheiro estiver reservado.</span>
+                <sc-for list="{{inpiDoc}}" as="dk" hint-placeholder-count="6">
+                  <div style="border-top: 1px solid #2a2a2a; padding-top: 10px; display: flex; flex-direction: column; gap: 4px;">
+                    <span style="font-size: 12px; font-weight: 700; color: #ff5a5a; letter-spacing: 0.06em; text-transform: uppercase;">{{dk.k}}</span>
+                    <span style="font-size: 14px; color: #f0f0f0; line-height: 1.5; white-space: pre-line;">{{dk.v}}</span>
+                  </div>
+                </sc-for>
+                <a href="./media/inpi-logo-945.jpg" download="ERDOP-logo-INPI-945x945.jpg" style="display: flex; align-items: center; justify-content: center; min-height: 48px; border-radius: 14px; background: #cc0000; color: #ffffff; text-decoration: none; font-weight: 700; font-size: 15px;">Baixar o logo no formato do INPI</a>
+              </div>
+              <div style="display: flex; flex-direction: column; gap: 8px;">
+                <span style="font-size: 15px; font-weight: 700;">Checklist do pedido</span>
+                <sc-for list="{{inpiChecks}}" as="ck" hint-placeholder-count="8">
+                  <button type="button" onClick="{{ck.toggle}}" aria-pressed="{{ck.on}}" style="{{ck.style}}"><span style="{{ck.box}}">{{ck.mark}}</span><span style="display: flex; flex-direction: column; gap: 2px;"><span style="font-size: 14px; font-weight: 600;">{{ck.t}}</span><span style="font-size: 12px; color: #6b6b6b;">{{ck.d}}</span></span></button>
+                </sc-for>
+              </div>
             </section>
 
             <section style="display: flex; flex-direction: column; gap: 10px;">
@@ -712,11 +729,11 @@ input::placeholder,textarea::placeholder{color:#8a8a8a;opacity:1}
     </sc-if>
   </main>
 
-  <nav aria-label="Seções" style="display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 0; padding: 6px 4px calc(12px + env(safe-area-inset-bottom)); background: #ffffff; border-top: 1px solid #ececec;">
+  <nav aria-label="Seções" style="display: grid; grid-template-columns: repeat(5, minmax(0, 1fr));  padding: 6px 4px calc(12px + env(safe-area-inset-bottom)); background: #111111; border-top: 2px solid #cc0000; gap: 4px;">
     <sc-for list="{{tabs}}" as="tb" hint-placeholder-count="5">
       <button type="button" onClick="{{tb.pick}}" aria-current="{{tb.cur}}" style="{{tb.style}}">
         <span style="position: relative; display: flex;"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="{{tb.icon}}"></path></svg><span style="{{tb.badgeStyle}}">{{tb.badge}}</span></span>
-        <span style="font-size: 10px; font-weight: 600; white-space: nowrap;">{{tb.label}}</span>
+        <span style="font-size: 11px; font-weight: 700; letter-spacing: 0.01em; white-space: nowrap;">{{tb.label}}</span>
       </button>
     </sc-for>
   </nav>
@@ -755,7 +772,9 @@ input::placeholder,textarea::placeholder{color:#8a8a8a;opacity:1}
         <div style="width: 40px; height: 4px; border-radius: 2px; background: #cfcfcf; align-self: center;"></div>
         <div style="display: flex; flex-direction: column; gap: 2px;"><span style="font-size: 18px; font-weight: 700;">O que ajustar?</span><span style="font-size: 13px; color: #6b6b6b;">{{sheetTitle}}</span></div>
         <div style="display: flex; flex-wrap: wrap; gap: 8px;"><sc-for list="{{reasons}}" as="rs" hint-placeholder-count="5"><button type="button" onClick="{{rs.pick}}" style="{{rs.style}}">{{rs.label}}</button></sc-for></div>
-        <textarea placeholder="Detalhe se quiser (opcional)" style="min-height: 72px; border-radius: 16px; background: #e8e8e8; color: #111111; border: 0; padding: 12px; font-size: 15px; resize: none;"></textarea>
+        <button type="button" onClick="{{toggleMic}}" aria-pressed="{{micOn}}" style="{{micStyle}}"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3z"></path><path d="M19 10v2a7 7 0 0 1-14 0v-2"></path><path d="M12 19v3"></path></svg><span>{{micLabel}}</span></button>
+        <span style="font-size: 12px; color: #6b6b6b; line-height: 1.4;">{{micHint}}</span>
+        <textarea value="{{adjText}}" onInput="{{typeAdj}}" aria-label="Detalhe do ajuste" placeholder="Fale ou digite o que precisa mudar" style="min-height: 96px; border-radius: 16px; background: #e8e8e8; color: #111111; border: 0; padding: 12px; font-size: 15px; line-height: 1.45; resize: none;"></textarea>
         <button type="button" onClick="{{sendAdjust}}" style="display: flex; align-items: center; justify-content: center; min-height: 52px; border-radius: 16px; background: #cc0000; color: #ffffff; border: 0; font-weight: 700; font-size: 16px; cursor: pointer;">Enviar pedido</button>
       </div>
     </div>
@@ -938,7 +957,7 @@ input::placeholder,textarea::placeholder{color:#8a8a8a;opacity:1}
   };
   async function sha(t) { var d = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(t)); return Array.from(new Uint8Array(d)).map(function (x) { return x.toString(16).padStart(2, '0'); }).join(''); }
   var BY_KEY = { erdop: 'ERDOP', warurase: 'Warurase', jose: 'José', uba: 'ubanarnia' };
-  var SHARED = ['gastos', 'events', 'cards', 'shows', 'promoters', 'merch', 'accepted'];
+  var SHARED = ['gastos', 'events', 'cards', 'shows', 'promoters', 'merch', 'accepted', 'inpiCheck'];
   var PERSONAL = ['votes', 'reasons'];
   window.ERDOP_ME = 'Warurase';
   window.ERDOP_MEK = 'warurase';
@@ -1289,6 +1308,10 @@ input::placeholder,textarea::placeholder{color:#8a8a8a;opacity:1}
         .catch(function () { setState(function (s) { return Object.assign({}, s, { error: 'Espere um minuto antes de pedir outro link.' }); }); });
     }
     window.ERDOP_LOGOUT = logout;
+    window.ERDOP_AJUSTE = function (d) {
+      if (!dbRef) return;
+      dbRef.collection('ajustes').add(Object.assign({}, d, { quem: BY_KEY[meKey], status: 'pendente', em: firebase.firestore.FieldValue.serverTimestamp() })).catch(function (e) { console.warn(e); });
+    };
 
     React.useEffect(function () {
       if (state.phase !== 'app') return;
@@ -1317,6 +1340,7 @@ input::placeholder,textarea::placeholder{color:#8a8a8a;opacity:1}
     if (state.phase === 'denied') return h(Gate, { denied: true, onLogout: logout });
     if (state.phase === 'verify') return h(Gate, { verify: state.verify, onCheck: check, onResend: resend, onLogout: logout, error: state.error });
     if (state.phase === 'login') return h(Gate, { onLogin: login, error: state.error });
+    meKey = state.me; window.ERDOP_ME = BY_KEY[state.me]; window.ERDOP_MEK = state.me;
     return h(window.Component, { ref: compRef, key: state.me });
   }
 
@@ -1472,10 +1496,30 @@ class Component extends DCLogic {
       ['Gravações (masters)', 'Quem pagou e produziu a gravação. Decidir no acordo: empresa da banda ou fundador.', 'D'],
       ['Imagem e voz', 'Cada um autoriza o uso para a ERDOP. Material já publicado continua no ar se alguém sair.', 'M']
     ].map((x) => ({ what: x[0], how: x[1], who: OWN[x[2]][0], bg: OWN[x[2]][1], c: OWN[x[2]][2] }));
-    const INPI = [['Busca', 'Busca de anterioridade', 'Pesquisar no site do INPI se já existe ERDOP ou nome parecido nas classes 41, 9, 25 e 16. Se estiver livre, seguir para o pedido.'], ['Pedido', 'Pedido de registro', 'Depositar a marca nominativa e a mista, no nome de Warurase, pagando a taxa de cada classe.'], ['Publicação', 'Publicação na revista', 'O INPI publica o pedido na Revista da Propriedade Industrial.'], ['Oposição', 'Prazo de oposição', '60 dias para terceiros contestarem. Se alguém se opuser, responder no prazo.'], ['Exame', 'Exame do INPI', 'O INPI analisa e pode pedir ajustes. Acompanhar a revista toda semana.'], ['Concessão', 'Marca concedida', 'Pagar a taxa de concessão. A partir daí vale por 10 anos, renováveis sem limite.']];
+    const INPI = [['Busca', 'Busca de anterioridade', 'Pesquisar no site do INPI se já existe ERDOP ou nome parecido nas classes 41, 9, 25 e 16. Se estiver livre, seguir para o pedido.'], ['Pedido', 'Pedido de registro', 'Depositar a marca nominativa e a mista, no nome de Warurase, pagando a taxa de cada classe.'], ['Publicação', 'Publicação na revista', 'O INPI publica o pedido na Revista da Propriedade Industrial.'], ['Oposição', 'Prazo de oposição', '60 dias para terceiros contestarem. Se alguém se opuser, responder no prazo.'], ['Exame', 'Exame do INPI', 'O INPI analisa e pode pedir ajustes. Acompanhar a revista toda semana.'], ['Concessão', 'Marca concedida', 'Na tabela nova a concessão já vem paga no pedido. Vale por 10 anos, renováveis sem limite.']];
     const inpiAt = 0;
     const inpi = INPI.map((x, i) => ({ l: x[0], dot: i < inpiAt ? '#111111' : (i === inpiAt ? '#cc0000' : '#ffffff'), ring: i <= inpiAt ? (i === inpiAt ? '#cc0000' : '#111111') : '#cfcfcf', line: i === 0 ? 'linear-gradient(90deg, transparent 50%, #e0e0e0 50%)' : (i === INPI.length - 1 ? 'linear-gradient(90deg, #e0e0e0 50%, transparent 50%)' : '#e0e0e0'), fw: i === inpiAt ? '700' : '500', tc: i === inpiAt ? '#cc0000' : '#6b6b6b' }));
     const inpiNow = { t: INPI[inpiAt][1], d: INPI[inpiAt][2] };
+    const INPI_DOC = [
+      ['Titular', 'Warurase, pessoa física, no próprio CPF. CPF e endereço ficam só no cadastro do e-INPI, nunca aqui.'],
+      ['Marca', 'ERDOP\n1) Nominativa: protege o nome escrito de qualquer jeito.\n2) Mista: protege o logo grafite.\nNatureza: marca de produto e de serviço.'],
+      ['Classes e itens', 'Classe 41: serviços de banda, apresentações musicais ao vivo, produção musical.\nClasse 9: gravações de som e música digital.\nClasse 25: camisetas e bonés.\nClasse 16: pôsteres e adesivos.\nNo e-Marcas, escolher esses itens na lista pré-aprovada: sai mais barato e mais rápido que texto livre.'],
+      ['Quanto custa', 'Tabela oficial do INPI (Portaria MDIC 110/2025), serviço 389, especificação pré-aprovada: R$ 880 por classe, ou R$ 440 com o desconto de pessoa física.\nNa tabela nova a concessão sai por R$ 0: o pedido já cobre até o certificado.\nMínimo: nominativa nas classes 41 e 9 = 2 guias = R$ 880.\nCompleto: nominativa e mista nas 4 classes = 8 guias = R$ 3.520.'],
+      ['A guia (GRU)', 'Emitir no site do INPI com o login do e-INPI: serviço 389, uma guia por classe e por marca, marcando o desconto de pessoa física.\nA guia sai com data de vencimento, por isso só gerar quando o dinheiro estiver separado. Pagar até o vencimento e guardar o nosso número.'],
+      ['Protocolo', 'Com a guia paga: entrar no e-Marcas, informar o nosso número, escolher nominativa ou mista, anexar o logo na mista, escolher a classe e os itens, conferir e enviar. Guardar o PDF do protocolo.'],
+      ['Depois', 'A Revista da Propriedade Industrial sai toda terça. Terceiros têm 60 dias depois da publicação para fazer oposição. Concedida, a marca vale 10 anos e pode ser renovada sem limite.']
+    ];
+    const inpiDoc = INPI_DOC.map((x) => ({ k: x[0], v: x[1] }));
+    const CK = [['cad', 'Cadastro no e-INPI', 'Login gov.br de Warurase'], ['busca', 'Busca de anterioridade', 'ERDOP nas classes 41, 9, 25 e 16'], ['itens', 'Itens de cada classe escolhidos', 'Lista pré-aprovada'], ['logo', 'Logo em JPG 945×945', 'Arquivo pronto acima'], ['grana', 'Dinheiro separado', 'R$ 440 por guia com desconto'], ['gru', 'Guia gerada', 'Só com o dinheiro separado'], ['pago', 'Guia paga', 'Guardar comprovante e nosso número'], ['proto', 'Pedido protocolado', 'Guardar o PDF do protocolo']];
+    const IC = S.inpiCheck || {};
+    const inpiChecks = CK.map((c) => {
+      const v = IC[c[0]];
+      return { t: c[1], d: v ? 'Feito por ' + v.by + ' em ' + v.when : c[2], on: v ? 'true' : 'false', mark: v ? '✓' : '',
+        toggle: () => { const o = Object.assign({}, IC); if (o[c[0]]) delete o[c[0]]; else { const dt = new Date(); o[c[0]] = { by: ME, when: String(dt.getDate()).padStart(2, '0') + '/' + String(dt.getMonth() + 1).padStart(2, '0') }; } set({ inpiCheck: o }); },
+        style: 'display: flex; align-items: center; justify-content: flex-start; gap: 12px; min-height: 56px; padding: 8px 12px; border-radius: 14px; border: 0; cursor: pointer; background: ' + (v ? 'rgba(19,138,75,0.10)' : '#f4f4f4') + '; color: #111111; text-align: left; width: 100%;',
+        box: 'flex: none; width: 26px; height: 26px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 15px; ' + (v ? 'background: #138a4b; color: #ffffff;' : 'background: #ffffff; border: 2px solid #cfcfcf; color: #ffffff;') };
+    });
+    const inpiDone = CK.filter((c) => IC[c[0]]).length + ' de ' + CK.length + ' feitos';
     const cares = [
       ['Use ™, nunca ®', 'O ® só pode aparecer depois da marca concedida. Até lá, ERDOP™ ou só o nome.'],
       ['Guarde provas de uso com data', 'Posts, cartazes, notas e contratos de shows. Quem usa o nome de boa-fé há 6 meses ou mais tem preferência no registro.'],
@@ -1591,7 +1635,7 @@ class Component extends DCLogic {
     const voted = items.length - pendItems.length;
     const curIt = pendItems[0];
     const voteNow = (id, val) => { const votes = Object.assign({}, S.votes); votes[id] = val; const left = items.filter((x) => votes[x.id] === 'pendente').length; set({ votes: votes, approve: left > 0 ? S.approve : false, sheet: null }); };
-    const cur = curIt ? { title: curIt.title, meta: curIt.meta, src: curIt.src, thumb: curIt.thumb || curIt.src, when: curIt.when, isVid: curIt.vid, isImg: !curIt.vid, approve: () => voteNow(curIt.id, 'aprovado'), adjust: () => set({ sheet: curIt.id, reasons: {} }) } : { title: '', meta: '', src: '', thumb: '', when: '', isVid: false, isImg: false, approve: () => {}, adjust: () => {} };
+    const cur = curIt ? { title: curIt.title, meta: curIt.meta, src: curIt.src, thumb: curIt.thumb || curIt.src, when: curIt.when, isVid: curIt.vid, isImg: !curIt.vid, approve: () => voteNow(curIt.id, 'aprovado'), adjust: () => set({ sheet: curIt.id, reasons: {}, adjText: '', micErr: '' }) } : { title: '', meta: '', src: '', thumb: '', when: '', isVid: false, isImg: false, approve: () => {}, adjust: () => {} };
     const modalDots = items.map((it) => ({ c: S.votes[it.id] === 'aprovado' ? '#138a4b' : (S.votes[it.id] === 'ajuste' ? '#111111' : (curIt && it.id === curIt.id ? '#111111' : '#cfcfcf')) }));
     const headline = pendItems.length === 1 ? '1 post espera você' : pendItems.length + ' posts esperam você';
     const sheetItem = items.find((x) => x.id === S.sheet);
@@ -1989,11 +2033,11 @@ class Component extends DCLogic {
     const tabs = [['inicio', 'Início', pendItems.length ? String(pendItems.length) : ''], ['agenda', 'Agenda', ''], ['producao', 'Produção', ''], ['vendas', 'Vendas', ''], ['grana', 'Financeiro', '']].map((x) => {
       const on = tab === x[0];
       return { label: x[1], icon: ICON[x[0]], badge: x[2], cur: on ? 'page' : 'false', pick: () => set({ tab: x[0] }),
-        style: 'min-height: 54px; border-radius: 16px; border: 0; cursor: pointer; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px; background: ' + 'transparent; color: ' + (on ? '#111111' : '#8a8a8a') + ';',
-        badgeStyle: x[2] ? 'position: absolute; top: -6px; right: -10px; min-width: 18px; height: 18px; border-radius: 9px; background: #cc0000; color: #ffffff; font-size: 11px; font-weight: 700; display: inline-flex; align-items: center; justify-content: center; padding: 0 4px;' : 'display: none;' };
+        style: 'min-height: 54px; border-radius: 16px; border: 0; cursor: pointer; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px; background: ' + (on ? '#cc0000; color: #ffffff; box-shadow: 0 6px 18px rgba(204,0,0,0.45);' : 'transparent; color: #c9c9c9;'),
+        badgeStyle: x[2] ? 'position: absolute; top: -6px; right: -10px; min-width: 18px; height: 18px; border-radius: 9px; background: #cc0000; color: #ffffff; border: 2px solid #111111; font-size: 11px; font-weight: 700; display: inline-flex; align-items: center; justify-content: center; padding: 0 4px;' : 'display: none;' };
     });
 
-    return { meIni: meIni,
+    return { meIni: meIni, inpiDoc: inpiDoc, inpiChecks: inpiChecks, inpiDone: inpiDone,
       pageTitle: TT[tab], tabs: tabs, tInicio: tab === 'inicio', tAgenda: tab === 'agenda', tProducao: tab === 'producao', tGrana: tab === 'grana', tBanda: tab === 'banda',
       me: me, goPay: () => set({ tab: 'grana', g: 'conta' }), goBanda: () => set({ tab: 'banda' }), avBg: tab === 'banda' ? '#cc0000' : '#e8e8e8', avC: tab === 'banda' ? '#ffffff' : '#111111', legalDocs: legalDocs, owners: owners, inpi: inpi, inpiNow: inpiNow, cares: cares, jurDone: String(jurDone), jurTotal: String(jurItems.length), jurPctW: Math.round(jurDone / jurItems.length * 100) + '%', keyClauses: clauses.slice(0, 3), otherClauses: clauses.slice(3), clausesOpen: !!S.clOpen, clausesTxt: S.clOpen ? 'Fechar as outras cláusulas' : 'Ver as outras ' + (clauses.length - 3) + ' cláusulas', toggleClauses: () => set({ clOpen: !S.clOpen }), bJur: S.bt === 'juridico', goAgenda: () => set({ tab: 'agenda', day: todayK, mon: 10 }),
       monthLabel: MONTHS[mon].charAt(0).toUpperCase() + MONTHS[mon].slice(1) + ' 2026', weekHead: ['D', 'S', 'T', 'Q', 'Q', 'S', 'S'], cells: cells, legend: legend, prevMonth: () => { if (canPrev) set({ mon: mon - 1 }); }, nextMonth: () => { if (canNext) set({ mon: mon + 1 }); }, prevStyle: navS(canPrev), nextStyle: navS(canNext),
@@ -2006,7 +2050,36 @@ class Component extends DCLogic {
       evDays: evDays, evHours: evHours, evSummary: KIND[S.evKind][0].toLowerCase() + ' · ' + WD[dateOf(evDay).getDay()] + ' ' + fmtD(evDay) + ' ' + S.evHour, sendTxt: ready ? 'Lançar' : 'Escolha tipo e valor',
       hasPend: pendItems.length > 0, headline: headline, pendThumbs: pendItems.slice(0, 3).map((it) => ({ src: it.thumb || it.src })),
       openApprove: () => set({ approve: true }), closeApprove: () => set({ approve: false }), approveOpen: !!S.approve && !!curIt, cur: cur, modalDots: modalDots, modalStep: (voted + 1) + ' de ' + items.length,
-      sheetOpen: !!sheetItem, sheetTitle: sheetItem ? sheetItem.title : '', reasons: reasons, closeSheet: () => set({ sheet: null }), sendAdjust: () => { if (sheetItem) voteNow(sheetItem.id, 'ajuste'); },
+      sheetOpen: !!sheetItem, sheetTitle: sheetItem ? sheetItem.title : '', reasons: reasons, closeSheet: () => { if (this._rec) { try { this._rec.stop(); } catch (e) {} } set({ sheet: null }); }, sendAdjust: () => {
+        if (!sheetItem) return;
+        if (this._rec) { try { this._rec.stop(); } catch (e) {} }
+        const pts = Object.keys(S.reasons || {}).filter((k) => S.reasons[k]);
+        const txt = (S.adjText || '').trim();
+        const prompt = 'Atualizar o post "' + sheetItem.title + '"' + (sheetItem.meta ? ' (' + sheetItem.meta + ')' : '') + '. ' + (pts.length ? 'Mudar: ' + pts.join(', ') + '. ' : '') + (txt ? 'Pedido de ' + ME + ': "' + txt + '". ' : '') + 'Manter a identidade visual da ERDOP (preto, vermelho #CC0000, cinza claro) e gerar uma nova versão para o conselho votar de novo.';
+        if (window.ERDOP_AJUSTE) window.ERDOP_AJUSTE({ post: sheetItem.id, titulo: sheetItem.title, pontos: pts, texto: txt, prompt: prompt });
+        voteNow(sheetItem.id, 'ajuste');
+        set({ adjText: '', toast: 'Pedido de ajuste enviado com o seu texto' });
+      },
+      adjText: S.adjText || '',
+      typeAdj: (e) => set({ adjText: e.target.value }),
+      micOn: !!S.listening,
+      micLabel: S.listening ? 'Parar de ouvir' : 'Falar o ajuste',
+      micHint: S.micErr || (S.listening ? 'Ouvindo… fale o que precisa mudar. O texto aparece abaixo.' : 'Toque, fale o que precisa mudar e confira o texto antes de enviar.'),
+      micStyle: 'display: flex; align-items: center; justify-content: center; gap: 10px; min-height: 52px; border-radius: 16px; border: 0; cursor: pointer; font-weight: 700; font-size: 16px; color: #ffffff; background: ' + (S.listening ? '#cc0000; box-shadow: 0 0 0 4px rgba(204,0,0,0.25);' : '#111111;'),
+      toggleMic: () => {
+        const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
+        if (!SR) { set({ micErr: 'Este navegador não transcreve voz. Use o microfone do teclado do celular para ditar.' }); return; }
+        if (this._rec) { try { this._rec.stop(); } catch (e) {} return; }
+        const base = (S.adjText || '').trim();
+        const r = new SR();
+        r.lang = 'pt-BR'; r.interimResults = true; r.continuous = true;
+        r.onresult = (ev) => { let all = ''; for (let i = 0; i < ev.results.length; i++) all += ev.results[i][0].transcript; this.setState({ adjText: (base ? base + ' ' : '') + all.trim() }); };
+        r.onerror = (ev) => { this.setState({ micErr: ev && ev.error === 'not-allowed' ? 'Libere o microfone para erdop.com.br nas permissões do navegador.' : 'Não deu para ouvir agora. Tente de novo ou digite.' }); };
+        r.onend = () => { this._rec = null; this.setState({ listening: false }); };
+        this._rec = r;
+        set({ listening: true, micErr: '' });
+        try { r.start(); } catch (e) { this._rec = null; set({ listening: false }); }
+      },
       reachBars: reachBars, scoreNets: scoreNets, nextEvents: nextEvents, myTasks: myTasks, caixaTxt: this.brl(caixaR),
       days: days, kindChips: kindChips, agendaGroups: agendaGroups, agendaEmpty: agendaGroups.length === 0,
       sfStep1: S.sf === 1, sfStep2: S.sf === 2, openShowFlow: () => set({ sf: 1, sfShow: '', sfOff: [], sfPlace: '' }), closeShowFlow: () => set({ sf: 0 }), sfDays: sfDaysL, sfHours: sfHours, sfOpts: sfOptsL, sfMsg: sfMsg,
