@@ -517,6 +517,21 @@ input::placeholder,textarea::placeholder{color:#8a8a8a;opacity:1}
               </div>
             </section>
 
+
+            <section style="background: #111111; color: #ffffff; border-radius: 20px; padding: 16px; display: flex; flex-direction: column; gap: 12px;">
+              <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 10px;"><span style="font-size: 16px; font-weight: 700;">Registro da marca no INPI</span><span style="font-size: 12px; color: #bdbdbd;">custo único</span></div>
+              <span style="font-size: 13px; color: #d6d6d6; line-height: 1.45;">Guarde aos poucos. Quando a reserva chegar na meta, gere as guias e pague no mesmo dia.</span>
+              <div style="display: flex; gap: 8px;"><button type="button" onClick="{{inpiCost.pickMin}}" style="{{inpiCost.minStyle}}">Mínimo · R$ 880</button><button type="button" onClick="{{inpiCost.pickComp}}" style="{{inpiCost.compStyle}}">Completo · R$ 3.520</button></div>
+              <div style="display: flex; justify-content: space-between; align-items: baseline;"><span style="font-size: 26px; font-weight: 700;">{{inpiCost.res}}</span><span style="font-size: 13px; color: #bdbdbd;">de {{inpiCost.meta}} · {{inpiCost.pc}}</span></div>
+              <div style="height: 10px; border-radius: 5px; background: #2a2a2a; overflow: hidden;"><div style="height: 10px; border-radius: 5px; width: {{inpiCost.w}}; background: {{inpiCost.cor}};"></div></div>
+              <span style="font-size: 13px; font-weight: 600; color: {{inpiCost.cor}};">{{inpiCost.falta}}</span>
+              <div style="display: flex; gap: 8px;"><button type="button" onClick="{{inpiCost.sub50}}" aria-label="Tirar 50 reais da reserva" style="flex: 1; min-height: 44px; border-radius: 12px; border: 1px solid #444444; background: transparent; color: #ffffff; cursor: pointer; font-weight: 700;">− R$ 50</button><button type="button" onClick="{{inpiCost.add50}}" style="flex: 1; min-height: 44px; border-radius: 12px; border: 0; background: #cc0000; color: #ffffff; cursor: pointer; font-weight: 700;">+ R$ 50</button><button type="button" onClick="{{inpiCost.add100}}" style="flex: 1; min-height: 44px; border-radius: 12px; border: 0; background: #cc0000; color: #ffffff; cursor: pointer; font-weight: 700;">+ R$ 100</button></div>
+              <span style="font-size: 12px; color: #bdbdbd;">{{inpiCost.nGuias}}</span>
+              <sc-for list="{{inpiCost.guias}}" as="gu" hint-placeholder-count="2">
+                <div style="display: flex; justify-content: space-between; gap: 10px; border-top: 1px solid #2a2a2a; padding-top: 8px;"><span style="display: flex; flex-direction: column;"><span style="font-size: 14px; font-weight: 600;">{{gu.t}}</span><span style="font-size: 12px; color: #9a9a9a;">{{gu.d}}</span></span><span style="font-size: 14px; font-weight: 700;">{{gu.v}}</span></div>
+              </sc-for>
+              <span style="font-size: 11px; color: #8a8a8a; line-height: 1.4;">Tabela oficial do INPI, Portaria MDIC 110/2025: R$ 880 por classe, R$ 440 para pessoa física. Na tabela nova a concessão sai por R$ 0. Passo a passo em Banda → Jurídico.</span>
+            </section>
             <span style="font-size: 17px; font-weight: 700;">Metas por área</span>
             <sc-for list="{{budget}}" as="bg" hint-placeholder-count="8">
               <div style="background: #f4f4f4; border-radius: 20px; padding: 14px; display: flex; flex-direction: column; gap: 8px;">
@@ -957,7 +972,7 @@ input::placeholder,textarea::placeholder{color:#8a8a8a;opacity:1}
   };
   async function sha(t) { var d = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(t)); return Array.from(new Uint8Array(d)).map(function (x) { return x.toString(16).padStart(2, '0'); }).join(''); }
   var BY_KEY = { erdop: 'ERDOP', warurase: 'Warurase', jose: 'José', uba: 'ubanarnia' };
-  var SHARED = ['gastos', 'events', 'cards', 'shows', 'promoters', 'merch', 'accepted', 'inpiCheck'];
+  var SHARED = ['gastos', 'events', 'cards', 'shows', 'promoters', 'merch', 'accepted', 'inpiCheck', 'inpiReserva', 'inpiPlano'];
   var PERSONAL = ['votes', 'reasons'];
   window.ERDOP_ME = 'Warurase';
   window.ERDOP_MEK = 'warurase';
@@ -1520,6 +1535,23 @@ class Component extends DCLogic {
         box: 'flex: none; width: 26px; height: 26px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 15px; ' + (v ? 'background: #138a4b; color: #ffffff;' : 'background: #ffffff; border: 2px solid #cfcfcf; color: #ffffff;') };
     });
     const inpiDone = CK.filter((c) => IC[c[0]]).length + ' de ' + CK.length + ' feitos';
+    const GUIAS = [['Nome', '41', 'shows e serviços de banda', 1], ['Nome', '9', 'música gravada', 1], ['Nome', '25', 'camisetas e bonés', 0], ['Nome', '16', 'pôsteres e adesivos', 0], ['Logo', '41', 'shows e serviços de banda', 0], ['Logo', '9', 'música gravada', 0], ['Logo', '25', 'camisetas e bonés', 0], ['Logo', '16', 'pôsteres e adesivos', 0]];
+    const plano = S.inpiPlano === 'completo' ? 'completo' : 'minimo';
+    const guiasAtivas = GUIAS.filter((g) => plano === 'completo' || g[3]);
+    const inpiMeta = guiasAtivas.length * 440;
+    const inpiRes = Math.max(0, Number(S.inpiReserva) || 0);
+    const inpiPc = Math.min(100, Math.round(inpiRes / inpiMeta * 100));
+    const addRes = (v) => () => set({ inpiReserva: Math.max(0, inpiRes + v) });
+    const planBtn = (on) => 'flex: 1; min-height: 44px; border-radius: 12px; border: 0; cursor: pointer; font-size: 13px; font-weight: 700; background: ' + (on ? '#cc0000' : '#2a2a2a') + '; color: ' + (on ? '#ffffff' : '#d6d6d6') + ';';
+    const inpiCost = {
+      meta: this.brl(inpiMeta), res: this.brl(inpiRes), falta: inpiRes >= inpiMeta ? 'Dinheiro completo: já dá para gerar as guias' : 'Faltam ' + this.brl(inpiMeta - inpiRes),
+      w: inpiPc + '%', cor: inpiRes >= inpiMeta ? '#138a4b' : '#cc0000', pc: inpiPc + '%',
+      guias: guiasAtivas.map((g) => ({ t: g[0] + ' · classe ' + g[1], d: g[2], v: 'R$ 440' })),
+      nGuias: guiasAtivas.length + (guiasAtivas.length === 1 ? ' guia' : ' guias') + ' · serviço 389 com desconto de pessoa física',
+      minStyle: planBtn(plano === 'minimo'), compStyle: planBtn(plano === 'completo'),
+      pickMin: () => set({ inpiPlano: 'minimo' }), pickComp: () => set({ inpiPlano: 'completo' }),
+      add50: addRes(50), add100: addRes(100), sub50: addRes(-50)
+    };
     const cares = [
       ['Use ™, nunca ®', 'O ® só pode aparecer depois da marca concedida. Até lá, ERDOP™ ou só o nome.'],
       ['Guarde provas de uso com data', 'Posts, cartazes, notas e contratos de shows. Quem usa o nome de boa-fé há 6 meses ou mais tem preferência no registro.'],
@@ -2037,7 +2069,7 @@ class Component extends DCLogic {
         badgeStyle: x[2] ? 'position: absolute; top: -6px; right: -10px; min-width: 18px; height: 18px; border-radius: 9px; background: #cc0000; color: #ffffff; border: 2px solid #111111; font-size: 11px; font-weight: 700; display: inline-flex; align-items: center; justify-content: center; padding: 0 4px;' : 'display: none;' };
     });
 
-    return { meIni: meIni, inpiDoc: inpiDoc, inpiChecks: inpiChecks, inpiDone: inpiDone,
+    return { meIni: meIni, inpiDoc: inpiDoc, inpiChecks: inpiChecks, inpiDone: inpiDone, inpiCost: inpiCost,
       pageTitle: TT[tab], tabs: tabs, tInicio: tab === 'inicio', tAgenda: tab === 'agenda', tProducao: tab === 'producao', tGrana: tab === 'grana', tBanda: tab === 'banda',
       me: me, goPay: () => set({ tab: 'grana', g: 'conta' }), goBanda: () => set({ tab: 'banda' }), avBg: tab === 'banda' ? '#cc0000' : '#e8e8e8', avC: tab === 'banda' ? '#ffffff' : '#111111', legalDocs: legalDocs, owners: owners, inpi: inpi, inpiNow: inpiNow, cares: cares, jurDone: String(jurDone), jurTotal: String(jurItems.length), jurPctW: Math.round(jurDone / jurItems.length * 100) + '%', keyClauses: clauses.slice(0, 3), otherClauses: clauses.slice(3), clausesOpen: !!S.clOpen, clausesTxt: S.clOpen ? 'Fechar as outras cláusulas' : 'Ver as outras ' + (clauses.length - 3) + ' cláusulas', toggleClauses: () => set({ clOpen: !S.clOpen }), bJur: S.bt === 'juridico', goAgenda: () => set({ tab: 'agenda', day: todayK, mon: 10 }),
       monthLabel: MONTHS[mon].charAt(0).toUpperCase() + MONTHS[mon].slice(1) + ' 2026', weekHead: ['D', 'S', 'T', 'Q', 'Q', 'S', 'S'], cells: cells, legend: legend, prevMonth: () => { if (canPrev) set({ mon: mon - 1 }); }, nextMonth: () => { if (canNext) set({ mon: mon + 1 }); }, prevStyle: navS(canPrev), nextStyle: navS(canNext),
