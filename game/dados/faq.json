@@ -1,0 +1,1246 @@
+{
+ "_leia": "Pergunte ao Krysa (FAQ do jogo no celular). A página responde por BUSCA local nesta base, sem serviço externo: normalizar a pergunta (minúsculas, sem acento, sem pontuação), pontuar cada item pelas palavras_chave e variacoes encontradas e responder o melhor acima do limiar; abaixo dele, sortear uma de nao_sei. Respostas na voz do Krysa (seco, engraçado, sujo; PERSONAGENS_DO_LOBBY.md), sem mecânica inventada: cada item cita a fonte. Nada de data de lançamento nem requisito publicado.",
+ "gerado_em": "2026-11-17",
+ "contato": {
+  "nome": "Krysa",
+  "papel": "O Cartógrafo das Sarjetas",
+  "avatar": "img/cla_krysa_rosto.jpg",
+  "status": "debaixo da cripta",
+  "cla": "OCULTOS"
+ },
+ "busca": {
+  "limiar": 2,
+  "peso_palavra_chave": 2,
+  "peso_variacao": 3,
+  "nota": "palavras_chave já vêm sem acento para casar com a pergunta normalizada; a página pesa cada palavra pelo quanto ela é rara na base (a que só um item tem decide sozinha)"
+ },
+ "celular": {
+  "desbloqueio": "deslize para destravar",
+  "hora": "03:33",
+  "operadora": "FREKVENCE NOC",
+  "notificacao": "Krysa: achou meu número.",
+  "nota": "texto da tela de bloqueio (proposta do site)"
+ },
+ "abertura": [
+  {
+   "texto": "Achou meu número. Ou meu número achou você. Dá na mesma.",
+   "espera_ms": 900
+  },
+  {
+   "texto": "Aqui é o Krysa. Cartógrafo das sarjetas. Não encare a foto.",
+   "espera_ms": 1300
+  },
+  {
+   "texto": "Lá em cima vendem mistério. Aqui embaixo eu vendo resposta. Hoje é por conta da trégua.",
+   "espera_ms": 1600
+  },
+  {
+   "texto": "Pergunte do jogo: como se joga, clãs, poderes, armas, loja, passe, quando sai.",
+   "espera_ms": 1500
+  },
+  {
+   "texto": "Se eu não souber, é porque ainda não cavaram esse túnel.",
+   "espera_ms": 1200
+  },
+  {
+   "texto": "Escreve aí. Devagar, que o sinal aqui embaixo é ruim.",
+   "espera_ms": 1000
+  }
+ ],
+ "perguntas_sugeridas": [
+  "Quando o jogo sai?",
+  "Quais são os clãs?",
+  "Como é uma partida?",
+  "Como funciona o passe de batalha?",
+  "Como entro na lista de espera?"
+ ],
+ "faq": [
+  {
+   "id": "o_que_e",
+   "tema": "jogo",
+   "pergunta": "O que é o BESTIAL?",
+   "resposta": "Battle royale de vampiros numa Praga que nunca amanhece. Você cai na cidade, caça, foge e tenta ser o último de pé. Simples de dizer. Lá em cima ninguém sobrevive para repetir.",
+   "palavras_chave": [
+    "bestial",
+    "genero",
+    "battle royale",
+    "que jogo"
+   ],
+   "variacoes": [
+    "que jogo é esse",
+    "do que se trata",
+    "é battle royale?",
+    "me explica o jogo",
+    "o que é esse jogo",
+    "sobre o que é o jogo"
+   ],
+   "fonte": "projeto.json jogo.subtitulo; universo.a_ideia"
+  },
+  {
+   "id": "historia",
+   "tema": "jogo",
+   "pergunta": "Qual é a história?",
+   "resposta": "Vampiros vivem entre os vivos há séculos porque ninguém acredita neles. Agora Praga está sob lei marcial e a Inquisição caça a gente com soldado, drone e blindado. E você morreu na Ponte Carlos ao amanhecer e não ficou morto. Isso deixou muita gente nervosa.",
+   "palavras_chave": [
+    "historia",
+    "enredo",
+    "lore",
+    "universo",
+    "trama",
+    "narrativa"
+   ],
+   "variacoes": [
+    "qual o enredo",
+    "me conta a lore",
+    "qual a historia do jogo"
+   ],
+   "fonte": "projeto.json universo (a_ideia, faccoes, cria_da_aurora)"
+  },
+  {
+   "id": "cria",
+   "tema": "jogo",
+   "pergunta": "Quem é a Cria da Aurora?",
+   "resposta": "É você. Morreu na Ponte Carlos ao amanhecer e acordou. Ninguém sobrevive ao sol, então as duas cortes querem saber se você é arma, profecia ou erro. Eu aposto em erro. Dos bons.",
+   "palavras_chave": [
+    "cria",
+    "aurora",
+    "protagonista",
+    "personagem principal",
+    "quem sou eu"
+   ],
+   "variacoes": [
+    "quem é o protagonista",
+    "quem eu jogo",
+    "o que é a cria"
+   ],
+   "fonte": "universo.cria_da_aurora"
+  },
+  {
+   "id": "plataforma",
+   "tema": "jogo",
+   "pergunta": "Em que plataforma vai sair?",
+   "resposta": "PC. Console e celular, ninguém me mostrou mapa disso ainda. Se aparecer, eu aviso quem estiver na lista de espera.",
+   "palavras_chave": [
+    "plataforma",
+    "pc",
+    "console",
+    "playstation",
+    "xbox",
+    "celular",
+    "mobile",
+    "ps5",
+    "ps4",
+    "switch",
+    "android",
+    "iphone",
+    "videogame"
+   ],
+   "variacoes": [
+    "tem pra ps5?",
+    "sai no xbox?",
+    "dá pra jogar no celular?",
+    "é só pc?",
+    "dá para jogar no celular ou console?",
+    "vai sair para console?"
+   ],
+   "fonte": "projeto.json jogo.estado ('PC')"
+  },
+  {
+   "id": "quando_sai",
+   "tema": "jogo",
+   "pergunta": "Quando o jogo sai?",
+   "resposta": "Ainda sem data. O jogo está em fase alfa e quem faz não promete dia. Entra na lista de espera: o aviso chega primeiro a quem assinou.",
+   "palavras_chave": [
+    "quando",
+    "lancamento",
+    "data",
+    "sai",
+    "lanca",
+    "previsao",
+    "lancar",
+    "lancam",
+    "baixar",
+    "baixo",
+    "download",
+    "instalar",
+    "steam",
+    "epic"
+   ],
+   "variacoes": [
+    "quando lança",
+    "tem data de lançamento?",
+    "quando posso jogar",
+    "qual a data",
+    "quando o jogo vai lançar",
+    "onde eu baixo o jogo",
+    "quando vai sair",
+    "já lançou?"
+   ],
+   "fonte": "avanco.regra ('sem data de lançamento')"
+  },
+  {
+   "id": "fase",
+   "tema": "jogo",
+   "pergunta": "Em que fase está o desenvolvimento?",
+   "resposta": "Alfa. Já roda: movimento, tiro, corpo a corpo, a catedral do lobby, a Praga de verdade, o passe. Ainda falta provar a partida em rede com dois jogadores. O resto está no avanço do projeto, aqui no site.",
+   "palavras_chave": [
+    "fase",
+    "alfa",
+    "beta",
+    "desenvolvimento",
+    "pronto",
+    "progresso",
+    "ja da para jogar",
+    "jogavel"
+   ],
+   "variacoes": [
+    "tá pronto?",
+    "em que pé está",
+    "já tem beta?",
+    "como está o desenvolvimento",
+    "já dá pra jogar?",
+    "já está jogável?"
+   ],
+   "fonte": "jogo.estado; avanco.feito e avanco.a_seguir"
+  },
+  {
+   "id": "preco_jogo",
+   "tema": "jogo",
+   "pergunta": "Quanto vai custar o jogo?",
+   "resposta": "Em definição. Quem decide preço não desce no esgoto para me contar. Quando houver número, a lista de espera sabe antes.",
+   "palavras_chave": [
+    "preco",
+    "custa",
+    "valor",
+    "gratis",
+    "pago",
+    "free",
+    "custar",
+    "caro",
+    "barato",
+    "comprar o jogo",
+    "de graca"
+   ],
+   "variacoes": [
+    "é de graça?",
+    "quanto custa",
+    "vai ser free to play?",
+    "é pago?",
+    "quanto vai custar",
+    "vai ser de graça?",
+    "qual o preço"
+   ],
+   "fonte": "nada no código define preço do jogo"
+  },
+  {
+   "id": "requisitos",
+   "tema": "jogo",
+   "pergunta": "Quais os requisitos para rodar?",
+   "resposta": "Em definição. É Unreal 5 e é PC, então não vai rodar na torradeira. Os números certos saem quando a versão de teste sair.",
+   "palavras_chave": [
+    "requisitos",
+    "roda",
+    "pc fraco",
+    "placa de video",
+    "configuracao",
+    "minimo"
+   ],
+   "variacoes": [
+    "roda no meu pc?",
+    "qual a configuração mínima",
+    "precisa de placa boa?"
+   ],
+   "fonte": "não há requisitos publicados"
+  },
+  {
+   "id": "idiomas",
+   "tema": "jogo",
+   "pergunta": "Tem em português?",
+   "resposta": "Tem. O texto do jogo já está escrito em português, inglês e espanhol. Eu falo os três mal, mas falo.",
+   "palavras_chave": [
+    "portugues",
+    "idioma",
+    "lingua",
+    "ingles",
+    "espanhol",
+    "traducao",
+    "legenda"
+   ],
+   "variacoes": [
+    "vai ter em pt-br?",
+    "tem legenda?",
+    "quais idiomas"
+   ],
+   "fonte": "GasRoteirosDaCatedral.cpp (cada fala em PT, EN e ES)"
+  },
+  {
+   "id": "testar",
+   "tema": "jogo",
+   "pergunta": "Como faço para testar antes?",
+   "resposta": "Lista de espera. Assina com o seu e-mail e, quando abrirem a porta, o convite chega primeiro para quem está nela. Eu não tenho chave sobrando. Juro.",
+   "palavras_chave": [
+    "testar",
+    "teste",
+    "beta",
+    "acesso",
+    "convite",
+    "jogar antes",
+    "testador",
+    "playtest"
+   ],
+   "variacoes": [
+    "como entro no beta",
+    "tem teste fechado?",
+    "quero testar",
+    "como conseguir acesso",
+    "quero jogar antes de todo mundo"
+   ],
+   "fonte": "lista_de_espera.convite"
+  },
+  {
+   "id": "como_joga",
+   "tema": "partida",
+   "pergunta": "Como é uma partida?",
+   "resposta": "Você entra na fila, escolhe onde cair, desce na cidade e a zona começa a fechar com o centro andando. No meio do caminho tem arma, gente da sua espécie e a Inquisição. Fim com dados, música e o passe subindo. Quem fica para saquear demais, eu já disse, não chega.",
+   "palavras_chave": [
+    "partida",
+    "como joga",
+    "gameplay",
+    "zona",
+    "fila",
+    "implantacao"
+   ],
+   "variacoes": [
+    "como funciona uma partida",
+    "como é o gameplay",
+    "o que acontece na partida",
+    "como se joga",
+    "como eu jogo"
+   ],
+   "fonte": "CLAUDE.md estado atual (fila, implantação, embarque, zona com centro que anda, fim)"
+  },
+  {
+   "id": "quantos_jogadores",
+   "tema": "partida",
+   "pergunta": "Quantos jogadores tem numa partida?",
+   "resposta": "Número fechado ainda não tem. O que eu sei: você entra solo, em dupla ou em trio. Quantos cabem na noite, quem decide ainda está contando cadeira. Quando contarem, a lista de espera fica sabendo.",
+   "palavras_chave": [
+    "quantos jogadores",
+    "quantas pessoas",
+    "lotacao",
+    "jogadores por partida"
+   ],
+   "variacoes": [
+    "quantos jogadores por partida",
+    "quantas pessoas jogam",
+    "quantos players"
+   ],
+   "fonte": "jogo.estado (solo, duo e trio); a lotação da partida não está publicada"
+  },
+  {
+   "id": "modos",
+   "tema": "partida",
+   "pergunta": "Quais os modos de jogo?",
+   "resposta": "Solo, duo e trio. E embaixo da catedral tem treino e estande de tiro, e o octógono para quem quer brigar com juiz olhando.",
+   "palavras_chave": [
+    "modos",
+    "solo",
+    "duo",
+    "trio",
+    "squad",
+    "treino"
+   ],
+   "variacoes": [
+    "tem modo dupla?",
+    "dá pra jogar em trio?",
+    "quais modos tem",
+    "tem squad?"
+   ],
+   "fonte": "jogo.estado; cidade.subsolo.no_jogo"
+  },
+  {
+   "id": "amigos",
+   "tema": "partida",
+   "pergunta": "Dá para jogar com amigos?",
+   "resposta": "Dá: duo e trio. O perfil tem código de amigo, BESTIAL e mais quatro letras. A partida em rede ainda está sendo provada, então paciência de vampiro.",
+   "palavras_chave": [
+    "amigos",
+    "jogar junto",
+    "multiplayer",
+    "online",
+    "rede",
+    "codigo de amigo"
+   ],
+   "variacoes": [
+    "tem multiplayer?",
+    "jogo online com amigos",
+    "como adiciono amigo",
+    "dá pra jogar com amigo",
+    "posso jogar com meus amigos"
+   ],
+   "fonte": "Social/GasPerfilDeJogador.h (código BESTIAL-XXXX); avanco.a_seguir (rede)"
+  },
+  {
+   "id": "lobby",
+   "tema": "partida",
+   "pergunta": "O que é o lobby?",
+   "resposta": "A catedral de São Vito. Lá dentro vale a Trégua: ninguém luta, ninguém caça. Oito moradores, um de cada clã, cada um no seu canto da igreja. Eu fico no mais sujo. Por escolha.",
+   "palavras_chave": [
+    "lobby",
+    "catedral",
+    "sao vito",
+    "tregua",
+    "moradores",
+    "igreja"
+   ],
+   "variacoes": [
+    "o que é a catedral",
+    "onde fica o lobby",
+    "o que é a trégua"
+   ],
+   "fonte": "clas.tregua"
+  },
+  {
+   "id": "teclas",
+   "tema": "partida",
+   "pergunta": "Quais são os comandos?",
+   "resposta": "Botão direito mira e apara. C desliza e protege. Q é a fuga do seu clã, E o poder, F o ULTIMATE e a interação. Segure X para os sentidos. 1, 2 e 3 trocam a arma, G é uso rápido, T a roda de gestos e TAB o placar.",
+   "palavras_chave": [
+    "teclas",
+    "comandos",
+    "controles",
+    "atalhos",
+    "botoes",
+    "teclado",
+    "miro",
+    "mirar",
+    "mira",
+    "tecla",
+    "controle",
+    "joystick"
+   ],
+   "variacoes": [
+    "quais os controles",
+    "como mira",
+    "qual tecla usa poder",
+    "mapa de teclas",
+    "como eu miro",
+    "como atiro",
+    "qual a tecla do poder"
+   ],
+   "fonte": "CLAUDE.md, mapa de teclas conferido no código"
+  },
+  {
+   "id": "sentidos",
+   "tema": "partida",
+   "pergunta": "O que são os sentidos aguçados?",
+   "resposta": "Segure X: uma onda sai da sua cabeça e atravessa parede. Soldado aparece em vermelho; civil aparece na cor do sangue que carrega. Aí você escolhe o jantar.",
+   "palavras_chave": [
+    "sentidos",
+    "x",
+    "raio-x",
+    "ver atraves",
+    "parede",
+    "onda"
+   ],
+   "variacoes": [
+    "pra que serve o X",
+    "como vejo pela parede",
+    "o que é raio-x"
+   ],
+   "fonte": "universo.sentidos"
+  },
+  {
+   "id": "pacto",
+   "tema": "partida",
+   "pergunta": "O que é o pacto?",
+   "resposta": "A lei da espécie: nenhum vampiro mostra o que é na frente de um mortal. Matou civil ou bancou o monstro na frente de um? Quebrou o pacto. Aí começa a parte divertida para os outros.",
+   "palavras_chave": [
+    "pacto",
+    "lei",
+    "regra",
+    "mortal",
+    "civil",
+    "quebrar"
+   ],
+   "variacoes": [
+    "o que acontece se eu matar civil",
+    "qual a regra do pacto",
+    "posso matar civil?"
+   ],
+   "fonte": "universo.pacto"
+  },
+  {
+   "id": "cacada",
+   "tema": "partida",
+   "pergunta": "O que é a caçada?",
+   "resposta": "O castigo de quem quebra o pacto. Por um tempo, todo inimigo do mapa sabe onde você está. Sobreviveu até o relógio zerar, acabou. Morreu antes, acabou você.",
+   "palavras_chave": [
+    "cacada",
+    "castigo",
+    "marcado",
+    "localizacao",
+    "punicao",
+    "relogio"
+   ],
+   "variacoes": [
+    "o que é ser caçado",
+    "o que acontece quando quebro o pacto",
+    "como funciona a caçada"
+   ],
+   "fonte": "universo.cacada"
+  },
+  {
+   "id": "presa_livre",
+   "tema": "partida",
+   "pergunta": "Posso atacar os soldados?",
+   "resposta": "Pode e deve. Soldado é presa livre: quem defende a cidade armado pode ser abatido e drenado à vontade. É a exceção da lei. Aproveite.",
+   "palavras_chave": [
+    "soldado",
+    "presa livre",
+    "inquisicao",
+    "drenar",
+    "excecao",
+    "atacar"
+   ],
+   "variacoes": [
+    "posso matar soldado?",
+    "o que é presa livre",
+    "soldado quebra o pacto?"
+   ],
+   "fonte": "universo.presa_livre"
+  },
+  {
+   "id": "abatido",
+   "tema": "partida",
+   "pergunta": "O que acontece quando a vida zera?",
+   "resposta": "Você rasteja. Um aliado segurando F te levanta; um inimigo segurando F termina o serviço com o ULTIMATE. Escolha bem os amigos.",
+   "palavras_chave": [
+    "abatido",
+    "morrer",
+    "vida zero",
+    "reviver",
+    "levantar",
+    "ultimate",
+    "morte",
+    "morro",
+    "morri",
+    "morreu",
+    "morre",
+    "revivo",
+    "revive",
+    "reanimar",
+    "caido",
+    "derrubado"
+   ],
+   "variacoes": [
+    "como reviver aliado",
+    "o que acontece quando morro",
+    "tem revive?",
+    "como funciona a morte",
+    "como funciona o abatido",
+    "morri e agora",
+    "como levanto meu amigo",
+    "como revivo meu amigo",
+    "o que é o ultimate"
+   ],
+   "fonte": "universo.ultimate"
+  },
+  {
+   "id": "inquisicao",
+   "tema": "partida",
+   "pergunta": "Quem é a Inquisição?",
+   "resposta": "A defesa da cidade. Soldados, drones e blindados, com base no estádio de Strahov e drones sobre a Praça Venceslau. Os drones escutam os telhados. O esgoto, não. Anote.",
+   "palavras_chave": [
+    "inquisicao",
+    "inimigos",
+    "soldados",
+    "drones",
+    "blindados",
+    "ia"
+   ],
+   "variacoes": [
+    "quem são os inimigos",
+    "contra quem eu luto",
+    "tem bots?"
+   ],
+   "fonte": "universo.faccoes; falas krysa_2 e vlk_1; passe.atos III"
+  },
+  {
+   "id": "bots",
+   "tema": "partida",
+   "pergunta": "Tem bots?",
+   "resposta": "Tem caçador de máquina com memória do alvo e cerco combinado. Eles não leem o seu controle: aprendem pelo que você já fez. É pior.",
+   "palavras_chave": [
+    "bots",
+    "ia",
+    "inteligencia",
+    "npc",
+    "computador",
+    "cerco"
+   ],
+   "variacoes": [
+    "os bots são bons?",
+    "tem ia?",
+    "como funcionam os inimigos"
+   ],
+   "fonte": "avanco.feito 13/11 (bots caçadores com memória e cerco); CLAUDE.md (IA não lê o input)"
+  },
+  {
+   "id": "fauna",
+   "tema": "partida",
+   "pergunta": "Tem animais na cidade?",
+   "resposta": "Rato, bando de pássaro, corvo, cão de rua. Os cães seguem o Vlk; se um seguir você, não espante, ele escolheu.",
+   "palavras_chave": [
+    "animais",
+    "fauna",
+    "caes",
+    "ratos",
+    "corvos",
+    "bichos"
+   ],
+   "variacoes": [
+    "tem bicho no mapa?",
+    "os animais atacam?",
+    "tem cachorro?"
+   ],
+   "fonte": "CLAUDE.md (fauna); fala vlk_3"
+  },
+  {
+   "id": "clas",
+   "tema": "clas",
+   "pergunta": "Quais são os clãs?",
+   "resposta": "Oito, em duas cortes. No CONCLAVE: SOBERANOS, ESTETAS, ARCANOS e OCULTOS. Nos INSURGENTES: REBELDES, FERAIS, SERPENTES e ANDARILHOS. Eu sou OCULTO. Dá para ver.",
+   "palavras_chave": [
+    "clas",
+    "cla",
+    "cortes",
+    "faccoes",
+    "conclave",
+    "insurgentes",
+    "lista"
+   ],
+   "variacoes": [
+    "quantos clãs tem",
+    "quais as facções",
+    "quais clãs existem",
+    "me fala dos clãs"
+   ],
+   "fonte": "clas.lista (jogavel=true)"
+  },
+  {
+   "id": "cla_iniciante",
+   "tema": "clas",
+   "pergunta": "Qual clã é melhor para quem está começando?",
+   "resposta": "Clã fácil não existe; existe clã que perdoa. Eu começaria de FERAL: a VARREDURA mostra todo mundo em volta, e quem enxerga erra menos. Quer só mirar e soltar? ARCANO, a lança de sangue. ANDARILHO e ESTETA são truque: deixe para quando souber o que está fazendo. Palpite de rato, não regra do jogo.",
+   "palavras_chave": [
+    "iniciante",
+    "novato",
+    "comecando",
+    "comecar",
+    "melhor cla",
+    "cla mais facil",
+    "mais facil",
+    "mais forte",
+    "recomenda",
+    "escolher cla",
+    "que cla"
+   ],
+   "variacoes": [
+    "qual o melhor clã",
+    "qual clã é melhor para iniciante",
+    "sou novato, que clã eu pego",
+    "que clã você recomenda",
+    "qual clã escolher",
+    "qual o clã mais forte"
+   ],
+   "fonte": "opinião do personagem a partir de clas.lista (VARREDURA dos FERAIS, LANÇA DE SANGUE dos ARCANOS, MIRAGEM dos ANDARILHOS, PULSO dos ESTETAS); o jogo não classifica clã por dificuldade"
+  },
+  {
+   "id": "poderes",
+   "tema": "clas",
+   "pergunta": "Como funcionam os poderes?",
+   "resposta": "Cada clã tem três coisas: o poder no E (segurar carrega), a fuga no Q e uma passiva que sempre vale. O ESTETA tranca o raio-X do inimigo, o FERAL revela todo mundo em volta, o ARCANO joga uma lança de sangue. Cada um com o seu jeito de estragar a noite alheia.",
+   "palavras_chave": [
+    "poderes",
+    "habilidades",
+    "e",
+    "q",
+    "passiva",
+    "skill"
+   ],
+   "variacoes": [
+    "quais as habilidades",
+    "como uso o poder",
+    "o que cada clã faz"
+   ],
+   "fonte": "clas.lista (poder_e, fuga_q, passiva)"
+  },
+  {
+   "id": "cla_soberanos",
+   "tema": "clas",
+   "pergunta": "O que fazem os SOBERANOS?",
+   "resposta": "Mandam. O DOMINAR derruba a postura de quem olha para eles e machuca quem cambaleia. A passiva ainda deixa mais fraco quem já cambaleou. Gente que baixa a voz em vez de levantar.",
+   "palavras_chave": [
+    "soberanos",
+    "dominar",
+    "senescal",
+    "postura",
+    "comando"
+   ],
+   "variacoes": [
+    "como joga de soberano",
+    "o que é dominar"
+   ],
+   "fonte": "clas.lista soberanos"
+  },
+  {
+   "id": "cla_ocultos",
+   "tema": "clas",
+   "pergunta": "O que fazem os OCULTOS?",
+   "resposta": "Somem. O VÉU apaga você da percepção dos bots por seis segundos, e o primeiro golpe depois de cinco segundos sem acertar sai metade mais forte. Gente seca, suja e engraçada. Gente de bem.",
+   "palavras_chave": [
+    "ocultos",
+    "veu",
+    "krysa",
+    "emboscada",
+    "furtivo"
+   ],
+   "variacoes": [
+    "como joga de oculto",
+    "o que é o véu"
+   ],
+   "fonte": "clas.lista ocultos"
+  },
+  {
+   "id": "cla_estetas",
+   "tema": "clas",
+   "pergunta": "O que fazem os ESTETAS?",
+   "resposta": "Desligam a sua visão. O PULSO tranca o raio-X do inimigo por dez segundos, e quem chega perto enxerga pela metade. Bonitos e perigosos. A galeria lá em cima é deles.",
+   "palavras_chave": [
+    "estetas",
+    "pulso",
+    "emp",
+    "anfitria",
+    "raio-x"
+   ],
+   "variacoes": [
+    "como joga de esteta",
+    "o que é o pulso emp"
+   ],
+   "fonte": "clas.lista estetas"
+  },
+  {
+   "id": "cla_outros",
+   "tema": "clas",
+   "pergunta": "E os outros clãs?",
+   "resposta": "ARCANOS jogam lança de sangue. REBELDES saltam alto e mais longe na parede. FERAIS revelam todo mundo em volta e mandam nos cães. SERPENTES soltam névoa venenosa. ANDARILHOS fazem três cópias de si correndo. Pergunte do seu e eu conto mais.",
+   "palavras_chave": [
+    "arcanos",
+    "rebeldes",
+    "ferais",
+    "serpentes",
+    "andarilhos",
+    "outros"
+   ],
+   "variacoes": [
+    "o que fazem os ferais",
+    "o que faz o rebelde",
+    "o que faz a serpente"
+   ],
+   "fonte": "clas.lista"
+  },
+  {
+   "id": "ressonancia",
+   "tema": "clas",
+   "pergunta": "O que é a Ressonância de Sangue?",
+   "resposta": "Cada civil carrega um humor no sangue: Sanguínea cura mais rápido, Colérica bate mais forte, Fleumática recarrega o poder de arquétipo, Melancólica recarrega o do clã. Drenou, ganhou. E cada ponto abre um nó da árvore no TAB.",
+   "palavras_chave": [
+    "ressonancia",
+    "sangue",
+    "humores",
+    "drenar",
+    "civil",
+    "cores"
+   ],
+   "variacoes": [
+    "o que acontece quando drena",
+    "pra que serve a cor do sangue",
+    "o que é ressonância"
+   ],
+   "fonte": "universo.ressonancia; passe.ressonancia_arvore"
+  },
+  {
+   "id": "arvore",
+   "tema": "clas",
+   "pergunta": "Como funciona a árvore de talentos?",
+   "resposta": "Vinte e sete nós em quatro ramos, saindo de um coração. Cada nó custa 1, 2 ou 3 pontos conforme a profundidade. Abra os três talentos de fuga do ramo Melancólico e o Q destrava. A Voz Fleumática faz a resposta certa brilhar em ouro nas conversas.",
+   "palavras_chave": [
+    "arvore",
+    "talentos",
+    "nos",
+    "constelacao",
+    "pontos",
+    "tab"
+   ],
+   "variacoes": [
+    "como evoluo o personagem",
+    "o que é a constelação",
+    "como pego talento"
+   ],
+   "fonte": "constelacao.regras"
+  },
+  {
+   "id": "armas",
+   "tema": "armas",
+   "pergunta": "Quais armas tem?",
+   "resposta": "Pistola 9mm, pistola pesada .357, fuzil 5.56, escopeta 12, SMG, DMR 7.62, sniper .338, cano serrado, besta, granada e fumaça. E as garras, que nunca saem da mão. Nem todas já têm modelo no jogo; todas têm balística no código.",
+   "palavras_chave": [
+    "armas",
+    "pistola",
+    "fuzil",
+    "escopeta",
+    "sniper",
+    "besta",
+    "lista"
+   ],
+   "variacoes": [
+    "quais as armas",
+    "tem sniper?",
+    "tem besta?",
+    "que armas tem"
+   ],
+   "fonte": "armas.json; projeto.json armas.no_jogo_nota"
+  },
+  {
+   "id": "rack",
+   "tema": "armas",
+   "pergunta": "Quantas armas posso carregar?",
+   "resposta": "Duas no coldre e as mãos sempre livres para o corpo a corpo: 1, 2 e 3 no teclado. Mais que isso, vampiro vira mula.",
+   "palavras_chave": [
+    "carregar",
+    "slots",
+    "rack",
+    "inventario",
+    "quantas armas",
+    "trocar"
+   ],
+   "variacoes": [
+    "quantas armas eu levo",
+    "como troco de arma",
+    "tem limite de armas?"
+   ],
+   "fonte": "armas.rack"
+  },
+  {
+   "id": "raridade",
+   "tema": "armas",
+   "pergunta": "Como funciona a raridade das armas?",
+   "resposta": "Não é da arma, é da sorte. Cada arma achada sorteia o nível: 60% comum, 25% rara, 12% épica, 3% lendária. O nível mexe em dano, pente e recarga. Cofre só dá épica para cima. Abra cofres.",
+   "palavras_chave": [
+    "raridade",
+    "lendaria",
+    "epica",
+    "rara",
+    "nivel",
+    "cofre"
+   ],
+   "variacoes": [
+    "como pego arma lendária",
+    "o que muda na raridade",
+    "o que tem no cofre"
+   ],
+   "fonte": "armas.json raridade (GasWeaponTier.cpp; GasCofre.cpp:34)"
+  },
+  {
+   "id": "dano_zona",
+   "tema": "armas",
+   "pergunta": "Tiro na cabeça dá mais dano?",
+   "resposta": "O dobro. Tronco é normal, braço tira três quartos, perna um pouco menos, pé metade. Mira alto, que a gente não morre de unha encravada.",
+   "palavras_chave": [
+    "headshot",
+    "cabeca",
+    "dano",
+    "zona",
+    "tiro",
+    "multiplicador"
+   ],
+   "variacoes": [
+    "headshot dá mais dano?",
+    "como funciona o dano",
+    "dano por parte do corpo"
+   ],
+   "fonte": "armas.json zonas (GasDamageZones.cpp:57-67)"
+  },
+  {
+   "id": "corpo_a_corpo",
+   "tema": "armas",
+   "pergunta": "Como é o corpo a corpo?",
+   "resposta": "Socos em cadeia, defesa no tempo certo com o botão direito e execução no F quando o outro cambaleia. Aparar na hora exata vale mais que bater primeiro.",
+   "palavras_chave": [
+    "corpo a corpo",
+    "melee",
+    "soco",
+    "parry",
+    "aparar",
+    "execucao"
+   ],
+   "variacoes": [
+    "tem luta corpo a corpo?",
+    "como dá parry",
+    "como executa"
+   ],
+   "fonte": "armas.lista garras; CLAUDE.md (parry de 3 resultados, execução por postura)"
+  },
+  {
+   "id": "skin_arma",
+   "tema": "armas",
+   "pergunta": "Dá para personalizar a arma?",
+   "resposta": "Ainda não. Acabamento, cor e grafismo de arma estão nos planos para o passe e a loja, mas o encaixe não existe no jogo hoje. Quando existir, eu conto onde achar.",
+   "palavras_chave": [
+    "skin",
+    "personalizar",
+    "acabamento",
+    "pintura",
+    "arma",
+    "customizar"
+   ],
+   "variacoes": [
+    "tem skin de arma?",
+    "posso pintar a arma",
+    "customização de arma"
+   ],
+   "fonte": "armas.customizacao (PLANO; GasPasseSubsystem.cpp:657-660)"
+  },
+  {
+   "id": "loja",
+   "tema": "loja",
+   "pergunta": "Como funciona a loja?",
+   "resposta": "Quatro casas: SUSSURRO, FORJA, ALTA NOITE e BECO. Compra com moeda do jogo, dentro do jogo; a peça vai para o guarda-roupa e veste o vampiro na hora. Neste site ninguém cobra nada. Nem eu.",
+   "palavras_chave": [
+    "loja",
+    "comprar",
+    "roupas",
+    "marcas",
+    "moedas",
+    "cosmeticos"
+   ],
+   "variacoes": [
+    "como compro roupa",
+    "o que tem na loja",
+    "como funciona a loja"
+   ],
+   "fonte": "loja.texto; moda.json marcas"
+  },
+  {
+   "id": "compra_real",
+   "tema": "loja",
+   "pergunta": "Dá para comprar a roupa de verdade?",
+   "resposta": "A ideia existe: a mesma peça, de verdade, na sua porta. Mas está em definição: preço, envio e quando. Hoje, só se compra dentro do jogo.",
+   "palavras_chave": [
+    "de verdade",
+    "real",
+    "entrega",
+    "fisica",
+    "camiseta",
+    "merch"
+   ],
+   "variacoes": [
+    "vende a roupa real?",
+    "tem produto físico?",
+    "entregam em casa?"
+   ],
+   "fonte": "loja.rodada3.compra_dupla (EM DEFINIÇÃO)"
+  },
+  {
+   "id": "dinheiro_real",
+   "tema": "loja",
+   "pergunta": "O jogo tem compra com dinheiro real?",
+   "resposta": "Hoje o protótipo não cobra nada: o próprio código escreve que não há cobrança. Como vai ser no lançamento, em definição.",
+   "palavras_chave": [
+    "dinheiro real",
+    "microtransacao",
+    "pay to win",
+    "cobranca",
+    "tokens",
+    "pagar"
+   ],
+   "variacoes": [
+    "é pay to win?",
+    "tem microtransação?",
+    "precisa pagar pra ganhar?"
+   ],
+   "fonte": "Economy/GasCarteira.h:11 (PROTÓTIPO SEM COBRANÇA); passe.trilhas_detalhe.nao_existe"
+  },
+  {
+   "id": "passe",
+   "tema": "loja",
+   "pergunta": "Como funciona o passe de batalha?",
+   "resposta": "Cem degraus de dez estrelas, setenta dias. A trilha prateada é de todo mundo. A dourada, a VIP, abre por 790 tokens e devolve 1.500 ao longo da temporada: no degrau 53 já se pagou. Matemática que até eu entendo.",
+   "palavras_chave": [
+    "passe",
+    "batalha",
+    "vip",
+    "dourada",
+    "prateada",
+    "degraus",
+    "temporada"
+   ],
+   "variacoes": [
+    "vale a pena o vip?",
+    "como funciona o passe",
+    "o que o passe dá"
+   ],
+   "fonte": "passe.trilhas_detalhe"
+  },
+  {
+   "id": "estrelas",
+   "tema": "loja",
+   "pergunta": "Como subo no passe?",
+   "resposta": "Estrelas. Missões semanais dão 490, as diárias até 250 (5 por dia jogado), as livres 50 e o nível de temporada 210. A sequência diária aguenta três dias de folga. No quarto, quebra.",
+   "palavras_chave": [
+    "estrelas",
+    "subir",
+    "missoes",
+    "diaria",
+    "semanal",
+    "xp"
+   ],
+   "variacoes": [
+    "como ganho estrela",
+    "como subo de degrau",
+    "quanto dá a diária"
+   ],
+   "fonte": "passe.trilhas_detalhe.como_avanca; rodada3.jogar_sempre"
+  },
+  {
+   "id": "patente",
+   "tema": "ranking",
+   "pergunta": "O que é a patente?",
+   "resposta": "Sua escada de posto: NEÓFITO, INICIADO, COMPANHEIRO, SANGUE FRIO, PREDADOR, VETERANO, PRIMOGÊNITO e ANCIÃO, que chega no 100 e para. O nível continua subindo. A patente, não.",
+   "palavras_chave": [
+    "patente",
+    "posto",
+    "anciao",
+    "neofito",
+    "titulo",
+    "nivel"
+   ],
+   "variacoes": [
+    "até onde vai a patente",
+    "o que é ancião",
+    "quais as patentes"
+   ],
+   "fonte": "GasProgressionComponent.cpp:46-61; PatenteMaxima = 100"
+  },
+  {
+   "id": "rankeada",
+   "tema": "ranking",
+   "pergunta": "Tem modo ranqueado?",
+   "resposta": "Tem: Bronze, Prata, Ouro, Platina, Diamante e Mestre, com divisões III, II e I. Todo mundo começa com 1.000 pontos. Colocação pesa mais que abate, e vencer sala cheia de bot vale menos que vencer gente.",
+   "palavras_chave": [
+    "rankeada",
+    "ranqueada",
+    "ranked",
+    "faixas",
+    "mestre",
+    "pontos",
+    "elo"
+   ],
+   "variacoes": [
+    "tem ranked?",
+    "como sobe de elo",
+    "quais as ligas"
+   ],
+   "fonte": "Progression/GasRankedTypes.h (TierDoRating); GasRankedSubsystem.h (RatingInicial 1000, PesoDaColocacao)"
+  },
+  {
+   "id": "ranking_mundial",
+   "tema": "ranking",
+   "pergunta": "Tem ranking mundial?",
+   "resposta": "O placar do mundo ainda não existe: o jogo guarda a sua posição como 'sem ranking global' até ligarem o serviço. O que tem aqui no site é simulação, para você ver como vai ser.",
+   "palavras_chave": [
+    "ranking",
+    "mundial",
+    "global",
+    "top",
+    "leaderboard",
+    "placar"
+   ],
+   "variacoes": [
+    "tem leaderboard?",
+    "como vejo o top 100",
+    "o ranking é real?"
+   ],
+   "fonte": "Social/GasPerfilDeJogador.h (PosicaoNoRanking = -1)"
+  },
+  {
+   "id": "lista_espera",
+   "tema": "lista",
+   "pergunta": "Como entro na lista de espera?",
+   "resposta": "Lá embaixo da página, no convite com lacre. Rompe o lacre, deixa o e-mail, guarda o convite. Quando a caçada abrir, o aviso chega primeiro para você. Não é spam: é trégua.",
+   "palavras_chave": [
+    "lista de espera",
+    "cadastro",
+    "inscricao",
+    "email",
+    "aviso",
+    "newsletter"
+   ],
+   "variacoes": [
+    "como me inscrevo",
+    "onde cadastro meu email",
+    "quero ser avisado"
+   ],
+   "fonte": "lista_de_espera.convite"
+  },
+  {
+   "id": "banda",
+   "tema": "banda",
+   "pergunta": "Quem faz a música?",
+   "resposta": "A ERDOP. Assina a trilha e toca no palco da abertura: BEIJO NA PELE entra aos 22,5 segundos. Na cidade ela está no rádio dos carros, nos cartazes e no grafite em neon.",
+   "palavras_chave": [
+    "musica",
+    "trilha",
+    "banda",
+    "erdop",
+    "som",
+    "soundtrack"
+   ],
+   "variacoes": [
+    "qual a música do trailer",
+    "quem faz a trilha",
+    "que banda é essa"
+   ],
+   "fonte": "banda.texto; banda.no_jogo"
+  },
+  {
+   "id": "radio",
+   "tema": "banda",
+   "pergunta": "Que rádio é essa que toca nos carros?",
+   "resposta": "Os rádios de rua tocam a ERDOP. E às vezes um hacker invade a frequência para avisar da caçada. Escute: ele erra pouco.",
+   "palavras_chave": [
+    "radio",
+    "frequencia",
+    "hacker",
+    "carro",
+    "estacao",
+    "aviso"
+   ],
+   "variacoes": [
+    "o que é o rádio pirata",
+    "quem fala no rádio",
+    "que rádio é essa"
+   ],
+   "fonte": "banda.discreta.radio_falas; GasRadioDeRua.cpp"
+  },
+  {
+   "id": "minha_banda",
+   "tema": "banda",
+   "pergunta": "Minha banda pode aparecer no jogo?",
+   "resposta": "Pode tentar. A cada temporada as paredes e os rádios de Praga podem tocar outra banda. Inscreve a sua no botão da seção da rádio. Eu não voto, mas aplaudo.",
+   "palavras_chave": [
+    "minha banda",
+    "inscrever",
+    "artista",
+    "musico",
+    "divulgar",
+    "temporada"
+   ],
+   "variacoes": [
+    "como coloco minha música no jogo",
+    "aceitam bandas?",
+    "quero inscrever minha banda"
+   ],
+   "fonte": "banda.discreta.convite_bandas"
+  },
+  {
+   "id": "cidade",
+   "tema": "cidade",
+   "pergunta": "A Praga do jogo é real?",
+   "resposta": "É. Hradčany e Malá Strana até a Ponte Carlos e Kampa, no traçado real das ruas: 628 prédios, o relevo da colina e a torre sul de São Vito com 96,6 metros. E 263 lugares contando história. Eu conheço todos por baixo.",
+   "palavras_chave": [
+    "praga",
+    "mapa",
+    "cidade",
+    "real",
+    "ruas",
+    "tamanho"
+   ],
+   "variacoes": [
+    "o mapa é grande?",
+    "a cidade é de verdade?",
+    "qual o mapa"
+   ],
+   "fonte": "cidade.construcao; cidade.numeros"
+  },
+  {
+   "id": "campanha",
+   "tema": "cidade",
+   "pergunta": "Tem modo história?",
+   "resposta": "Tem as Crônicas de Praga: quatro atos, dezesseis capítulos, cada um num lugar real do mapa. Alguém está vendendo nomes de vampiros à Inquisição. Eu sei quem. Não conto.",
+   "palavras_chave": [
+    "campanha",
+    "historia",
+    "cronicas",
+    "missoes",
+    "capitulos",
+    "quests"
+   ],
+   "variacoes": [
+    "tem campanha?",
+    "tem missões?",
+    "o que são as crônicas"
+   ],
+   "fonte": "passe.cronicas; cidade.sala_de_investigacoes"
+  },
+  {
+   "id": "krysa_quem",
+   "tema": "krysa",
+   "pergunta": "Quem é você, Krysa?",
+   "resposta": "Krysa quer dizer rato em tcheco. Sou o cartógrafo das sarjetas: toda tampa de bueiro de Hradčany dá numa sala minha. Lá em cima pagam para não ver a minha cara. Aqui embaixo, pagam pelo meu mapa.",
+   "palavras_chave": [
+    "krysa",
+    "quem e voce",
+    "rato",
+    "cartografo",
+    "voce",
+    "seu nome",
+    "quem fala"
+   ],
+   "variacoes": [
+    "quem é você",
+    "você é um bot?",
+    "quem tá falando",
+    "qual o seu nome",
+    "com quem eu falo"
+   ],
+   "fonte": "clas.tregua.moradores krysa; falas krysa_0 e krysa_1"
+  },
+  {
+   "id": "bueiro",
+   "tema": "krysa",
+   "pergunta": "Dá para descer no esgoto?",
+   "resposta": "A descida pelo bueiro já está escrita: F na tampa e você desce comigo. Mas a tampa ainda não existe no jogo, então por enquanto é promessa de rato.",
+   "palavras_chave": [
+    "esgoto",
+    "bueiro",
+    "subsolo",
+    "tampa",
+    "descer",
+    "tunel"
+   ],
+   "variacoes": [
+    "tem esgoto no mapa?",
+    "como desço no bueiro",
+    "dá pra andar por baixo?"
+   ],
+   "fonte": "cidade.subsolo.no_jogo (krysa_3 ainda proposta)"
+  }
+ ],
+ "nao_sei": [
+  "Esse túnel ainda não cavaram. Deixa o e-mail na lista de espera: quando eu souber, você sabe.",
+  "Não tenho mapa disso. E eu tenho mapa de tudo. Assina a lista de espera que a resposta chega lá primeiro.",
+  "Pergunta boa demais para um rato. Guarda o convite da lista de espera: quem está nela ouve antes de mim."
+ ]
+}

@@ -1,0 +1,1278 @@
+{
+ "versao": 1,
+ "tamanho_px": [
+  1024,
+  1280
+ ],
+ "unidade": "% da largura (x) e da altura (y) da imagem; _e = lado esquerdo DA IMAGEM",
+ "olhos_alvo": [
+  [
+   39,
+   43
+  ],
+  [
+   61,
+   43
+  ]
+ ],
+ "metodo": {
+  "medido": "olhos (MediaPipe PoseLandmarker + refino da pupila por contraste iris/esclera), sobrancelhas, narinas/nariz e fenda da boca (faixa mais escura em janela fixa), orelhas (PoseLandmarker)",
+  "estimado": "iris_raio (0,093 x distancia entre pupilas), cantos da boca (+-0,4 x distancia), testa (0,38 acima da sobrancelha), bochechas e pescoco (proporcao)",
+  "manual": "lobulo_e/_d, queixo, pescoco (centro do pescoco visivel), septo, sobr_ext_e/_d (canto externo da sobrancelha), labio_inf (centro do labio inferior) e orelha_coberta_e/_d marcados a olho sobre a imagem com grade de 1% (rodada de acabamento, 20/11/2026); o site usa estes antes dos estimados"
+ },
+ "rostos": [
+  {
+   "id": "r01",
+   "descricao": "homem jovem de pele retinta, traços da África Ocidental",
+   "cabelos": [
+    {
+     "id": "curto",
+     "nome": "curto rente",
+     "arquivo": "img/cria/rostos/r01_curto.webp",
+     "origem": "gemini/r01_curto.jpg",
+     "pontos": {
+      "olho_e": [
+       38.96,
+       42.97
+      ],
+      "olho_d": [
+       61.04,
+       42.97
+      ],
+      "iris_raio_pct_largura": 2.05,
+      "sobrancelha_e": [
+       38.96,
+       38.91
+      ],
+      "sobrancelha_d": [
+       61.04,
+       38.91
+      ],
+      "testa": [
+       50.0,
+       32.2
+      ],
+      "nariz": [
+       50.0,
+       53.08
+      ],
+      "boca": [
+       50.0,
+       65.78
+      ],
+      "boca_canto_e": [
+       41.17,
+       65.78
+      ],
+      "boca_canto_d": [
+       58.83,
+       65.78
+      ],
+      "bochecha_e": [
+       37.2,
+       52.2
+      ],
+      "bochecha_d": [
+       62.8,
+       52.2
+      ],
+      "orelha_e": [
+       32.67,
+       45.07
+      ],
+      "orelha_d": [
+       69.51,
+       44.46
+      ],
+      "manual": true,
+      "lobulo_e": [
+       26.5,
+       49.5
+      ],
+      "lobulo_d": [
+       73.5,
+       49.5
+      ],
+      "queixo": [
+       50,
+       71.5
+      ],
+      "pescoco": [
+       50,
+       80
+      ],
+      "septo": [
+       50,
+       53.5
+      ],
+      "sobr_ext_e": [
+       31.5,
+       38.5
+      ],
+      "sobr_ext_d": [
+       68,
+       38.5
+      ],
+      "labio_inf": [
+       50,
+       63.3
+      ]
+     }
+    },
+    {
+     "id": "trancas",
+     "nome": "tranças nagô",
+     "arquivo": "img/cria/rostos/r01_trancas.webp",
+     "origem": "gemini/r01_trancas.jpg",
+     "pontos": {
+      "olho_e": [
+       39.06,
+       43.05
+      ],
+      "olho_d": [
+       60.94,
+       42.73
+      ],
+      "iris_raio_pct_largura": 2.03,
+      "sobrancelha_e": [
+       39.06,
+       38.98
+      ],
+      "sobrancelha_d": [
+       60.94,
+       38.91
+      ],
+      "testa": [
+       50.0,
+       32.26
+      ],
+      "nariz": [
+       50.0,
+       53.25
+      ],
+      "boca": [
+       50.0,
+       65.55
+      ],
+      "boca_canto_e": [
+       41.25,
+       65.55
+      ],
+      "boca_canto_d": [
+       58.75,
+       65.55
+      ],
+      "bochecha_e": [
+       37.31,
+       52.37
+      ],
+      "bochecha_d": [
+       62.69,
+       52.37
+      ],
+      "orelha_e": [
+       32.05,
+       45.7
+      ],
+      "orelha_d": [
+       71.08,
+       44.34
+      ],
+      "manual": true,
+      "lobulo_e": [
+       26.5,
+       49.5
+      ],
+      "lobulo_d": [
+       73.5,
+       49.5
+      ],
+      "queixo": [
+       50,
+       71.5
+      ],
+      "pescoco": [
+       50,
+       80
+      ],
+      "septo": [
+       50,
+       53.5
+      ],
+      "sobr_ext_e": [
+       31.5,
+       38.5
+      ],
+      "sobr_ext_d": [
+       68,
+       38.5
+      ],
+      "labio_inf": [
+       50,
+       63.3
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "id": "r02",
+   "descricao": "mulher jovem de pele clara, traços do Leste Asiático",
+   "cabelos": [
+    {
+     "id": "curto",
+     "nome": "curto rente",
+     "arquivo": "img/cria/rostos/r02_curto.webp",
+     "origem": "gemini/r02_curto.jpg",
+     "pontos": {
+      "olho_e": [
+       38.96,
+       43.12
+      ],
+      "olho_d": [
+       61.04,
+       43.05
+      ],
+      "iris_raio_pct_largura": 2.05,
+      "sobrancelha_e": [
+       38.96,
+       37.27
+      ],
+      "sobrancelha_d": [
+       61.04,
+       37.19
+      ],
+      "testa": [
+       50.0,
+       30.48
+      ],
+      "nariz": [
+       50.0,
+       54.88
+      ],
+      "boca": [
+       50.0,
+       65.94
+      ],
+      "boca_canto_e": [
+       41.17,
+       65.94
+      ],
+      "boca_canto_d": [
+       58.83,
+       65.94
+      ],
+      "bochecha_e": [
+       37.2,
+       54.0
+      ],
+      "bochecha_d": [
+       62.8,
+       54.0
+      ],
+      "orelha_e": [
+       32.08,
+       46.62
+      ],
+      "orelha_d": [
+       70.99,
+       45.38
+      ],
+      "manual": true,
+      "orelha_coberta_e": true,
+      "orelha_coberta_d": true,
+      "queixo": [
+       50,
+       73
+      ],
+      "pescoco": [
+       50,
+       82
+      ],
+      "septo": [
+       50,
+       55.3
+      ],
+      "sobr_ext_e": [
+       31.5,
+       39
+      ],
+      "sobr_ext_d": [
+       68.5,
+       39
+      ],
+      "labio_inf": [
+       50,
+       63.5
+      ],
+      "testa_coberta": true
+     }
+    },
+    {
+     "id": "longo",
+     "nome": "longo solto",
+     "arquivo": "img/cria/rostos/r02_longo.webp",
+     "origem": "gemini/r02_longo.jpg",
+     "pontos": {
+      "olho_e": [
+       38.96,
+       43.05
+      ],
+      "olho_d": [
+       61.04,
+       42.97
+      ],
+      "iris_raio_pct_largura": 2.05,
+      "sobrancelha_e": [
+       38.96,
+       37.42
+      ],
+      "sobrancelha_d": [
+       61.04,
+       37.19
+      ],
+      "testa": [
+       50.0,
+       30.48
+      ],
+      "nariz": [
+       50.0,
+       54.72
+      ],
+      "boca": [
+       50.0,
+       65.86
+      ],
+      "boca_canto_e": [
+       41.17,
+       65.86
+      ],
+      "boca_canto_d": [
+       58.83,
+       65.86
+      ],
+      "bochecha_e": [
+       37.2,
+       53.84
+      ],
+      "bochecha_d": [
+       62.8,
+       53.84
+      ],
+      "orelha_e": [
+       32.05,
+       46.68
+      ],
+      "orelha_d": [
+       70.54,
+       45.54
+      ],
+      "manual": true,
+      "lobulo_e": [
+       25.5,
+       52.5
+      ],
+      "lobulo_d": [
+       74.5,
+       52.5
+      ],
+      "queixo": [
+       50,
+       72.5
+      ],
+      "pescoco": [
+       50,
+       82
+      ],
+      "septo": [
+       50,
+       55.5
+      ],
+      "sobr_ext_e": [
+       30.5,
+       38.5
+      ],
+      "sobr_ext_d": [
+       69.5,
+       38.5
+      ],
+      "labio_inf": [
+       50,
+       64
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "id": "r03",
+   "descricao": "homem jovem de pele morena média, traços do Sul da Ásia, barba rala",
+   "cabelos": [
+    {
+     "id": "moicano",
+     "nome": "moicano (laterais raspadas)",
+     "arquivo": "img/cria/rostos/r03_moicano.webp",
+     "origem": "gemini/r03_moicano.jpg",
+     "pontos": {
+      "olho_e": [
+       39.06,
+       43.05
+      ],
+      "olho_d": [
+       61.04,
+       43.05
+      ],
+      "iris_raio_pct_largura": 2.04,
+      "sobrancelha_e": [
+       39.06,
+       39.22
+      ],
+      "sobrancelha_d": [
+       61.04,
+       39.14
+      ],
+      "testa": [
+       50.05,
+       32.46
+      ],
+      "nariz": [
+       50.05,
+       55.04
+      ],
+      "boca": [
+       50.05,
+       65.78
+      ],
+      "boca_canto_e": [
+       41.26,
+       65.78
+      ],
+      "boca_canto_d": [
+       58.84,
+       65.78
+      ],
+      "bochecha_e": [
+       37.3,
+       54.16
+      ],
+      "bochecha_d": [
+       62.79,
+       54.16
+      ],
+      "orelha_e": [
+       30.89,
+       46.47
+      ],
+      "orelha_d": [
+       72.85,
+       45.87
+      ],
+      "manual": true,
+      "lobulo_e": [
+       26,
+       55
+      ],
+      "lobulo_d": [
+       74,
+       55
+      ],
+      "queixo": [
+       50,
+       73
+      ],
+      "pescoco": [
+       50,
+       82
+      ],
+      "septo": [
+       50,
+       55.5
+      ],
+      "sobr_ext_e": [
+       30,
+       38.5
+      ],
+      "sobr_ext_d": [
+       69.5,
+       38.5
+      ],
+      "labio_inf": [
+       50,
+       64
+      ]
+     }
+    },
+    {
+     "id": "ondulado",
+     "nome": "médio ondulado solto",
+     "arquivo": "img/cria/rostos/r03_ondulado.webp",
+     "origem": "gemini/r03_ondulado.jpg",
+     "pontos": {
+      "olho_e": [
+       39.06,
+       43.05
+      ],
+      "olho_d": [
+       61.04,
+       42.97
+      ],
+      "iris_raio_pct_largura": 2.04,
+      "sobrancelha_e": [
+       39.06,
+       39.22
+      ],
+      "sobrancelha_d": [
+       61.04,
+       39.14
+      ],
+      "testa": [
+       50.05,
+       32.46
+      ],
+      "nariz": [
+       50.05,
+       54.96
+      ],
+      "boca": [
+       50.05,
+       65.78
+      ],
+      "boca_canto_e": [
+       41.26,
+       65.78
+      ],
+      "boca_canto_d": [
+       58.84,
+       65.78
+      ],
+      "bochecha_e": [
+       37.3,
+       54.08
+      ],
+      "bochecha_d": [
+       62.79,
+       54.08
+      ],
+      "orelha_e": [
+       30.5,
+       46.51
+      ],
+      "orelha_d": [
+       72.23,
+       47.11
+      ],
+      "manual": true,
+      "lobulo_e": [
+       26,
+       55.5
+      ],
+      "lobulo_d": [
+       74,
+       55.5
+      ],
+      "queixo": [
+       50,
+       73
+      ],
+      "pescoco": [
+       50,
+       82
+      ],
+      "septo": [
+       50,
+       55.5
+      ],
+      "sobr_ext_e": [
+       30,
+       38.5
+      ],
+      "sobr_ext_d": [
+       69.5,
+       38.5
+      ],
+      "labio_inf": [
+       50,
+       64
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "id": "r04",
+   "descricao": "mulher jovem de pele negra média, traços afro-brasileiros",
+   "cabelos": [
+    {
+     "id": "cachos",
+     "nome": "cacheado",
+     "arquivo": "img/cria/rostos/r04_cachos.webp",
+     "origem": "gemini/r04_cachos.jpg",
+     "pontos": {
+      "olho_e": [
+       38.96,
+       42.97
+      ],
+      "olho_d": [
+       61.04,
+       42.97
+      ],
+      "iris_raio_pct_largura": 2.05,
+      "sobrancelha_e": [
+       38.96,
+       37.42
+      ],
+      "sobrancelha_d": [
+       61.04,
+       37.42
+      ],
+      "testa": [
+       50.0,
+       30.71
+      ],
+      "nariz": [
+       50.0,
+       52.92
+      ],
+      "boca": [
+       50.0,
+       65.08
+      ],
+      "boca_canto_e": [
+       41.17,
+       65.08
+      ],
+      "boca_canto_d": [
+       58.83,
+       65.08
+      ],
+      "bochecha_e": [
+       37.2,
+       52.04
+      ],
+      "bochecha_d": [
+       62.8,
+       52.04
+      ],
+      "orelha_e": [
+       31.19,
+       47.11
+      ],
+      "orelha_d": [
+       71.93,
+       47.67
+      ],
+      "manual": true,
+      "queixo": [
+       50,
+       72
+      ],
+      "pescoco": [
+       50,
+       81
+      ],
+      "septo": [
+       50,
+       53.5
+      ],
+      "sobr_ext_e": [
+       31,
+       38
+      ],
+      "sobr_ext_d": [
+       68.5,
+       38
+      ],
+      "labio_inf": [
+       50,
+       62.8
+      ],
+      "orelha_coberta_e": true,
+      "orelha_coberta_d": true
+     }
+    },
+    {
+     "id": "raspado",
+     "nome": "raspado",
+     "arquivo": "img/cria/rostos/r04_raspado.webp",
+     "origem": "gemini/r04_raspado.jpg",
+     "pontos": {
+      "olho_e": [
+       38.96,
+       42.89
+      ],
+      "olho_d": [
+       61.04,
+       42.89
+      ],
+      "iris_raio_pct_largura": 2.05,
+      "sobrancelha_e": [
+       38.96,
+       37.5
+      ],
+      "sobrancelha_d": [
+       61.04,
+       37.5
+      ],
+      "testa": [
+       50.0,
+       30.79
+      ],
+      "nariz": [
+       50.0,
+       52.85
+      ],
+      "boca": [
+       50.0,
+       65.0
+      ],
+      "boca_canto_e": [
+       41.17,
+       65.0
+      ],
+      "boca_canto_d": [
+       58.83,
+       65.0
+      ],
+      "bochecha_e": [
+       37.2,
+       51.96
+      ],
+      "bochecha_d": [
+       62.8,
+       51.96
+      ],
+      "orelha_e": [
+       30.73,
+       45.21
+      ],
+      "orelha_d": [
+       71.75,
+       44.08
+      ],
+      "manual": true,
+      "lobulo_e": [
+       26.5,
+       52.5
+      ],
+      "lobulo_d": [
+       73.5,
+       52.5
+      ],
+      "queixo": [
+       50,
+       72
+      ],
+      "pescoco": [
+       50,
+       81
+      ],
+      "septo": [
+       50,
+       53.5
+      ],
+      "sobr_ext_e": [
+       31,
+       38
+      ],
+      "sobr_ext_d": [
+       68.5,
+       38
+      ],
+      "labio_inf": [
+       50,
+       62.8
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "id": "r05",
+   "descricao": "pessoa jovem andrógina de pele bronzeada, traços indígenas andinos",
+   "cabelos": [
+    {
+     "id": "longo",
+     "nome": "longo solto",
+     "arquivo": "img/cria/rostos/r05_longo.webp",
+     "origem": "gemini/r05_longo.jpg",
+     "pontos": {
+      "olho_e": [
+       38.96,
+       42.97
+      ],
+      "olho_d": [
+       60.94,
+       42.97
+      ],
+      "iris_raio_pct_largura": 2.04,
+      "sobrancelha_e": [
+       38.96,
+       39.14
+      ],
+      "sobrancelha_d": [
+       60.94,
+       39.14
+      ],
+      "testa": [
+       49.95,
+       32.46
+      ],
+      "nariz": [
+       49.95,
+       55.66
+      ],
+      "boca": [
+       49.95,
+       62.66
+      ],
+      "boca_canto_e": [
+       41.16,
+       62.66
+      ],
+      "boca_canto_d": [
+       58.74,
+       62.66
+      ],
+      "bochecha_e": [
+       37.21,
+       54.79
+      ],
+      "bochecha_d": [
+       62.7,
+       54.79
+      ],
+      "orelha_e": [
+       31.87,
+       48.05
+      ],
+      "orelha_d": [
+       71.31,
+       46.99
+      ],
+      "manual": true,
+      "lobulo_e": [
+       26,
+       53.5
+      ],
+      "lobulo_d": [
+       74.5,
+       53.5
+      ],
+      "queixo": [
+       50,
+       73
+      ],
+      "pescoco": [
+       50,
+       82
+      ],
+      "septo": [
+       50,
+       55.5
+      ],
+      "sobr_ext_e": [
+       30.5,
+       38.5
+      ],
+      "sobr_ext_d": [
+       69,
+       38.5
+      ],
+      "labio_inf": [
+       50,
+       64.7
+      ]
+     }
+    },
+    {
+     "id": "moicano",
+     "nome": "moicano (laterais raspadas)",
+     "arquivo": "img/cria/rostos/r05_moicano.webp",
+     "origem": "gemini/r05_moicano.jpg",
+     "pontos": {
+      "olho_e": [
+       38.96,
+       42.89
+      ],
+      "olho_d": [
+       61.04,
+       42.97
+      ],
+      "iris_raio_pct_largura": 2.05,
+      "sobrancelha_e": [
+       38.96,
+       39.06
+      ],
+      "sobrancelha_d": [
+       61.04,
+       39.14
+      ],
+      "testa": [
+       50.0,
+       32.35
+      ],
+      "nariz": [
+       50.0,
+       55.58
+      ],
+      "boca": [
+       50.0,
+       62.66
+      ],
+      "boca_canto_e": [
+       41.17,
+       62.66
+      ],
+      "boca_canto_d": [
+       58.83,
+       62.66
+      ],
+      "bochecha_e": [
+       37.2,
+       54.7
+      ],
+      "bochecha_d": [
+       62.8,
+       54.7
+      ],
+      "orelha_e": [
+       32.0,
+       46.96
+      ],
+      "orelha_d": [
+       72.51,
+       46.19
+      ],
+      "manual": true,
+      "lobulo_e": [
+       26,
+       53.5
+      ],
+      "lobulo_d": [
+       74.5,
+       53.5
+      ],
+      "queixo": [
+       50,
+       73.5
+      ],
+      "pescoco": [
+       50,
+       82
+      ],
+      "septo": [
+       50,
+       55.5
+      ],
+      "sobr_ext_e": [
+       30.5,
+       38.5
+      ],
+      "sobr_ext_d": [
+       69,
+       38.5
+      ],
+      "labio_inf": [
+       50,
+       64.7
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "id": "r06",
+   "descricao": "homem jovem de pele oliva, traços do Norte da África e Oriente Médio, barba curta",
+   "cabelos": [
+    {
+     "id": "cachos",
+     "nome": "cacheado",
+     "arquivo": "img/cria/rostos/r06_cachos.webp",
+     "origem": "gemini/r06_cachos.jpg",
+     "pontos": {
+      "olho_e": [
+       38.96,
+       43.05
+      ],
+      "olho_d": [
+       60.94,
+       43.05
+      ],
+      "iris_raio_pct_largura": 2.04,
+      "sobrancelha_e": [
+       38.96,
+       39.3
+      ],
+      "sobrancelha_d": [
+       60.94,
+       39.22
+      ],
+      "testa": [
+       49.95,
+       32.54
+      ],
+      "nariz": [
+       49.95,
+       55.9
+      ],
+      "boca": [
+       49.95,
+       62.89
+      ],
+      "boca_canto_e": [
+       41.16,
+       62.89
+      ],
+      "boca_canto_d": [
+       58.74,
+       62.89
+      ],
+      "bochecha_e": [
+       37.21,
+       55.02
+      ],
+      "bochecha_d": [
+       62.7,
+       55.02
+      ],
+      "orelha_e": [
+       32.37,
+       46.43
+      ],
+      "orelha_d": [
+       72.01,
+       45.22
+      ],
+      "manual": true,
+      "lobulo_e": [
+       26,
+       55.3
+      ],
+      "lobulo_d": [
+       74,
+       55.3
+      ],
+      "queixo": [
+       50,
+       74.5
+      ],
+      "pescoco": [
+       50,
+       83
+      ],
+      "septo": [
+       50,
+       56
+      ],
+      "sobr_ext_e": [
+       30.5,
+       39
+      ],
+      "sobr_ext_d": [
+       69.5,
+       39
+      ],
+      "labio_inf": [
+       50,
+       64.8
+      ]
+     }
+    },
+    {
+     "id": "raspado_lateral",
+     "nome": "raspado nas laterais (undercut)",
+     "arquivo": "img/cria/rostos/r06_raspado_lateral.webp",
+     "origem": "gemini/r06_raspado_lateral.jpg",
+     "pontos": {
+      "olho_e": [
+       38.96,
+       42.97
+      ],
+      "olho_d": [
+       60.94,
+       43.05
+      ],
+      "iris_raio_pct_largura": 2.04,
+      "sobrancelha_e": [
+       38.96,
+       39.3
+      ],
+      "sobrancelha_d": [
+       60.94,
+       39.3
+      ],
+      "testa": [
+       49.95,
+       32.62
+      ],
+      "nariz": [
+       49.95,
+       55.9
+      ],
+      "boca": [
+       49.95,
+       62.89
+      ],
+      "boca_canto_e": [
+       41.16,
+       62.89
+      ],
+      "boca_canto_d": [
+       58.74,
+       62.89
+      ],
+      "bochecha_e": [
+       37.21,
+       55.02
+      ],
+      "bochecha_d": [
+       62.7,
+       55.02
+      ],
+      "orelha_e": [
+       31.91,
+       46.23
+      ],
+      "orelha_d": [
+       71.08,
+       45.29
+      ],
+      "manual": true,
+      "lobulo_e": [
+       26,
+       55
+      ],
+      "lobulo_d": [
+       74,
+       55
+      ],
+      "queixo": [
+       50,
+       74.5
+      ],
+      "pescoco": [
+       50,
+       83
+      ],
+      "septo": [
+       50,
+       56
+      ],
+      "sobr_ext_e": [
+       30.5,
+       39
+      ],
+      "sobr_ext_d": [
+       69.5,
+       39
+      ],
+      "labio_inf": [
+       50,
+       64.8
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "id": "r07",
+   "descricao": "mulher jovem de pele muito clara com sardas, cabelo ruivo natural",
+   "cabelos": [
+    {
+     "id": "longo",
+     "nome": "longo solto",
+     "arquivo": "img/cria/rostos/r07_longo.webp",
+     "origem": "gemini/r07_longo.jpg",
+     "pontos": {
+      "olho_e": [
+       38.96,
+       43.05
+      ],
+      "olho_d": [
+       60.94,
+       42.97
+      ],
+      "iris_raio_pct_largura": 2.04,
+      "sobrancelha_e": [
+       38.96,
+       39.06
+      ],
+      "sobrancelha_d": [
+       60.94,
+       38.98
+      ],
+      "testa": [
+       49.95,
+       32.3
+      ],
+      "nariz": [
+       49.95,
+       53.63
+      ],
+      "boca": [
+       49.95,
+       60.78
+      ],
+      "boca_canto_e": [
+       41.16,
+       60.78
+      ],
+      "boca_canto_d": [
+       58.74,
+       60.78
+      ],
+      "bochecha_e": [
+       37.21,
+       52.75
+      ],
+      "bochecha_d": [
+       62.7,
+       52.75
+      ],
+      "orelha_e": [
+       31.38,
+       47.15
+      ],
+      "orelha_d": [
+       72.29,
+       46.8
+      ],
+      "manual": true,
+      "lobulo_e": [
+       26.5,
+       52.5
+      ],
+      "lobulo_d": [
+       73.5,
+       52.5
+      ],
+      "queixo": [
+       50,
+       72
+      ],
+      "pescoco": [
+       50,
+       83
+      ],
+      "septo": [
+       50,
+       55
+      ],
+      "sobr_ext_e": [
+       31,
+       38.5
+      ],
+      "sobr_ext_d": [
+       68.5,
+       38.5
+      ],
+      "labio_inf": [
+       50,
+       63.5
+      ]
+     }
+    }
+   ]
+  }
+ ]
+}

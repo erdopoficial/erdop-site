@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 96" width="320" height="96" role="img" aria-label="NOTURNA EXPRESSO">
+<title>NOTURNA EXPRESSO</title>
+<g fill="none" stroke="#E8E1D3" stroke-width="3.2" stroke-linejoin="miter" stroke-linecap="square">
+<path d="M8 40 L22 30 L30 38 L38 26 L48 40 L58 26 L66 38 L74 30 L88 40 L74 46 L48 52 L22 46 Z"/>
+<path d="M30 52 H66 V82 H30 Z M30 62 H66 M48 52 V82"/>
+</g>
+<path d="M44 66 L48 72 L52 66 Z" fill="#C9A45C"/>
+<text x="104" y="50" font-family="'UnifrakturCook','Playfair Display SC',serif" font-weight="700" font-size="30" fill="#E8E1D3" letter-spacing="1">Noturna</text>
+<text x="106" y="76" font-family="'Black Ops One','Arial Black',sans-serif" font-size="17" fill="#C9A45C" letter-spacing="6">EXPRESSO</text>
+<path d="M104 84 H312" stroke="#C9A45C" stroke-width="1.2" opacity=".6"/>
+</svg>

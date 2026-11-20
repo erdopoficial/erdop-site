@@ -1,0 +1,186 @@
+{
+ "_leia": "Créditos de imagens de terceiros usadas no site. Fotos reais dos alfinetes da sala de operações (Wikimedia Commons, só domínio público/CC0/CC BY/CC BY-SA). CC BY e CC BY-SA exigem atribuição visível (autor, licença com link) perto da foto ou numa página de créditos; CC BY-SA pede que a versão alterada (aqui só redimensionada) siga sob a mesma licença.",
+ "gerado_em": "2026-11-14",
+ "praga": [
+  {
+   "id": "catedral",
+   "arquivo": "img/praga/catedral.jpg",
+   "descricao": "Fachada oeste da Catedral de São Vito, à noite",
+   "titulo_commons": "File:Saint Vitus Cathedral exterior at night. Prague, Czech Republic, Western Europe. October 24, 2012.jpg",
+   "autor": "Mstyslav Chernov",
+   "licenca": "CC BY-SA 4.0",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Saint_Vitus_Cathedral_exterior_at_night._Prague,_Czech_Republic,_Western_Europe._October_24,_2012.jpg",
+   "tamanho_original": [
+    3500,
+    2329
+   ],
+   "baixado_em": "2026-11-14",
+   "alteracao": "reduzida para o lado maior de 1280 px, JPEG q84"
+  },
+  {
+   "id": "campanario",
+   "arquivo": "img/praga/campanario.jpg",
+   "descricao": "Lado sul de São Vito com a torre grande (campanário)",
+   "titulo_commons": "File:Czech-03758 - South Side of St. Vitus Cathedral (32637395700).jpg",
+   "autor": "Dennis G. Jarvis",
+   "licenca": "CC BY-SA 2.0",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Czech-03758_-_South_Side_of_St._Vitus_Cathedral_(32637395700).jpg",
+   "tamanho_original": [
+    4000,
+    6000
+   ],
+   "baixado_em": "2026-11-14",
+   "alteracao": "reduzida para o lado maior de 1280 px, JPEG q84"
+  },
+  {
+   "id": "cripta",
+   "arquivo": "img/praga/cripta.jpg",
+   "descricao": "Tampa de esgoto de Praga (Pražská kanalizace)",
+   "titulo_commons": "File:Pražská kanalizace, poklop.jpg",
+   "autor": "ŠJů (cs:ŠJů)",
+   "licenca": "CC BY-SA 3.0",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Pra%C5%BEsk%C3%A1_kanalizace,_poklop.jpg",
+   "tamanho_original": [
+    3264,
+    2448
+   ],
+   "baixado_em": "2026-11-14",
+   "alteracao": "reduzida para o lado maior de 1280 px, JPEG q84"
+  },
+  {
+   "id": "rua_dourada",
+   "arquivo": "img/praga/rua_dourada.jpg",
+   "descricao": "Zlatá ulička, a Rua Dourada, vazia ao amanhecer",
+   "titulo_commons": "File:Zlatá ulička, Pražský hrad (04-2026) 01.jpg",
+   "autor": "Skot",
+   "licenca": "CC BY-SA 4.0",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Zlat%C3%A1_uli%C4%8Dka,_Pra%C5%BEsk%C3%BD_hrad_(04-2026)_01.jpg",
+   "tamanho_original": [
+    6000,
+    4007
+   ],
+   "baixado_em": "2026-11-14",
+   "alteracao": "reduzida para o lado maior de 1280 px, JPEG q84"
+  },
+  {
+   "id": "fosso",
+   "arquivo": "img/praga/fosso.jpg",
+   "descricao": "Túnel sob a Ponte da Pólvora, no Fosso dos Cervos",
+   "titulo_commons": "File:Deer Moat Tunnel, Prague Castle.JPG",
+   "autor": "Harke",
+   "licenca": "CC BY-SA 4.0",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Deer_Moat_Tunnel,_Prague_Castle.JPG",
+   "tamanho_original": [
+    3456,
+    4608
+   ],
+   "baixado_em": "2026-11-14",
+   "alteracao": "reduzida para o lado maior de 1280 px, JPEG q84"
+  },
+  {
+   "id": "jardim_real",
+   "arquivo": "img/praga/jardim_real.jpg",
+   "descricao": "Belvedere (Letohrádek královny Anny) no Jardim Real",
+   "titulo_commons": "File:Pražský hrad, Letohrádek královny Anny 02.jpg",
+   "autor": "Karen Blaha",
+   "licenca": "CC BY-SA 2.0",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Pra%C5%BEsk%C3%BD_hrad,_Letohr%C3%A1dek_kr%C3%A1lovny_Anny_02.jpg",
+   "tamanho_original": [
+    3872,
+    2592
+   ],
+   "baixado_em": "2026-11-14",
+   "alteracao": "reduzida para o lado maior de 1280 px, JPEG q84"
+  },
+  {
+   "id": "praca_castelo",
+   "arquivo": "img/praga/praca_castelo.jpg",
+   "descricao": "Hradčanské náměstí com a coluna mariana da peste",
+   "titulo_commons": "File:Hradčanské náměstí s mariánským sloupem v popředí 0278.jpg",
+   "autor": "Matěj Baťha",
+   "licenca": "CC BY-SA 3.0",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Hrad%C4%8Dansk%C3%A9_n%C3%A1m%C4%9Bst%C3%AD_s_mari%C3%A1nsk%C3%BDm_sloupem_v_pop%C5%99ed%C3%AD_0278.jpg",
+   "tamanho_original": [
+    3000,
+    2000
+   ],
+   "baixado_em": "2026-11-14",
+   "alteracao": "reduzida para o lado maior de 1280 px, JPEG q84"
+  },
+  {
+   "id": "loreta",
+   "arquivo": "img/praga/loreta.jpg",
+   "descricao": "A Loreta, vista da Loretánské náměstí",
+   "titulo_commons": "File:Loreta, Praha, Loretánské náměstí.JPG",
+   "autor": "Martin Mašek",
+   "licenca": "CC BY-SA 4.0",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Loreta,_Praha,_Loret%C3%A1nsk%C3%A9_n%C3%A1m%C4%9Bst%C3%AD.JPG",
+   "tamanho_original": [
+    2816,
+    1880
+   ],
+   "baixado_em": "2026-11-14",
+   "alteracao": "reduzida para o lado maior de 1280 px, JPEG q84"
+  },
+  {
+   "id": "uvoz",
+   "arquivo": "img/praga/uvoz.jpg",
+   "descricao": "Casas de Úvoz na encosta",
+   "titulo_commons": "File:Praha, Hradčany, Úvoz 01.jpg",
+   "autor": "Daniel Baránek",
+   "licenca": "CC BY-SA 3.0",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Praha,_Hrad%C4%8Dany,_%C3%9Avoz_01.jpg",
+   "tamanho_original": [
+    3072,
+    2304
+   ],
+   "baixado_em": "2026-11-14",
+   "alteracao": "reduzida para o lado maior de 1280 px, JPEG q84"
+  },
+  {
+   "id": "nerudova",
+   "arquivo": "img/praga/nerudova.jpg",
+   "descricao": "Sinal da casa U Dvou slunců (Dois Sóis), Nerudova 47",
+   "titulo_commons": "File:Prague Praha 2014 Holmstad Huset med de to soler i Nerudova - gata House by two suns nr 47.JPG",
+   "autor": "Øyvind Holmstad",
+   "licenca": "CC BY-SA 3.0",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Prague_Praha_2014_Holmstad_Huset_med_de_to_soler_i_Nerudova_-_gata_House_by_two_suns_nr_47.JPG",
+   "tamanho_original": [
+    5184,
+    3456
+   ],
+   "baixado_em": "2026-11-14",
+   "alteracao": "reduzida para o lado maior de 1280 px, JPEG q84"
+  },
+  {
+   "id": "mala_strana",
+   "arquivo": "img/praga/mala_strana.jpg",
+   "descricao": "Igreja de São Nicolau de Malá Strana",
+   "titulo_commons": "File:Church of Saint Nicholas in Malá Strana 03(js).jpg",
+   "autor": "Jerzy Strzelecki",
+   "licenca": "CC BY-SA 3.0",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Church_of_Saint_Nicholas_in_Mal%C3%A1_Strana_03(js).jpg",
+   "tamanho_original": [
+    3262,
+    4893
+   ],
+   "baixado_em": "2026-11-14",
+   "alteracao": "reduzida para o lado maior de 1280 px, JPEG q84"
+  },
+  {
+   "id": "ponte_carlos",
+   "arquivo": "img/praga/ponte_carlos.jpg",
+   "descricao": "Estátua da Ponte Carlos e a torre de Malá Strana ao entardecer",
+   "titulo_commons": "File:Charles Bridge at night with sky in Prague.jpg",
+   "autor": "Marc-Olivier Giguere",
+   "licenca": "CC BY-SA 4.0",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Charles_Bridge_at_night_with_sky_in_Prague.jpg",
+   "tamanho_original": [
+    3403,
+    5104
+   ],
+   "baixado_em": "2026-11-14",
+   "alteracao": "reduzida para o lado maior de 1280 px, JPEG q84"
+  }
+ ]
+}

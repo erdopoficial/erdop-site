@@ -1,0 +1,1592 @@
+{
+  "gerado_em": "2026-11-15T08:23:03",
+  "convencoes": "GLB sem Draco, eixo Y para cima (three.js), metros, origem no pe (centro XY da base, Y=0). Texturas JPEG <= 1024. Camera: posicao [x,y,z] e alvo [x,y,z] em metros no espaco do modelo. 'frente' = +Z do three.js (-Y do Blender; o exportador glTF troca Y por -Z); conferida a olho nos renders _ver/, nao por medida.",
+  "modelos": [
+    {
+      "arquivo": "modelos/estatua_nepomuk.glb",
+      "nome": "Sao Joao Nepomuceno (ponte Carlos)",
+      "tipo": "estatua",
+      "triangulos": 29700,
+      "tamanho_mb": 1.38,
+      "caixa_m": [
+        0.66,
+        2.2,
+        0.79
+      ],
+      "texturas": "cor + normal 1024",
+      "camera": {
+        "posicao": [
+          1.6,
+          1.9,
+          2.9
+        ],
+        "alvo": [
+          0,
+          1.25,
+          0
+        ],
+        "fov": 30,
+        "close_rosto": {
+          "posicao": [
+            0.45,
+            2.0,
+            0.9
+          ],
+          "alvo": [
+            0,
+            1.95,
+            0
+          ]
+        }
+      },
+      "luz": "contraluz vermelho atras-esquerda forte, recorte frio atras-direita, chave quente fraca na frente; fundo quase preto",
+      "uso": "iluminado",
+      "notas": "Melhor peca do lote: rosto, coroa de estrelas, crucifixo e palma leem bem em close. Fonte: I:/WaruraseAsset/catalogo/glb_pub_1024/SM_WAR_Estatua_Nepomuk.glb. Licenca da malha a confirmar antes do site publico."
+    },
+    {
+      "arquivo": "modelos/estatua_leao_vermelho.glb",
+      "nome": "Leao Vermelho (guarda da Camara da Coroa)",
+      "tipo": "estatua",
+      "triangulos": 29700,
+      "tamanho_mb": 1.12,
+      "caixa_m": [
+        3.25,
+        2.1,
+        1.41
+      ],
+      "texturas": "cor + normal 1024",
+      "camera": {
+        "posicao": [
+          2.6,
+          1.7,
+          4.6
+        ],
+        "alvo": [
+          0,
+          1.05,
+          0
+        ],
+        "fov": 35,
+        "close_rosto": {
+          "posicao": [
+            2.2,
+            1.9,
+            1.6
+          ],
+          "alvo": [
+            1.3,
+            1.6,
+            0
+          ]
+        }
+      },
+      "luz": "contraluz vermelho rasante pela juba (a narrativa e alquimica: enxofre e sangue); frio so no lombo",
+      "uso": "iluminado",
+      "notas": "Le bem; juba e pata no brasao tem volume. Fonte: catalogo/glb_tex/SM_WAR_Leao_Kafka.glb (no GDD vira Leao Vermelho). A cabeca fica no lado +X."
+    },
+    {
+      "arquivo": "modelos/estatua_mestre_encapuzado.glb",
+      "nome": "O Mestre Encapuzado (efigie de bronze)",
+      "tipo": "estatua",
+      "triangulos": 13420,
+      "tamanho_mb": 1.11,
+      "caixa_m": [
+        1.78,
+        5.06,
+        1.58
+      ],
+      "texturas": "bronze 512 (cor, normal, ORM)",
+      "camera": {
+        "posicao": [
+          3.5,
+          3.6,
+          9.5
+        ],
+        "alvo": [
+          0,
+          2.6,
+          0
+        ],
+        "fov": 30,
+        "close_rosto": {
+          "posicao": [
+            0.9,
+            4.3,
+            2.6
+          ],
+          "alvo": [
+            0,
+            4.3,
+            0
+          ]
+        }
+      },
+      "luz": "contraluz vermelho na balanca e no capuz; quase nada de luz frontal (o rosto deve ficar escondido no capuz)",
+      "uso": "iluminado",
+      "notas": "Bronze convincente, mas textura so 512: no close o detalhe e pouco; usar em plano medio ou em silhueta alta. Fonte: catalogo/glb_tex_final/Statue_CloakedWithSword.glb (pacote 'Infil1', provavel conteudo da Epic: NAO publicar no site aberto sem conferir a licenca)."
+    },
+    {
+      "arquivo": "modelos/estatua_judas_tadeu.glb",
+      "nome": "Sao Judas Tadeu (octogono) - reserva",
+      "tipo": "estatua",
+      "triangulos": 23760,
+      "tamanho_mb": 1.05,
+      "caixa_m": [
+        0.67,
+        2.0,
+        0.73
+      ],
+      "texturas": "cor + normal 1024",
+      "camera": {
+        "posicao": [
+          1.5,
+          1.7,
+          2.7
+        ],
+        "alvo": [
+          0,
+          1.1,
+          0
+        ],
+        "fov": 30,
+        "close_rosto": {
+          "posicao": [
+            0.4,
+            1.85,
+            0.85
+          ],
+          "alvo": [
+            0,
+            1.8,
+            0
+          ]
+        }
+      },
+      "luz": "igual ao Nepomuceno",
+      "uso": "iluminado",
+      "notas": "Reserva (o pedido era 2 ou 3). Panejamento muito bom. CREDITO CC BY 4.0 OBRIGATORIO no site (memoria narrativa-esoterica-estatuas-08-11)."
+    },
+    {
+      "arquivo": "modelos/estatua_gargula.glb",
+      "nome": "Gargula da catedral",
+      "tipo": "estatua",
+      "triangulos": 8872,
+      "tamanho_mb": 0.69,
+      "caixa_m": [
+        0.87,
+        0.89,
+        0.68
+      ],
+      "texturas": "cantaria 512 (cor, normal, ORM)",
+      "camera": {
+        "posicao": [
+          0,
+          1.3,
+          1.6
+        ],
+        "alvo": [
+          0,
+          0.45,
+          0
+        ],
+        "fov": 35
+      },
+      "luz": "so contraluz, sem chave",
+      "uso": "so_silhueta",
+      "notas": "Iluminada parece low-poly facetada (duas fontes tentadas: a UVPainter_v9fix de 38 mil tri saiu com manchas brancas da textura; a glb_tex_final de 8,9 mil tri, a exportada, sai facetada). Por regra do dono a forma primitiva e proposital, mas no site so funciona recortada contra o ceu, empoleirada num beiral."
+    },
+    {
+      "arquivo": "modelos/arma_pistola.glb",
+      "nome": "Pistola 9 mm",
+      "tipo": "arma",
+      "triangulos": 2122,
+      "tamanho_mb": 0.32,
+      "caixa_m": [
+        0.21,
+        0.12,
+        0.03
+      ],
+      "texturas": "cor + normal (512, 128 e 64 por parte)",
+      "camera": {
+        "posicao": [
+          0.17,
+          0.08,
+          0.33
+        ],
+        "alvo": [
+          0,
+          0.06,
+          0
+        ],
+        "fov": 30
+      },
+      "luz": "recorte vermelho no topo do ferrolho + frio no guarda-mato; girar lento no eixo Y para a vitrine da loja",
+      "uso": "iluminado",
+      "notas": "Le como arma real. NAO e a malha do jogo (o jogo usa SK_Pistol do Lyra, uasset da Epic: exportar exige abrir a Unreal e a licenca nao cobre web). Fonte: I:/GAME DESIGNER/3D/!NOVO BESTIAL/ASSETS/ARMAS/WeaponsHQ4/Pistol01 (pacote Unity, licenca a confirmar). O ferrolho tem uma gravacao de texto pequena: conferir se e marca registrada antes de publicar."
+    },
+    {
+      "arquivo": "modelos/arma_escopeta_serrada.glb",
+      "nome": "Escopeta de cano serrado",
+      "tipo": "arma",
+      "triangulos": 1234,
+      "tamanho_mb": 0.36,
+      "caixa_m": [
+        0.69,
+        0.19,
+        0.08
+      ],
+      "texturas": "cor + normal",
+      "camera": {
+        "posicao": [
+          0.5,
+          0.2,
+          0.9
+        ],
+        "alvo": [
+          0,
+          0.07,
+          0
+        ],
+        "fov": 30
+      },
+      "luz": "contraluz vermelho no cano, frio no cabo gravado",
+      "uso": "iluminado",
+      "notas": "Bom candidato para skins de passe (cabo gravado, cano perfurado). Fonte: ASSETS/ARMAS/Sawed Off (pacote Unity, licenca a confirmar). Nao e a SM_Shotgun do jogo."
+    },
+    {
+      "arquivo": "modelos/arma_magnum.glb",
+      "nome": "Magnum (revolver CC0)",
+      "tipo": "arma",
+      "triangulos": 1046,
+      "tamanho_mb": 0.05,
+      "caixa_m": [
+        0.33,
+        0.15,
+        0.05
+      ],
+      "texturas": "nenhuma (aco escuro, aco claro, madeira)",
+      "camera": {
+        "posicao": [
+          0.2,
+          0.1,
+          0.45
+        ],
+        "alvo": [
+          0,
+          0.07,
+          0
+        ],
+        "fov": 30
+      },
+      "luz": "so contraluz",
+      "uso": "so_silhueta",
+      "notas": "Parece brinquedo low-poly quando iluminado. E a base CC0 (Quaternius) da SM_WAR_Magnum_Revolver do jogo: unica arma do lote com licenca livre garantida."
+    },
+    {
+      "arquivo": "modelos/skyline_praga.glb",
+      "nome": "Skyline: Sao Vito sobre o castelo + telhados e torres de Praga",
+      "tipo": "skyline",
+      "triangulos": 40972,
+      "tamanho_mb": 0.38,
+      "compactado": "acabamento 14/11: vertices soldados, sem normais, posicao int16 com escala no no (passo 2,1 cm), indices uint16; original de 2,52 MB guardado em I:/WaruraseIntro/site/acabamento_bkp",
+      "caixa_m": [
+        1400,
+        147.6,
+        1100
+      ],
+      "texturas": "nenhuma; materiais 'silhueta' (quase preto) e 'janela' (emissivo laranja, ~poucas dezenas)",
+      "camera": {
+        "posicao": [
+          30,
+          40,
+          820
+        ],
+        "alvo": [
+          0,
+          75,
+          0
+        ],
+        "fov": 23,
+        "nota": "no three.js o lado da cidade baixa fica em +Z (o -Y do Blender vira +Z); camera do lado da cidade olhando o castelo"
+      },
+      "luz": "nenhuma luz no modelo: fundo em gradiente (vermelho no horizonte, azul-noite em cima), lua fria atras; nevoa exponencial escura para separar as faixas de telhados",
+      "uso": "so_silhueta",
+      "notas": "Catedral real do projeto (Ferramentas/catedral/saida, decimada de 104 mil para 20 mil tri) num morro de 50 m com muralha e palacio; 611 casas procedurais de telhado ingreme, 2 torres goticas tipo Tyn, cupulas barrocas e torre de ponte. O palacio do castelo e uma caixa lisa: le bem em contraluz, ruim iluminado. Na borda do chao (fundo) aparece uma faixa de ceu: esconder com nevoa ou limitar a camera."
+    },
+    {
+      "arquivo": "img/lua_albedo.jpg",
+      "nome": "Lua realista (albedo equiretangular 2048x1024) + img/lua_normal.jpg + img/lua_disco.png",
+      "tipo": "textura",
+      "rodada": 2,
+      "uso": "Esfera: THREE.SphereGeometry(r,96,64) com map=lua_albedo (sRGB) e normalMap=lua_normal (normalScale ~0.35); rotation.y=-PI/2 para a face visivel (os mares) ficar em +Z (o centro da face visivel esta em u=0,5 do mapa; na SphereGeometry o +Z e u=0,25). Luz direcional a ~15 graus da camera (quase cheia, terminador suave). Para a borda nao escurecer como plastico, somar emissive 0x2a2a2a com emissiveMap=lua_albedo. Alternativa barata: img/lua_disco.png (768 px, alfa, ja iluminada) num plano ou sprite.",
+      "fonte": "Mosaico real da Lua T_WAR_Lua_Tenkoku.png (Ferramentas/ceu/locais, do pacote Tenkoku Dynamic Sky; licenca do pacote a conferir antes do site publico), reamostrado para 2048 e com o contraste dos mares ajustado; normal derivada da altura passa-alta do proprio mapa (I:/WaruraseIntro/site/3d_r2/lua_tex.py).",
+      "conferencia": "modelos/_ver/lua_conferencia.jpg (lua cheia, halo e nuvem fina). Mar da Chuva, Tranquilidade e Crisio nos lugares certos. A nuvem da conferencia e composicao 2D de exemplo, nao vai no arquivo."
+    },
+    {
+      "arquivo": "modelos/morcego_poses.glb",
+      "nome": "Morcego em 3 poses de batida de asa",
+      "tipo": "animal",
+      "rodada": 2,
+      "triangulos": 600,
+      "vertices": 1107,
+      "tamanho_mb": 0.09,
+      "malhas_em_ordem": [
+        "morcego_asa_alta",
+        "morcego_asa_media",
+        "morcego_asa_baixa"
+      ],
+      "envergadura_m": 1.46,
+      "caixa_asa_alta_m": [
+        1.46,
+        0.39,
+        0.53
+      ],
+      "notas_tecnicas": "As tres malhas tem a MESMA topologia e a MESMA ordem de vertices (um unico accessor de indices compartilhado): da para interpolar posicao e normal vertice a vertice (alta, media, baixa, media, alta; o ciclo do jogo e 0,6 s; num enxame use 8 a 14 Hz com fase aleatoria por morcego) ou so alternar. Cabeca em +Z, Y para cima, centro da caixa da pose alta na origem. Escala do rig do jogo (envergadura 1,46 m, maior que um morcego real de ~0,3 m): escalar a gosto. Material unico morcego, quase preto, doubleSided: usar DoubleSide. O leitor lerGLB nao guarda o nome do no: os nos vem na ordem alta, media, baixa (ou acrescentar pai.name=no.name no leitor).",
+      "fonte": "E:/WaruraseAcervo/Morcego_animado_12-11/rodada2/morcego_animado_r2.glb, acao bater_asa, quadros 2 (alta), 5 (media), 8 (baixa); decimate 36156 -> 600 tri antes do armature, com simetria X (I:/WaruraseIntro/site/3d_r2/morcego_poses.py).",
+      "conferencia": "modelos/_ver/morcego_poses.png (frente: alta, baixa, media). A membrana tem fendas finas da decimacao; em silhueta pequena nao aparecem, em close sim."
+    },
+    {
+      "arquivo": "modelos/figura_ressonancia.glb",
+      "nome": "Figura da Ressonancia (corpo e arvore arterial em duas poses, coracao anatomico)",
+      "tipo": "figura",
+      "rodada": 4,
+      "tamanho_mb": 1.72,
+      "draco": false,
+      "malhas": {
+        "figura_corpo": 11999,
+        "figura_corpo_maos": 11999,
+        "figura_veias": 35074,
+        "figura_veias_maos": 35074,
+        "figura_coracao": 7710
+      },
+      "materiais": {
+        "figura_corpo": "corpo",
+        "figura_corpo_maos": "corpo",
+        "figura_veias": "veias",
+        "figura_veias_maos": "veias",
+        "figura_coracao": "coracao"
+      },
+      "caixa_m": [
+        0.61,
+        1.8,
+        0.3
+      ],
+      "coracao_centro": [
+        0.028,
+        1.309,
+        0.004
+      ],
+      "coracao_centro_nota": "Igual ao da r2 (o CENTRO fixo em abrirFigura continua valendo). A malha do coracao NAO vem centrada nele: e o mesmo espaco do corpo (a pagina ja faz geometry.translate(-CENTRO) e position=CENTRO para pulsar em volta dele). Caixa do coracao em Y-up: min [-0.026, 1.245, -0.041], max [0.08, 1.396, 0.051].",
+      "atributo_veias": {
+        "nome": "TEXCOORD_0 (geometry.attributes.uv no three.js)",
+        "u": "uv.x = distancia percorrida AO LONGO DO VASO desde o centro do coracao, dividida pela maior distancia da arvore (2.2728 m). 0 no coracao, 1 na ponta mais distante (dedos do pe / capilares mais longos). Velocidade constante: um pulso uv.x == fase anda o mesmo tanto de vaso por segundo em todo o corpo; as pontas mais perto do coracao (mao, rosto) terminam abaixo de 1.",
+        "v": "uv.y = a mesma distancia dividida pela distancia da ponta mais longa da propria sub-arvore: chega a 1 em TODA ponta. Use para fazer o brilho morrer nas extremidades ou para o pulso chegar a todas as pontas juntas. Nos capilares longe do coracao fica perto de 1 no ramo inteiro.",
+        "ja_conferido": "lido do GLB exportado: uv.x de 0,000 a 1,000; uv.y de 0,000 a 1,000; media de uv.y onde uv.x < 0,05 = 0,14; correlacao uv.x x uv.y = 0,36.",
+        "exemplo_shader": "varying vec2 vUv; ... float w = smoothstep(.06, 0., abs(vUv.x - onda)); gl_FragColor = vec4(cor * (.42*forca + w*1.5) * (1. - .55*vUv.y), 1.); com onda indo de 0 a 1 em ~1,2 s por batida. O shader atual da pagina (distance(position, centro)) continua funcionando, so que mede em linha reta, nao pelo vaso."
+      },
+      "uso": "Corpo em silhueta escura com rim/fresnel na cor da Ressonancia; figura_veias aditivas na mesma cor (depthTest=false, renderOrder 1), animadas por uv.x; figura_coracao com emissao modulada por fresnel (MeshBasic chapado vira mancha branca e perde ventriculos e coronarias - conferido no render): emissao = cor * (0.18 + 1.4*pow(1-abs(dot(N,V)),1.)) e um pouco de AO falso; pulso de escala 1,0 -> 1,08 em volta do centro.",
+      "cores_conferidas": {
+        "rosa": "#FF4D9D",
+        "laranja": "#FF8A2B",
+        "azul": "#3B8FE8",
+        "roxo": "#A45CFF"
+      },
+      "camera": {
+        "posicao": [
+          0,
+          1.05,
+          3.6
+        ],
+        "alvo": [
+          0,
+          0.95,
+          0
+        ],
+        "fov": 30
+      },
+      "notas": "Pes em Y=0, frente +Z. Corpo IDENTICO ao da r2 (mesma malha de 11.999 tri). Arvore arterial de 506 vasos: aorta (arco e descendente), cavas superior e inferior, braquiocefalico, carotidas comuns e internas, facial, temporal superficial e occipital com capilares no rosto, palpebras e couro cabeludo, arvore cerebral dentro do cranio, subclavias, braquiais, radiais, ulnares, cefalicas, toracicas internas, arco palmar e digitais ate a ponta de cada dedo, intercostais com capilares no flanco, renais com arvore no rim, tronco celiaco e mesenterica com arvores nas visceras, arterias pulmonares com arvores nos dois pulmoes, iliacas, femorais e femorais profundas, popliteas, tibiais anterior e posterior, safenas, epigastricas e uma arteria para cada dedo do pe. Vasos serpenteiam (tubo reto le como cano); raio de 8 mm (aorta) a 0,3 mm (ponta). O trecho de vaso dentro do coracao foi cortado. Coracao: TRELLIS.2 1024_cascade a partir de ilustracao anatomica, voxel remesh 1,1 mm e decimate para 5.500 tri, mais descendente anterior, coronaria direita e circunflexa com ramos (tubos sobre a superficie, mesma malha). Altura 15 cm com os grandes vasos.",
+      "defeitos_conhecidos": "Em close do peito a aorta ascendente (tubo grosso) ainda passa na frente da parte de cima do coracao, cruzando os grandes vasos dele em diagonal; algumas arvores dos pulmoes e as intercostais tem trechos retos que cruzam a mama. Em plano de corpo inteiro nao aparecem.",
+      "fonte": "Corpo: E:/WaruraseAcervo/Arte/modelsheet_vestido/glb/SK_G8F_Corpo.glb (Daz Genesis 8; mesma ressalva de licenca do Daz no site publico). Coracao: TRELLIS.2 local (D:/WaruraseIA) sobre 'File:Heart anterior exterior view.png' da Wikimedia Commons, CC BY 2.5, autor listado no Commons: Jerm - CREDITO OBRIGATORIO no site. Scripts: I:/WaruraseIntro/site/3d_r3/figura_r3.py (montagem), pose_comum.py (pose igual a r2), ver_r3.py e brilho.py (conferencia). Versao anterior: modelos/figura_ressonancia_r2.glb. | r4: I:/WaruraseIntro/site/3d_r4/figura_maos.py (pesos de pele do G8F transferidos para a malha da r3 e skinning relativo pose r2 -> pose maos; conferido contra o skinning do proprio Blender: mediana 0,3 mm, max 3,5 mm). A r3 ficou em modelos/figura_ressonancia_r3.glb. | r4: I:/WaruraseIntro/site/3d_r4/figura_maos.py (pesos de pele do G8F transferidos para a malha da r3 e skinning relativo pose r2 -> pose maos; conferido contra o skinning do proprio Blender: mediana 0,3 mm, max 3,5 mm). A r3 ficou em modelos/figura_ressonancia_r3.glb.",
+      "conferencia": "modelos/_ver/figura_r4_poses.jpg (neutra, maos de frente, de lado e 3/4), figura_r4_maos_frente.jpg, figura_r4_maos_cima.jpg (vista de quem olha), figura_r4_veias_frente.jpg e figura_r4_veias_lado.jpg (neutra x maos, so as veias). Nenhum tubo rasgado; dois capilares do antebraco encostam na pele por dentro (aparecem como risco vermelho fino quando o corpo e opaco; com o corpo translucido do site nao se distinguem).",
+      "poses": {
+        "nos_neutra": [
+          "figura_corpo",
+          "figura_veias"
+        ],
+        "nos_maos": [
+          "figura_corpo_maos",
+          "figura_veias_maos"
+        ],
+        "descricao_maos": "Bracos erguidos a frente do peito, cotovelos junto ao corpo, antebracos quase na horizontal, palmas para cima (supinacao medida: normal da palma ~(0; 0,99; -0,17) em Y-up), dedos soltos, cabeca e pescoco inclinados olhando as maos (direcao do rosto ~44 graus abaixo da horizontal). Punhos a ~1,33 m de altura e 0,25 m a frente do corpo; pontas dos dedos medios afastadas ~16 cm uma da outra.",
+        "mesma_topologia": "figura_corpo_maos usa o MESMO accessor de indices de figura_corpo (6220 vertices, mesma ordem); figura_veias_maos usa os MESMOS accessors de indices e de TEXCOORD_0 de figura_veias (19234 vertices). So POSITION e NORMAL sao novos. Interpolar vertice a vertice: pos = mix(neutra, maos, t) e normal = normalize(mix(...)). O atributo UV das veias (distancia ao coracao) vale igual nas duas poses.",
+        "como_interpolar_no_three": "Ao carregar, pegar a geometria do no figura_corpo e adicionar morphAttributes.position = [geometria de figura_corpo_maos .attributes.position] (idem normal), mesh.morphTargetInfluences[0] = t; esconder os nos *_maos. ShaderMaterial proprio precisa de #include <morphtarget_pars_vertex>/<morphtarget_vertex> ou fazer o mix no vertex shader com um atributo extra (posicao2). Alternativa sem morph: a cada quadro copiar mix() para o array de posicao (25 mil vertices, barato) e marcar needsUpdate.",
+        "o_que_nao_se_move": "Coracao, tronco, quadril e pernas sao identicos nas duas poses (a deformacao so atinge clavicula para fora, pescoco e cabeca): o coracao, a aorta e as arterias das pernas nao mudam de lugar.",
+        "parametros": {
+          "braco": {
+            "aduz": 6,
+            "flexao_ombro": 24,
+            "flexao_cotovelo": 66,
+            "antebraco_dentro": 36,
+            "fracao_supinacao": 1.0,
+            "extensao_punho": 10,
+            "desvio_punho": 0,
+            "curva_dedos": [
+              10,
+              16,
+              10
+            ],
+            "curva_polegar": [
+              0,
+              8,
+              6
+            ]
+          },
+          "braco_l": {
+            "flexao_cotovelo": 60
+          },
+          "cabeca": {
+            "pescoco_baixo": 8,
+            "pescoco_alto": 8,
+            "cabeca": 24
+          },
+          "suavizar_corpo": 1,
+          "suavizar_veias": 4
+        }
+      }
+    },
+    {
+      "arquivo": "modelos/maquete_praga.glb",
+      "nome": "Maquete de Praga em etapas de construcao, na mesa de investigacao com jornal, celular e quadro",
+      "tipo": "maquete",
+      "rodada": 4,
+      "tamanho_mb": 3.68,
+      "draco": false,
+      "triangulos": 69647,
+      "escala": "1:850 na horizontal; relevo x1,2 e predios x1,4 na vertical",
+      "etapas_ordem": [
+        "etapa1_topografia",
+        "etapa2_ruas",
+        "etapa3_igrejas",
+        "etapa4_predios"
+      ],
+      "etapas": {
+        "etapa1_topografia": {
+          "nos": [
+            "etapa1_topografia_camada_00",
+            "etapa1_topografia_camada_01",
+            "etapa1_topografia_camada_02",
+            "etapa1_topografia_camada_03",
+            "etapa1_topografia_camada_04",
+            "etapa1_topografia_camada_05",
+            "etapa1_topografia_camada_06",
+            "etapa1_topografia_camada_07",
+            "etapa1_topografia_camada_08",
+            "etapa1_topografia_camada_09",
+            "etapa1_topografia_camada_10",
+            "etapa1_topografia_camada_11",
+            "etapa1_topografia_camada_12",
+            "etapa1_topografia_camada_13",
+            "etapa1_topografia_camada_14",
+            "etapa1_topografia_camada_15",
+            "etapa1_topografia_camada_16",
+            "etapa1_topografia_camada_17",
+            "etapa1_topografia_camada_18",
+            "etapa1_topografia_camada_19",
+            "etapa1_topografia_camada_20",
+            "etapa1_topografia_rio"
+          ],
+          "camadas": 21,
+          "metros_reais_por_camada": 4.0
+        },
+        "etapa2_ruas": {
+          "nos": [
+            "etapa2_ruas_carro",
+            "etapa2_ruas_pedestres",
+            "etapa2_ruas_ponte_carlos"
+          ],
+          "vias_carro": 193,
+          "vias_pedestres": 903,
+          "vias_total": 1097,
+          "km_reais": 44.88,
+          "pontes": 1
+        },
+        "etapa3_igrejas": {
+          "nos": [
+            "etapa3_igrejas_catedral",
+            "etapa3_igrejas_svaty_mikulas",
+            "etapa3_igrejas_svata_terezie_z_avily",
+            "etapa3_igrejas_svaty_elias",
+            "etapa3_igrejas_svaty_josef",
+            "etapa3_igrejas_svaty_benedikt",
+            "etapa3_igrejas_svaty_tomas",
+            "etapa3_igrejas_svaty_karel_boromejsky",
+            "etapa3_igrejas_panna_marie_matka_ustavicne_",
+            "etapa3_igrejas_nejsvetejsi_trojice",
+            "etapa3_igrejas_klaster_theatinu_kajetanu",
+            "etapa3_igrejas_svata_anna",
+            "etapa3_igrejas_jirsky_klaster",
+            "etapa3_igrejas_svaty_kriz",
+            "etapa3_igrejas_bazilika_svateho_jiri",
+            "etapa3_igrejas_vsech_svatych",
+            "etapa3_igrejas_torres"
+          ],
+          "igrejas": 16,
+          "torres": 8,
+          "lista_igrejas": [
+            {
+              "no": "etapa3_igrejas_catedral",
+              "nome": "Katedrála svatého Víta, Václava a Vojtěcha",
+              "x_jogo_m": -0.4,
+              "y_jogo_m": -1.9
+            },
+            {
+              "no": "etapa3_igrejas_svaty_mikulas",
+              "nome": "svatý Mikuláš",
+              "x_jogo_m": 172.8,
+              "y_jogo_m": 316.1
+            },
+            {
+              "no": "etapa3_igrejas_svata_terezie_z_avily",
+              "nome": "svatá Terezie z Ávily",
+              "x_jogo_m": 533.8,
+              "y_jogo_m": 254.4
+            },
+            {
+              "no": "etapa3_igrejas_svaty_elias",
+              "nome": "svatý Eliáš",
+              "x_jogo_m": 535.0,
+              "y_jogo_m": 298.1
+            },
+            {
+              "no": "etapa3_igrejas_svaty_josef",
+              "nome": "svatý Josef",
+              "x_jogo_m": 395.8,
+              "y_jogo_m": 282.9
+            },
+            {
+              "no": "etapa3_igrejas_svaty_benedikt",
+              "nome": "svatý Benedikt",
+              "x_jogo_m": -337.9,
+              "y_jogo_m": 200.3
+            },
+            {
+              "no": "etapa3_igrejas_svaty_tomas",
+              "nome": "svatý Tomáš",
+              "x_jogo_m": 357.0,
+              "y_jogo_m": 239.9
+            },
+            {
+              "no": "etapa3_igrejas_svaty_karel_boromejsky",
+              "nome": "svatý Karel Boromejský",
+              "x_jogo_m": -306.5,
+              "y_jogo_m": 439.1
+            },
+            {
+              "no": "etapa3_igrejas_panna_marie_matka_ustavicne_",
+              "nome": "Panna Marie Matka ustavičné pomoci",
+              "x_jogo_m": -55.6,
+              "y_jogo_m": 236.7
+            },
+            {
+              "no": "etapa3_igrejas_nejsvetejsi_trojice",
+              "nome": "Nejsvětější Trojice",
+              "x_jogo_m": 136.9,
+              "y_jogo_m": 281.4
+            },
+            {
+              "no": "etapa3_igrejas_klaster_theatinu_kajetanu",
+              "nome": "Klášter theatinů (kajetánů)",
+              "x_jogo_m": -72.5,
+              "y_jogo_m": 184.6
+            },
+            {
+              "no": "etapa3_igrejas_svata_anna",
+              "nome": "svatá Anna",
+              "x_jogo_m": 167.8,
+              "y_jogo_m": -64.4
+            },
+            {
+              "no": "etapa3_igrejas_jirsky_klaster",
+              "nome": "Jiřský klášter",
+              "x_jogo_m": 149.4,
+              "y_jogo_m": -71.0
+            },
+            {
+              "no": "etapa3_igrejas_svaty_kriz",
+              "nome": "svatý Kříž",
+              "x_jogo_m": -84.8,
+              "y_jogo_m": 84.0
+            },
+            {
+              "no": "etapa3_igrejas_bazilika_svateho_jiri",
+              "nome": "Bazilika svatého Jiří",
+              "x_jogo_m": 147.4,
+              "y_jogo_m": -38.2
+            },
+            {
+              "no": "etapa3_igrejas_vsech_svatych",
+              "nome": "Všech svatých",
+              "x_jogo_m": 134.8,
+              "y_jogo_m": 9.1
+            }
+          ],
+          "lista_torres": [
+            "Svatomikulášská městská zvonice",
+            "věž Biskupského dvora",
+            "Juditina věž",
+            "Malostranská mostecká věž",
+            "Prašná věž",
+            "Bílá věž",
+            "Daliborka",
+            "Černá věž"
+          ]
+        },
+        "etapa4_predios": {
+          "nos": [
+            "etapa4_predios_a",
+            "etapa4_predios_b",
+            "etapa4_predios_c",
+            "etapa4_predios_d"
+          ],
+          "aneis": {
+            "a": {
+              "predios": 148,
+              "distancia_igreja_m": [
+                0,
+                80.1
+              ]
+            },
+            "b": {
+              "predios": 148,
+              "distancia_igreja_m": [
+                80.1,
+                110.4
+              ]
+            },
+            "c": {
+              "predios": 147,
+              "distancia_igreja_m": [
+                110.4,
+                145.6
+              ]
+            },
+            "d": {
+              "predios": 148,
+              "distancia_igreja_m": [
+                145.6,
+                548.8
+              ]
+            }
+          },
+          "predios": 591
+        }
+      },
+      "contagem_progressiva": {
+        "camadas_de_relevo": 21,
+        "ruas": 1097,
+        "ruas_km_reais": 44.88,
+        "igrejas": 16,
+        "torres": 8,
+        "predios": 591,
+        "predios_por_anel": {
+          "a": 148,
+          "b": 148,
+          "c": 147,
+          "d": 148
+        },
+        "nota": "Numeros do proprio arquivo: vias = trechos OSM com geometria dentro do recorte (carro + pedestres + a Ponte Carlos); igrejas = catedral + 15 igrejas/capelas/conventos nomeados no OSM (lista em etapas.etapa3_igrejas.lista_igrejas, nomes tchecos do OSM); torres = as 8 do praga_torres.json num no so."
+      },
+      "nos_fixos": [
+        "mesa",
+        "pedestal",
+        "papeis",
+        "jornal",
+        "celular",
+        "alfinete_<id> (12)",
+        "fio_vermelho"
+      ],
+      "nos_info": {
+        "mesa": {
+          "origem_yup": [
+            0.0,
+            0.0,
+            -0.0
+          ],
+          "altura_m": 0.8,
+          "triangulos": 60
+        },
+        "pedestal": {
+          "origem_yup": [
+            0.0,
+            0.8,
+            -0.0
+          ],
+          "altura_m": 0.1,
+          "triangulos": 12
+        },
+        "etapa1_topografia_rio": {
+          "origem_yup": [
+            0.6319,
+            0.9008,
+            0.3192
+          ],
+          "altura_m": 0.0,
+          "triangulos": 1
+        },
+        "etapa1_topografia_camada_00": {
+          "origem_yup": [
+            0.0,
+            0.9,
+            -0.0
+          ],
+          "altura_m": 0.0056,
+          "triangulos": 400
+        },
+        "etapa1_topografia_camada_01": {
+          "origem_yup": [
+            0.0,
+            0.9056,
+            -0.0
+          ],
+          "altura_m": 0.0056,
+          "triangulos": 194
+        },
+        "etapa1_topografia_camada_02": {
+          "origem_yup": [
+            0.0,
+            0.9113,
+            -0.0
+          ],
+          "altura_m": 0.0056,
+          "triangulos": 79
+        },
+        "etapa1_topografia_camada_03": {
+          "origem_yup": [
+            0.0,
+            0.9169,
+            -0.0
+          ],
+          "altura_m": 0.0056,
+          "triangulos": 118
+        },
+        "etapa1_topografia_camada_04": {
+          "origem_yup": [
+            0.0,
+            0.9226,
+            -0.0
+          ],
+          "altura_m": 0.0056,
+          "triangulos": 88
+        },
+        "etapa1_topografia_camada_05": {
+          "origem_yup": [
+            0.0,
+            0.9282,
+            -0.0
+          ],
+          "altura_m": 0.0056,
+          "triangulos": 85
+        },
+        "etapa1_topografia_camada_06": {
+          "origem_yup": [
+            0.0,
+            0.9339,
+            -0.0
+          ],
+          "altura_m": 0.0056,
+          "triangulos": 115
+        },
+        "etapa1_topografia_camada_07": {
+          "origem_yup": [
+            0.0,
+            0.9395,
+            -0.0
+          ],
+          "altura_m": 0.0056,
+          "triangulos": 115
+        },
+        "etapa1_topografia_camada_08": {
+          "origem_yup": [
+            0.0,
+            0.9452,
+            -0.0
+          ],
+          "altura_m": 0.0056,
+          "triangulos": 127
+        },
+        "etapa1_topografia_camada_09": {
+          "origem_yup": [
+            0.0,
+            0.9508,
+            -0.0
+          ],
+          "altura_m": 0.0056,
+          "triangulos": 124
+        },
+        "etapa1_topografia_camada_10": {
+          "origem_yup": [
+            0.0,
+            0.9565,
+            -0.0
+          ],
+          "altura_m": 0.0056,
+          "triangulos": 121
+        },
+        "etapa1_topografia_camada_11": {
+          "origem_yup": [
+            0.0,
+            0.9621,
+            -0.0
+          ],
+          "altura_m": 0.0056,
+          "triangulos": 139
+        },
+        "etapa1_topografia_camada_12": {
+          "origem_yup": [
+            0.0,
+            0.9678,
+            -0.0
+          ],
+          "altura_m": 0.0056,
+          "triangulos": 130
+        },
+        "etapa1_topografia_camada_13": {
+          "origem_yup": [
+            0.0,
+            0.9734,
+            -0.0
+          ],
+          "altura_m": 0.0056,
+          "triangulos": 127
+        },
+        "etapa1_topografia_camada_14": {
+          "origem_yup": [
+            0.0,
+            0.9791,
+            -0.0
+          ],
+          "altura_m": 0.0056,
+          "triangulos": 162
+        },
+        "etapa1_topografia_camada_15": {
+          "origem_yup": [
+            0.0,
+            0.9847,
+            -0.0
+          ],
+          "altura_m": 0.0056,
+          "triangulos": 175
+        },
+        "etapa1_topografia_camada_16": {
+          "origem_yup": [
+            0.0,
+            0.9904,
+            -0.0
+          ],
+          "altura_m": 0.0056,
+          "triangulos": 246
+        },
+        "etapa1_topografia_camada_17": {
+          "origem_yup": [
+            0.0,
+            0.996,
+            -0.0
+          ],
+          "altura_m": 0.0056,
+          "triangulos": 212
+        },
+        "etapa1_topografia_camada_18": {
+          "origem_yup": [
+            0.0,
+            1.0016,
+            -0.0
+          ],
+          "altura_m": 0.0056,
+          "triangulos": 155
+        },
+        "etapa1_topografia_camada_19": {
+          "origem_yup": [
+            0.0,
+            1.0073,
+            -0.0
+          ],
+          "altura_m": 0.0056,
+          "triangulos": 101
+        },
+        "etapa1_topografia_camada_20": {
+          "origem_yup": [
+            0.0,
+            1.0129,
+            -0.0
+          ],
+          "altura_m": 0.0056,
+          "triangulos": 25
+        },
+        "etapa2_ruas_carro": {
+          "origem_yup": [
+            -0.0909,
+            0.9048,
+            -0.003
+          ],
+          "altura_m": 0.1035,
+          "triangulos": 6498
+        },
+        "etapa2_ruas_pedestres": {
+          "origem_yup": [
+            -0.0867,
+            0.9048,
+            -0.0002
+          ],
+          "altura_m": 0.1148,
+          "triangulos": 22644
+        },
+        "etapa2_ruas_ponte_carlos": {
+          "origem_yup": [
+            0.64,
+            0.9,
+            0.4906
+          ],
+          "altura_m": 0.0141,
+          "triangulos": 72
+        },
+        "etapa3_igrejas_catedral": {
+          "origem_yup": [
+            -0.1861,
+            0.9817,
+            -0.1034
+          ],
+          "altura_m": 0.1621,
+          "triangulos": 1392
+        },
+        "etapa3_igrejas_svaty_mikulas": {
+          "origem_yup": [
+            0.0366,
+            0.9252,
+            0.2722
+          ],
+          "altura_m": 0.048,
+          "triangulos": 232
+        },
+        "etapa3_igrejas_svata_terezie_z_avily": {
+          "origem_yup": [
+            0.4421,
+            0.9083,
+            0.1987
+          ],
+          "altura_m": 0.0145,
+          "triangulos": 52
+        },
+        "etapa3_igrejas_svaty_elias": {
+          "origem_yup": [
+            0.4438,
+            0.9083,
+            0.2503
+          ],
+          "altura_m": 0.012,
+          "triangulos": 60
+        },
+        "etapa3_igrejas_svaty_josef": {
+          "origem_yup": [
+            0.284,
+            0.9139,
+            0.2325
+          ],
+          "altura_m": 0.0326,
+          "triangulos": 128
+        },
+        "etapa3_igrejas_svaty_benedikt": {
+          "origem_yup": [
+            -0.5881,
+            1.0043,
+            0.1357
+          ],
+          "altura_m": 0.0345,
+          "triangulos": 40
+        },
+        "etapa3_igrejas_svaty_tomas": {
+          "origem_yup": [
+            0.24,
+            0.9196,
+            0.1751
+          ],
+          "altura_m": 0.0376,
+          "triangulos": 280
+        },
+        "etapa3_igrejas_svaty_karel_boromejsky": {
+          "origem_yup": [
+            -0.5479,
+            0.9535,
+            0.4186
+          ],
+          "altura_m": 0.0371,
+          "triangulos": 16
+        },
+        "etapa3_igrejas_panna_marie_matka_ustavicne_": {
+          "origem_yup": [
+            -0.2515,
+            0.9648,
+            0.1686
+          ],
+          "altura_m": 0.0371,
+          "triangulos": 96
+        },
+        "etapa3_igrejas_nejsvetejsi_trojice": {
+          "origem_yup": [
+            -0.0254,
+            0.9422,
+            0.2297
+          ],
+          "altura_m": 0.0033,
+          "triangulos": 20
+        },
+        "etapa3_igrejas_klaster_theatinu_kajetanu": {
+          "origem_yup": [
+            -0.2788,
+            0.9817,
+            0.1203
+          ],
+          "altura_m": 0.0295,
+          "triangulos": 156
+        },
+        "etapa3_igrejas_svata_anna": {
+          "origem_yup": [
+            0.0119,
+            0.9817,
+            -0.1773
+          ],
+          "altura_m": 0.0225,
+          "triangulos": 20
+        },
+        "etapa3_igrejas_jirsky_klaster": {
+          "origem_yup": [
+            -0.0285,
+            0.9761,
+            -0.1858
+          ],
+          "altura_m": 0.0302,
+          "triangulos": 88
+        },
+        "etapa3_igrejas_svaty_kriz": {
+          "origem_yup": [
+            -0.2826,
+            1.0043,
+            0.0052
+          ],
+          "altura_m": 0.0392,
+          "triangulos": 48
+        },
+        "etapa3_igrejas_bazilika_svateho_jiri": {
+          "origem_yup": [
+            -0.016,
+            0.9874,
+            -0.1467
+          ],
+          "altura_m": 0.0277,
+          "triangulos": 264
+        },
+        "etapa3_igrejas_vsech_svatych": {
+          "origem_yup": [
+            -0.0325,
+            0.993,
+            -0.0861
+          ],
+          "altura_m": 0.0326,
+          "triangulos": 220
+        },
+        "etapa3_igrejas_torres": {
+          "origem_yup": [
+            0.0706,
+            0.9139,
+            0.0438
+          ],
+          "altura_m": 0.1441,
+          "triangulos": 564
+        },
+        "etapa4_predios_a": {
+          "origem_yup": [
+            -0.0831,
+            0.9026,
+            0.1011
+          ],
+          "altura_m": 0.1404,
+          "triangulos": 8820
+        },
+        "etapa4_predios_b": {
+          "origem_yup": [
+            -0.0874,
+            0.9026,
+            0.0743
+          ],
+          "altura_m": 0.1294,
+          "triangulos": 5720
+        },
+        "etapa4_predios_c": {
+          "origem_yup": [
+            -0.1056,
+            0.9026,
+            0.0389
+          ],
+          "altura_m": 0.1511,
+          "triangulos": 6788
+        },
+        "etapa4_predios_d": {
+          "origem_yup": [
+            -0.104,
+            0.9026,
+            -0.0077
+          ],
+          "altura_m": 0.154,
+          "triangulos": 7908
+        },
+        "alfinete_catedral": {
+          "origem_yup": [
+            -0.1865,
+            0.984,
+            -0.1012
+          ],
+          "altura_m": 0.0702,
+          "triangulos": 252
+        },
+        "alfinete_campanario": {
+          "origem_yup": [
+            -0.1738,
+            1.1278,
+            -0.0754
+          ],
+          "altura_m": 0.0503,
+          "triangulos": 252
+        },
+        "alfinete_cripta": {
+          "origem_yup": [
+            -0.1347,
+            0.9896,
+            -0.0706
+          ],
+          "altura_m": 0.0703,
+          "triangulos": 252
+        },
+        "alfinete_rua_dourada": {
+          "origem_yup": [
+            0.1406,
+            0.9614,
+            -0.2706
+          ],
+          "altura_m": 0.0699,
+          "triangulos": 252
+        },
+        "alfinete_fosso": {
+          "origem_yup": [
+            -0.3519,
+            0.9896,
+            -0.3169
+          ],
+          "altura_m": 0.0704,
+          "triangulos": 252
+        },
+        "alfinete_jardim_real": {
+          "origem_yup": [
+            0.2152,
+            0.9671,
+            -0.4594
+          ],
+          "altura_m": 0.0704,
+          "triangulos": 252
+        },
+        "alfinete_praca_castelo": {
+          "origem_yup": [
+            -0.4572,
+            0.9953,
+            0.0502
+          ],
+          "altura_m": 0.07,
+          "triangulos": 252
+        },
+        "alfinete_loreta": {
+          "origem_yup": [
+            -0.7688,
+            1.0066,
+            0.2155
+          ],
+          "altura_m": 0.0704,
+          "triangulos": 252
+        },
+        "alfinete_uvoz": {
+          "origem_yup": [
+            -0.6695,
+            0.9896,
+            0.2397
+          ],
+          "altura_m": 0.0703,
+          "triangulos": 252
+        },
+        "alfinete_nerudova": {
+          "origem_yup": [
+            -0.3983,
+            0.9614,
+            0.2027
+          ],
+          "altura_m": 0.0702,
+          "triangulos": 252
+        },
+        "alfinete_mala_strana": {
+          "origem_yup": [
+            -0.0036,
+            0.9219,
+            0.3008
+          ],
+          "altura_m": 0.0701,
+          "triangulos": 252
+        },
+        "alfinete_ponte_carlos": {
+          "origem_yup": [
+            0.5253,
+            0.888,
+            0.4753
+          ],
+          "altura_m": 0.07,
+          "triangulos": 252
+        },
+        "fio_vermelho": {
+          "origem_yup": [
+            0.0,
+            0.8,
+            -0.0
+          ],
+          "altura_m": 0.1203,
+          "triangulos": 864
+        },
+        "papeis": {
+          "origem_yup": [
+            0.0,
+            0.8,
+            -0.0
+          ],
+          "altura_m": 0.0007,
+          "triangulos": 10
+        },
+        "jornal": {
+          "origem_yup": [
+            1.02,
+            0.8,
+            0.26
+          ],
+          "altura_m": 0.009,
+          "triangulos": 44
+        },
+        "celular": {
+          "origem_yup": [
+            0.93,
+            0.8,
+            -0.07
+          ],
+          "altura_m": 0.0078,
+          "triangulos": 468
+        }
+      },
+      "origens": "Todo no com malha tem a origem na BASE (centro em x/z, y minimo da propria malha) e nenhuma rotacao/escala: crescer do chao = scale.y de ~0,001 a 1 (ou position.y descendo a altura). Camadas do relevo: origem na base da camada (empilhar uma por vez). Predios de cada anel: origem na base do predio mais baixo do anel; com scale.y os predios saem de dentro do relevo (o papelao e opaco), que e o efeito de 'subir do chao'. Igrejas: uma malha por igreja, origem na base dela.",
+      "grupos": "No GLB as malhas sao filhas de empties etapa1_topografia, etapa2_ruas, etapa3_igrejas, etapa4_predios e alfinetes, todos na origem sem transformacao; o lerGLB do site le os nos em lista plana e so os com malha, e por isso o NOME de cada malha ja comeca pela etapa (filtrar por prefixo: name.indexOf('etapa2_')===0).",
+      "materiais_por_no": "O site da a cada THREE.Mesh o nome do MATERIAL: predio (etapa4_* e a Ponte Carlos), marco (etapa3_*), terreno/terreno_borda (camadas), rio, rua, rua_pedestre, jornal_capa/jornal_papel, celular_corpo/celular_tela, alfinete_cabeca/alfinete_haste, fio, papel/foto, mesa, pedestal/corte_subsolo. As regras de vestir() que ja existem (predio, marco, rio, corte_subsolo) continuam valendo; o no pai (THREE.Group) e que carrega o nome do no.",
+      "ruas": "Etapa 2 e geometria: faixas de 1,1 mm de relevo sobre as camadas, do OSM vias (carro: secondary, trunk, tertiary, residential, living_street, service; pedestres: pedestrian, footway, steps, path, cycleway), largura real na escala (minimo 3,5 mm carro e 1,6 mm pedestre), cortadas no rio. A textura do tampo foi refeita SEM as ruas impressas (maquete_mapa_sem_ruas.jpg): na etapa 1 o relevo aparece limpo, so com jardins, agua e a grade.",
+      "jornal": {
+        "posicao_yup": [
+          1.02,
+          0.809,
+          0.26
+        ],
+        "normal_yup": [
+          0,
+          1,
+          0
+        ],
+        "tamanho_m": [
+          0.36,
+          0.28,
+          0.009
+        ],
+        "giro_y_graus": -9.0,
+        "no": "jornal",
+        "capa": "O ARAUTO DA NOITE dobrado ao meio, a dobra virada para a camera; manchete do flipbook (A ESPADA NA PONTE AINDA NAO PULOU), foto meio-tom de img/cine_torres.jpg e as lendas do tabloide em duas colunas (textura jornal_capa, 1024x800)."
+      },
+      "celular": {
+        "posicao_yup": [
+          0.93,
+          0.8078,
+          -0.07
+        ],
+        "normal_yup": [
+          0,
+          1,
+          0
+        ],
+        "tamanho_m": [
+          0.0716,
+          0.1476,
+          0.0078
+        ],
+        "giro_y_graus": 14.0,
+        "tela_material": "celular_tela",
+        "topo_do_aparelho_yup": "direcao -Z local girada 14 graus em Y",
+        "no": "celular",
+        "tela": "material celular_tela, preto quase espelhado: para acender, trocar por MeshBasicMaterial/emissive ou um CanvasTexture com a tela de bloqueio. O topo do aparelho aponta para o fundo (norte) girado 14 graus."
+      },
+      "quadro": {
+        "centro_yup": [
+          0,
+          1.42,
+          -0.915
+        ],
+        "normal_yup": [
+          0,
+          0,
+          1
+        ],
+        "largura_m": 3.1,
+        "altura_m": 1.16,
+        "superficie_z_yup": -0.915,
+        "no": null,
+        "nota": "SEM malha no GLB: e o mesmo retangulo da cortica que abrirSala ja pinta na parede (x -1,55..1,55; y 0,84..2,0; parede em z=-0,93). Pregar os props em z_yup ~ -0,91 (superficie_z_yup), normal +Z. Uma versao com a malha da cortica sai de maquete_r4.py -- <saida> quadro (a conferencia _quadro.jpg foi feita com ela).",
+        "camera_sugerida": {
+          "posicao": [
+            0,
+            1.9,
+            2.3
+          ],
+          "alvo": [
+            0,
+            1.42,
+            -0.92
+          ],
+          "fov": 34
+        }
+      },
+      "camera": {
+        "geral": {
+          "posicao": [
+            0,
+            2.05,
+            2.35
+          ],
+          "alvo": [
+            0,
+            0.86,
+            -0.05
+          ],
+          "fov": 40
+        },
+        "close": {
+          "posicao": [
+            0.25,
+            1.18,
+            0.95
+          ],
+          "alvo": [
+            -0.05,
+            0.93,
+            -0.15
+          ],
+          "fov": 26
+        },
+        "corte_subsolo": {
+          "posicao": [
+            -0.35,
+            0.98,
+            1.4
+          ],
+          "alvo": [
+            0.1,
+            0.86,
+            0.4
+          ],
+          "fov": 30
+        }
+      },
+      "luz": "Luminaria quente (SpotLight 0xffb873 em (0.15, 2.15, 0.1), angulo ~75 graus, penumbra 0,6) e preenchimento frio fraco de tras-esquerda; fundo quase preto. O corte do subsolo e vertical e fica no escuro so com a luminaria: dar luz frontal baixa ou emissive no material corte_subsolo quando a camera for para ele.",
+      "mesa": {
+        "tampo_m": [
+          2.5,
+          1.44
+        ],
+        "topo": 0.8,
+        "nota": "Tampo alargado de 1,96 x 1,32 para 2,50 x 1,44 m para caber o jornal e o celular a direita do pedestal; os papeis foram para as pontas. A camera geral antiga continua enquadrando a mesa inteira."
+      },
+      "pedestal_yup": {
+        "x": [
+          -0.778,
+          0.778
+        ],
+        "z_frente_sul": 0.511,
+        "z_fundo_norte": -0.511,
+        "topo_mesa": 0.8,
+        "nivel_rio": 0.9
+      },
+      "alfinetes": [
+        {
+          "id": "catedral",
+          "nome": "Catedral de São Vito",
+          "cabeca": [
+            -0.1797,
+            1.0506,
+            -0.1002
+          ],
+          "posicao_no_jogo_m": [
+            -0.02,
+            -0.01
+          ]
+        },
+        {
+          "id": "campanario",
+          "nome": "Campanário da torre sul (Radek Vlk)",
+          "cabeca": [
+            -0.1694,
+            1.1745,
+            -0.075
+          ],
+          "posicao_no_jogo_m": [
+            10.8,
+            21.9
+          ]
+        },
+        {
+          "id": "cripta",
+          "nome": "Cripta do Krysa (boca do esgoto)",
+          "cabeca": [
+            -0.1297,
+            1.0564,
+            -0.0701
+          ],
+          "posicao_no_jogo_m": [
+            44.0,
+            26.0
+          ]
+        },
+        {
+          "id": "rua_dourada",
+          "nome": "Rua Dourada e Daliborka",
+          "cabeca": [
+            0.1366,
+            1.0276,
+            -0.2788
+          ],
+          "posicao_no_jogo_m": [
+            278.0,
+            -144.0
+          ]
+        },
+        {
+          "id": "fosso",
+          "nome": "Fosso dos Cervos e a Ponte da Pólvora",
+          "cabeca": [
+            -0.3496,
+            1.0565,
+            -0.3132
+          ],
+          "posicao_no_jogo_m": [
+            -140.65,
+            -183.39
+          ]
+        },
+        {
+          "id": "jardim_real",
+          "nome": "Jardim Real e o Belvedere",
+          "cabeca": [
+            0.218,
+            1.0339,
+            -0.4564
+          ],
+          "posicao_no_jogo_m": [
+            341.4,
+            -304.49
+          ]
+        },
+        {
+          "id": "praca_castelo",
+          "nome": "Praça do Castelo (Ranthir)",
+          "cabeca": [
+            -0.465,
+            1.0617,
+            0.0528
+          ],
+          "posicao_no_jogo_m": [
+            -230.14,
+            128.66
+          ]
+        },
+        {
+          "id": "loreta",
+          "nome": "Loreta",
+          "cabeca": [
+            -0.7728,
+            1.0734,
+            0.2157
+          ],
+          "posicao_no_jogo_m": [
+            -495.0,
+            269.15
+          ],
+          "nota": "fora do recorte da maquete (Loreta fica a oeste); alfinete posto na borda oeste"
+        },
+        {
+          "id": "uvoz",
+          "nome": "Úvoz (barão Malick)",
+          "cabeca": [
+            -0.6739,
+            1.0564,
+            0.2372
+          ],
+          "posicao_no_jogo_m": [
+            -410.54,
+            289.72
+          ]
+        },
+        {
+          "id": "nerudova",
+          "nome": "Rua Nerudova",
+          "cabeca": [
+            -0.3914,
+            1.028,
+            0.2015
+          ],
+          "posicao_no_jogo_m": [
+            -180.02,
+            258.28
+          ]
+        },
+        {
+          "id": "mala_strana",
+          "nome": "Malostranské náměstí e São Nicolau",
+          "cabeca": [
+            -0.0036,
+            0.9884,
+            0.3081
+          ],
+          "posicao_no_jogo_m": [
+            155.45,
+            341.67
+          ]
+        },
+        {
+          "id": "ponte_carlos",
+          "nome": "Ponte Carlos e a torre de Malá Strana",
+          "cabeca": [
+            0.5172,
+            0.9544,
+            0.4737
+          ],
+          "posicao_no_jogo_m": [
+            605.0,
+            490.0
+          ]
+        }
+      ],
+      "subsolo": "Corte esquematico na face sul (+Z) do pedestal: galeria medieval, tunel do Fosso dos Cervos, cripta do Krysa sob a catedral, coletor do esgoto, poroes de Mala Strana e o metro A sob o rio, ligados por fio vermelho, rotulos em mono. E esquema narrativo, nao levantamento real.",
+      "fonte": "Content/Warurase/Dados/praga_hradcany.json (OSM (c) colaboradores do OpenStreetMap, ODbL, creditar no site; relevo EU-DEM), praga_torres.json. Scripts: I:/WaruraseIntro/site/3d_r4/texturas_r4.py e maquete_r4.py (sobre o preparo da r2, 3d_r2/maquete_prep.py). A versao anterior ficou em modelos/maquete_praga_r3.glb.",
+      "conferencia": "modelos/_ver/maquete_r4_etapa1.jpg (so relevo e rio), _etapa2.jpg (+ ruas), _etapa2_close.jpg, _etapa3.jpg (+ igrejas e torres), _etapa4.jpg (+ predios), _etapa5.jpg (+ alfinetes e fio), _aneis_topo.jpg (vista de cima: anel a vermelho, b laranja, c verde, d azul; igrejas roxo), _jornal_celular.jpg, _quadro.jpg."
+    }
+  ],
+  "nao_feito": [
+    "Armas do jogo (SK_Pistol, SK_Rifle, SM_Shotgun do Lyra): so existem como uasset; exportar exige a Unreal (proibido nesta tarefa) e a licenca Epic nao cobre GLB na web.",
+    "Corpo a corpo: a unica faca achada (ARMAS/M9_Knife/M9_Knife.FBX) e FBX ASCII, que o Blender nao importa. Nao convertido.",
+    "Rodada 2: o enxame de morcegos da torre para a lua e a troca/animacao da figura sao codigo do site; os assets estao prontos.",
+    "Rodada 2: o corte do subsolo e textura esquematica; o subsolo do jogo (salas da catedral) nao e exportavel sem a Unreal."
+  ]
+}

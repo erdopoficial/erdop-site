@@ -1,0 +1,3072 @@
+{
+ "gerado": "14/11/2026 por I:/WaruraseIntro/site/armas/gerar_armas_json.py | rodada 4 (15/11): I:/WaruraseIntro/site/armas/r4/atualizar_armas_r4.py",
+ "raridade": {
+  "como_funciona": "A raridade NÃO é da arma: cada arma achada sorteia o nível (60/25/12/3 %) e o nível multiplica dano, pente e recarga. O cofre só dá épica ou melhor. Os números de cada arma abaixo são do nível COMUM.",
+  "fonte": [
+   "Source/GameAnimationSample/Weapons/GasWeaponTier.cpp",
+   "Source/GameAnimationSample/World/GasLootContainer.cpp:588 (sorteio no baú)",
+   "Source/GameAnimationSample/World/GasCofre.cpp:34 (cofre: mínimo ÉPICA)"
+  ],
+  "escala": [
+   {
+    "nivel": "COMUM",
+    "cor_linear": [
+     0.35,
+     0.85,
+     0.35
+    ],
+    "dano": 1.0,
+    "carregador": 1.0,
+    "recarga": 1.0,
+    "chance_pct": 60,
+    "fonte": "Source/GameAnimationSample/Weapons/GasWeaponTier.cpp:34-40, :100",
+    "cor": "#A0EDA0"
+   },
+   {
+    "nivel": "RARA",
+    "cor_linear": [
+     0.3,
+     0.6,
+     1.0
+    ],
+    "dano": 1.12,
+    "carregador": 1.2,
+    "recarga": 0.88,
+    "chance_pct": 25,
+    "fonte": "Source/GameAnimationSample/Weapons/GasWeaponTier.cpp:10-16, :101",
+    "cor": "#95CBFF"
+   },
+   {
+    "nivel": "ÉPICA",
+    "cor_linear": [
+     0.7,
+     0.35,
+     0.95
+    ],
+    "dano": 1.25,
+    "carregador": 1.45,
+    "recarga": 0.74,
+    "chance_pct": 12,
+    "fonte": "Source/GameAnimationSample/Weapons/GasWeaponTier.cpp:18-24, :102",
+    "cor": "#DAA0F9"
+   },
+   {
+    "nivel": "LENDÁRIA",
+    "cor_linear": [
+     1.0,
+     0.72,
+     0.15
+    ],
+    "dano": 1.4,
+    "carregador": 1.75,
+    "recarga": 0.6,
+    "chance_pct": 3,
+    "fonte": "Source/GameAnimationSample/Weapons/GasWeaponTier.cpp:26-32, :104",
+    "cor": "#FFDD6C"
+   }
+  ],
+  "cor_hex": "convertida de linear (FLinearColor do código) para sRGB"
+ },
+ "zonas": {
+  "multiplicadores": {
+   "cabeca": 2.0,
+   "tronco": 1.0,
+   "bracos": 0.75,
+   "pernas": 0.7,
+   "pes": 0.5
+  },
+  "fonte": "Source/GameAnimationSample/Weapons/GasDamageZones.cpp:57-67"
+ },
+ "nota_imagens": "Modelos de estudo dos discos (campo origem_do_modelo), renderizados no Blender 5.2 headless; as malhas não vão para o site. Rodada 4: DMR ganhou giro (FN FAL Para), garras refeitas como acessório gótico, e cada arma com giro tem passes de luz, máscara e acessórios para a customização.",
+ "armas": [
+  {
+   "id": "pistola",
+   "nome": "PISTOLA 9MM",
+   "familia": "Pistola",
+   "calibre": "9mm",
+   "no_jogo": true,
+   "asset": "BP_WAR_Pistol / WI_WAR_Pistol",
+   "dano_base": 32.0,
+   "chumbos": 1,
+   "dano_por_disparo": 32.0,
+   "dano_por_zona": {
+    "cabeca": 64.0,
+    "tronco": 32.0,
+    "bracos": 24.0,
+    "pernas": 22.4,
+    "pes": 16.0
+   },
+   "cadencia_tiros_s": 5.0,
+   "pente": 12,
+   "recarga_s": 1.4,
+   "alcance_cm": 8000,
+   "queda_de_dano": null,
+   "recuo_vertical_graus": 0.5,
+   "recuo_lateral_graus": 0.2,
+   "dispersao_base_graus": 0.4,
+   "dispersao_por_tiro": 0.5,
+   "dispersao_maxima": 3.0,
+   "peso_kg": 0.95,
+   "mira_fov": 62,
+   "modos_de_fogo": [
+    {
+     "nome": "semiautomático",
+     "auto": false
+    },
+    {
+     "nome": "automático",
+     "auto": true,
+     "cadencia_x": 1.6,
+     "dano_x": 0.85,
+     "dispersao_x": 1.5,
+     "recuo_x": 1.2
+    }
+   ],
+   "fonte": [
+    "Content/Warurase/Weapons/WI_WAR_Pistol.uasset (CDO lido do cabecalho de propriedades em 14/11; confere com o log '[WARURASE] Arma WI_WAR_Pistol_C nivel COMUM: carregador, recarga')",
+    "Source/GameAnimationSample/Weapons/GasPerfilDaArma.cpp:209 (peso)",
+    "Source/GameAnimationSample/Weapons/GasDamageZones.cpp:57-67",
+    "Source/GameAnimationSample/Weapons/GasRangedWeaponInstance.h:239,278,281,309 (padroes que o CDO sobrescreve)"
+   ],
+   "modelo_de_estudo": true,
+   "giro": {
+    "arquivo": "img/armas/pistola_giro.webp",
+    "quadros": 24,
+    "colunas": 6,
+    "linhas": 4,
+    "largura": 640,
+    "altura": 400,
+    "graus_por_quadro": 15,
+    "kb": 288
+   },
+   "mini": "img/armas/pistola_mini.png",
+   "raridade": "COMUM",
+   "cor_da_raridade": "#A0EDA0",
+   "raridades_possiveis": [
+    "COMUM",
+    "RARA",
+    "ÉPICA",
+    "LENDÁRIA"
+   ],
+   "modelo_de_estudo_antes_r3": "WeaponsHQ4/Pistol01 (pacote Unity em I:/GAME DESIGNER; não é a SK_Pistol do jogo; o ferrolho tem gravação de texto a conferir)",
+   "origem_do_modelo": "WeaponsHQ4/Pistol01 (pacote Unity em I:/GAME DESIGNER/3D/!NOVO BESTIAL/ASSETS/ARMAS; licença a confirmar). Não é a SK_Pistol do jogo.",
+   "resumo": {
+    "medidores": [
+     {
+      "rotulo": "DANO",
+      "valor": 0.286,
+      "texto": "32"
+     },
+     {
+      "rotulo": "CADÊNCIA",
+      "valor": 0.333,
+      "texto": "5/s"
+     },
+     {
+      "rotulo": "ALCANCE",
+      "valor": 0.2,
+      "texto": "80 m"
+     },
+     {
+      "rotulo": "PENTE",
+      "valor": 0.4,
+      "texto": "12"
+     },
+     {
+      "rotulo": "CONTROLE",
+      "valor": 1.0,
+      "texto": "0.7°"
+     }
+    ],
+    "etiquetas": [
+     "média distância",
+     "semi ou auto"
+    ],
+    "nota": "valor 0–1 contra a melhor arma do eixo (comparar.como_normalizou); null = o número ainda não existe no código",
+    "painel_giro": {
+     "onde": "ao lado de 'arraste para girar': coluna de até 260 px, quatro linhas por bloco",
+     "cor_e_valor": {
+      "titulo": "A cor é o valor",
+      "niveis": [
+       {
+        "nivel": "COMUM",
+        "cor": "#A0EDA0",
+        "chance_pct": 60,
+        "linha": "dano 32 · pente 12 · recarga 1.4 s"
+       },
+       {
+        "nivel": "RARA",
+        "cor": "#95CBFF",
+        "chance_pct": 25,
+        "linha": "dano 35.8 · pente 14 · recarga 1.2 s"
+       },
+       {
+        "nivel": "ÉPICA",
+        "cor": "#DAA0F9",
+        "chance_pct": 12,
+        "linha": "dano 40 · pente 17 · recarga 1.0 s"
+       },
+       {
+        "nivel": "LENDÁRIA",
+        "cor": "#FFDD6C",
+        "chance_pct": 3,
+        "linha": "dano 44.8 · pente 21 · recarga 0.8 s"
+       }
+      ]
+     },
+     "comparar": {
+      "contra": "revolver",
+      "contra_nome": "PISTOLA PESADA .357",
+      "linhas": [
+       {
+        "rotulo": "CONTROLE",
+        "esta": "0.7°",
+        "outra": "4.2°",
+        "vence": "esta"
+       },
+       {
+        "rotulo": "DANO",
+        "esta": "32",
+        "outra": "68",
+        "vence": "outra"
+       },
+       {
+        "rotulo": "CADÊNCIA",
+        "esta": "5/s",
+        "outra": "1.8/s",
+        "vence": "esta"
+       }
+      ],
+      "nota": "três eixos em que as duas mais diferem; a lista completa fica em 'comparar'"
+     }
+    }
+   },
+   "customizar": {
+    "luz": {
+     "arquivo": "img/armas/pistola_luz.webp",
+     "kb": 150
+    },
+    "mascara": {
+     "arquivo": "img/armas/pistola_mascara.webp",
+     "kb": 128,
+     "canais": "R corpo · G empunhadura/coronha · B detalhes"
+    },
+    "acessorios": [
+     {
+      "id": "lanterna",
+      "nome": "Lanterna tática",
+      "arquivo": "img/armas/pistola_ac_lanterna.webp",
+      "kb": 46
+     },
+     {
+      "id": "pingente",
+      "nome": "Pingente: cruz gótica com pedra vermelha",
+      "arquivo": "img/armas/pistola_ac_pingente.webp",
+      "kb": 32
+     }
+    ],
+    "inicio_do_giro": "quadro 0 (perfil)"
+   }
+  },
+  {
+   "id": "revolver",
+   "nome": "PISTOLA PESADA .357",
+   "familia": "Revólver",
+   "calibre": ".357",
+   "no_jogo": true,
+   "asset": "BP_WAR_Magnum / WI_WAR_Magnum",
+   "dano_base": 68.0,
+   "chumbos": 1,
+   "dano_por_disparo": 68.0,
+   "dano_por_zona": {
+    "cabeca": 136.0,
+    "tronco": 68.0,
+    "bracos": 51.0,
+    "pernas": 47.6,
+    "pes": 34.0
+   },
+   "cadencia_tiros_s": 1.8,
+   "pente": 6,
+   "recarga_s": 1.4,
+   "alcance_cm": 8000,
+   "queda_de_dano": null,
+   "recuo_vertical_graus": 3.2,
+   "recuo_lateral_graus": 1.0,
+   "dispersao_base_graus": 0.6,
+   "dispersao_por_tiro": 0.5,
+   "dispersao_maxima": 3.0,
+   "peso_kg": 1.8,
+   "mira_fov": 58,
+   "modos_de_fogo": [
+    {
+     "nome": "semiautomático",
+     "auto": false
+    }
+   ],
+   "nota": "O CDO traz CurrentAmmo=12 com pente 6: o rack enche a arma pelo pente ao aplicar o nível (GasWeaponTier.cpp:84), então no jogo entra com 6.",
+   "fonte": [
+    "Content/Warurase/Weapons/WI_WAR_Magnum.uasset (CDO lido do cabecalho de propriedades em 14/11; confere com o log '[WARURASE] Arma WI_WAR_Magnum_C nivel COMUM: carregador, recarga')",
+    "Source/GameAnimationSample/Weapons/GasPerfilDaArma.cpp:233 (peso)",
+    "Source/GameAnimationSample/Weapons/GasDamageZones.cpp:57-67"
+   ],
+   "modelo_de_estudo": true,
+   "giro": {
+    "arquivo": "img/armas/revolver_giro.webp",
+    "quadros": 24,
+    "colunas": 6,
+    "linhas": 4,
+    "largura": 640,
+    "altura": 400,
+    "graus_por_quadro": 15,
+    "kb": 249
+   },
+   "mini": "img/armas/revolver_mini.png",
+   "raridade": "COMUM",
+   "cor_da_raridade": "#A0EDA0",
+   "raridades_possiveis": [
+    "COMUM",
+    "RARA",
+    "ÉPICA",
+    "LENDÁRIA"
+   ],
+   "modelo_de_estudo_antes_r3": "Revólver CC0 (Quaternius) — é a BASE da SM_WAR_Magnum_Revolver do jogo; low-poly, parece brinquedo de perto",
+   "origem_do_modelo": "Daz 3D: Polish \"Gangster Weapons 03 - Small revolver pistol\" (D:/daz/Content/Props/Polish), material preto. Revólver de armação média e cano de 4 polegadas, a silhueta de um .357 clássico. Licença Daz: render 2D permitido; a malha não vai para o site.",
+   "rodada_do_modelo": 3,
+   "resumo": {
+    "medidores": [
+     {
+      "rotulo": "DANO",
+      "valor": 0.607,
+      "texto": "68"
+     },
+     {
+      "rotulo": "CADÊNCIA",
+      "valor": 0.12,
+      "texto": "1.8/s"
+     },
+     {
+      "rotulo": "ALCANCE",
+      "valor": 0.2,
+      "texto": "80 m"
+     },
+     {
+      "rotulo": "PENTE",
+      "valor": 0.2,
+      "texto": "6"
+     },
+     {
+      "rotulo": "CONTROLE",
+      "valor": 0.167,
+      "texto": "4.2°"
+     }
+    ],
+    "etiquetas": [
+     "golpe pesado",
+     "seis tiros"
+    ],
+    "nota": "valor 0–1 contra a melhor arma do eixo (comparar.como_normalizou); null = o número ainda não existe no código",
+    "painel_giro": {
+     "onde": "ao lado de 'arraste para girar': coluna de até 260 px, quatro linhas por bloco",
+     "cor_e_valor": {
+      "titulo": "A cor é o valor",
+      "niveis": [
+       {
+        "nivel": "COMUM",
+        "cor": "#A0EDA0",
+        "chance_pct": 60,
+        "linha": "dano 68 · pente 6 · recarga 1.4 s"
+       },
+       {
+        "nivel": "RARA",
+        "cor": "#95CBFF",
+        "chance_pct": 25,
+        "linha": "dano 76.2 · pente 7 · recarga 1.2 s"
+       },
+       {
+        "nivel": "ÉPICA",
+        "cor": "#DAA0F9",
+        "chance_pct": 12,
+        "linha": "dano 85 · pente 9 · recarga 1.0 s"
+       },
+       {
+        "nivel": "LENDÁRIA",
+        "cor": "#FFDD6C",
+        "chance_pct": 3,
+        "linha": "dano 95.2 · pente 10 · recarga 0.8 s"
+       }
+      ]
+     },
+     "comparar": {
+      "contra": "pistola",
+      "contra_nome": "PISTOLA 9MM",
+      "linhas": [
+       {
+        "rotulo": "CONTROLE",
+        "esta": "4.2°",
+        "outra": "0.7°",
+        "vence": "outra"
+       },
+       {
+        "rotulo": "DANO",
+        "esta": "68",
+        "outra": "32",
+        "vence": "esta"
+       },
+       {
+        "rotulo": "CADÊNCIA",
+        "esta": "1.8/s",
+        "outra": "5/s",
+        "vence": "outra"
+       }
+      ],
+      "nota": "três eixos em que as duas mais diferem; a lista completa fica em 'comparar'"
+     }
+    }
+   },
+   "customizar": {
+    "luz": {
+     "arquivo": "img/armas/revolver_luz.webp",
+     "kb": 248
+    },
+    "mascara": {
+     "arquivo": "img/armas/revolver_mascara.webp",
+     "kb": 136,
+     "canais": "R corpo · G empunhadura/coronha · B detalhes"
+    },
+    "acessorios": [
+     {
+      "id": "pingente",
+      "nome": "Pingente: cruz gótica com pedra vermelha",
+      "arquivo": "img/armas/revolver_ac_pingente.webp",
+      "kb": 28
+     }
+    ],
+    "inicio_do_giro": "quadro 0 (perfil)"
+   }
+  },
+  {
+   "id": "fuzil",
+   "nome": "FUZIL 5.56",
+   "familia": "Fuzil de assalto",
+   "calibre": "5.56",
+   "no_jogo": true,
+   "asset": "BP_WAR_Rifle / WI_WAR_Rifle",
+   "dano_base": 24.0,
+   "chumbos": 1,
+   "dano_por_disparo": 24.0,
+   "dano_por_zona": {
+    "cabeca": 48.0,
+    "tronco": 24.0,
+    "bracos": 18.0,
+    "pernas": 16.8,
+    "pes": 12.0
+   },
+   "cadencia_tiros_s": 7.5,
+   "pente": 30,
+   "recarga_s": 1.8,
+   "alcance_cm": 12000,
+   "queda_de_dano": null,
+   "recuo_vertical_graus": 0.6,
+   "recuo_lateral_graus": 0.25,
+   "dispersao_base_graus": 0.7,
+   "dispersao_por_tiro": 0.35,
+   "dispersao_maxima": 4.0,
+   "peso_kg": 3.4,
+   "mira_fov": 68,
+   "modos_de_fogo": [
+    {
+     "nome": "automático",
+     "auto": true
+    },
+    {
+     "nome": "precisão (semi)",
+     "auto": false,
+     "cadencia_x": 0.45,
+     "dano_x": 1.35,
+     "dispersao_x": 0.15,
+     "recuo_x": 0.7,
+     "mira_fov": 34
+    }
+   ],
+   "nota": "Pente, recuo e dispersão por tiro não são sobrescritos no WI_WAR_Rifle: valem os padrões do C++ (pente 30 confirmado no log 'carregador 30').",
+   "fonte": [
+    "Content/Warurase/Weapons/WI_WAR_Rifle.uasset (CDO lido do cabecalho de propriedades em 14/11; confere com o log '[WARURASE] Arma WI_WAR_Rifle_C nivel COMUM: carregador, recarga')",
+    "Source/GameAnimationSample/Weapons/GasRangedWeaponInstance.h:281 (pente 30), :321,:324 (dispersao), :485,:533 (recuo)",
+    "Source/GameAnimationSample/Weapons/GasPerfilDaArma.cpp:269 (peso)",
+    "Source/GameAnimationSample/Weapons/GasDamageZones.cpp:57-67"
+   ],
+   "modelo_de_estudo": true,
+   "giro": {
+    "arquivo": "img/armas/fuzil_giro.webp",
+    "quadros": 24,
+    "colunas": 6,
+    "linhas": 4,
+    "largura": 640,
+    "altura": 400,
+    "graus_por_quadro": 15,
+    "kb": 137
+   },
+   "mini": "img/armas/fuzil_mini.png",
+   "raridade": "COMUM",
+   "cor_da_raridade": "#A0EDA0",
+   "raridades_possiveis": [
+    "COMUM",
+    "RARA",
+    "ÉPICA",
+    "LENDÁRIA"
+   ],
+   "modelo_de_estudo_antes_r3": "ARMAS/Rifle/rifle.FBX (um M4, pacote Unity, licença a confirmar); não é a malha Lyra do jogo",
+   "origem_do_modelo": "ARMAS/Rifle/rifle.FBX (um M4, pacote Unity, licença a confirmar); não é a malha Lyra do jogo.",
+   "resumo": {
+    "medidores": [
+     {
+      "rotulo": "DANO",
+      "valor": 0.214,
+      "texto": "24"
+     },
+     {
+      "rotulo": "CADÊNCIA",
+      "valor": 0.5,
+      "texto": "7.5/s"
+     },
+     {
+      "rotulo": "ALCANCE",
+      "valor": 0.3,
+      "texto": "120 m"
+     },
+     {
+      "rotulo": "PENTE",
+      "valor": 1.0,
+      "texto": "30"
+     },
+     {
+      "rotulo": "CONTROLE",
+      "valor": 0.824,
+      "texto": "0.8°"
+     }
+    ],
+    "etiquetas": [
+     "média distância",
+     "automática"
+    ],
+    "nota": "valor 0–1 contra a melhor arma do eixo (comparar.como_normalizou); null = o número ainda não existe no código",
+    "painel_giro": {
+     "onde": "ao lado de 'arraste para girar': coluna de até 260 px, quatro linhas por bloco",
+     "cor_e_valor": {
+      "titulo": "A cor é o valor",
+      "niveis": [
+       {
+        "nivel": "COMUM",
+        "cor": "#A0EDA0",
+        "chance_pct": 60,
+        "linha": "dano 24 · pente 30 · recarga 1.8 s"
+       },
+       {
+        "nivel": "RARA",
+        "cor": "#95CBFF",
+        "chance_pct": 25,
+        "linha": "dano 26.9 · pente 36 · recarga 1.6 s"
+       },
+       {
+        "nivel": "ÉPICA",
+        "cor": "#DAA0F9",
+        "chance_pct": 12,
+        "linha": "dano 30 · pente 44 · recarga 1.3 s"
+       },
+       {
+        "nivel": "LENDÁRIA",
+        "cor": "#FFDD6C",
+        "chance_pct": 3,
+        "linha": "dano 33.6 · pente 52 · recarga 1.1 s"
+       }
+      ]
+     },
+     "comparar": {
+      "contra": "smg",
+      "contra_nome": "SMG 9MM",
+      "linhas": [
+       {
+        "rotulo": "CADÊNCIA",
+        "esta": "7.5/s",
+        "outra": "15/s",
+        "vence": "outra"
+       },
+       {
+        "rotulo": "ALCANCE",
+        "esta": "120 m",
+        "outra": "40 m",
+        "vence": "esta"
+       },
+       {
+        "rotulo": "CONTROLE",
+        "esta": "0.8°",
+        "outra": "0.8°",
+        "vence": "outra"
+       }
+      ],
+      "nota": "três eixos em que as duas mais diferem; a lista completa fica em 'comparar'"
+     }
+    }
+   },
+   "customizar": {
+    "luz": {
+     "arquivo": "img/armas/fuzil_luz.webp",
+     "kb": 134
+    },
+    "mascara": {
+     "arquivo": "img/armas/fuzil_mascara.webp",
+     "kb": 85,
+     "canais": "R corpo · G empunhadura/coronha · B detalhes"
+    },
+    "acessorios": [
+     {
+      "id": "luneta",
+      "nome": "Luneta 4x (ACOG)",
+      "arquivo": "img/armas/fuzil_ac_luneta.webp",
+      "kb": 39
+     },
+     {
+      "id": "supressor",
+      "nome": "Supressor de anéis",
+      "arquivo": "img/armas/fuzil_ac_supressor.webp",
+      "kb": 23
+     },
+     {
+      "id": "pingente",
+      "nome": "Pingente: cruz gótica com pedra vermelha",
+      "arquivo": "img/armas/fuzil_ac_pingente.webp",
+      "kb": 22
+     }
+    ],
+    "inicio_do_giro": "quadro 0 (perfil)"
+   }
+  },
+  {
+   "id": "escopeta",
+   "nome": "ESCOPETA 12GA",
+   "familia": "Escopeta de bomba",
+   "calibre": "12ga (8 chumbos)",
+   "no_jogo": true,
+   "asset": "BP_WAR_Shotgun / WI_WAR_Shotgun",
+   "dano_base": 14.0,
+   "chumbos": 8,
+   "dano_por_disparo": 112.0,
+   "dano_por_zona": {
+    "cabeca": 224.0,
+    "tronco": 112.0,
+    "bracos": 84.0,
+    "pernas": 78.4,
+    "pes": 56.0
+   },
+   "cadencia_tiros_s": 1.4,
+   "pente": 8,
+   "recarga_s": 2.6,
+   "alcance_cm": 3000,
+   "queda_de_dano": null,
+   "recuo_vertical_graus": 2.2,
+   "recuo_lateral_graus": 0.6,
+   "dispersao_base_graus": 6.0,
+   "dispersao_por_tiro": 0.0,
+   "dispersao_maxima": 0.0,
+   "peso_kg": 3.6,
+   "mira_fov": 78,
+   "modos_de_fogo": [
+    {
+     "nome": "bomba",
+     "auto": false
+    }
+   ],
+   "nota": "Dano por zona = 14 por chumbo x 8 chumbos, todos na mesma zona (o teto). Cada chumbo resolve a zona dele. O perfil do codigo diz 9 chumbos (GasPerfilDaArma.cpp:317), mas a instancia manda 8 (GasPerfilDaArma.cpp:655).",
+   "fonte": [
+    "Content/Warurase/Weapons/WI_WAR_Shotgun.uasset (CDO lido do cabecalho de propriedades em 14/11; confere com o log '[WARURASE] Arma WI_WAR_Shotgun_C nivel COMUM: carregador, recarga')",
+    "Source/GameAnimationSample/Weapons/GasPerfilDaArma.cpp:320 (peso)",
+    "Source/GameAnimationSample/Weapons/GasDamageZones.cpp:57-67"
+   ],
+   "modelo_de_estudo": true,
+   "giro": {
+    "arquivo": "img/armas/escopeta_giro.webp",
+    "quadros": 24,
+    "colunas": 6,
+    "linhas": 4,
+    "largura": 640,
+    "altura": 400,
+    "graus_por_quadro": 15,
+    "kb": 109
+   },
+   "mini": "img/armas/escopeta_mini.png",
+   "raridade": "COMUM",
+   "cor_da_raridade": "#A0EDA0",
+   "raridades_possiveis": [
+    "COMUM",
+    "RARA",
+    "ÉPICA",
+    "LENDÁRIA"
+   ],
+   "modelo_de_estudo_antes_r3": "ARMAS/shotgun/MARMO3.obj + textura 5_d (pacote sem licença anotada); visual de escopeta tática, não de bomba clássica",
+   "origem_do_modelo": "Daz 3D: Polish \"Gangster Weapons 01 - JKS shotgun\", material preto: escopeta de bomba com coronha e telha de madeira e mira de ponto. Licença Daz: render 2D permitido.",
+   "rodada_do_modelo": 3,
+   "resumo": {
+    "medidores": [
+     {
+      "rotulo": "DANO",
+      "valor": 1.0,
+      "texto": "112"
+     },
+     {
+      "rotulo": "CADÊNCIA",
+      "valor": 0.093,
+      "texto": "1.4/s"
+     },
+     {
+      "rotulo": "ALCANCE",
+      "valor": 0.075,
+      "texto": "30 m"
+     },
+     {
+      "rotulo": "PENTE",
+      "valor": 0.267,
+      "texto": "8"
+     },
+     {
+      "rotulo": "CONTROLE",
+      "valor": 0.25,
+      "texto": "2.8°"
+     }
+    ],
+    "etiquetas": [
+     "curta distância",
+     "bomba"
+    ],
+    "nota": "valor 0–1 contra a melhor arma do eixo (comparar.como_normalizou); null = o número ainda não existe no código",
+    "painel_giro": {
+     "onde": "ao lado de 'arraste para girar': coluna de até 260 px, quatro linhas por bloco",
+     "cor_e_valor": {
+      "titulo": "A cor é o valor",
+      "niveis": [
+       {
+        "nivel": "COMUM",
+        "cor": "#A0EDA0",
+        "chance_pct": 60,
+        "linha": "dano 112 · pente 8 · recarga 2.6 s"
+       },
+       {
+        "nivel": "RARA",
+        "cor": "#95CBFF",
+        "chance_pct": 25,
+        "linha": "dano 125.4 · pente 10 · recarga 2.3 s"
+       },
+       {
+        "nivel": "ÉPICA",
+        "cor": "#DAA0F9",
+        "chance_pct": 12,
+        "linha": "dano 140 · pente 12 · recarga 1.9 s"
+       },
+       {
+        "nivel": "LENDÁRIA",
+        "cor": "#FFDD6C",
+        "chance_pct": 3,
+        "linha": "dano 156.8 · pente 14 · recarga 1.6 s"
+       }
+      ]
+     },
+     "comparar": {
+      "contra": "cano_serrado",
+      "contra_nome": "CANO SERRADO 12GA",
+      "linhas": [
+       {
+        "rotulo": "CONTROLE",
+        "esta": "2.8°",
+        "outra": "5.2°",
+        "vence": "esta"
+       },
+       {
+        "rotulo": "CADÊNCIA",
+        "esta": "1.4/s",
+        "outra": "3/s",
+        "vence": "outra"
+       },
+       {
+        "rotulo": "ALCANCE",
+        "esta": "30 m",
+        "outra": "12 m",
+        "vence": "esta"
+       }
+      ],
+      "nota": "três eixos em que as duas mais diferem; a lista completa fica em 'comparar'"
+     }
+    }
+   },
+   "customizar": {
+    "luz": {
+     "arquivo": "img/armas/escopeta_luz.webp",
+     "kb": 97
+    },
+    "mascara": {
+     "arquivo": "img/armas/escopeta_mascara.webp",
+     "kb": 48,
+     "canais": "R corpo · G empunhadura/coronha · B detalhes"
+    },
+    "acessorios": [
+     {
+      "id": "lanterna",
+      "nome": "Lanterna tática",
+      "arquivo": "img/armas/escopeta_ac_lanterna.webp",
+      "kb": 25
+     },
+     {
+      "id": "pingente",
+      "nome": "Pingente: cruz gótica com pedra vermelha",
+      "arquivo": "img/armas/escopeta_ac_pingente.webp",
+      "kb": 23
+     }
+    ],
+    "inicio_do_giro": "quadro 0 (perfil)"
+   }
+  },
+  {
+   "id": "smg",
+   "nome": "SMG 9MM",
+   "familia": "Submetralhadora",
+   "calibre": "9mm",
+   "no_jogo": false,
+   "asset": null,
+   "dano_base": null,
+   "chumbos": null,
+   "dano_por_disparo": null,
+   "dano_por_zona": null,
+   "cadencia_tiros_s": 15.0,
+   "pente": null,
+   "recarga_s": null,
+   "alcance_cm": 4000,
+   "queda_de_dano": null,
+   "recuo_vertical_graus": 0.45,
+   "recuo_lateral_graus": 0.35,
+   "dispersao_base_graus": 0.9,
+   "dispersao_por_tiro": 0.28,
+   "dispersao_maxima": 5.0,
+   "peso_kg": 2.9,
+   "mira_fov": null,
+   "modos_de_fogo": [
+    {
+     "nome": "automática",
+     "auto": true
+    }
+   ],
+   "nota": "Só existe como linha do perfil de balística (cadência, alcance, recuo, peso). Dano e pente não existem no código: nascem quando a arma ganhar instância.",
+   "fonte": [
+    "Source/GameAnimationSample/Weapons/GasPerfilDaArma.cpp:256 (fogo)",
+    "Source/GameAnimationSample/Weapons/GasPerfilDaArma.cpp:253 (peso)"
+   ],
+   "modelo_de_estudo": true,
+   "giro": {
+    "arquivo": "img/armas/smg_giro.webp",
+    "quadros": 24,
+    "colunas": 6,
+    "linhas": 4,
+    "largura": 640,
+    "altura": 400,
+    "graus_por_quadro": 15,
+    "kb": 170
+   },
+   "mini": "img/armas/smg_mini.png",
+   "raridade": "COMUM",
+   "cor_da_raridade": "#A0EDA0",
+   "raridades_possiveis": [
+    "COMUM",
+    "RARA",
+    "ÉPICA",
+    "LENDÁRIA"
+   ],
+   "modelo_de_estudo_antes_r3": "Modern Weapons Pack/UMP-45 (OBJ); é UMP-45 (.45), não MP5 9mm — só a silhueta da família",
+   "origem_do_modelo": "Modern Weapons Pack/UMP-45 (OBJ). É UMP-45 (.45), não MP5 9mm: só a silhueta da família.",
+   "resumo": {
+    "medidores": [
+     {
+      "rotulo": "DANO",
+      "valor": null,
+      "texto": "—"
+     },
+     {
+      "rotulo": "CADÊNCIA",
+      "valor": 1.0,
+      "texto": "15/s"
+     },
+     {
+      "rotulo": "ALCANCE",
+      "valor": 0.1,
+      "texto": "40 m"
+     },
+     {
+      "rotulo": "PENTE",
+      "valor": null,
+      "texto": "—"
+     },
+     {
+      "rotulo": "CONTROLE",
+      "valor": 0.875,
+      "texto": "0.8°"
+     }
+    ],
+    "etiquetas": [
+     "curta distância",
+     "automática"
+    ],
+    "nota": "valor 0–1 contra a melhor arma do eixo (comparar.como_normalizou); null = o número ainda não existe no código",
+    "painel_giro": {
+     "onde": "ao lado de 'arraste para girar': coluna de até 260 px, quatro linhas por bloco",
+     "cor_e_valor": {
+      "titulo": "A cor é o valor",
+      "niveis": [
+       {
+        "nivel": "COMUM",
+        "cor": "#A0EDA0",
+        "chance_pct": 60,
+        "linha": ""
+       },
+       {
+        "nivel": "RARA",
+        "cor": "#95CBFF",
+        "chance_pct": 25,
+        "linha": ""
+       },
+       {
+        "nivel": "ÉPICA",
+        "cor": "#DAA0F9",
+        "chance_pct": 12,
+        "linha": ""
+       },
+       {
+        "nivel": "LENDÁRIA",
+        "cor": "#FFDD6C",
+        "chance_pct": 3,
+        "linha": ""
+       }
+      ]
+     },
+     "comparar": {
+      "contra": "fuzil",
+      "contra_nome": "FUZIL 5.56",
+      "linhas": [
+       {
+        "rotulo": "CADÊNCIA",
+        "esta": "15/s",
+        "outra": "7.5/s",
+        "vence": "esta"
+       },
+       {
+        "rotulo": "ALCANCE",
+        "esta": "40 m",
+        "outra": "120 m",
+        "vence": "outra"
+       },
+       {
+        "rotulo": "CONTROLE",
+        "esta": "0.8°",
+        "outra": "0.8°",
+        "vence": "esta"
+       }
+      ],
+      "nota": "três eixos em que as duas mais diferem; a lista completa fica em 'comparar'"
+     }
+    }
+   },
+   "customizar": {
+    "luz": {
+     "arquivo": "img/armas/smg_luz.webp",
+     "kb": 165
+    },
+    "mascara": {
+     "arquivo": "img/armas/smg_mascara.webp",
+     "kb": 133,
+     "canais": "R corpo · G empunhadura/coronha · B detalhes"
+    },
+    "acessorios": [
+     {
+      "id": "luneta",
+      "nome": "Luneta 4x (ACOG)",
+      "arquivo": "img/armas/smg_ac_luneta.webp",
+      "kb": 46
+     },
+     {
+      "id": "supressor",
+      "nome": "Supressor de anéis",
+      "arquivo": "img/armas/smg_ac_supressor.webp",
+      "kb": 22
+     },
+     {
+      "id": "pingente",
+      "nome": "Pingente: cruz gótica com pedra vermelha",
+      "arquivo": "img/armas/smg_ac_pingente.webp",
+      "kb": 30
+     }
+    ],
+    "inicio_do_giro": "quadro 0 (perfil)"
+   }
+  },
+  {
+   "id": "dmr",
+   "nome": "DMR 7.62",
+   "familia": "Fuzil de precisão semiautomático",
+   "calibre": "7.62",
+   "no_jogo": false,
+   "asset": null,
+   "dano_base": null,
+   "chumbos": null,
+   "dano_por_disparo": null,
+   "dano_por_zona": null,
+   "cadencia_tiros_s": 4.0,
+   "pente": null,
+   "recarga_s": null,
+   "alcance_cm": 25000,
+   "queda_de_dano": null,
+   "recuo_vertical_graus": 1.4,
+   "recuo_lateral_graus": 0.3,
+   "dispersao_base_graus": 0.25,
+   "dispersao_por_tiro": 0.9,
+   "dispersao_maxima": 3.0,
+   "peso_kg": 4.8,
+   "mira_fov": null,
+   "modos_de_fogo": [
+    {
+     "nome": "semiautomático",
+     "auto": false
+    }
+   ],
+   "nota": "Só existe como linha do perfil de balística (cadência, alcance, recuo, peso). Dano e pente não existem no código: nascem quando a arma ganhar instância.",
+   "fonte": [
+    "Source/GameAnimationSample/Weapons/GasPerfilDaArma.cpp:288 (fogo)",
+    "Source/GameAnimationSample/Weapons/GasPerfilDaArma.cpp:285 (peso)"
+   ],
+   "modelo_de_estudo": true,
+   "giro": {
+    "arquivo": "img/armas/dmr_giro.webp",
+    "quadros": 24,
+    "colunas": 6,
+    "linhas": 4,
+    "largura": 640,
+    "altura": 400,
+    "graus_por_quadro": 15,
+    "kb": 194
+   },
+   "mini": "img/armas/dmr_mini.png",
+   "raridade": "COMUM",
+   "cor_da_raridade": "#A0EDA0",
+   "raridades_possiveis": [
+    "COMUM",
+    "RARA",
+    "ÉPICA",
+    "LENDÁRIA"
+   ],
+   "origem_do_modelo": "FN FAL Para 7.62x51 com luneta e lanterna/laser (F:/GAME DESIGNER/ORGANIZAR BACKUP 2023/3D/ARMAS/Automatic/308-Rifle, OBJ do Daz Studio 3.1, licença a confirmar). Saía preto porque as normais do OBJ apontam todas para dentro (medido: 100% dos cantos contra a face); tiradas as normais do arquivo, o Blender recalcula e a peça acende. Materiais por peça: aço fosfatizado, guarda-mão e empunhadura de polímero, lentes de vidro.",
+   "resumo": {
+    "medidores": [
+     {
+      "rotulo": "DANO",
+      "valor": null,
+      "texto": "—"
+     },
+     {
+      "rotulo": "CADÊNCIA",
+      "valor": 0.267,
+      "texto": "4/s"
+     },
+     {
+      "rotulo": "ALCANCE",
+      "valor": 0.625,
+      "texto": "250 m"
+     },
+     {
+      "rotulo": "PENTE",
+      "valor": null,
+      "texto": "—"
+     },
+     {
+      "rotulo": "CONTROLE",
+      "valor": 0.412,
+      "texto": "1.7°"
+     }
+    ],
+    "etiquetas": [
+     "longa distância",
+     "semiautomática"
+    ],
+    "nota": "valor 0–1 contra a melhor arma do eixo (comparar.como_normalizou); null = o número ainda não existe no código",
+    "painel_giro": {
+     "onde": "ao lado de 'arraste para girar': coluna de até 260 px, quatro linhas por bloco",
+     "cor_e_valor": {
+      "titulo": "A cor é o valor",
+      "niveis": [
+       {
+        "nivel": "COMUM",
+        "cor": "#A0EDA0",
+        "chance_pct": 60,
+        "linha": ""
+       },
+       {
+        "nivel": "RARA",
+        "cor": "#95CBFF",
+        "chance_pct": 25,
+        "linha": ""
+       },
+       {
+        "nivel": "ÉPICA",
+        "cor": "#DAA0F9",
+        "chance_pct": 12,
+        "linha": ""
+       },
+       {
+        "nivel": "LENDÁRIA",
+        "cor": "#FFDD6C",
+        "chance_pct": 3,
+        "linha": ""
+       }
+      ]
+     },
+     "comparar": {
+      "contra": "sniper",
+      "contra_nome": "SNIPER .338",
+      "linhas": [
+       {
+        "rotulo": "ALCANCE",
+        "esta": "250 m",
+        "outra": "400 m",
+        "vence": "outra"
+       },
+       {
+        "rotulo": "CADÊNCIA",
+        "esta": "4/s",
+        "outra": "0.8/s",
+        "vence": "esta"
+       },
+       {
+        "rotulo": "CONTROLE",
+        "esta": "1.7°",
+        "outra": "3.4°",
+        "vence": "esta"
+       }
+      ],
+      "nota": "três eixos em que as duas mais diferem; a lista completa fica em 'comparar'"
+     }
+    }
+   },
+   "rodada_do_modelo": 4,
+   "customizar": {
+    "luz": {
+     "arquivo": "img/armas/dmr_luz.webp",
+     "kb": 171
+    },
+    "mascara": {
+     "arquivo": "img/armas/dmr_mascara.webp",
+     "kb": 113,
+     "canais": "R corpo · G empunhadura/coronha · B detalhes"
+    },
+    "acessorios": [
+     {
+      "id": "supressor",
+      "nome": "Supressor de anéis",
+      "arquivo": "img/armas/dmr_ac_supressor.webp",
+      "kb": 26
+     },
+     {
+      "id": "pingente",
+      "nome": "Pingente: cruz gótica com pedra vermelha",
+      "arquivo": "img/armas/dmr_ac_pingente.webp",
+      "kb": 24
+     }
+    ],
+    "inicio_do_giro": "quadro 0 (perfil)"
+   }
+  },
+  {
+   "id": "sniper",
+   "nome": "SNIPER .338",
+   "familia": "Ferrolho",
+   "calibre": ".338",
+   "no_jogo": false,
+   "asset": null,
+   "dano_base": null,
+   "chumbos": null,
+   "dano_por_disparo": null,
+   "dano_por_zona": null,
+   "cadencia_tiros_s": 0.8,
+   "pente": null,
+   "recarga_s": null,
+   "alcance_cm": 40000,
+   "queda_de_dano": null,
+   "recuo_vertical_graus": 3.0,
+   "recuo_lateral_graus": 0.4,
+   "dispersao_base_graus": 0.05,
+   "dispersao_por_tiro": 2.5,
+   "dispersao_maxima": 3.0,
+   "peso_kg": 6.5,
+   "mira_fov": null,
+   "modos_de_fogo": [
+    {
+     "nome": "ferrolho; luneta com zoom na roda do mouse",
+     "auto": false
+    }
+   ],
+   "nota": "Só existe como linha do perfil de balística (cadência, alcance, recuo, peso). Dano e pente não existem no código: nascem quando a arma ganhar instância.",
+   "fonte": [
+    "Source/GameAnimationSample/Weapons/GasPerfilDaArma.cpp:305 (fogo)",
+    "Source/GameAnimationSample/Weapons/GasPerfilDaArma.cpp:302 (peso)"
+   ],
+   "modelo_de_estudo": true,
+   "giro": {
+    "arquivo": "img/armas/sniper_giro.webp",
+    "quadros": 24,
+    "colunas": 6,
+    "linhas": 4,
+    "largura": 640,
+    "altura": 400,
+    "graus_por_quadro": 15,
+    "kb": 177
+   },
+   "mini": "img/armas/sniper_mini.png",
+   "raridade": "COMUM",
+   "cor_da_raridade": "#A0EDA0",
+   "raridades_possiveis": [
+    "COMUM",
+    "RARA",
+    "ÉPICA",
+    "LENDÁRIA"
+   ],
+   "origem_do_modelo": "Bestial2/Assets/3rdParty/Maksim Bugrimov/Sci_Fi_Character_08/Mesh/Sniper_Rifle.FBX: fuzil de ferrolho no padrão AWM/L115 (a família do .338 Lapua), com luneta, supressor e bipé; o pano de camuflagem do pacote foi tirado. Camuflagem ártica da textura original. Unity Asset Store, licença a confirmar.",
+   "rodada_do_modelo": 3,
+   "resumo": {
+    "medidores": [
+     {
+      "rotulo": "DANO",
+      "valor": null,
+      "texto": "—"
+     },
+     {
+      "rotulo": "CADÊNCIA",
+      "valor": 0.053,
+      "texto": "0.8/s"
+     },
+     {
+      "rotulo": "ALCANCE",
+      "valor": 1.0,
+      "texto": "400 m"
+     },
+     {
+      "rotulo": "PENTE",
+      "valor": null,
+      "texto": "—"
+     },
+     {
+      "rotulo": "CONTROLE",
+      "valor": 0.206,
+      "texto": "3.4°"
+     }
+    ],
+    "etiquetas": [
+     "longa distância",
+     "ferrolho"
+    ],
+    "nota": "valor 0–1 contra a melhor arma do eixo (comparar.como_normalizou); null = o número ainda não existe no código",
+    "painel_giro": {
+     "onde": "ao lado de 'arraste para girar': coluna de até 260 px, quatro linhas por bloco",
+     "cor_e_valor": {
+      "titulo": "A cor é o valor",
+      "niveis": [
+       {
+        "nivel": "COMUM",
+        "cor": "#A0EDA0",
+        "chance_pct": 60,
+        "linha": ""
+       },
+       {
+        "nivel": "RARA",
+        "cor": "#95CBFF",
+        "chance_pct": 25,
+        "linha": ""
+       },
+       {
+        "nivel": "ÉPICA",
+        "cor": "#DAA0F9",
+        "chance_pct": 12,
+        "linha": ""
+       },
+       {
+        "nivel": "LENDÁRIA",
+        "cor": "#FFDD6C",
+        "chance_pct": 3,
+        "linha": ""
+       }
+      ]
+     },
+     "comparar": {
+      "contra": "dmr",
+      "contra_nome": "DMR 7.62",
+      "linhas": [
+       {
+        "rotulo": "ALCANCE",
+        "esta": "400 m",
+        "outra": "250 m",
+        "vence": "esta"
+       },
+       {
+        "rotulo": "CADÊNCIA",
+        "esta": "0.8/s",
+        "outra": "4/s",
+        "vence": "outra"
+       },
+       {
+        "rotulo": "CONTROLE",
+        "esta": "3.4°",
+        "outra": "1.7°",
+        "vence": "outra"
+       }
+      ],
+      "nota": "três eixos em que as duas mais diferem; a lista completa fica em 'comparar'"
+     }
+    }
+   },
+   "customizar": {
+    "luz": {
+     "arquivo": "img/armas/sniper_luz.webp",
+     "kb": 136
+    },
+    "mascara": {
+     "arquivo": "img/armas/sniper_mascara.webp",
+     "kb": 74,
+     "canais": "R corpo · G empunhadura/coronha · B detalhes"
+    },
+    "acessorios": [
+     {
+      "id": "pingente",
+      "nome": "Pingente: cruz gótica com pedra vermelha",
+      "arquivo": "img/armas/sniper_ac_pingente.webp",
+      "kb": 20
+     }
+    ],
+    "inicio_do_giro": "quadro 0 (perfil)"
+   }
+  },
+  {
+   "id": "cano_serrado",
+   "nome": "CANO SERRADO 12GA",
+   "familia": "Escopeta de dois canos",
+   "calibre": "12ga",
+   "no_jogo": false,
+   "asset": null,
+   "dano_base": null,
+   "chumbos": null,
+   "dano_por_disparo": null,
+   "dano_por_zona": null,
+   "cadencia_tiros_s": 3.0,
+   "pente": null,
+   "recarga_s": null,
+   "alcance_cm": 1200,
+   "queda_de_dano": null,
+   "recuo_vertical_graus": 4.0,
+   "recuo_lateral_graus": 1.2,
+   "dispersao_base_graus": 7.0,
+   "dispersao_por_tiro": 1.0,
+   "dispersao_maxima": 3.0,
+   "peso_kg": 2.4,
+   "mira_fov": null,
+   "modos_de_fogo": [
+    {
+     "nome": "dois canos",
+     "auto": false
+    }
+   ],
+   "nota": "Só existe como linha do perfil de balística (cadência, alcance, recuo, peso). Dano e pente não existem no código: nascem quando a arma ganhar instância.",
+   "fonte": [
+    "Source/GameAnimationSample/Weapons/GasPerfilDaArma.cpp:341 (fogo)",
+    "Source/GameAnimationSample/Weapons/GasPerfilDaArma.cpp:338 (peso)"
+   ],
+   "modelo_de_estudo": true,
+   "giro": {
+    "arquivo": "img/armas/cano_serrado_giro.webp",
+    "quadros": 24,
+    "colunas": 6,
+    "linhas": 4,
+    "largura": 640,
+    "altura": 400,
+    "graus_por_quadro": 15,
+    "kb": 189
+   },
+   "mini": "img/armas/cano_serrado_mini.png",
+   "raridade": "COMUM",
+   "cor_da_raridade": "#A0EDA0",
+   "raridades_possiveis": [
+    "COMUM",
+    "RARA",
+    "ÉPICA",
+    "LENDÁRIA"
+   ],
+   "modelo_de_estudo_antes_r3": "ARMAS/Sawed Off (pacote Unity, licença a confirmar)",
+   "origem_do_modelo": "ARMAS/Sawed Off (pacote Unity, licença a confirmar).",
+   "resumo": {
+    "medidores": [
+     {
+      "rotulo": "DANO",
+      "valor": null,
+      "texto": "—"
+     },
+     {
+      "rotulo": "CADÊNCIA",
+      "valor": 0.2,
+      "texto": "3/s"
+     },
+     {
+      "rotulo": "ALCANCE",
+      "valor": 0.03,
+      "texto": "12 m"
+     },
+     {
+      "rotulo": "PENTE",
+      "valor": null,
+      "texto": "—"
+     },
+     {
+      "rotulo": "CONTROLE",
+      "valor": 0.135,
+      "texto": "5.2°"
+     }
+    ],
+    "etiquetas": [
+     "queima-roupa",
+     "dois canos"
+    ],
+    "nota": "valor 0–1 contra a melhor arma do eixo (comparar.como_normalizou); null = o número ainda não existe no código",
+    "painel_giro": {
+     "onde": "ao lado de 'arraste para girar': coluna de até 260 px, quatro linhas por bloco",
+     "cor_e_valor": {
+      "titulo": "A cor é o valor",
+      "niveis": [
+       {
+        "nivel": "COMUM",
+        "cor": "#A0EDA0",
+        "chance_pct": 60,
+        "linha": ""
+       },
+       {
+        "nivel": "RARA",
+        "cor": "#95CBFF",
+        "chance_pct": 25,
+        "linha": ""
+       },
+       {
+        "nivel": "ÉPICA",
+        "cor": "#DAA0F9",
+        "chance_pct": 12,
+        "linha": ""
+       },
+       {
+        "nivel": "LENDÁRIA",
+        "cor": "#FFDD6C",
+        "chance_pct": 3,
+        "linha": ""
+       }
+      ]
+     },
+     "comparar": {
+      "contra": "escopeta",
+      "contra_nome": "ESCOPETA 12GA",
+      "linhas": [
+       {
+        "rotulo": "CONTROLE",
+        "esta": "5.2°",
+        "outra": "2.8°",
+        "vence": "outra"
+       },
+       {
+        "rotulo": "CADÊNCIA",
+        "esta": "3/s",
+        "outra": "1.4/s",
+        "vence": "esta"
+       },
+       {
+        "rotulo": "ALCANCE",
+        "esta": "12 m",
+        "outra": "30 m",
+        "vence": "outra"
+       }
+      ],
+      "nota": "três eixos em que as duas mais diferem; a lista completa fica em 'comparar'"
+     }
+    }
+   },
+   "customizar": {
+    "luz": {
+     "arquivo": "img/armas/cano_serrado_luz.webp",
+     "kb": 104
+    },
+    "mascara": {
+     "arquivo": "img/armas/cano_serrado_mascara.webp",
+     "kb": 61,
+     "canais": "R corpo · G empunhadura/coronha · B detalhes"
+    },
+    "acessorios": [
+     {
+      "id": "pingente",
+      "nome": "Pingente: cruz gótica com pedra vermelha",
+      "arquivo": "img/armas/cano_serrado_ac_pingente.webp",
+      "kb": 28
+     }
+    ],
+    "inicio_do_giro": "quadro 0 (perfil)"
+   }
+  },
+  {
+   "id": "besta",
+   "nome": "BESTA",
+   "familia": "Besta",
+   "calibre": "virote",
+   "no_jogo": false,
+   "asset": null,
+   "dano_base": null,
+   "chumbos": null,
+   "dano_por_disparo": null,
+   "dano_por_zona": null,
+   "cadencia_tiros_s": 0.5,
+   "pente": null,
+   "recarga_s": null,
+   "alcance_cm": 8000,
+   "queda_de_dano": null,
+   "recuo_vertical_graus": 0.8,
+   "recuo_lateral_graus": 0.1,
+   "dispersao_base_graus": 0.1,
+   "dispersao_por_tiro": 0.0,
+   "dispersao_maxima": 0.0,
+   "peso_kg": 3.4,
+   "mira_fov": null,
+   "modos_de_fogo": [
+    {
+     "nome": "virote (silenciosa)",
+     "auto": false
+    }
+   ],
+   "nota": "Só existe como linha do perfil de balística (cadência, alcance, recuo, peso). Dano e pente não existem no código: nascem quando a arma ganhar instância.",
+   "fonte": [
+    "Source/GameAnimationSample/Weapons/GasPerfilDaArma.cpp:359 (fogo)",
+    "Source/GameAnimationSample/Weapons/GasPerfilDaArma.cpp:356 (peso)"
+   ],
+   "modelo_de_estudo": true,
+   "giro": {
+    "arquivo": "img/armas/besta_giro.webp",
+    "quadros": 24,
+    "colunas": 6,
+    "linhas": 4,
+    "largura": 640,
+    "altura": 400,
+    "graus_por_quadro": 15,
+    "kb": 134
+   },
+   "mini": "img/armas/besta_mini.png",
+   "raridade": "COMUM",
+   "cor_da_raridade": "#A0EDA0",
+   "raridades_possiveis": [
+    "COMUM",
+    "RARA",
+    "ÉPICA",
+    "LENDÁRIA"
+   ],
+   "origem_do_modelo": "Element 3D (Video Copilot), Projectiles_Weapons_3D_Files/crossbow_armed: besta armada com estribo e virote. Sem textura no pacote: aço escurecido aplicado no render. Licença a confirmar.",
+   "rodada_do_modelo": 3,
+   "mini_quadro": 21,
+   "resumo": {
+    "medidores": [
+     {
+      "rotulo": "DANO",
+      "valor": null,
+      "texto": "—"
+     },
+     {
+      "rotulo": "CADÊNCIA",
+      "valor": 0.033,
+      "texto": "0.5/s"
+     },
+     {
+      "rotulo": "ALCANCE",
+      "valor": 0.2,
+      "texto": "80 m"
+     },
+     {
+      "rotulo": "PENTE",
+      "valor": null,
+      "texto": "—"
+     },
+     {
+      "rotulo": "CONTROLE",
+      "valor": 0.778,
+      "texto": "0.9°"
+     }
+    ],
+    "etiquetas": [
+     "silenciosa",
+     "virote"
+    ],
+    "nota": "valor 0–1 contra a melhor arma do eixo (comparar.como_normalizou); null = o número ainda não existe no código",
+    "painel_giro": {
+     "onde": "ao lado de 'arraste para girar': coluna de até 260 px, quatro linhas por bloco",
+     "cor_e_valor": {
+      "titulo": "A cor é o valor",
+      "niveis": [
+       {
+        "nivel": "COMUM",
+        "cor": "#A0EDA0",
+        "chance_pct": 60,
+        "linha": ""
+       },
+       {
+        "nivel": "RARA",
+        "cor": "#95CBFF",
+        "chance_pct": 25,
+        "linha": ""
+       },
+       {
+        "nivel": "ÉPICA",
+        "cor": "#DAA0F9",
+        "chance_pct": 12,
+        "linha": ""
+       },
+       {
+        "nivel": "LENDÁRIA",
+        "cor": "#FFDD6C",
+        "chance_pct": 3,
+        "linha": ""
+       }
+      ]
+     },
+     "comparar": {
+      "contra": "dmr",
+      "contra_nome": "DMR 7.62",
+      "linhas": [
+       {
+        "rotulo": "ALCANCE",
+        "esta": "80 m",
+        "outra": "250 m",
+        "vence": "outra"
+       },
+       {
+        "rotulo": "CONTROLE",
+        "esta": "0.9°",
+        "outra": "1.7°",
+        "vence": "esta"
+       },
+       {
+        "rotulo": "CADÊNCIA",
+        "esta": "0.5/s",
+        "outra": "4/s",
+        "vence": "outra"
+       }
+      ],
+      "nota": "três eixos em que as duas mais diferem; a lista completa fica em 'comparar'"
+     }
+    }
+   },
+   "customizar": {
+    "luz": {
+     "arquivo": "img/armas/besta_luz.webp",
+     "kb": 120
+    },
+    "mascara": {
+     "arquivo": "img/armas/besta_mascara.webp",
+     "kb": 58,
+     "canais": "R corpo · G empunhadura/coronha · B detalhes"
+    },
+    "acessorios": [
+     {
+      "id": "luneta",
+      "nome": "Luneta 4x (ACOG)",
+      "arquivo": "img/armas/besta_ac_luneta.webp",
+      "kb": 39
+     },
+     {
+      "id": "pingente",
+      "nome": "Pingente: cruz gótica com pedra vermelha",
+      "arquivo": "img/armas/besta_ac_pingente.webp",
+      "kb": 25
+     }
+    ],
+    "inicio_do_giro": "quadro 0 (perfil)"
+   }
+  },
+  {
+   "id": "granadas",
+   "nome": "GRANADA E FUMAÇA",
+   "familia": "Uso rápido (G)",
+   "calibre": null,
+   "no_jogo": true,
+   "asset": "BP_WAR_Grenade",
+   "dano_base": 90.0,
+   "dano_por_disparo": 90.0,
+   "nota": "Dano 90 no centro, queda linear até 0 na borda; sem zona do corpo (Docs/GUIA_DE_PROJETEIS.md seção 5). Fora do comparativo: não é arma de tiro.",
+   "fonte": [
+    "Docs/GUIA_DE_PROJETEIS.md:79-83"
+   ],
+   "fora_do_comparativo": true,
+   "modelo_de_estudo": false,
+   "giro": {
+    "arquivo": "img/armas/granadas_giro.webp",
+    "quadros": 24,
+    "colunas": 6,
+    "linhas": 4,
+    "largura": 640,
+    "altura": 400,
+    "graus_por_quadro": 15,
+    "kb": 109
+   },
+   "mini": "img/armas/granadas_mini.png",
+   "raridade": "COMUM",
+   "cor_da_raridade": "#A0EDA0",
+   "raridades_possiveis": [
+    "COMUM",
+    "RARA",
+    "ÉPICA",
+    "LENDÁRIA"
+   ],
+   "modelo_de_estudo_antes_r3": "SM_WAR_GranadaFumaca (malha própria do jogo, do catálogo de props)",
+   "origem_do_modelo": "SM_WAR_GranadaFumaca (malha própria do jogo, do catálogo de props).",
+   "resumo": {
+    "medidores": [
+     {
+      "rotulo": "DANO",
+      "valor": null,
+      "texto": "90"
+     }
+    ],
+    "etiquetas": [
+     "área",
+     "uso rápido (G)"
+    ],
+    "nota": "fora do comparativo de tiro: só o dano existe no código",
+    "painel_giro": {
+     "onde": "ao lado de 'arraste para girar': coluna de até 260 px, quatro linhas por bloco",
+     "cor_e_valor": {
+      "titulo": "A cor é o valor",
+      "niveis": [
+       {
+        "nivel": "COMUM",
+        "cor": "#A0EDA0",
+        "chance_pct": 60,
+        "linha": "dano 90"
+       },
+       {
+        "nivel": "RARA",
+        "cor": "#95CBFF",
+        "chance_pct": 25,
+        "linha": "dano 100.8"
+       },
+       {
+        "nivel": "ÉPICA",
+        "cor": "#DAA0F9",
+        "chance_pct": 12,
+        "linha": "dano 112.5"
+       },
+       {
+        "nivel": "LENDÁRIA",
+        "cor": "#FFDD6C",
+        "chance_pct": 3,
+        "linha": "dano 126"
+       }
+      ]
+     },
+     "comparar": null
+    }
+   },
+   "customizar": {
+    "luz": {
+     "arquivo": "img/armas/granadas_luz.webp",
+     "kb": 86
+    },
+    "mascara": {
+     "arquivo": "img/armas/granadas_mascara.webp",
+     "kb": 48,
+     "canais": "R corpo · G empunhadura/coronha · B detalhes"
+    },
+    "acessorios": [],
+    "inicio_do_giro": "quadro 0 (perfil)"
+   }
+  },
+  {
+   "id": "garras",
+   "nome": "GARRAS",
+   "familia": "Corpo a corpo (vaga 3)",
+   "calibre": null,
+   "no_jogo": true,
+   "asset": null,
+   "dano_base": 35.0,
+   "nota": "Soco 35, sem multiplicador de zona (Docs/GUIA_DE_PROJETEIS.md seção 4). Fora do comparativo. No jogo as garras são as mãos; no site, o acessório.",
+   "fonte": [
+    "Docs/GUIA_DE_PROJETEIS.md:69-77"
+   ],
+   "fora_do_comparativo": true,
+   "modelo_de_estudo": true,
+   "giro": {
+    "arquivo": "img/armas/garras_giro.webp",
+    "quadros": 24,
+    "colunas": 6,
+    "linhas": 4,
+    "largura": 640,
+    "altura": 400,
+    "graus_por_quadro": 15,
+    "kb": 490
+   },
+   "mini": "img/armas/garras_mini.png",
+   "raridade": "COMUM",
+   "cor_da_raridade": "#A0EDA0",
+   "raridades_possiveis": [
+    "COMUM",
+    "RARA",
+    "ÉPICA",
+    "LENDÁRIA"
+   ],
+   "origem_do_modelo": "Feito para o site (I:/WaruraseIntro/site/armas/r4/garras_goticas.py): acessório gótico, só as peças — cinco armaduras de dedo articuladas em prata enegrecida com gravura, placas em arco ogival, anéis com contas, rebites de dobradiça, granada engastada e garra curva na ponta, numa mão invisível. Sem mão de manequim. Não é malha do jogo.",
+   "rodada_do_modelo": 4,
+   "resumo": {
+    "medidores": [
+     {
+      "rotulo": "DANO",
+      "valor": null,
+      "texto": "35"
+     }
+    ],
+    "etiquetas": [
+     "corpo a corpo",
+     "sempre à mão"
+    ],
+    "nota": "fora do comparativo de tiro: só o dano existe no código",
+    "painel_giro": {
+     "onde": "ao lado de 'arraste para girar': coluna de até 260 px, quatro linhas por bloco",
+     "cor_e_valor": {
+      "titulo": "A cor é o valor",
+      "niveis": [
+       {
+        "nivel": "COMUM",
+        "cor": "#A0EDA0",
+        "chance_pct": 60,
+        "linha": "dano 35"
+       },
+       {
+        "nivel": "RARA",
+        "cor": "#95CBFF",
+        "chance_pct": 25,
+        "linha": "dano 39.2"
+       },
+       {
+        "nivel": "ÉPICA",
+        "cor": "#DAA0F9",
+        "chance_pct": 12,
+        "linha": "dano 43.8"
+       },
+       {
+        "nivel": "LENDÁRIA",
+        "cor": "#FFDD6C",
+        "chance_pct": 3,
+        "linha": "dano 49"
+       }
+      ]
+     },
+     "comparar": null
+    }
+   },
+   "customizar": {
+    "luz": {
+     "arquivo": "img/armas/garras_luz.webp",
+     "kb": 381
+    },
+    "mascara": {
+     "arquivo": "img/armas/garras_mascara.webp",
+     "kb": 226,
+     "canais": "R corpo · G empunhadura/coronha · B detalhes"
+    },
+    "acessorios": [],
+    "inicio_do_giro": "quadro 6 do render (vista de lado)"
+   }
+  },
+  {
+   "id": "katana",
+   "nome": "KATANA",
+   "familia": "Armas brancas · corpo a corpo",
+   "categoria": "Armas brancas",
+   "calibre": null,
+   "no_jogo": true,
+   "asset": null,
+   "dano_base": 55.0,
+   "nota": "Arma branca do jogo: dano 55, alcance 2,1 m, golpe na taxa 1,0, sem custo de vigor. O modelo do site foi feito para o site; a malha do jogo vem de um pacote que não está no PC.",
+   "fonte": [
+    "Source/GameAnimationSample/Weapons/GasArmaBrancaInstance.h:52,56,60,64",
+    "Source/GameAnimationSample/World/GasCatalogoDeItens.cpp:167 (EGasItemRarity::Raro)"
+   ],
+   "fora_do_comparativo": true,
+   "modelo_de_estudo": true,
+   "giro": {
+    "arquivo": "img/armas/katana_giro.webp",
+    "quadros": 24,
+    "colunas": 6,
+    "linhas": 4,
+    "largura": 640,
+    "altura": 400,
+    "graus_por_quadro": 15,
+    "kb": 105,
+    "quadro_inicial": 0
+   },
+   "mini": "img/armas/katana_mini.png",
+   "raridade": "RARA",
+   "cor_da_raridade": "#95CBFF",
+   "raridades_possiveis": [
+    "COMUM",
+    "RARA",
+    "ÉPICA",
+    "LENDÁRIA"
+   ],
+   "origem_do_modelo": "Modelado por código para o site (D:/WaruraseIntro/site_r7/m3d/armas_modelar.py), Blender 5.2; obra própria, sem asset de terceiros. Não é a malha do jogo.",
+   "rodada_do_modelo": 9,
+   "resumo": {
+    "medidores": [
+     {
+      "rotulo": "DANO",
+      "valor": null,
+      "texto": "55"
+     },
+     {
+      "rotulo": "ALCANCE",
+      "valor": null,
+      "texto": "2,1 m"
+     },
+     {
+      "rotulo": "VELOCIDADE",
+      "valor": null,
+      "texto": "1,0"
+     }
+    ],
+    "etiquetas": [
+     "corpo a corpo",
+     "sem vigor"
+    ],
+    "nota": "fora do comparativo de tiro",
+    "painel_giro": {
+     "cor_e_valor": {
+      "titulo": "A cor é o valor",
+      "niveis": [
+       {
+        "nivel": "COMUM",
+        "cor": "#A0EDA0",
+        "chance_pct": 60,
+        "linha": "dano 55"
+       },
+       {
+        "nivel": "RARA",
+        "cor": "#95CBFF",
+        "chance_pct": 25,
+        "linha": "dano 61,6"
+       },
+       {
+        "nivel": "ÉPICA",
+        "cor": "#DAA0F9",
+        "chance_pct": 12,
+        "linha": "dano 68,8"
+       },
+       {
+        "nivel": "LENDÁRIA",
+        "cor": "#FFDD6C",
+        "chance_pct": 3,
+        "linha": "dano 77"
+       }
+      ]
+     },
+     "comparar": null
+    }
+   },
+   "ficha": [
+    [
+     "Alcance",
+     "2,1 m · varredura 2,4 m"
+    ],
+    [
+     "Velocidade",
+     "taxa 1,0 · não cobra vigor"
+    ],
+    [
+     "Medidas do modelo",
+     "lâmina 70,5 cm · curva 1,9 cm · empunhadura 25,4 cm · 100,8 cm no total"
+    ]
+   ],
+   "customizar": {
+    "luz": {
+     "arquivo": "img/armas/katana_luz.webp",
+     "kb": 82
+    },
+    "mascara": {
+     "arquivo": "img/armas/katana_mascara.webp",
+     "kb": 114,
+     "canais": "R lâmina · G empunhadura · B guarda, pomo, gema e runas"
+    },
+    "acessorios": [],
+    "abas": [
+     "acab",
+     "cor"
+    ],
+    "regioes_nomes": {
+     "R": "Lâmina",
+     "G": "Empunhadura",
+     "B": "Guarda e detalhes"
+    },
+    "inicio_do_giro": "quadro 0 (vista de lado, ponta para a direita)"
+   }
+  },
+  {
+   "id": "espada_flamejante",
+   "nome": "ESPADÃO FLAMEJANTE",
+   "familia": "Armas brancas · corpo a corpo",
+   "categoria": "Armas brancas",
+   "calibre": null,
+   "no_jogo": true,
+   "asset": null,
+   "dano_base": 90.0,
+   "nota": "O espadão de duas mãos do jogo, de lâmina ondulada: dano 90 (golpe pesado ×1,4 = 126), alcance 2,6 m, lento (taxa 0,72) e cobra 28 de vigor por golpe.",
+   "fonte": [
+    "Source/GameAnimationSample/Weapons/GasEspadaoNumeros.h:18,21,24,28,32",
+    "Source/GameAnimationSample/World/GasCatalogoDeItens.cpp:177"
+   ],
+   "fora_do_comparativo": true,
+   "modelo_de_estudo": true,
+   "giro": {
+    "arquivo": "img/armas/espada_flamejante_giro.webp",
+    "quadros": 24,
+    "colunas": 6,
+    "linhas": 4,
+    "largura": 640,
+    "altura": 400,
+    "graus_por_quadro": 15,
+    "kb": 164,
+    "quadro_inicial": 0
+   },
+   "mini": "img/armas/espada_flamejante_mini.png",
+   "raridade": "LENDÁRIA",
+   "cor_da_raridade": "#FFDD6C",
+   "raridades_possiveis": [
+    "COMUM",
+    "RARA",
+    "ÉPICA",
+    "LENDÁRIA"
+   ],
+   "origem_do_modelo": "Modelado por código para o site (D:/WaruraseIntro/site_r7/m3d/armas_modelar.py), Blender 5.2; obra própria, sem asset de terceiros. Não é a malha do jogo.",
+   "rodada_do_modelo": 9,
+   "resumo": {
+    "medidores": [
+     {
+      "rotulo": "DANO",
+      "valor": null,
+      "texto": "90"
+     },
+     {
+      "rotulo": "ALCANCE",
+      "valor": null,
+      "texto": "2,6 m"
+     },
+     {
+      "rotulo": "VELOCIDADE",
+      "valor": null,
+      "texto": "0,72"
+     },
+     {
+      "rotulo": "VIGOR",
+      "valor": null,
+      "texto": "28"
+     }
+    ],
+    "etiquetas": [
+     "duas mãos",
+     "golpe pesado 126"
+    ],
+    "nota": "fora do comparativo de tiro",
+    "painel_giro": {
+     "cor_e_valor": {
+      "titulo": "A cor é o valor",
+      "niveis": [
+       {
+        "nivel": "COMUM",
+        "cor": "#A0EDA0",
+        "chance_pct": 60,
+        "linha": "dano 90"
+       },
+       {
+        "nivel": "RARA",
+        "cor": "#95CBFF",
+        "chance_pct": 25,
+        "linha": "dano 100,8"
+       },
+       {
+        "nivel": "ÉPICA",
+        "cor": "#DAA0F9",
+        "chance_pct": 12,
+        "linha": "dano 112,5"
+       },
+       {
+        "nivel": "LENDÁRIA",
+        "cor": "#FFDD6C",
+        "chance_pct": 3,
+        "linha": "dano 126"
+       }
+      ]
+     },
+     "comparar": null
+    }
+   },
+   "ficha": [
+    [
+     "Golpe pesado",
+     "126 (×1,4)"
+    ],
+    [
+     "Alcance",
+     "2,6 m · varredura 3,0 m"
+    ],
+    [
+     "Velocidade",
+     "taxa 0,72 · 28 de vigor por golpe"
+    ],
+    [
+     "Medidas do modelo",
+     "lâmina 110 cm · guarda 34 cm · empunhadura 33 cm · 151 cm no total"
+    ]
+   ],
+   "customizar": {
+    "luz": {
+     "arquivo": "img/armas/espada_flamejante_luz.webp",
+     "kb": 112
+    },
+    "mascara": {
+     "arquivo": "img/armas/espada_flamejante_mascara.webp",
+     "kb": 159,
+     "canais": "R lâmina · G empunhadura · B guarda, pomo, gema e runas"
+    },
+    "acessorios": [],
+    "abas": [
+     "acab",
+     "cor"
+    ],
+    "regioes_nomes": {
+     "R": "Lâmina",
+     "G": "Empunhadura",
+     "B": "Guarda e detalhes"
+    },
+    "inicio_do_giro": "quadro 0 (vista de lado, ponta para a direita)"
+   }
+  },
+  {
+   "id": "adaga_mistica",
+   "nome": "ADAGA MÍSTICA",
+   "familia": "Armas brancas · corpo a corpo",
+   "categoria": "Armas brancas",
+   "calibre": null,
+   "no_jogo": false,
+   "asset": null,
+   "dano_base": 40.0,
+   "nota": "Em definição: a adaga não existe no código do jogo. Os números são PROPOSTA do site (dano 40, alcance 1,5 m, rápida, sem custo de vigor). As runas foram inventadas para o jogo; não são um alfabeto real.",
+   "fonte": [
+    "proposta do site (D:/WaruraseIntro/site_r7/modelos3d.json, armas_brancas.adaga_mistica)"
+   ],
+   "fora_do_comparativo": true,
+   "modelo_de_estudo": true,
+   "giro": {
+    "arquivo": "img/armas/adaga_mistica_giro.webp",
+    "quadros": 24,
+    "colunas": 6,
+    "linhas": 4,
+    "largura": 640,
+    "altura": 400,
+    "graus_por_quadro": 15,
+    "kb": 171,
+    "quadro_inicial": 0
+   },
+   "mini": "img/armas/adaga_mistica_mini.png",
+   "raridade": "ÉPICA",
+   "cor_da_raridade": "#DAA0F9",
+   "raridades_possiveis": [
+    "COMUM",
+    "RARA",
+    "ÉPICA",
+    "LENDÁRIA"
+   ],
+   "origem_do_modelo": "Modelado por código para o site (D:/WaruraseIntro/site_r7/m3d/armas_modelar.py), Blender 5.2; obra própria, sem asset de terceiros. Não é a malha do jogo.",
+   "rodada_do_modelo": 9,
+   "resumo": {
+    "medidores": [
+     {
+      "rotulo": "DANO",
+      "valor": null,
+      "texto": "40*"
+     },
+     {
+      "rotulo": "ALCANCE",
+      "valor": null,
+      "texto": "1,5 m*"
+     },
+     {
+      "rotulo": "VELOCIDADE",
+      "valor": null,
+      "texto": "1,3*"
+     }
+    ],
+    "etiquetas": [
+     "proposta",
+     "em definição"
+    ],
+    "nota": "fora do comparativo de tiro; números de PROPOSTA, a arma não existe no código",
+    "painel_giro": {
+     "cor_e_valor": {
+      "titulo": "A cor é o valor",
+      "niveis": [
+       {
+        "nivel": "COMUM",
+        "cor": "#A0EDA0",
+        "chance_pct": 60,
+        "linha": "dano 40 · proposta"
+       },
+       {
+        "nivel": "RARA",
+        "cor": "#95CBFF",
+        "chance_pct": 25,
+        "linha": "dano 44,8 · proposta"
+       },
+       {
+        "nivel": "ÉPICA",
+        "cor": "#DAA0F9",
+        "chance_pct": 12,
+        "linha": "dano 50 · proposta"
+       },
+       {
+        "nivel": "LENDÁRIA",
+        "cor": "#FFDD6C",
+        "chance_pct": 3,
+        "linha": "dano 56 · proposta"
+       }
+      ]
+     },
+     "comparar": null
+    }
+   },
+   "ficha": [
+    [
+     "Estado",
+     "em definição · números de proposta"
+    ],
+    [
+     "Alcance",
+     "1,5 m (proposta)"
+    ],
+    [
+     "Velocidade",
+     "taxa 1,3, sem custo de vigor (proposta)"
+    ],
+    [
+     "Medidas do modelo",
+     "lâmina 19,5 cm · guarda 10 cm · empunhadura 9,2 cm · 33,4 cm no total"
+    ]
+   ],
+   "customizar": {
+    "luz": {
+     "arquivo": "img/armas/adaga_mistica_luz.webp",
+     "kb": 130
+    },
+    "mascara": {
+     "arquivo": "img/armas/adaga_mistica_mascara.webp",
+     "kb": 206,
+     "canais": "R lâmina · G empunhadura · B guarda, pomo, gema e runas"
+    },
+    "acessorios": [],
+    "abas": [
+     "acab",
+     "cor"
+    ],
+    "regioes_nomes": {
+     "R": "Lâmina",
+     "G": "Empunhadura",
+     "B": "Guarda e detalhes"
+    },
+    "inicio_do_giro": "quadro 0 (vista de lado, ponta para a direita)"
+   },
+   "proposta": true,
+   "estado": "em definição"
+  },
+  {
+   "id": "espadas_duplas",
+   "nome": "ESPADAS DUPLAS CURVAS",
+   "familia": "Armas brancas · corpo a corpo",
+   "categoria": "Armas brancas",
+   "calibre": null,
+   "no_jogo": false,
+   "asset": null,
+   "dano_base": 30.0,
+   "nota": "Em definição: o par de cimitarras não existe no código do jogo. Os números são PROPOSTA do site (2 × 30 por golpe, alcance 1,9 m, taxa 1,15, 12 de vigor por série).",
+   "fonte": [
+    "proposta do site (D:/WaruraseIntro/site_r7/modelos3d.json, armas_brancas.espadas_duplas)"
+   ],
+   "fora_do_comparativo": true,
+   "modelo_de_estudo": true,
+   "giro": {
+    "arquivo": "img/armas/espadas_duplas_giro.webp",
+    "quadros": 24,
+    "colunas": 6,
+    "linhas": 4,
+    "largura": 640,
+    "altura": 400,
+    "graus_por_quadro": 15,
+    "kb": 180,
+    "quadro_inicial": 0
+   },
+   "mini": "img/armas/espadas_duplas_mini.png",
+   "raridade": "ÉPICA",
+   "cor_da_raridade": "#DAA0F9",
+   "raridades_possiveis": [
+    "COMUM",
+    "RARA",
+    "ÉPICA",
+    "LENDÁRIA"
+   ],
+   "origem_do_modelo": "Modelado por código para o site (D:/WaruraseIntro/site_r7/m3d/armas_modelar.py), Blender 5.2; obra própria, sem asset de terceiros. Não é a malha do jogo.",
+   "rodada_do_modelo": 9,
+   "resumo": {
+    "medidores": [
+     {
+      "rotulo": "DANO",
+      "valor": null,
+      "texto": "2 × 30*"
+     },
+     {
+      "rotulo": "ALCANCE",
+      "valor": null,
+      "texto": "1,9 m*"
+     },
+     {
+      "rotulo": "VELOCIDADE",
+      "valor": null,
+      "texto": "1,15*"
+     },
+     {
+      "rotulo": "VIGOR",
+      "valor": null,
+      "texto": "12*"
+     }
+    ],
+    "etiquetas": [
+     "proposta",
+     "uma em cada mão"
+    ],
+    "nota": "fora do comparativo de tiro; números de PROPOSTA, a arma não existe no código",
+    "painel_giro": {
+     "cor_e_valor": {
+      "titulo": "A cor é o valor",
+      "niveis": [
+       {
+        "nivel": "COMUM",
+        "cor": "#A0EDA0",
+        "chance_pct": 60,
+        "linha": "dano 30 · proposta"
+       },
+       {
+        "nivel": "RARA",
+        "cor": "#95CBFF",
+        "chance_pct": 25,
+        "linha": "dano 33,6 · proposta"
+       },
+       {
+        "nivel": "ÉPICA",
+        "cor": "#DAA0F9",
+        "chance_pct": 12,
+        "linha": "dano 37,5 · proposta"
+       },
+       {
+        "nivel": "LENDÁRIA",
+        "cor": "#FFDD6C",
+        "chance_pct": 3,
+        "linha": "dano 42 · proposta"
+       }
+      ]
+     },
+     "comparar": null
+    }
+   },
+   "ficha": [
+    [
+     "Estado",
+     "em definição · números de proposta"
+    ],
+    [
+     "Dano",
+     "2 × 30 por golpe (proposta)"
+    ],
+    [
+     "Alcance",
+     "1,9 m (proposta)"
+    ],
+    [
+     "Velocidade",
+     "taxa 1,15 · 12 de vigor por série (proposta)"
+    ],
+    [
+     "Medidas do modelo",
+     "cada lâmina 76 cm · curva 7,5 cm · par cruzado em X"
+    ]
+   ],
+   "customizar": {
+    "luz": {
+     "arquivo": "img/armas/espadas_duplas_luz.webp",
+     "kb": 151
+    },
+    "mascara": {
+     "arquivo": "img/armas/espadas_duplas_mascara.webp",
+     "kb": 211,
+     "canais": "R lâmina · G empunhadura · B guarda, pomo, gema e runas"
+    },
+    "acessorios": [],
+    "abas": [
+     "acab",
+     "cor"
+    ],
+    "regioes_nomes": {
+     "R": "Lâmina",
+     "G": "Empunhadura",
+     "B": "Guarda e detalhes"
+    },
+    "inicio_do_giro": "quadro 0 (vista de lado, ponta para a direita)"
+   },
+   "proposta": true,
+   "estado": "em definição"
+  }
+ ],
+ "comparar": {
+  "eixos": [
+   "dano",
+   "cadencia",
+   "alcance",
+   "controle",
+   "pente"
+  ],
+  "como_normalizou": {
+   "regra": "valor / maior valor entre as armas que TÊM o número (a melhor do eixo = 1). Arma sem o número no código fica null, não zero.",
+   "dano": "dano por disparo no nível COMUM, no tronco (x1,0): BaseDamage x chumbos. A escopeta soma os 8 chumbos (112), por isso lidera; na cabeça tudo dobra.",
+   "cadencia": "tiros por segundo do modo principal (FireRate da instância; perfil do código para as que não têm instância).",
+   "alcance": "MaxRange em cm: até onde o traço do tiro vai (GasGameplayAbility_RangedWeapon.cpp:1388). Não existe queda de dano por distância no código.",
+   "controle": "inverso do recuo: (recuo vertical + lateral da arma mais controlável) / (recuo vertical + lateral desta). 1 = a de menor coice.",
+   "pente": "MagazineSize no nível COMUM. Só as quatro armas com instância têm pente.",
+   "fontes_misturadas": "As quatro do jogo usam os números da instância (WI_WAR_*), que vencem o perfil (GasPerfilDaArma.cpp:660-670). SMG, DMR, sniper, cano serrado e besta usam a linha do perfil — ainda não existem em jogo."
+  },
+  "por_arma": {
+   "pistola": {
+    "dano": 0.286,
+    "cadencia": 0.333,
+    "alcance": 0.2,
+    "controle": 1.0,
+    "pente": 0.4
+   },
+   "revolver": {
+    "dano": 0.607,
+    "cadencia": 0.12,
+    "alcance": 0.2,
+    "controle": 0.167,
+    "pente": 0.2
+   },
+   "fuzil": {
+    "dano": 0.214,
+    "cadencia": 0.5,
+    "alcance": 0.3,
+    "controle": 0.824,
+    "pente": 1.0
+   },
+   "escopeta": {
+    "dano": 1.0,
+    "cadencia": 0.093,
+    "alcance": 0.075,
+    "controle": 0.25,
+    "pente": 0.267
+   },
+   "smg": {
+    "dano": null,
+    "cadencia": 1.0,
+    "alcance": 0.1,
+    "controle": 0.875,
+    "pente": null
+   },
+   "dmr": {
+    "dano": null,
+    "cadencia": 0.267,
+    "alcance": 0.625,
+    "controle": 0.412,
+    "pente": null
+   },
+   "sniper": {
+    "dano": null,
+    "cadencia": 0.053,
+    "alcance": 1.0,
+    "controle": 0.206,
+    "pente": null
+   },
+   "cano_serrado": {
+    "dano": null,
+    "cadencia": 0.2,
+    "alcance": 0.03,
+    "controle": 0.135,
+    "pente": null
+   },
+   "besta": {
+    "dano": null,
+    "cadencia": 0.033,
+    "alcance": 0.2,
+    "controle": 0.778,
+    "pente": null
+   }
+  },
+  "brutos": {
+   "pistola": {
+    "dano_por_disparo": 32.0,
+    "cadencia_tiros_s": 5.0,
+    "alcance_cm": 8000,
+    "recuo_total_graus": 0.7,
+    "pente": 12,
+    "dano_por_segundo_tronco": 160.0
+   },
+   "revolver": {
+    "dano_por_disparo": 68.0,
+    "cadencia_tiros_s": 1.8,
+    "alcance_cm": 8000,
+    "recuo_total_graus": 4.2,
+    "pente": 6,
+    "dano_por_segundo_tronco": 122.4
+   },
+   "fuzil": {
+    "dano_por_disparo": 24.0,
+    "cadencia_tiros_s": 7.5,
+    "alcance_cm": 12000,
+    "recuo_total_graus": 0.85,
+    "pente": 30,
+    "dano_por_segundo_tronco": 180.0
+   },
+   "escopeta": {
+    "dano_por_disparo": 112.0,
+    "cadencia_tiros_s": 1.4,
+    "alcance_cm": 3000,
+    "recuo_total_graus": 2.8000000000000003,
+    "pente": 8,
+    "dano_por_segundo_tronco": 156.8
+   },
+   "smg": {
+    "dano_por_disparo": null,
+    "cadencia_tiros_s": 15.0,
+    "alcance_cm": 4000,
+    "recuo_total_graus": 0.8,
+    "pente": null,
+    "dano_por_segundo_tronco": null
+   },
+   "dmr": {
+    "dano_por_disparo": null,
+    "cadencia_tiros_s": 4.0,
+    "alcance_cm": 25000,
+    "recuo_total_graus": 1.7,
+    "pente": null,
+    "dano_por_segundo_tronco": null
+   },
+   "sniper": {
+    "dano_por_disparo": null,
+    "cadencia_tiros_s": 0.8,
+    "alcance_cm": 40000,
+    "recuo_total_graus": 3.4,
+    "pente": null,
+    "dano_por_segundo_tronco": null
+   },
+   "cano_serrado": {
+    "dano_por_disparo": null,
+    "cadencia_tiros_s": 3.0,
+    "alcance_cm": 1200,
+    "recuo_total_graus": 5.2,
+    "pente": null,
+    "dano_por_segundo_tronco": null
+   },
+   "besta": {
+    "dano_por_disparo": null,
+    "cadencia_tiros_s": 0.5,
+    "alcance_cm": 8000,
+    "recuo_total_graus": 0.9,
+    "pente": null,
+    "dano_por_segundo_tronco": null
+   }
+  }
+ },
+ "selos": {
+  "estado": "proposta",
+  "nota": "O jogo ainda não tem decalque nem skin de arma no código (grep por selo/adesivo/decalque/skin em Source/, 14/11). Nomes e regras de ganho são proposta; a raridade usa as quatro cores do jogo.",
+  "grupos": {
+   "em_jogo": "Em jogo (feito)",
+   "compra": "Compra (loja ou passe)",
+   "temporada": "Conquista de temporada (Fase Beta)"
+  },
+  "lista": [
+   {
+    "id": "runa_do_cacador",
+    "nome": "Runa do Caçador",
+    "raridade": "COMUM",
+    "cor_da_raridade": "#A0EDA0",
+    "grupo": "em_jogo",
+    "como_ganha": "10 abates com a mesma arma",
+    "arquivo": "img/selos/runa_do_cacador.svg"
+   },
+   {
+    "id": "presas",
+    "nome": "Presas",
+    "raridade": "RARA",
+    "cor_da_raridade": "#95CBFF",
+    "grupo": "em_jogo",
+    "como_ganha": "25 execuções por mordida",
+    "arquivo": "img/selos/presas.svg"
+   },
+   {
+    "id": "olho_insone",
+    "nome": "Olho Insone",
+    "raridade": "RARA",
+    "cor_da_raridade": "#95CBFF",
+    "grupo": "em_jogo",
+    "como_ganha": "chegar ao top 3 em cinco partidas",
+    "arquivo": "img/selos/olho_insone.svg"
+   },
+   {
+    "id": "caveira",
+    "nome": "Caveira de Josefov",
+    "raridade": "ÉPICA",
+    "cor_da_raridade": "#DAA0F9",
+    "grupo": "em_jogo",
+    "como_ganha": "100 abates na cabeça",
+    "arquivo": "img/selos/caveira.svg"
+   },
+   {
+    "id": "morcego",
+    "nome": "Morcego da Torre",
+    "raridade": "COMUM",
+    "cor_da_raridade": "#A0EDA0",
+    "grupo": "compra",
+    "como_ganha": "loja, 300 moedas",
+    "arquivo": "img/selos/morcego.svg"
+   },
+   {
+    "id": "rosa_negra",
+    "nome": "Rosa Negra",
+    "raridade": "RARA",
+    "cor_da_raridade": "#95CBFF",
+    "grupo": "compra",
+    "como_ganha": "passe, degrau 8",
+    "arquivo": "img/selos/rosa_negra.svg"
+   },
+   {
+    "id": "serpente",
+    "nome": "Serpente de Vyšehrad",
+    "raridade": "ÉPICA",
+    "cor_da_raridade": "#DAA0F9",
+    "grupo": "compra",
+    "como_ganha": "passe VIP, degrau 15",
+    "arquivo": "img/selos/serpente.svg"
+   },
+   {
+    "id": "tag_erdop",
+    "nome": "Tag ERDOP",
+    "raridade": "LENDÁRIA",
+    "cor_da_raridade": "#FFDD6C",
+    "grupo": "compra",
+    "como_ganha": "loja, pacote da banda ERDOP",
+    "arquivo": "img/selos/tag_erdop.svg"
+   },
+   {
+    "id": "lua_de_sangue",
+    "nome": "Lua de Sangue",
+    "raridade": "LENDÁRIA",
+    "cor_da_raridade": "#FFDD6C",
+    "grupo": "temporada",
+    "como_ganha": "terminar a Fase Beta no top 100",
+    "arquivo": "img/selos/lua_de_sangue.svg"
+   },
+   {
+    "id": "cruz_de_sao_pedro",
+    "nome": "Cruz de São Pedro",
+    "raridade": "ÉPICA",
+    "cor_da_raridade": "#DAA0F9",
+    "grupo": "temporada",
+    "como_ganha": "completar todas as quests da temporada",
+    "arquivo": "img/selos/cruz_de_sao_pedro.svg"
+   },
+   {
+    "id": "marca_da_garra",
+    "nome": "Marca da Garra",
+    "raridade": "RARA",
+    "cor_da_raridade": "#95CBFF",
+    "grupo": "temporada",
+    "como_ganha": "50 abates com as garras na temporada",
+    "arquivo": "img/selos/marca_da_garra.svg"
+   },
+   {
+    "id": "coroa_do_anciao",
+    "nome": "Coroa do Ancião",
+    "raridade": "LENDÁRIA",
+    "cor_da_raridade": "#FFDD6C",
+    "grupo": "temporada",
+    "como_ganha": "chegar à patente ANCIÃO na temporada",
+    "arquivo": "img/selos/coroa_do_anciao.svg"
+   }
+  ],
+  "posicao_por_arma": {
+   "pistola": {
+    "x_pct": 58,
+    "y_pct": 30,
+    "quadro": 0,
+    "superficie": "ferrolho"
+   },
+   "revolver": {
+    "x_pct": 60,
+    "y_pct": 42,
+    "quadro": 0,
+    "superficie": "armação, sobre o gatilho"
+   },
+   "fuzil": {
+    "x_pct": 42,
+    "y_pct": 46,
+    "quadro": 0,
+    "superficie": "caixa da culatra"
+   },
+   "escopeta": {
+    "x_pct": 75,
+    "y_pct": 54,
+    "quadro": 0,
+    "superficie": "coronha de madeira"
+   },
+   "smg": {
+    "x_pct": 53,
+    "y_pct": 31,
+    "quadro": 0,
+    "superficie": "caixa da culatra"
+   },
+   "dmr": null,
+   "sniper": {
+    "x_pct": 80,
+    "y_pct": 50,
+    "quadro": 0,
+    "superficie": "coronha"
+   },
+   "cano_serrado": {
+    "x_pct": 52,
+    "y_pct": 44,
+    "quadro": 0,
+    "superficie": "báscula"
+   },
+   "besta": {
+    "x_pct": 28,
+    "y_pct": 47,
+    "quadro": 0,
+    "superficie": "coronha"
+   },
+   "granadas": {
+    "x_pct": 50,
+    "y_pct": 50,
+    "quadro": 0,
+    "superficie": "corpo do cilindro"
+   },
+   "garras": {
+    "x_pct": 39,
+    "y_pct": 60,
+    "quadro": 0,
+    "superficie": "dorso da mão"
+   }
+  },
+  "como_posicionar": "x,y em % do quadro 640x400 do giro, medido no quadro 0 (perfil). Nos outros quadros a superfície gira: a página pode mostrar o selo só entre os quadros 22 e 2."
+ },
+ "customizar": {
+  "estado": "proposta",
+  "nota": "O jogo ainda não tem skin, acabamento nem acessório de arma no código (grep por skin/acabamento/decalque/acessorio em Source/Weapons, 14/11 e 15/11). Tudo aqui é proposta de desenho para o site; as regras de desbloqueio são sugestão. Substitui os selos como centro da customização: os selos viram adesivos.",
+  "como_aplicar": [
+   "1. Para o quadro q do giro, recorte o mesmo retângulo 640x400 em <id>_luz.webp, <id>_mascara.webp e em cada <id>_ac_*.webp ligado.",
+   "2. Luz: cinza 18% renderizado com a mesma luz do giro (AgX). Valor L = canal vermelho / 255.",
+   "3. Para cada região da máscara (R = corpo/metal, G = empunhadura/coronha/madeira, B = detalhes), pinte base × L × ganho do acabamento daquela região e aplique a receita (campo 'mistura').",
+   "4. Grafismo: ladrilho SVG branco, tingido e desenhado em 'overlay' (opacidade 0,35–0,6) só onde a máscara tem a região escolhida (padrão R).",
+   "5. Acessórios: desenhe a tira do acessório por cima do resultado no mesmo quadro (já vem recortado onde a arma o esconde).",
+   "6. O giro original (<id>_giro.webp) continua sendo a vista 'de fábrica'; a customizada é feita em canvas por cima dele."
+  ],
+  "regioes": {
+   "R": "corpo / metal principal",
+   "G": "empunhadura, coronha, madeira, forro",
+   "B": "detalhes: ferrolho, gatilho, trilho, miras, pinos, garra"
+  },
+  "acabamentos": [
+   {
+    "id": "aco_de_fabrica",
+    "nome": "Aço de fábrica",
+    "cor_base": "#6E7174",
+    "tipo": "metalizado",
+    "receita": {
+     "ganho": 2.6,
+     "contraste": 1.35,
+     "especular": 0.55,
+     "desgaste": 0.0,
+     "mistura": "cor = base × luz × ganho, com contraste aplicado na luz; soma branco (tingido de 30% da base) onde luz > 0,72, na força 'especular'"
+    },
+    "desbloqueio": {
+     "tipo": "em_jogo",
+     "texto": "padrão de toda arma",
+     "proposta": true
+    }
+   },
+   {
+    "id": "preto_fosco",
+    "nome": "Preto fosco",
+    "cor_base": "#1C1C1F",
+    "tipo": "fosco",
+    "receita": {
+     "ganho": 3.0,
+     "contraste": 1.0,
+     "especular": 0.08,
+     "desgaste": 0.0,
+     "mistura": "cor = base × luz × ganho; sem brilho somado"
+    },
+    "desbloqueio": {
+     "tipo": "em_jogo",
+     "texto": "10 abates com a arma",
+     "proposta": true
+    }
+   },
+   {
+    "id": "ouro_velho",
+    "nome": "Ouro velho",
+    "cor_base": "#9A7638",
+    "tipo": "metalizado",
+    "receita": {
+     "ganho": 2.7,
+     "contraste": 1.45,
+     "especular": 0.7,
+     "desgaste": 0.35,
+     "mistura": "cor = base × luz × ganho, com contraste aplicado na luz; soma branco (tingido de 30% da base) onde luz > 0,72, na força 'especular'"
+    },
+    "desbloqueio": {
+     "tipo": "passe",
+     "texto": "passe VIP, degrau 20",
+     "proposta": true
+    }
+   },
+   {
+    "id": "cromo_sangue",
+    "nome": "Cromo sangue",
+    "cor_base": "#8C0E1A",
+    "tipo": "metalizado",
+    "receita": {
+     "ganho": 2.8,
+     "contraste": 1.7,
+     "especular": 1.0,
+     "desgaste": 0.0,
+     "mistura": "cor = base × luz × ganho, com contraste aplicado na luz; soma branco (tingido de 30% da base) onde luz > 0,72, na força 'especular'"
+    },
+    "desbloqueio": {
+     "tipo": "loja",
+     "texto": "loja, 800 moedas",
+     "proposta": true
+    }
+   },
+   {
+    "id": "osso",
+    "nome": "Osso",
+    "cor_base": "#D6CAB2",
+    "tipo": "fosco",
+    "receita": {
+     "ganho": 2.2,
+     "contraste": 0.9,
+     "especular": 0.15,
+     "desgaste": 0.1,
+     "mistura": "cor = base × luz × ganho; sem brilho somado"
+    },
+    "desbloqueio": {
+     "tipo": "conquista",
+     "texto": "50 execuções por mordida",
+     "proposta": true
+    }
+   },
+   {
+    "id": "verde_catedral",
+    "nome": "Verde catedral",
+    "cor_base": "#2E4A3A",
+    "tipo": "desgastado",
+    "receita": {
+     "ganho": 2.8,
+     "contraste": 1.2,
+     "especular": 0.3,
+     "desgaste": 0.45,
+     "mistura": "como fosco, mas o ruído (desgaste) clareia as arestas: onde luz > 0,6, mistura 'desgaste' de aço claro #8A8C8E"
+    },
+    "desbloqueio": {
+     "tipo": "passe",
+     "texto": "passe livre, degrau 10",
+     "proposta": true
+    }
+   },
+   {
+    "id": "roxo_estetas",
+    "nome": "Roxo ESTETAS",
+    "cor_base": "#5A2A6E",
+    "tipo": "perolado",
+    "receita": {
+     "ganho": 2.7,
+     "contraste": 1.25,
+     "especular": 0.45,
+     "desgaste": 0.0,
+     "mistura": "como metalizado, e o matiz da base gira até 25° conforme a luz (sombra mais azul, luz mais rosada)"
+    },
+    "desbloqueio": {
+     "tipo": "conquista",
+     "texto": "vencer uma partida como ESTETAS",
+     "proposta": true
+    }
+   },
+   {
+    "id": "ferrugem",
+    "nome": "Ferrugem",
+    "cor_base": "#7A3A1C",
+    "tipo": "desgastado",
+    "receita": {
+     "ganho": 2.6,
+     "contraste": 1.15,
+     "especular": 0.12,
+     "desgaste": 0.7,
+     "mistura": "como fosco, mas o ruído (desgaste) clareia as arestas: onde luz > 0,6, mistura 'desgaste' de aço claro #8A8C8E"
+    },
+    "desbloqueio": {
+     "tipo": "em_jogo",
+     "texto": "sobreviver a 10 fechamentos de zona",
+     "proposta": true
+    }
+   }
+  ],
+  "grafismos": [
+   {
+    "id": "runas",
+    "nome": "Runas",
+    "arquivo": "img/armas/grafismos/runas.svg",
+    "ladrilho_px": 160,
+    "escala_sugerida": 0.5,
+    "mistura": "overlay",
+    "opacidade": 0.45,
+    "regiao_padrao": "R",
+    "desbloqueio": {
+     "tipo": "conquista",
+     "texto": "chegar à patente CAÇADOR",
+     "proposta": true
+    }
+   },
+   {
+    "id": "espinhos",
+    "nome": "Espinhos",
+    "arquivo": "img/armas/grafismos/espinhos.svg",
+    "ladrilho_px": 160,
+    "escala_sugerida": 0.5,
+    "mistura": "overlay",
+    "opacidade": 0.45,
+    "regiao_padrao": "R",
+    "desbloqueio": {
+     "tipo": "passe",
+     "texto": "passe livre, degrau 5",
+     "proposta": true
+    }
+   },
+   {
+    "id": "escamas",
+    "nome": "Escamas",
+    "arquivo": "img/armas/grafismos/escamas.svg",
+    "ladrilho_px": 160,
+    "escala_sugerida": 0.5,
+    "mistura": "overlay",
+    "opacidade": 0.45,
+    "regiao_padrao": "R",
+    "desbloqueio": {
+     "tipo": "loja",
+     "texto": "loja, 300 moedas",
+     "proposta": true
+    }
+   },
+   {
+    "id": "vitral",
+    "nome": "Vitral",
+    "arquivo": "img/armas/grafismos/vitral.svg",
+    "ladrilho_px": 160,
+    "escala_sugerida": 0.5,
+    "mistura": "overlay",
+    "opacidade": 0.45,
+    "regiao_padrao": "R",
+    "desbloqueio": {
+     "tipo": "conquista",
+     "texto": "completar as quests da catedral",
+     "proposta": true
+    }
+   },
+   {
+    "id": "pichacao",
+    "nome": "Pichação",
+    "arquivo": "img/armas/grafismos/pichacao.svg",
+    "ladrilho_px": 160,
+    "escala_sugerida": 0.5,
+    "mistura": "overlay",
+    "opacidade": 0.45,
+    "regiao_padrao": "R",
+    "desbloqueio": {
+     "tipo": "loja",
+     "texto": "pacote da banda ERDOP",
+     "proposta": true
+    }
+   },
+   {
+    "id": "veias",
+    "nome": "Veias",
+    "arquivo": "img/armas/grafismos/veias.svg",
+    "ladrilho_px": 160,
+    "escala_sugerida": 0.5,
+    "mistura": "overlay",
+    "opacidade": 0.45,
+    "regiao_padrao": "R",
+    "desbloqueio": {
+     "tipo": "passe",
+     "texto": "passe VIP, degrau 15",
+     "proposta": true
+    }
+   }
+  ],
+  "adesivos": {
+   "de_onde": "selos.lista (rodada 3): cada selo vira um adesivo de 1 por arma, na posição de selos.posicao_por_arma",
+   "proposta": true
+  },
+  "acessorios_tipos": {
+   "luneta": {
+    "nome": "Luneta 4x (ACOG)",
+    "desbloqueio": {
+     "tipo": "em_jogo",
+     "texto": "achar uma luneta em baú e usá-la em 3 partidas",
+     "proposta": true
+    }
+   },
+   "supressor": {
+    "nome": "Supressor de anéis",
+    "desbloqueio": {
+     "tipo": "loja",
+     "texto": "loja, 500 moedas",
+     "proposta": true
+    }
+   },
+   "lanterna": {
+    "nome": "Lanterna tática",
+    "desbloqueio": {
+     "tipo": "passe",
+     "texto": "passe livre, degrau 12",
+     "proposta": true
+    }
+   },
+   "pingente": {
+    "nome": "Pingente: cruz gótica com pedra vermelha",
+    "desbloqueio": {
+     "tipo": "conquista",
+     "texto": "primeira vitória da temporada",
+     "proposta": true
+    }
+   }
+  },
+  "fonte": "I:/WaruraseIntro/site/armas/r4 (passes_r4.py, acessorios.py, grafismos.py, montar_r4.py)"
+ },
+ "armas_brancas_r9": "Rodada 9 (18/11): katana, espadão flamejante, adaga mística e espadas duplas curvas (D:/WaruraseIntro/site_r7/r9_armas_brancas.py). Adaga e duplas são PROPOSTA (campo proposta: true)."
+}

@@ -1,0 +1,1213 @@
+{
+ "_leia": "Gerado em 14/11 para o item 07 (loja = catálogo de moda). Peças: render NOVO com textura das malhas otimizadas da loja, fundo transparente. Preço e raridade: Ferramentas/loja/base_marcas.json (gerado do catálogo do jogo, Docs/Loja/CATALOGO_LOJA.md). Nome e frase da marca: Source/GameAnimationSample/Economy/GasMarcasDaLoja.cpp:27-51. Toda peça renderizada tem cópia .webp (qualidade 85) ao lado do .png, bem mais leve para a página.",
+ "gerado_em": "2026-11-14",
+ "marcas": [
+  {
+   "id": "sussurro",
+   "nome": "SUSSURRO",
+   "frase": "Vampiro punk: couro, capuz, tachas e correntes.",
+   "cor": "#E8E1D3",
+   "logo": "img/moda/logo_sussurro.svg",
+   "fonte_tipografica": "Playfair Display SC Bold Italic (Fontes/Marcas/Sussurro.ttf, OFL)",
+   "tendencias": [
+    "couro envelhecido",
+    "vinil roxo",
+    "estampa de cruzes e corações",
+    "fivelas e tachas",
+    "saia em camadas"
+   ],
+   "pecas": [
+    {
+     "nome": "VESTIDO GÓTICO",
+     "tipo": "roupa",
+     "categoria": "Traje",
+     "raridade": "Raro",
+     "preco": 1400,
+     "moeda": "moedas",
+     "imagem": "img/moda/sussurro_vestido_gotico.png",
+     "imagem_webp": "img/moda/sussurro_vestido_gotico.webp",
+     "tamanho": [
+      555,
+      900
+     ],
+     "id_jogo": "DAZ_G8F_VESTIDO_GOTICO",
+     "fonte": "I:/WaruraseAsset/catalogo/roupas-otimizadas/DAZ_G8F_VESTIDO_GOTICO/ + C:/Users/warurase/Desktop/Warurase/Ferramentas/roupa_texturas/saida (mapas T_G8F_PGDress_Purp); render Blender Cycles com fundo transparente, 14/11",
+     "id": "sussurro.vestido_gotico"
+    },
+    {
+     "nome": "VESTIDO VERMELHO",
+     "tipo": "roupa",
+     "categoria": "Traje",
+     "raridade": "Raro",
+     "preco": 1400,
+     "moeda": "moedas",
+     "imagem": "img/moda/sussurro_vestido_vermelho.png",
+     "imagem_webp": "img/moda/sussurro_vestido_vermelho.webp",
+     "tamanho": [
+      378,
+      900
+     ],
+     "id_jogo": "DAZ_G8F_VESTIDO_VERMELHO",
+     "fonte": "I:/WaruraseAsset/catalogo/roupas-otimizadas/DAZ_G8F_VESTIDO_VERMELHO/ + C:/Users/warurase/Desktop/Warurase/Ferramentas/roupa_texturas/saida (mapas T_G8F_SHLRD_Dress3); render Blender Cycles com fundo transparente, 14/11",
+     "id": "sussurro.vestido_vermelho"
+    },
+    {
+     "nome": "JAQUETA GÓTICA",
+     "tipo": "roupa",
+     "categoria": "Traje",
+     "raridade": "Raro",
+     "preco": 1600,
+     "moeda": "moedas",
+     "imagem": "img/moda/sussurro_jaqueta_gotica.png",
+     "imagem_webp": "img/moda/sussurro_jaqueta_gotica.webp",
+     "tamanho": [
+      900,
+      548
+     ],
+     "id_jogo": "DAZ_G8F_JAQUETA_GOTICA",
+     "fonte": "I:/WaruraseAsset/catalogo/roupas-otimizadas/DAZ_G8F_JAQUETA_GOTICA/ + C:/Users/warurase/Desktop/Warurase/Ferramentas/roupa_texturas/saida (mapas T_G8F_PGJacket_Uni); render Blender Cycles com fundo transparente, 14/11",
+     "id": "sussurro.jaqueta_gotica"
+    },
+    {
+     "nome": "COLETE SUSSURRO",
+     "tipo": "roupa",
+     "categoria": "Traje",
+     "raridade": "Incomum",
+     "preco": 900,
+     "moeda": "moedas",
+     "imagem": "img/moda/sussurro_colete.png",
+     "imagem_webp": "img/moda/sussurro_colete.webp",
+     "tamanho": [
+      683,
+      900
+     ],
+     "id_jogo": "DAZ_F_COLETE",
+     "fonte": "I:/WaruraseAsset/catalogo/roupas-otimizadas/DAZ_F_COLETE/ + C:/Users/warurase/Desktop/Warurase/Ferramentas/roupa_texturas/saida (mapas T_G3M_DWprVest); render Blender Cycles com fundo transparente, 14/11",
+     "id": "sussurro.colete_sussurro"
+    },
+    {
+     "nome": "TOP ROCKER",
+     "tipo": "roupa",
+     "categoria": "Traje",
+     "raridade": "Incomum",
+     "preco": 900,
+     "moeda": "moedas",
+     "imagem": "img/moda/sussurro_top_rocker.png",
+     "imagem_webp": "img/moda/sussurro_top_rocker.webp",
+     "tamanho": [
+      847,
+      890
+     ],
+     "id_jogo": "DAZ_G8F_TOP_ROCKER",
+     "fonte": "I:/WaruraseAsset/catalogo/roupas-otimizadas/DAZ_G8F_TOP_ROCKER/ + C:/Users/warurase/Desktop/Warurase/Ferramentas/roupa_texturas/saida (mapas T_G8F_mRockerShirt01); render Blender Cycles com fundo transparente, 14/11",
+     "id": "sussurro.top_rocker"
+    },
+    {
+     "nome": "SAIA ROCKER",
+     "tipo": "roupa",
+     "categoria": "Calças",
+     "raridade": "Incomum",
+     "preco": 800,
+     "moeda": "moedas",
+     "imagem": "img/moda/sussurro_saia_rocker.png",
+     "imagem_webp": "img/moda/sussurro_saia_rocker.webp",
+     "tamanho": [
+      796,
+      900
+     ],
+     "id_jogo": "DAZ_G8F_SAIA_ROCKER",
+     "fonte": "I:/WaruraseAsset/catalogo/roupas-otimizadas/DAZ_G8F_SAIA_ROCKER/ + C:/Users/warurase/Desktop/Warurase/Ferramentas/roupa_texturas/saida (mapas T_G8F_mRockerSkirt01); render Blender Cycles com fundo transparente, 14/11",
+     "id": "sussurro.saia_rocker"
+    },
+    {
+     "nome": "BOTAS SUSSURRO",
+     "tipo": "acessorio",
+     "categoria": "Calçados",
+     "raridade": "Raro",
+     "preco": 1100,
+     "moeda": "moedas",
+     "imagem": "img/moda/sussurro_botas.png",
+     "imagem_webp": "img/moda/sussurro_botas.webp",
+     "tamanho": [
+      900,
+      738
+     ],
+     "id_jogo": "DAZ_F_BOTAS",
+     "fonte": "I:/WaruraseAsset/catalogo/roupas-otimizadas/DAZ_F_BOTAS/ + C:/Users/warurase/Desktop/Warurase/Ferramentas/roupa_texturas/saida (mapas T_G3M_DWprBoots); render Blender Cycles com fundo transparente, 14/11",
+     "id": "sussurro.botas_sussurro"
+    },
+    {
+     "nome": "GARGANTILHA",
+     "tipo": "acessorio",
+     "categoria": "Acessório",
+     "raridade": "Incomum",
+     "preco": 600,
+     "moeda": "moedas",
+     "imagem": "img/moda/sussurro_gargantilha.png",
+     "imagem_webp": "img/moda/sussurro_gargantilha.webp",
+     "tamanho": [
+      900,
+      539
+     ],
+     "id_jogo": "DAZ_F_GARGANTILHA",
+     "fonte": "I:/WaruraseAsset/catalogo/roupas-otimizadas/DAZ_F_GARGANTILHA/ + C:/Users/warurase/Desktop/Warurase/Ferramentas/roupa_texturas/saida (mapas T_G3M_DWprBeltChoker); render Blender Cycles com fundo transparente, 14/11",
+     "id": "sussurro.gargantilha"
+    }
+   ],
+   "clima": [
+    "img/moda/clima_sussurro_estampa.jpg",
+    "img/moda/clima_sussurro_couro.jpg"
+   ],
+   "colecao": {
+    "numero": "01",
+    "nome": "Couro e Cinza",
+    "estacao": "Inverno de Praga · TEMPORADA SANGUE NOVO",
+    "estado": "proposta (nome de coleção do site)"
+   }
+  },
+  {
+   "id": "forja",
+   "nome": "FORJA",
+   "frase": "Armadura: do EXO de entrada ao Cavaleiro e ao Tirano.",
+   "cor": "#B8BEC6",
+   "logo": "img/moda/logo_forja.svg",
+   "fonte_tipografica": "Black Ops One (Fontes/Marcas/Forja.ttf, OFL)",
+   "tendencias": [
+    "aço com rebites",
+    "couro cru",
+    "exoesqueleto",
+    "arnês tático",
+    "cinza-chumbo"
+   ],
+   "pecas": [
+    {
+     "nome": "ARMADURA DO CAVALEIRO",
+     "tipo": "roupa",
+     "categoria": "Traje",
+     "raridade": "Lendário",
+     "preco": 3200,
+     "moeda": "moedas",
+     "imagem": "img/moda/forja_armadura_cavaleiro.png",
+     "imagem_webp": "img/moda/forja_armadura_cavaleiro.webp",
+     "tamanho": [
+      900,
+      527
+     ],
+     "id_jogo": "DAZ_M_PEITORAL_CAVALEIRO",
+     "fonte": "I:/WaruraseAsset/catalogo/roupas-otimizadas/DAZ_M_PEITORAL_CAVALEIRO/ + C:/Users/warurase/Desktop/Warurase/Ferramentas/roupa_texturas/saida (mapas T_G3M_AHB_CBreast_04); render Blender Cycles com fundo transparente, 14/11",
+     "id": "forja.armadura_do_cavaleiro"
+    },
+    {
+     "nome": "CAPA DO CAVALEIRO",
+     "tipo": "acessorio",
+     "categoria": "Acessório",
+     "raridade": "Lendário",
+     "preco": 2600,
+     "moeda": "moedas",
+     "imagem": "img/moda/forja_capa_cavaleiro.png",
+     "imagem_webp": "img/moda/forja_capa_cavaleiro.webp",
+     "tamanho": [
+      374,
+      900
+     ],
+     "id_jogo": "DAZ_M_CAPA",
+     "fonte": "I:/WaruraseAsset/catalogo/roupas-otimizadas/DAZ_M_CAPA/ + C:/Users/warurase/Desktop/Warurase/Ferramentas/roupa_texturas/saida (mapas T_G3M_AHB_CCape_04 + CLShoulder/CRShoulder); render Blender Cycles com fundo transparente, 14/11",
+     "id": "forja.capa_do_cavaleiro"
+    },
+    {
+     "nome": "JAQUETA CAÇADORA",
+     "tipo": "roupa",
+     "categoria": "Traje",
+     "raridade": "Raro",
+     "preco": 1600,
+     "moeda": "moedas",
+     "imagem": "img/moda/forja_jaqueta_cacadora.png",
+     "imagem_webp": "img/moda/forja_jaqueta_cacadora.webp",
+     "tamanho": [
+      900,
+      633
+     ],
+     "id_jogo": "DAZ_G8F_JAQUETA_CACADORA",
+     "fonte": "I:/WaruraseAsset/catalogo/roupas-otimizadas/DAZ_G8F_JAQUETA_CACADORA/ + C:/Users/warurase/Desktop/Warurase/Ferramentas/roupa_texturas/saida (mapas T_G8F_BH_M8Jacket_Dark); render Blender Cycles com fundo transparente, 14/11",
+     "id": "forja.jaqueta_cacadora"
+    },
+    {
+     "nome": "TRAJE FURTIVO",
+     "tipo": "roupa",
+     "categoria": "Traje",
+     "raridade": "Raro",
+     "preco": 1400,
+     "moeda": "moedas",
+     "imagem": "img/moda/forja_traje_furtivo.png",
+     "imagem_webp": "img/moda/forja_traje_furtivo.webp",
+     "tamanho": [
+      616,
+      900
+     ],
+     "id_jogo": "DAZ_G8F_TRAJE_FURTIVO",
+     "fonte": "I:/WaruraseAsset/catalogo/roupas-otimizadas/DAZ_G8F_TRAJE_FURTIVO/ + C:/Users/warurase/Desktop/Warurase/Ferramentas/roupa_texturas/saida (mapas T_G8F_BlackSiren_Suit); render Blender Cycles com fundo transparente, 14/11",
+     "id": "forja.traje_furtivo"
+    },
+    {
+     "nome": "ARNÊS FURTIVO",
+     "tipo": "acessorio",
+     "categoria": "Acessório",
+     "raridade": "Raro",
+     "preco": 1300,
+     "moeda": "moedas",
+     "imagem": "img/moda/forja_arnes_furtivo.png",
+     "imagem_webp": "img/moda/forja_arnes_furtivo.webp",
+     "tamanho": [
+      758,
+      900
+     ],
+     "id_jogo": "DAZ_G8F_PEITORAL_ARNES",
+     "fonte": "I:/WaruraseAsset/catalogo/roupas-otimizadas/DAZ_G8F_PEITORAL_ARNES/ + C:/Users/warurase/Desktop/Warurase/Ferramentas/roupa_texturas/saida (mapas T_G8F_BlackSiren_Harness); render Blender Cycles com fundo transparente, 14/11",
+     "id": "forja.arnes_furtivo"
+    },
+    {
+     "nome": "PERNEIRAS EXO",
+     "tipo": "roupa",
+     "categoria": "Calças",
+     "raridade": "Raro",
+     "preco": 1100,
+     "moeda": "moedas",
+     "imagem": "img/moda/forja_perneiras_exo.png",
+     "imagem_webp": "img/moda/forja_perneiras_exo.webp",
+     "tamanho": [
+      716,
+      900
+     ],
+     "id_jogo": "DAZ_M_PERNEIRAS",
+     "fonte": "I:/WaruraseAsset/catalogo/roupas-otimizadas/DAZ_M_PERNEIRAS/ + C:/Users/warurase/Desktop/Warurase/Ferramentas/roupa_texturas/saida (mapas T_G3M_AHB_EXOM*Leg_04); render Blender Cycles com fundo transparente, 14/11",
+     "id": "forja.perneiras_exo"
+    },
+    {
+     "nome": "BOTAS EXO",
+     "tipo": "acessorio",
+     "categoria": "Calçados",
+     "raridade": "Raro",
+     "preco": 1000,
+     "moeda": "moedas",
+     "imagem": "img/moda/forja_botas_exo.png",
+     "imagem_webp": "img/moda/forja_botas_exo.webp",
+     "tamanho": [
+      802,
+      900
+     ],
+     "id_jogo": "DAZ_M_BOTAS",
+     "fonte": "I:/WaruraseAsset/catalogo/roupas-otimizadas/DAZ_M_BOTAS/ + C:/Users/warurase/Desktop/Warurase/Ferramentas/roupa_texturas/saida (mapas T_G3M_AHB_EXOM*Boot_04); render Blender Cycles com fundo transparente, 14/11",
+     "id": "forja.botas_exo"
+    },
+    {
+     "nome": "BOTAS FURTIVAS",
+     "tipo": "acessorio",
+     "categoria": "Calçados",
+     "raridade": "Raro",
+     "preco": 1000,
+     "moeda": "moedas",
+     "imagem": "img/moda/forja_botas_furtivas.png",
+     "imagem_webp": "img/moda/forja_botas_furtivas.webp",
+     "tamanho": [
+      773,
+      900
+     ],
+     "id_jogo": "DAZ_G8F_BOTAS_FURTIVAS",
+     "fonte": "I:/WaruraseAsset/catalogo/roupas-otimizadas/DAZ_G8F_BOTAS_FURTIVAS/ + C:/Users/warurase/Desktop/Warurase/Ferramentas/roupa_texturas/saida (mapas T_G8F_BlackSiren_L/RBoot); render Blender Cycles com fundo transparente, 14/11",
+     "id": "forja.botas_furtivas"
+    }
+   ],
+   "clima": [
+    "img/moda/clima_forja_metal.jpg",
+    "img/moda/clima_forja_couro.jpg"
+   ],
+   "colecao": {
+    "numero": "01",
+    "nome": "Aço Frio",
+    "estacao": "Inverno de Praga · TEMPORADA SANGUE NOVO",
+    "estado": "proposta (nome de coleção do site)"
+   }
+  },
+  {
+   "id": "alta_noite",
+   "nome": "ALTA NOITE",
+   "frase": "Gala vampírica: o traje completo.",
+   "cor": "#C9A45C",
+   "logo": "img/moda/logo_alta_noite.svg",
+   "fonte_tipografica": "UnifrakturCook Bold (Fontes/Marcas/AltaNoite.ttf, OFL)",
+   "tendencias": [
+    "gala",
+    "traje completo",
+    "ouro velho",
+    "luz de vela"
+   ],
+   "pecas": [],
+   "pecas_nota": "Vitrine vazia no jogo: a regra da marca é 'traje completo que não é Daz' (GasMarcasDaLoja.cpp:121-125) e o catálogo de hoje é todo Daz. Nada foi inventado; ver notas (pedido ao Gemini).",
+   "aguardando_gemini": [
+    "img/moda/gemini_alta_noite_look1.png",
+    "img/moda/gemini_alta_noite_look2.png",
+    "img/moda/gemini_alta_noite_detalhe.jpg"
+   ],
+   "clima": [
+    "img/moda/clima_alta_noite_velas.jpg",
+    "img/cla_anfitria_corpo.jpg"
+   ],
+   "colecao": {
+    "numero": "01",
+    "nome": "Gala da Trégua",
+    "estacao": "Inverno de Praga · TEMPORADA SANGUE NOVO",
+    "estado": "proposta (nome de coleção do site)"
+   }
+  },
+  {
+   "id": "beco",
+   "nome": "BECO",
+   "frase": "Rua de Praga: dança, provocação, pose e pichação.",
+   "cor": "#CC0000",
+   "logo": "img/moda/logo_beco.svg",
+   "fonte_tipografica": "Sedgwick Ave Display (Fontes/Marcas/Beco.ttf, OFL)",
+   "tendencias": [
+    "tag",
+    "spray escorrido",
+    "gesto de provocação",
+    "palavra em tcheco"
+   ],
+   "pecas": [
+    {
+     "nome": "Tag UPÍR",
+     "tipo": "acessorio",
+     "categoria": "Grafite (arte de rua)",
+     "raridade": null,
+     "preco": null,
+     "imagem": "img/tag_upir_knewave.png",
+     "tamanho": [
+      900,
+      450
+     ],
+     "fonte": "já publicada na rodada 1 (img/, PNG com alfa); gerador em Ferramentas/grafite",
+     "id": "beco.tag_upir"
+    },
+    {
+     "nome": "Tag PACTO",
+     "tipo": "acessorio",
+     "categoria": "Grafite (arte de rua)",
+     "raridade": null,
+     "preco": null,
+     "imagem": "img/tag_pacto_knewave.png",
+     "tamanho": [
+      900,
+      450
+     ],
+     "fonte": "já publicada na rodada 1 (img/, PNG com alfa); gerador em Ferramentas/grafite",
+     "id": "beco.tag_pacto"
+    },
+    {
+     "nome": "Tag TRÉGUA",
+     "tipo": "acessorio",
+     "categoria": "Grafite (arte de rua)",
+     "raridade": null,
+     "preco": null,
+     "imagem": "img/tag_tregua_nosifer.png",
+     "tamanho": [
+      900,
+      450
+     ],
+     "fonte": "já publicada na rodada 1 (img/, PNG com alfa); gerador em Ferramentas/grafite",
+     "id": "beco.tag_tregua"
+    },
+    {
+     "nome": "Tag ERDOP (gesto)",
+     "tipo": "acessorio",
+     "categoria": "Grafite (arte de rua)",
+     "raridade": null,
+     "preco": null,
+     "imagem": "img/tag_erdop_gesto.png",
+     "tamanho": [
+      900,
+      450
+     ],
+     "fonte": "já publicada na rodada 1 (img/, PNG com alfa); gerador em Ferramentas/grafite",
+     "id": "beco.tag_erdop_gesto"
+    },
+    {
+     "nome": "KREV",
+     "tipo": "acessorio",
+     "categoria": "Grafite (arte de rua)",
+     "raridade": null,
+     "preco": null,
+     "imagem": "img/krev.png",
+     "tamanho": [
+      640,
+      320
+     ],
+     "fonte": "já publicada na rodada 1 (img/, PNG com alfa); gerador em Ferramentas/grafite",
+     "id": "beco.krev"
+    },
+    {
+     "nome": "NOC",
+     "tipo": "acessorio",
+     "categoria": "Grafite (arte de rua)",
+     "raridade": null,
+     "preco": null,
+     "imagem": "img/noc.png",
+     "tamanho": [
+      640,
+      320
+     ],
+     "fonte": "já publicada na rodada 1 (img/, PNG com alfa); gerador em Ferramentas/grafite",
+     "id": "beco.noc"
+    },
+    {
+     "nome": "TMA",
+     "tipo": "acessorio",
+     "categoria": "Grafite (arte de rua)",
+     "raridade": null,
+     "preco": null,
+     "imagem": "img/tma.png",
+     "tamanho": [
+      640,
+      320
+     ],
+     "fonte": "já publicada na rodada 1 (img/, PNG com alfa); gerador em Ferramentas/grafite",
+     "id": "beco.tma"
+    },
+    {
+     "nome": "HLAD",
+     "tipo": "acessorio",
+     "categoria": "Grafite (arte de rua)",
+     "raridade": null,
+     "preco": null,
+     "imagem": "img/hlad.png",
+     "tamanho": [
+      640,
+      320
+     ],
+     "fonte": "já publicada na rodada 1 (img/, PNG com alfa); gerador em Ferramentas/grafite",
+     "id": "beco.hlad"
+    }
+   ],
+   "pecas_nota": "BECO não vende roupa: no jogo a marca é a roda de gestos (tecla T) e a arte de rua. Os recortes são as tags já publicadas (PNG com alfa); os gestos não têm imagem.",
+   "aguardando_gemini": [
+    "img/moda/gemini_beco_look1.png",
+    "img/moda/gemini_beco_acessorios.png"
+   ],
+   "clima": [
+    "img/beco_mural_olho_da_vigilia.jpg",
+    "img/erdop_grafite_beijo_na_pele.jpg"
+   ],
+   "colecao": {
+    "numero": "01",
+    "nome": "Parede Nova",
+    "estacao": "Inverno de Praga · TEMPORADA SANGUE NOVO",
+    "estado": "proposta (nome de coleção do site)"
+   }
+  }
+ ],
+ "props": [
+  {
+   "nome": "Gárgula",
+   "imagem": "img/props/gargula.png",
+   "fonte": "Site/game/modelos/estatua_gargula.glb",
+   "categoria": "Estátuas e símbolos",
+   "curiosidades": [
+    "Na Praga real, as gárgulas de São Vito são calhas: escoam a chuva do telhado. A maior parte das que se veem hoje veio da fase neogótica, de 1861 a 1929.",
+    "No jogo, é a gárgula em que a Cria senta no telhado nos capítulos 4.1 e 4.3, de onde se vê o pináculo."
+   ],
+   "id": "gargula",
+   "giro": "img/props/gargula_giro.webp",
+   "subcategoria": "Igreja"
+  },
+  {
+   "nome": "Leão Vermelho",
+   "imagem": "img/props/leao_vermelho.png",
+   "fonte": "Site/game/modelos/estatua_leao_vermelho.glb",
+   "categoria": "Estátuas e símbolos",
+   "curiosidades": [
+    "Na Praga real, o imperador Rodolfo II criava leões no Castelo, no Pátio dos Leões; diz a lenda que Tycho Brahe ligou o destino do imperador ao de um deles.",
+    "No jogo, guarda a entrada da Câmara da Coroa. O leão vermelho é o símbolo alquímico do enxofre e do sangue."
+   ],
+   "id": "leao_vermelho",
+   "giro": "img/props/leao_vermelho_giro.webp",
+   "subcategoria": "Estatuária"
+  },
+  {
+   "nome": "Mestre Encapuzado",
+   "imagem": "img/props/mestre_encapuzado.png",
+   "fonte": "Site/game/modelos/estatua_mestre_encapuzado.glb",
+   "categoria": "Estátuas e símbolos",
+   "curiosidades": [
+    "A Praga de Rodolfo II reuniu alquimistas e astrólogos na corte; é desse tempo também a lenda do Golem do rabino Löw.",
+    "No jogo, é a efígie de bronze (5,06 m) do Antigo, na cripta, diante do trono de ossos e de costas para a Trégua."
+   ],
+   "id": "mestre_encapuzado",
+   "giro": "img/props/mestre_encapuzado_giro.webp",
+   "subcategoria": "Estatuária"
+  },
+  {
+   "nome": "Candelabro de coroa",
+   "imagem": "img/props/candelabro_coroa_v2.png",
+   "fonte": "Site/game/modelos/prop_candelabro_coroa.glb",
+   "medidas": "aro 1,20 m; altura total 2,56 m do pingente a roseta; 41.312 triangulos",
+   "versao": "v2 (18/11): gerador 07/11 com elos encaixados + corrente de suspensao, roseta de teto, pingentes, bobeches e flores de lis. Malha alterada: aguardando aprovacao do dono.",
+   "categoria": "Luz e fogo",
+   "curiosidades": [
+    "O lustre em forma de coroa, aceso com velas, é tradição antiga das igrejas da Europa central.",
+    "No jogo, é a luz de vela das igrejas e da catedral do lobby."
+   ],
+   "id": "candelabro_coroa",
+   "giro": "img/props/candelabro_coroa_v2_giro.webp",
+   "subcategoria": "Luz"
+  },
+  {
+   "nome": "Barril fogareiro",
+   "imagem": "img/props/barril_fogareiro.png",
+   "fonte": "I:/WaruraseAsset/catalogo/glb_pub_1024/SM_WAR_Barril_Fogareiro.glb",
+   "categoria": "Luz e fogo",
+   "curiosidades": [
+    "O barril de lata com fogo é o aquecedor improvisado de quem passa a noite na rua.",
+    "No jogo, é o fogo de rua nas noites de Praga."
+   ],
+   "id": "barril_fogareiro",
+   "giro": "img/props/barril_fogareiro_giro.webp",
+   "subcategoria": "Improviso"
+  },
+  {
+   "nome": "Poste de Praga",
+   "imagem": "img/props/poste_de_praga.png",
+   "fonte": "I:/WaruraseAsset/catalogo/glb_pub_1024/SM_WAR_Praga_Poste_4m5.glb",
+   "categoria": "Luz e fogo",
+   "curiosidades": [
+    "Praga acendeu as primeiras lâmpadas a gás em 1847, e na Ponte Carlos ainda há postes a gás acesos à mão.",
+    "No jogo, são os postes do Castelo, com 4,5 m."
+   ],
+   "id": "poste_de_praga",
+   "giro": "img/props/poste_de_praga_giro.webp",
+   "subcategoria": "Luz"
+  },
+  {
+   "nome": "Cadeira de madeira pintada",
+   "imagem": "img/props/cadeira_madeira_pintada_v2.png",
+   "fonte": "E:/WaruraseBridge/esteira/SM_WAR_Cadeira_MadeiraPintada_12-11/rodada2/5_glb/SM_WAR_Cadeira_MadeiraPintada.glb",
+   "medidas": "0,64 x 0,66 x 1,26 m (bbox do GLB aprovado)",
+   "versao": "APROVADA 12/11 (esteira Painter rodada 2, madeira_r2, cor dE76 2,98 contra a foto)",
+   "categoria": "Rua e mobília",
+   "curiosidades": [
+    "As cadeiras de madeira pintada fazem parte das varandas de café das ruas estreitas de Malá Strana.",
+    "No jogo, é mobília das ruas do mapa."
+   ],
+   "id": "cadeira_madeira_pintada",
+   "giro": "img/props/cadeira_madeira_pintada_v2_giro.webp",
+   "subcategoria": "Mobiliário de rua"
+  },
+  {
+   "nome": "Caixa de papelão",
+   "imagem": "img/props/caixa_de_papelao.png",
+   "fonte": "I:/WaruraseAsset/catalogo/glb_tex_final11/SM_WAR_Caixote_CaixaDePapelao.glb",
+   "categoria": "Rua e mobília",
+   "curiosidades": [
+    "É o resto do comércio da noite: caixas empilhadas na porta das lojas antes do amanhecer.",
+    "No jogo, é esconderijo de esquina."
+   ],
+   "id": "caixa_de_papelao",
+   "giro": "img/props/caixa_de_papelao_giro.webp",
+   "subcategoria": "Improviso"
+  },
+  {
+   "nome": "Floreira de concreto",
+   "imagem": "img/props/floreira_de_concreto.png",
+   "fonte": "I:/WaruraseAsset/catalogo/glb_tex3_val11b/SM_WAR_Floreira_Vaso.glb",
+   "categoria": "Rua e mobília",
+   "curiosidades": [
+    "Nas praças europeias, as floreiras pesadas de concreto também servem de barreira contra veículos.",
+    "No jogo, é cobertura baixa na praça."
+   ],
+   "id": "floreira_de_concreto",
+   "giro": "img/props/floreira_de_concreto_giro.webp",
+   "subcategoria": "Mobiliário de rua"
+  },
+  {
+   "nome": "Mesa de calçada",
+   "imagem": "img/props/mesa_de_calcada.png",
+   "fonte": "I:/WaruraseAsset/catalogo/glb_tex3_val11b/SM_WAR_Mesa_DeCalcada.glb",
+   "categoria": "Rua e mobília",
+   "curiosidades": [
+    "Os tchecos chamam de 'zahrádka' (jardinzinho) as mesas que os cafés põem na calçada.",
+    "No jogo, é a mesa de café na calçada."
+   ],
+   "id": "mesa_de_calcada",
+   "giro": "img/props/mesa_de_calcada_giro.webp",
+   "subcategoria": "Mobiliário de rua"
+  },
+  {
+   "nome": "São Judas Tadeu",
+   "imagem": "img/estatua_judas_tadeu.jpg",
+   "fonte": "I:/WaruraseAsset/catalogo/glb_tex2/SM_Estatua_JudasTadeu.glb",
+   "id": "estatua_judas_tadeu",
+   "categoria": "Estátuas e símbolos",
+   "giro": "img/props/estatua_judas_tadeu_giro.webp",
+   "subcategoria": "Estatuária"
+  },
+  {
+   "nome": "Santo Adalberto",
+   "imagem": "img/estatua_adalberto.jpg",
+   "fonte": "I:/WaruraseAsset/catalogo/glb_tex2/SM_Estatua_Adalberto.glb",
+   "id": "estatua_adalberto",
+   "categoria": "Estátuas e símbolos",
+   "giro": "img/props/estatua_adalberto_giro.webp",
+   "subcategoria": "Estatuária"
+  },
+  {
+   "nome": "São Filipe Benizi",
+   "imagem": "img/estatua_filipe_benizi.jpg",
+   "fonte": "I:/WaruraseAsset/catalogo/glb_tex2/SM_Estatua_FilipeBenizi.glb",
+   "id": "estatua_filipe_benizi",
+   "categoria": "Estátuas e símbolos",
+   "giro": "img/props/estatua_filipe_benizi_giro.webp",
+   "subcategoria": "Estatuária"
+  },
+  {
+   "nome": "São João Nepomuceno",
+   "imagem": "img/props/estatua_nepomuk.webp",
+   "fonte": "I:/WaruraseAsset/catalogo/glb_tex2/SM_WAR_Estatua_Nepomuk.glb",
+   "id": "estatua_nepomuk",
+   "categoria": "Estátuas e símbolos",
+   "giro": "img/props/estatua_nepomuk_giro.webp",
+   "subcategoria": "Estatuária"
+  }
+ ],
+ "notas": [
+  "O 'asset de desfile' existe só como decisão e animação: AS_F_Catwalk / AS_M_Catwalk, passarela só na loja, cada marca com cor e estética próprias (memória decisoes-17-10-lote-c). Não há render nem vídeo de desfile para o site; a colagem do catálogo faz esse papel por enquanto.",
+  "Os renders anteriores das peças (I:/WaruraseAsset/catalogo/moda-renders-v4, Content/Warurase/Loja/Props/*.png, Ferramentas/modelsheet_vestido/saida) eram malha branca ou cor de ID, sem textura: NÃO usados. Os recortes daqui são render NOVO com os mapas de Ferramentas/roupa_texturas/saida (normal OpenGL).",
+  "Peças descartadas por textura faltando ou errada: JAQUETA DE COURO e OMBREIRAS DO MORTO (sem mapa), CHAPÉU DO CAÇADOR (sem textura de origem), cabelos DAX/TERRAN/RENTE (sem mapa de cartão), MACACÃO EXO, PEITORAL EXO e MOCHILA (saem brancos), MANOPLAS e BRAÇOS EXO (só pedaços soltos no render), VESTIDO ESCOLAR (pegou o mapa de uma pulseira), SOBRETUDO SUSSURRO (cinza liso, parece sem material), BOTAS DE FREYA e ESPARTILHO (mapa laranja, parece errado), CAPUZ DO MORTO (ornamentos saem brancos).",
+  "O mapa do VESTIDO VERMELHO veio por aproximação de nome (SHLRD_Dress3); conferir se é a cor do jogo antes de publicar. Os demais casaram pelo nome exato da textura de origem.",
+  "FRANQUEZA: SUSSURRO e FORJA ficaram cheias (8 recortes texturizados cada). BECO tem só tags (é marca de gesto e grafite, sem roupa). ALTA NOITE ficou POBRE: nenhuma peça real no jogo, só clima (velas do candelabro e o retrato da Anfitriã).",
+  "Pedido Gemini ALTA NOITE look 1 (recorte): 'Full-body fashion catalog cutout of an original vampire gala outfit on an invisible mannequin: long black velvet tailcoat with oxblood silk lining, high standing collar, antique gold embroidery of crescent moons and candle flames, black brocade waistcoat, ruffled bone-white cravat, slim trousers, polished patent boots. Studio product shot, pure flat white background for easy cutout, soft key light, 3/4 view, no person, no face, no logo, no text, photorealistic, 4k.'",
+  "Pedido Gemini ALTA NOITE look 2 (recorte): 'Full-body fashion catalog cutout of an original vampire evening gown on an invisible mannequin: floor-length deep black satin gown with a sheer black lace cape, corseted bodice with antique gold filigree, high lace collar, long opera gloves, crescent-moon gold brooch at the throat. Studio product shot, pure flat white background, soft light, front 3/4 view, no person, no face, no logo, no text, photorealistic, 4k.'",
+  "Pedido Gemini ALTA NOITE detalhe (clima): 'Extreme macro editorial photo of black velvet fabric with antique gold thread embroidery of a crescent moon and three candle flames, a drop of red wax on the velvet, warm candlelight, dark moody fashion still life, no text, no logo.'",
+  "Pedido Gemini BECO look 1 (recorte): 'Fashion catalog cutout of an original Prague street-gothic outfit on an invisible mannequin: oversized black hoodie hand-sprayed with red drippy graffiti tags, cropped bomber with paint splatter, baggy cargo pants with safety pins, worn black high-top sneakers stained with red spray paint. Pure flat white background, 3/4 view, no person, no face, no real brand, no readable text, photorealistic.'",
+  "Pedido Gemini BECO acessórios (recortes): 'Flat-lay fashion catalog cutouts on pure white background: dented spray paint can with red drips, black bandana with a bat-wing pattern, fingerless gloves stained with paint, a chunky chain wallet, studded black cap. No brand, no readable text, product photography, soft shadows.'",
+  "Os arquivos 'aguardando_gemini' ainda NÃO existem: são os nomes reservados para quando as imagens chegarem (fundo branco -> recortar com limiar). Os closes dos moradores e a Cálice de capuz baixado são de outro item.",
+  "Sobra para o dono apagar: C:/bruto (3 PNG de teste deste item, gravados na raiz do C: por caminho relativo do Blender; a remoção foi barrada pela checagem de segurança)."
+ ],
+ "props_categorias": [
+  "Estátuas e símbolos",
+  "Luz e fogo",
+  "Rua e mobília"
+ ],
+ "props_fonte_curiosidades": "GDD 04 §3.4 (estátuas), cidade.estatuas_historia_real, memória narrativa-esoterica-estatuas-08-11 e as etiquetas de cidade.sala_de_operacoes.quadro_de_props; fatos de Praga de domínio público (gás em 1847; 'zahrádka'). Candelabro, barril, cadeira e caixa: curiosidade genérica do site, sem fonte do jogo (proposta).",
+ "catalogo": {
+  "_leia": "Catálogo de moda preparado para MUITAS peças. A página não lista peça à mão: gera do dado. Ordem: para cada marca (na ordem de 'marcas'), a CAPA (logo, coleção, estação) e depois as PÁGINAS com até 6 peças, na ordem da lista da marca. Cada página leva 3 'referências' (dois recortes de tendência em texto e uma imagem de clima, em rodízio). Peça nova = acrescentar em marcas[].pecas com id, nome, categoria, raridade, preco (em MOEDAS do jogo) e imagem; depois rodar o gerador (ou a página pagina sozinha pela mesma regra). Sem preço em dinheiro: só se compra em jogo.",
+  "pecas_por_pagina": 6,
+  "ordem": [
+   "capa",
+   "paginas"
+  ],
+  "esquema": {
+   "capa": {
+    "marca": "id da marca",
+    "nome": "",
+    "logo": "SVG da marca",
+    "frase": "",
+    "cor": "",
+    "fonte_tipografica": "",
+    "colecao_numero": "01, 02...",
+    "colecao_nome": "",
+    "estacao": "",
+    "imagem": "foto de clima da capa"
+   },
+   "pagina": {
+    "n": "nº geral",
+    "marca": "",
+    "pagina_da_marca": 1,
+    "paginas_da_marca": 1,
+    "pecas": [
+     "ids de marcas[].pecas[].id, até 6"
+    ],
+    "referencias": [
+     {
+      "tipo": "tendencia|imagem",
+      "texto|arquivo": ""
+     }
+    ]
+   },
+   "peca": {
+    "id": "marca.nome_em_slug",
+    "nome": "",
+    "tipo": "roupa|acessorio",
+    "categoria": "",
+    "raridade": "",
+    "preco": "inteiro, em moedas",
+    "moeda": "moedas",
+    "imagem": "",
+    "imagem_webp": "",
+    "id_jogo": "",
+    "fonte": ""
+   }
+  },
+  "gerador": "I:/WaruraseIntro/site/rodada4/r4_conteudo2.py (bloco 'catalogo paginado')",
+  "capas": [
+   {
+    "marca": "sussurro",
+    "nome": "SUSSURRO",
+    "logo": "img/moda/logo_sussurro.svg",
+    "frase": "Vampiro punk: couro, capuz, tachas e correntes.",
+    "cor": "#E8E1D3",
+    "fonte_tipografica": "Playfair Display SC Bold Italic (Fontes/Marcas/Sussurro.ttf, OFL)",
+    "colecao_numero": "01",
+    "colecao_nome": "Couro e Cinza",
+    "estacao": "Inverno de Praga · TEMPORADA SANGUE NOVO",
+    "imagem": "img/moda/clima_sussurro_estampa.jpg"
+   },
+   {
+    "marca": "forja",
+    "nome": "FORJA",
+    "logo": "img/moda/logo_forja.svg",
+    "frase": "Armadura: do EXO de entrada ao Cavaleiro e ao Tirano.",
+    "cor": "#B8BEC6",
+    "fonte_tipografica": "Black Ops One (Fontes/Marcas/Forja.ttf, OFL)",
+    "colecao_numero": "01",
+    "colecao_nome": "Aço Frio",
+    "estacao": "Inverno de Praga · TEMPORADA SANGUE NOVO",
+    "imagem": "img/moda/clima_forja_metal.jpg"
+   },
+   {
+    "marca": "alta_noite",
+    "nome": "ALTA NOITE",
+    "logo": "img/moda/logo_alta_noite.svg",
+    "frase": "Gala vampírica: o traje completo.",
+    "cor": "#C9A45C",
+    "fonte_tipografica": "UnifrakturCook Bold (Fontes/Marcas/AltaNoite.ttf, OFL)",
+    "colecao_numero": "01",
+    "colecao_nome": "Gala da Trégua",
+    "estacao": "Inverno de Praga · TEMPORADA SANGUE NOVO",
+    "imagem": "img/moda/clima_alta_noite_velas.jpg"
+   },
+   {
+    "marca": "beco",
+    "nome": "BECO",
+    "logo": "img/moda/logo_beco.svg",
+    "frase": "Rua de Praga: dança, provocação, pose e pichação.",
+    "cor": "#CC0000",
+    "fonte_tipografica": "Sedgwick Ave Display (Fontes/Marcas/Beco.ttf, OFL)",
+    "colecao_numero": "01",
+    "colecao_nome": "Parede Nova",
+    "estacao": "Inverno de Praga · TEMPORADA SANGUE NOVO",
+    "imagem": "img/beco_mural_olho_da_vigilia.jpg"
+   }
+  ],
+  "paginas": [
+   {
+    "marca": "sussurro",
+    "pagina_da_marca": 1,
+    "paginas_da_marca": 2,
+    "pecas": [
+     "sussurro.vestido_gotico",
+     "sussurro.vestido_vermelho",
+     "sussurro.jaqueta_gotica",
+     "sussurro.colete_sussurro",
+     "sussurro.top_rocker",
+     "sussurro.saia_rocker"
+    ],
+    "referencias": [
+     {
+      "tipo": "tendencia",
+      "texto": "couro envelhecido"
+     },
+     {
+      "tipo": "tendencia",
+      "texto": "vinil roxo"
+     },
+     {
+      "tipo": "imagem",
+      "arquivo": "img/moda/clima_sussurro_estampa.jpg"
+     }
+    ],
+    "n": 1
+   },
+   {
+    "marca": "sussurro",
+    "pagina_da_marca": 2,
+    "paginas_da_marca": 2,
+    "pecas": [
+     "sussurro.botas_sussurro",
+     "sussurro.gargantilha"
+    ],
+    "referencias": [
+     {
+      "tipo": "tendencia",
+      "texto": "estampa de cruzes e corações"
+     },
+     {
+      "tipo": "tendencia",
+      "texto": "fivelas e tachas"
+     },
+     {
+      "tipo": "imagem",
+      "arquivo": "img/moda/clima_sussurro_couro.jpg"
+     }
+    ],
+    "n": 2
+   },
+   {
+    "marca": "forja",
+    "pagina_da_marca": 1,
+    "paginas_da_marca": 2,
+    "pecas": [
+     "forja.armadura_do_cavaleiro",
+     "forja.capa_do_cavaleiro",
+     "forja.jaqueta_cacadora",
+     "forja.traje_furtivo",
+     "forja.arnes_furtivo",
+     "forja.perneiras_exo"
+    ],
+    "referencias": [
+     {
+      "tipo": "tendencia",
+      "texto": "aço com rebites"
+     },
+     {
+      "tipo": "tendencia",
+      "texto": "couro cru"
+     },
+     {
+      "tipo": "imagem",
+      "arquivo": "img/moda/clima_forja_metal.jpg"
+     }
+    ],
+    "n": 3
+   },
+   {
+    "marca": "forja",
+    "pagina_da_marca": 2,
+    "paginas_da_marca": 2,
+    "pecas": [
+     "forja.botas_exo",
+     "forja.botas_furtivas"
+    ],
+    "referencias": [
+     {
+      "tipo": "tendencia",
+      "texto": "exoesqueleto"
+     },
+     {
+      "tipo": "tendencia",
+      "texto": "arnês tático"
+     },
+     {
+      "tipo": "imagem",
+      "arquivo": "img/moda/clima_forja_couro.jpg"
+     }
+    ],
+    "n": 4
+   },
+   {
+    "marca": "alta_noite",
+    "pagina_da_marca": 1,
+    "paginas_da_marca": 1,
+    "pecas": [
+     "alta_noite.carrasco_da_noite",
+     "alta_noite.pecado_escuro"
+    ],
+    "referencias": [
+     {
+      "tipo": "tendencia",
+      "texto": "gala"
+     },
+     {
+      "tipo": "tendencia",
+      "texto": "traje completo"
+     },
+     {
+      "tipo": "imagem",
+      "arquivo": "img/moda/clima_alta_noite_velas.jpg"
+     }
+    ],
+    "pecas_fora_da_lista": [
+     {
+      "id": "alta_noite.carrasco_da_noite",
+      "nome": "CARRASCO DA NOITE",
+      "categoria": "Traje completo",
+      "raridade": "Épico",
+      "preco": 2800,
+      "moeda": "moedas",
+      "imagem": "img/gemini/moda_alta_noite_1.jpg",
+      "imagem_nota": "ilustração do Gemini no espírito da casa; não é o asset do jogo",
+      "fonte": "Source/GameAnimationSample/Progression/GasCosmeticSubsystem.cpp:866-882; GasLoja.cpp:117"
+     },
+     {
+      "id": "alta_noite.pecado_escuro",
+      "nome": "PECADO ESCURO",
+      "categoria": "Traje completo",
+      "raridade": "Lendário",
+      "preco": 3400,
+      "moeda": "moedas",
+      "imagem": "img/gemini/moda_alta_noite_2.jpg",
+      "imagem_nota": "ilustração do Gemini no espírito da casa; não é o asset do jogo",
+      "fonte": "Source/GameAnimationSample/Progression/GasCosmeticSubsystem.cpp:866-882; GasLoja.cpp:117"
+     }
+    ],
+    "n": 5
+   },
+   {
+    "marca": "beco",
+    "pagina_da_marca": 1,
+    "paginas_da_marca": 2,
+    "pecas": [
+     "beco.tag_upir",
+     "beco.tag_pacto",
+     "beco.tag_tregua",
+     "beco.tag_erdop_gesto",
+     "beco.krev",
+     "beco.noc"
+    ],
+    "referencias": [
+     {
+      "tipo": "tendencia",
+      "texto": "tag"
+     },
+     {
+      "tipo": "tendencia",
+      "texto": "spray escorrido"
+     },
+     {
+      "tipo": "imagem",
+      "arquivo": "img/beco_mural_olho_da_vigilia.jpg"
+     }
+    ],
+    "n": 6
+   },
+   {
+    "marca": "beco",
+    "pagina_da_marca": 2,
+    "paginas_da_marca": 2,
+    "pecas": [
+     "beco.tma",
+     "beco.hlad"
+    ],
+    "referencias": [
+     {
+      "tipo": "tendencia",
+      "texto": "gesto de provocação"
+     },
+     {
+      "tipo": "tendencia",
+      "texto": "palavra em tcheco"
+     },
+     {
+      "tipo": "imagem",
+      "arquivo": "img/erdop_grafite_beijo_na_pele.jpg"
+     }
+    ],
+    "n": 7
+   }
+  ],
+  "nota_alta_noite": "ALTA NOITE não tem peça em marcas[].pecas (regra 'traje completo que não é Daz'); a página dela usa os dois trajes do código (pecas_fora_da_lista) com as ilustrações do Gemini como imagem."
+ },
+ "props_giro_leia": "giro: tira WEBP 6x4 (2880x1920) de 24 quadros 480x480 com alfa, volta inteira no sentido anti-horario visto de cima, quadro i em x=(i%6)*480, y=floor(i/6)*480; camera ortografica fixa, prop em pe com a base no chao. Render Blender Cycles 15/11, script I:/WaruraseIntro/site/props_giro/giro_prop.py. categoria segue props_categorias (já existente); subcategoria é o grupo fino: Igreja, Estatuária, Luz, Mobiliário de rua, Improviso.",
+ "beco": {
+  "_leia": "Laços do Beco (15/11). Uma figura vestida (capuz levantado, contraluz vermelho e frio, rosto em sombra) sobre fundo liso #0c0809; mp4 H.264 360x480 24 qps sem áudio, em laço (o trecho do clipe foi escolhido para início e fim terem a pose mais parecida). nome, id_jogo, preço e raridade vêm de Progression/GasCatalogoDeGestos.cpp:35-89. movimento='previa' = clipe aproximado de outra fonte; 'clipe de mesmo nome' = mocap do mesmo passo retargetado aqui, não a montagem do jogo. Script: I:/WaruraseIntro/site/beco/beco_lacos.py.",
+  "sprays": [
+   {
+    "nome": "Tag UPÍR",
+    "imagem": "img/tag_upir_knewave.png"
+   },
+   {
+    "nome": "Tag PACTO",
+    "imagem": "img/tag_pacto_knewave.png"
+   },
+   {
+    "nome": "Tag TRÉGUA",
+    "imagem": "img/tag_tregua_nosifer.png"
+   },
+   {
+    "nome": "Tag ERDOP (gesto)",
+    "imagem": "img/tag_erdop_gesto.png"
+   },
+   {
+    "nome": "KREV",
+    "imagem": "img/krev.png"
+   },
+   {
+    "nome": "NOC",
+    "imagem": "img/noc.png"
+   },
+   {
+    "nome": "TMA",
+    "imagem": "img/tma.png"
+   },
+   {
+    "nome": "HLAD",
+    "imagem": "img/hlad.png"
+   }
+  ],
+  "gestos": [
+   {
+    "id": "saudacao",
+    "nome": "SAUDAÇÃO",
+    "id_jogo": "GESTO_SAUDACAO",
+    "categoria_jogo": "Saudação",
+    "preco": 600,
+    "moeda": "moedas",
+    "raridade": "Incomum",
+    "video": "media/beco/gesto_saudacao.mp4",
+    "poster": "media/beco/gesto_saudacao.jpg",
+    "segundos": 2.0,
+    "kb": 29,
+    "movimento": "previa",
+    "nota": "Clipe 'Yes' da Quaternius UAL2 (CC0): punho erguido de comemoração; a montagem do jogo é AM_Gesto_Saudacao, não conferida."
+   },
+   {
+    "id": "negar",
+    "nome": "NEGAR",
+    "id_jogo": "GESTO_NEGAR",
+    "categoria_jogo": "Provocação",
+    "preco": null,
+    "moeda": null,
+    "raridade": "Comum",
+    "video": "media/beco/gesto_negar.mp4",
+    "poster": "media/beco/gesto_negar.jpg",
+    "segundos": 2.0,
+    "kb": 26,
+    "movimento": "previa",
+    "nota": "Clipe 'Idle_No_Loop' da UAL2 (CC0): balança a cabeça, movimento discreto; o jogo usa M_LookAtPOI_test_relaxed_gesture_disagree."
+   },
+   {
+    "id": "vem_ca",
+    "nome": "VEM CÁ",
+    "id_jogo": "GESTO_VEM_CA",
+    "categoria_jogo": "Saudação",
+    "preco": null,
+    "moeda": null,
+    "raridade": "Comum",
+    "video": "media/beco/gesto_vem_ca.mp4",
+    "poster": "media/beco/gesto_vem_ca.jpg",
+    "segundos": 2.0,
+    "kb": 31,
+    "movimento": "previa",
+    "nota": "APROXIMADO: o clipe 'Idle_Rail_Call' da UAL2 é um chamado com a mão na testa, não o aceno de 'vem cá' do jogo (M_LookAtPOI_test_relaxed_gesture_come_on_in)."
+   },
+   {
+    "id": "pose_de_rua",
+    "nome": "POSE DE RUA",
+    "id_jogo": "GESTO_POSE",
+    "categoria_jogo": "Pose",
+    "preco": 600,
+    "moeda": "moedas",
+    "raridade": "Incomum",
+    "video": "media/beco/gesto_pose_de_rua.mp4",
+    "poster": "media/beco/gesto_pose_de_rua.jpg",
+    "segundos": 2.0,
+    "kb": 23,
+    "movimento": "previa",
+    "nota": "Clipe 'Idle_FoldArms_Loop' da UAL2 (CC0): braços cruzados; o jogo usa AM_Gesto_Pose, não conferida."
+   },
+   {
+    "id": "galinha",
+    "nome": "GALINHA",
+    "id_jogo": "GESTO_GALINHA",
+    "categoria_jogo": "Provocação",
+    "preco": 1000,
+    "moeda": "moedas",
+    "raridade": "Raro",
+    "video": "media/beco/gesto_galinha.mp4",
+    "poster": "media/beco/gesto_galinha.jpg",
+    "segundos": 2.5,
+    "kb": 69,
+    "movimento": "clipe de mesmo nome",
+    "nota": "Clipe chicken_dance.fbx (pasta RogueAgents, licença NÃO confirmada) retargetado; o jogo usa AM_Gesto_Galinha, não conferida."
+   }
+  ],
+  "dancas": [
+   {
+    "id": "macarena",
+    "nome": "MACARENA",
+    "id_jogo": "GESTO_MACARENA",
+    "categoria_jogo": "Dança",
+    "preco": 700,
+    "moeda": "moedas",
+    "raridade": "Incomum",
+    "video": "media/beco/danca_macarena.mp4",
+    "poster": "media/beco/danca_macarena.jpg",
+    "segundos": 3.0,
+    "kb": 71,
+    "movimento": "clipe de mesmo nome",
+    "nota": "Clipe macarena_dance.fbx (pasta RogueAgents, licença NÃO confirmada) retargetado para a figura; o jogo usa AM_Gesto_Macarena, não conferida."
+   },
+   {
+    "id": "hip_hop",
+    "nome": "HIP HOP",
+    "id_jogo": "GESTO_HIPHOP",
+    "categoria_jogo": "Dança",
+    "preco": 700,
+    "moeda": "moedas",
+    "raridade": "Incomum",
+    "video": "media/beco/danca_hip_hop.mp4",
+    "poster": "media/beco/danca_hip_hop.jpg",
+    "segundos": 2.5,
+    "kb": 75,
+    "movimento": "clipe de mesmo nome",
+    "nota": "Clipe hip_hop_dancing.fbx (pasta RogueAgents, licença NÃO confirmada) retargetado para a figura; o jogo usa AM_Gesto_HipHop, não conferida."
+   },
+   {
+    "id": "robo",
+    "nome": "ROBÔ",
+    "id_jogo": "GESTO_ROBO",
+    "categoria_jogo": "Dança",
+    "preco": 1100,
+    "moeda": "moedas",
+    "raridade": "Raro",
+    "video": "media/beco/danca_robo.mp4",
+    "poster": "media/beco/danca_robo.jpg",
+    "segundos": 2.5,
+    "kb": 56,
+    "movimento": "clipe de mesmo nome",
+    "nota": "Clipe robot_hip_hop_dance.fbx (pasta RogueAgents, licença NÃO confirmada) retargetado para a figura; o jogo usa AM_Gesto_Robo, não conferida."
+   },
+   {
+    "id": "tut",
+    "nome": "TUT",
+    "id_jogo": "GESTO_TUT",
+    "categoria_jogo": "Dança",
+    "preco": 1100,
+    "moeda": "moedas",
+    "raridade": "Raro",
+    "video": "media/beco/danca_tut.mp4",
+    "poster": "media/beco/danca_tut.jpg",
+    "segundos": 2.5,
+    "kb": 70,
+    "movimento": "clipe de mesmo nome",
+    "nota": "Clipe tut_hip_hop_dance.fbx (pasta RogueAgents, licença NÃO confirmada) retargetado para a figura; o jogo usa AM_Gesto_Tut, não conferida."
+   },
+   {
+    "id": "onda",
+    "nome": "ONDA",
+    "id_jogo": "GESTO_ONDA",
+    "categoria_jogo": "Dança",
+    "preco": 1200,
+    "moeda": "moedas",
+    "raridade": "Raro",
+    "video": "media/beco/danca_onda.mp4",
+    "poster": "media/beco/danca_onda.jpg",
+    "segundos": 2.5,
+    "kb": 76,
+    "movimento": "clipe de mesmo nome",
+    "nota": "Clipe wave_hip_hop_dance.fbx (pasta RogueAgents, licença NÃO confirmada) retargetado para a figura; o jogo usa AM_Gesto_Onda, não conferida."
+   },
+   {
+    "id": "locking",
+    "nome": "LOCKING",
+    "id_jogo": "GESTO_LOCKING",
+    "categoria_jogo": "Dança",
+    "preco": 1200,
+    "moeda": "moedas",
+    "raridade": "Raro",
+    "video": "media/beco/danca_locking.mp4",
+    "poster": "media/beco/danca_locking.jpg",
+    "segundos": 2.5,
+    "kb": 44,
+    "movimento": "clipe de mesmo nome",
+    "nota": "Clipe locking_hip_hop_dance.fbx (pasta RogueAgents, licença NÃO confirmada) retargetado para a figura; o jogo usa AM_Gesto_Locking, não conferida."
+   }
+  ]
+ }
+}

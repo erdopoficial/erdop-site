@@ -1,0 +1,217 @@
+{
+ "gerado_em": "2026-11-17",
+ "gerador": "Ferramentas/narracao/narrar_estatuas.py",
+ "voz": "Microsoft Maria (pt-BR, WinRT), tom -1st, ritmo 0.90",
+ "tratamento": "coro desafinado, dobra de oitava, ar, reverb de catedral; fantasma (sussurro com reverb invertido, sopro grave, voz lenta) em 2 a 4 pausas",
+ "alvo": {
+  "lufs": -16.0,
+  "teto_dbtp": -1.5,
+  "formato": "mp3 estereo 96 kbps 44,1 kHz"
+ },
+ "pecas": [
+  {
+   "id": "nepomuk",
+   "nome": "São João Nepomuceno",
+   "arquivo": "media/narracao/nepomuk.mp3",
+   "duracao": 56.74,
+   "bytes": 681526,
+   "trechos": [
+    {
+     "campo": "real",
+     "texto": "Em 20 de março de 1393, por ordem do rei Venceslau IV, o vigário João de Nepomuk foi jogado da Ponte Carlos no Vltava.",
+     "inicio": 0.45,
+     "fim": 13.43
+    },
+    {
+     "campo": "real",
+     "texto": "Uma lenda posterior diz que ele morreu por não revelar a confissão da rainha, e que cinco estrelas pairaram sobre o corpo no rio.",
+     "inicio": 15.38,
+     "fim": 25.73
+    },
+    {
+     "campo": "real",
+     "texto": "A estátua de bronze da ponte, de 1683, nasceu de um modelo de Matthias Rauchmiller, entalhada em madeira por Jan Brokoff e fundida em Nuremberg; ele foi canonizado em 1729.",
+     "inicio": 26.35,
+     "fim": 44.6
+    },
+    {
+     "campo": "jogo",
+     "texto": "O santo do segredo guardado: a Trégua inteira depende de alguém que não fala.",
+     "inicio": 46.55,
+     "fim": 53.14
+    }
+   ],
+   "fantasmas": [
+    {
+     "inicio": 13.57,
+     "fim": 15.32
+    },
+    {
+     "inicio": 44.74,
+     "fim": 46.49
+    }
+   ],
+   "medidas": {
+    "duracao": 56.74,
+    "lufs": -16.4,
+    "lra": 3.8,
+    "pico_dbtp": -1.8,
+    "envelope_seca_x_final": 0.975,
+    "contraste_fala_pausa_db": 14.5
+   }
+  },
+  {
+   "id": "leao_vermelho",
+   "nome": "O Leão Vermelho",
+   "arquivo": "media/narracao/leao_vermelho.mp3",
+   "duracao": 51.19,
+   "bytes": 615070,
+   "trechos": [
+    {
+     "campo": "real",
+     "texto": "O sultão Murade III deu a Rodolfo II um leão, que o imperador alimentava pessoalmente num pátio construído para ele, o Pátio dos Leões.",
+     "inicio": 0.45,
+     "fim": 12.57
+    },
+    {
+     "campo": "real",
+     "texto": "Tycho Brahe teria feito um horóscopo ligando o destino do imperador ao do animal.",
+     "inicio": 14.52,
+     "fim": 20.89
+    },
+    {
+     "campo": "real",
+     "texto": "O leão morreu no começo de 1612, e Rodolfo dias depois; está sepultado na cripta de São Vito.",
+     "inicio": 21.51,
+     "fim": 31.71
+    },
+    {
+     "campo": "jogo",
+     "texto": "Na alquimia, o Leão Vermelho é o enxofre e o sangue.",
+     "inicio": 33.66,
+     "fim": 38.32
+    },
+    {
+     "campo": "jogo",
+     "texto": "No jogo, guarda a Câmara da Coroa: todo príncipe de Praga tem um leão, e este seria o de Ranthir.",
+     "inicio": 38.94,
+     "fim": 47.59
+    }
+   ],
+   "fantasmas": [
+    {
+     "inicio": 12.71,
+     "fim": 14.46
+    },
+    {
+     "inicio": 31.85,
+     "fim": 33.6
+    }
+   ],
+   "medidas": {
+    "duracao": 51.19,
+    "lufs": -16.4,
+    "lra": 4.2,
+    "pico_dbtp": -1.7,
+    "envelope_seca_x_final": 0.974,
+    "contraste_fala_pausa_db": 15.9
+   }
+  },
+  {
+   "id": "judas_tadeu",
+   "nome": "São Judas Tadeu",
+   "arquivo": "media/narracao/judas_tadeu.mp3",
+   "duracao": 46.84,
+   "bytes": 562721,
+   "trechos": [
+    {
+     "campo": "real",
+     "texto": "Jan Oldřich Mayer esculpiu o apóstolo em 1708, pago pelo cavaleiro František Sezima Mitrovský de Nemyšl.",
+     "inicio": 0.45,
+     "fim": 10.58
+    },
+    {
+     "campo": "real",
+     "texto": "Faz parte do conjunto barroco da Ponte Carlos, erguido sobretudo entre 1706 e 1714, quando Praga esperava a canonização de Nepomuceno.",
+     "inicio": 12.53,
+     "fim": 28.2
+    },
+    {
+     "campo": "real",
+     "texto": "O santo segura o livro e a clava do seu martírio.",
+     "inicio": 28.82,
+     "fim": 33.07
+    },
+    {
+     "campo": "jogo",
+     "texto": "Fica no octógono, numa capela só: o padroeiro das causas perdidas olha a luta da grade.",
+     "inicio": 35.02,
+     "fim": 43.24
+    }
+   ],
+   "fantasmas": [
+    {
+     "inicio": 10.72,
+     "fim": 12.47
+    },
+    {
+     "inicio": 33.21,
+     "fim": 34.96
+    }
+   ],
+   "medidas": {
+    "duracao": 46.84,
+    "lufs": -16.4,
+    "lra": 4.0,
+    "pico_dbtp": -1.7,
+    "envelope_seca_x_final": 0.975,
+    "contraste_fala_pausa_db": 15.0
+   }
+  },
+  {
+   "id": "gargula",
+   "nome": "A Gárgula de São Vito",
+   "arquivo": "media/narracao/gargula.mp3",
+   "duracao": 51.02,
+   "bytes": 613190,
+   "trechos": [
+    {
+     "campo": "real",
+     "texto": "São Vito levou quase seis séculos para ficar pronta: começada em 1344, só foi completada em 1929.",
+     "inicio": 0.45,
+     "fim": 13.78
+    },
+    {
+     "campo": "real",
+     "texto": "Boa parte das gárgulas que se veem hoje veio da fase neogótica (1861 a 1929), com os construtores Kranner, Mocker e Hilbert, muitas copiadas de peças medievais.",
+     "inicio": 15.73,
+     "fim": 33.3
+    },
+    {
+     "campo": "jogo",
+     "texto": "A gárgula do capítulo 4.1 das Crônicas, esculpida tosca de propósito: é dela o telhado onde a Cria sobe para ver a cidade.",
+     "inicio": 35.25,
+     "fim": 47.42
+    }
+   ],
+   "fantasmas": [
+    {
+     "inicio": 13.92,
+     "fim": 15.67
+    },
+    {
+     "inicio": 33.44,
+     "fim": 35.19
+    }
+   ],
+   "medidas": {
+    "duracao": 51.02,
+    "lufs": -16.4,
+    "lra": 3.8,
+    "pico_dbtp": -1.7,
+    "envelope_seca_x_final": 0.975,
+    "contraste_fala_pausa_db": 15.1
+   }
+  }
+ ]
+}

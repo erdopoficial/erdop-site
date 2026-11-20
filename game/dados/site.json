@@ -1,0 +1,801 @@
+{
+ "_leia": "Configuracao do site (nao e texto do jogo; o texto do jogo mora em projeto.json, armas.json e moda.json). bar.imagem, closes, telhados e moda_looks sao preenchidos sozinhos por Ferramentas/site/atualizar_site.py quando os arquivos existirem em img/gemini/ e img/moda/. bar.pontos e bar.caixas = posicao de cada morador na imagem do bar, em %.",
+ "bar": {
+  "imagem": "img/gemini/bar_clas.jpg",
+  "pontos": {
+   "vlk": [
+    15.6,
+    34.5
+   ],
+   "andarilho": [
+    31.3,
+    43.0
+   ],
+   "faisca": [
+    41.1,
+    44.9
+   ],
+   "anfitria": [
+    52.2,
+    40.4
+   ],
+   "senescal": [
+    63.2,
+    41.0
+   ],
+   "calice": [
+    71.9,
+    40.4
+   ],
+   "confessora": [
+    80.7,
+    46.2
+   ],
+   "krysa": [
+    90.5,
+    50.1
+   ]
+  },
+  "caixas": {
+   "_leia": "Caixa do corpo inteiro de cada morador na imagem do bar, em % {x0,y0,x1,y1}; conferida desenhando sobre a imagem 1376x768. Caixas vizinhas se tocam (Senescal/Cálice, Andarilho/Faísca) porque os corpos se sobrepõem.",
+   "vlk": {
+    "x0": 7.0,
+    "y0": 28.0,
+    "x1": 22.0,
+    "y1": 99.0
+   },
+   "andarilho": {
+    "x0": 23.5,
+    "y0": 36.0,
+    "x1": 38.0,
+    "y1": 98.0
+   },
+   "faisca": {
+    "x0": 36.7,
+    "y0": 38.5,
+    "x1": 45.5,
+    "y1": 97.0
+   },
+   "anfitria": {
+    "x0": 46.0,
+    "y0": 36.0,
+    "x1": 56.0,
+    "y1": 61.0
+   },
+   "senescal": {
+    "x0": 55.8,
+    "y0": 36.5,
+    "x1": 67.5,
+    "y1": 95.5
+   },
+   "calice": {
+    "x0": 66.5,
+    "y0": 35.5,
+    "x1": 75.5,
+    "y1": 92.0
+   },
+   "confessora": {
+    "x0": 74.8,
+    "y0": 41.5,
+    "x1": 85.0,
+    "y1": 89.5
+   },
+   "krysa": {
+    "x0": 85.0,
+    "y0": 44.5,
+    "x1": 97.3,
+    "y1": 87.0
+   }
+  },
+  "rotulos": {
+   "_leia": "Onde fica o NOME de cada morador na imagem do bar, em %: [x, y] = ponto de baixo-centro do rótulo, logo acima da cabeça (conferido desenhando sobre img/gemini/bar_clas.jpg 1376x768). O fio do rótulo desce até bar.pontos. Cálice sobe 3 % para não encostar na Senescal.",
+   "vlk": [
+    14.2,
+    26.0
+   ],
+   "andarilho": [
+    30.5,
+    33.0
+   ],
+   "faisca": [
+    41.2,
+    36.5
+   ],
+   "anfitria": [
+    51.8,
+    33.5
+   ],
+   "senescal": [
+    63.3,
+    34.0
+   ],
+   "calice": [
+    71.6,
+    30.0
+   ],
+   "confessora": [
+    80.3,
+    38.8
+   ],
+   "krysa": [
+    90.0,
+    42.0
+   ]
+  },
+  "cores_dos_clas": {
+   "senescal": "#FFD94D",
+   "anfitria": "#FF4D9D",
+   "calice": "#C51C20",
+   "krysa": "#A45CFF",
+   "faisca": "#FF8A2B",
+   "vlk": "#3B8FE8",
+   "confessora": "#59D959",
+   "andarilho": "#CCD6F2"
+  },
+  "falas": {
+   "_leia": "Legenda de fala de cada morador em img/gemini/bar_clas.jpg (1376x768), em % da imagem. 'boca' = de onde sai o rabicho; 'balao' = a caixa {x0,y0,x1,y1}; 'lado' = de que lado do rosto a caixa fica. Os pontos de boca foram marcados sobre a imagem e conferidos (15/11). A caixa fica no vão de parede ou de vitral perto do rosto; só uma aparece por vez (no hover), por isso a de um pode passar sobre a cabeça do vizinho. O texto vem de projeto.json clas.tregua.moradores[].legenda.",
+   "vlk": {
+    "boca": [
+     16.4,
+     39.0
+    ],
+    "balao": {
+     "x0": 0.8,
+     "y0": 27.0,
+     "x1": 13.4,
+     "y1": 41.0
+    },
+    "lado": "esquerda"
+   },
+   "andarilho": {
+    "boca": [
+     30.9,
+     45.0
+    ],
+    "balao": {
+     "x0": 22.5,
+     "y0": 14.0,
+     "x1": 38.5,
+     "y1": 28.0
+    },
+    "lado": "acima"
+   },
+   "faisca": {
+    "boca": [
+     41.1,
+     46.0
+    ],
+    "balao": {
+     "x0": 33.2,
+     "y0": 17.5,
+     "x1": 49.2,
+     "y1": 31.5
+    },
+    "lado": "acima"
+   },
+   "anfitria": {
+    "boca": [
+     52.0,
+     41.4
+    ],
+    "balao": {
+     "x0": 43.8,
+     "y0": 14.5,
+     "x1": 59.8,
+     "y1": 28.5
+    },
+    "lado": "acima"
+   },
+   "senescal": {
+    "boca": [
+     63.2,
+     41.4
+    ],
+    "balao": {
+     "x0": 55.3,
+     "y0": 15.0,
+     "x1": 71.3,
+     "y1": 29.0
+    },
+    "lado": "acima"
+   },
+   "calice": {
+    "boca": [
+     72.1,
+     40.6
+    ],
+    "balao": {
+     "x0": 63.6,
+     "y0": 11.0,
+     "x1": 79.6,
+     "y1": 25.0
+    },
+    "lado": "acima"
+   },
+   "confessora": {
+    "boca": [
+     80.0,
+     48.4
+    ],
+    "balao": {
+     "x0": 72.3,
+     "y0": 19.8,
+     "x1": 88.3,
+     "y1": 33.8
+    },
+    "lado": "acima"
+   },
+   "krysa": {
+    "boca": [
+     91.2,
+     51.4
+    ],
+    "balao": {
+     "x0": 82.0,
+     "y0": 23.0,
+     "x1": 98.0,
+     "y1": 37.0
+    },
+    "lado": "acima"
+   }
+  }
+ },
+ "closes": {
+  "senescal": "img/gemini/close_senescal.jpg",
+  "anfitria": "img/gemini/close_anfitria.jpg",
+  "calice": "img/gemini/close_calice.jpg",
+  "krysa": "img/gemini/close_krysa.jpg",
+  "faisca": "img/gemini/close_faisca.jpg",
+  "vlk": "img/gemini/close_vlk.jpg",
+  "confessora": "img/gemini/close_confessora.jpg",
+  "andarilho": "img/gemini/close_andarilho.jpg"
+ },
+ "telhados": "img/gemini/telhados_torres.jpg",
+ "armas_imagens": {
+  "pistola": "img/arma_pistola.jpg",
+  "cano_serrado": "img/arma_escopeta_serrada.jpg"
+ },
+ "estatuas_3d": [
+  {
+   "arquivo": "modelos/estatua_nepomuk.glb",
+   "nome": "São João Nepomuceno",
+   "historia": "O santo da Ponte Carlos.",
+   "credito": "",
+   "historia_real": "Em 20 de março de 1393, por ordem do rei Venceslau IV, o vigário João de Nepomuk foi jogado da Ponte Carlos no Vltava. Uma lenda posterior diz que ele morreu por não revelar a confissão da rainha, e que cinco estrelas pairaram sobre o corpo no rio. A estátua de bronze da ponte, de 1683, nasceu de um modelo de Matthias Rauchmiller, entalhada em madeira por Jan Brokoff e fundida em Nuremberg; ele foi canonizado em 1729.",
+   "no_jogo": "O santo do segredo guardado: a Trégua inteira depende de alguém que não fala.",
+   "no_jogo_fonte": "proposta do site (não há texto do jogo sobre o Nepomuceno)",
+   "fonte_real": [
+    "https://en.wikipedia.org/wiki/John_of_Nepomuk",
+    "https://en.wikipedia.org/wiki/Statue_of_John_of_Nepomuk,_Charles_Bridge"
+   ]
+  },
+  {
+   "arquivo": "modelos/estatua_leao_vermelho.glb",
+   "nome": "O Leão Vermelho",
+   "historia": "Todo príncipe de Praga tem um leão. O da cripta é o símbolo alquímico do enxofre e do sangue.",
+   "credito": "",
+   "historia_real": "O sultão Murade III deu a Rodolfo II um leão, que o imperador alimentava pessoalmente num pátio construído para ele, o Pátio dos Leões. Tycho Brahe teria feito um horóscopo ligando o destino do imperador ao do animal. O leão morreu no começo de 1612, e Rodolfo dias depois; está sepultado na cripta de São Vito.",
+   "no_jogo": "Na alquimia, o Leão Vermelho é o enxofre e o sangue. No jogo, guarda a Câmara da Coroa: todo príncipe de Praga tem um leão, e este seria o de Ranthir.",
+   "no_jogo_fonte": "memoria narrativa-esoterica-estatuas-08-11.md; Docs/Narrativa/FOLCLORE_DE_PRAGA_13-11.md §4, gancho 4",
+   "fonte_real": [
+    "https://prague.eu/en/a-lion-a-mandrake-and-the-stars/"
+   ]
+  },
+  {
+   "arquivo": "modelos/estatua_judas_tadeu.glb",
+   "nome": "São Judas Tadeu",
+   "historia": "Arenito de Jan Oldřich Mayer, 1708. No jogo fica no octógono, uma capela só.",
+   "credito": "Foto-base do modelo 3D: Marek Mróz, Wikimedia Commons, CC BY 4.0",
+   "historia_real": "Jan Oldřich Mayer esculpiu o apóstolo em 1708, pago pelo cavaleiro František Sezima Mitrovský de Nemyšl. Faz parte do conjunto barroco da Ponte Carlos, erguido sobretudo entre 1706 e 1714, quando Praga esperava a canonização de Nepomuceno. O santo segura o livro e a clava do seu martírio.",
+   "no_jogo": "Fica no octógono, numa capela só: o padroeiro das causas perdidas olha a luta da grade.",
+   "no_jogo_fonte": "memoria narrativa-esoterica-estatuas-08-11.md",
+   "fonte_real": [
+    "https://en.wikipedia.org/wiki/Statue_of_Jude_the_Apostle,_Charles_Bridge"
+   ]
+  },
+  {
+   "arquivo": "modelos/estatua_gargula.glb",
+   "nome": "A Gárgula de São Vito",
+   "historia": "Escultura primitiva de propósito: a gárgula de \"A Gárgula\", capítulo 4.1 das Crônicas.",
+   "credito": "",
+   "historia_real": "São Vito levou quase seis séculos para ficar pronta: começada em 1344, só foi completada em 1929. Boa parte das gárgulas que se veem hoje veio da fase neogótica (1861 a 1929), com os construtores Kranner, Mocker e Hilbert, muitas copiadas de peças medievais.",
+   "no_jogo": "A gárgula do capítulo 4.1 das Crônicas, esculpida tosca de propósito: é dela o telhado onde a Cria sobe para ver a cidade.",
+   "no_jogo_fonte": "Docs/Narrativa/CRONICAS_DE_PRAGA.md §3 (CRONICA_4_1 A GÁRGULA)",
+   "fonte_real": [
+    "https://en.wikipedia.org/wiki/St._Vitus_Cathedral",
+    "https://starfos.tacr.cz/en/vysledky-vyzkumu/RIV%2F68378033%3A_____%2F12%3A00382786"
+   ],
+   "nota": "O autor de cada gárgula não foi achado; a frase fala só do período."
+  }
+ ],
+ "closes_pendentes": {
+  "_leia": "Closes aprovados pelo dono que chegam do Gemini depois (23:21). O atualizar_site.py liga quando o arquivo existir.",
+  "anfitria": "img/gemini/close_anfitria.jpg",
+  "calice": "img/gemini/close_calice.jpg",
+  "faisca": "img/gemini/close_faisca.jpg",
+  "andarilho": "img/gemini/close_andarilho.jpg",
+  "bar_calice_capuz_baixado": "img/gemini/bar_clas_calice_capuz.jpg"
+ },
+ "site": {
+  "_leia": "Endereco publico da pagina; e o que o botao Compartilhar envia.",
+  "url": "https://erdop.com.br/game/",
+  "texto_de_convite": "BESTIAL: battle royale de vampiros numa Praga que nunca amanhece. Entre na lista de espera."
+ },
+ "dados_do_jogo": {
+  "_leia": "MODULO DO JOGO no Firebase (projeto erdop-central), separado da Central da banda. As regras foram publicadas em 14/11/2026 (Site/firebase/firestore.publicado-14-11.rules). ativo=true liga o envio; so_em limita aos enderecos onde a inscricao funciona (na previa a pagina diz 'abre em breve'). config_js traz a configuracao publica do Firebase da banda.",
+  "ativo": true,
+  "colecoes": {
+   "lista": "jogo_lista_de_espera",
+   "bandas": "jogo_bandas"
+  },
+  "config_js": "https://erdop.com.br/app/config.js",
+  "versao": "site-rodada-2",
+  "so_em": [
+   "erdop.com.br",
+   "localhost",
+   "127.0.0.1"
+  ]
+ },
+ "maquete": {
+  "_leia": "Liga cada alfinete da maquete (dados/modelos.json) a um lugar de cidade.sala_de_investigacoes.locais (campo local = comeco do nome). Sem 'local', o texto vem daqui, tirado do proprio projeto.json (fonte ao lado).",
+  "imagem": "img/maquete_praga.jpg",
+  "alfinetes": {
+   "catedral": {
+    "local": "Catedral de São Vito"
+   },
+   "campanario": {
+    "linha": "Do campanário da torre sul, Radek Vlk vê Praga inteira: é o alarme vivo da trégua.",
+    "pista": "Morador da Trégua (clã FERAIS); conta os drones da lei marcial",
+    "fonte": "clas.tregua.moradores[vlk].historia"
+   },
+   "cripta": {
+    "linha": "Na cripta mora o Krysa, junto à boca do esgoto. Diz ele que toda tampa de bueiro de Hradčany dá numa sala dele.",
+    "pista": "A descida pelo bueiro (fala krysa_3) ainda é proposta",
+    "fonte": "cidade.subsolo.no_jogo"
+   },
+   "rua_dourada": {
+    "local": "Rua Dourada"
+   },
+   "fosso": {
+    "local": "Fosso dos Cervos"
+   },
+   "jardim_real": {
+    "linha": "Jardim Real e Pátio dos Leões, onde Rodolfo II criava o leão dele.",
+    "pista": "Lenda do leão e do imperador; o Leão Vermelho da cripta seria o de Ranthir",
+    "fonte": "cidade.tabloide.lendas (leão)"
+   },
+   "praca_castelo": {
+    "local": "Praça do Castelo"
+   },
+   "loreta": {
+    "linha": "Fica a oeste, fora do recorte da maquete: o alfinete está na borda.",
+    "pista": "Lugar do mapa do jogo, ainda sem capítulo escrito",
+    "fonte": "dados/modelos.json (nota do alfinete)"
+   },
+   "uvoz": {
+    "local": "Úvoz"
+   },
+   "nerudova": {
+    "local": "Rua Nerudova"
+   },
+   "mala_strana": {
+    "linha": "O campanário de São Nicolau é uma das oito torres reais que entram no jogo.",
+    "pista": "Marco de navegação; ainda sem capítulo escrito",
+    "fonte": "cidade.construcao (torres)"
+   },
+   "ponte_carlos": {
+    "local": "Ponte Carlos"
+   }
+  },
+  "modelos_dos_lugares": {
+   "_leia": "Rodada 9 (18/11): o modelo 3D de cada alfinete no modal do lugar. medidas_m = [largura (X), altura, profundidade (Z)] da peca ou do lugar real; 'rotulos' diz o que cada cota mede; 'chao' corta o que fica abaixo do nivel da rua (a malha da catedral traz a fundacao). Origem: D:/WaruraseIntro/site_r7/modelos3d.json. Onde o modelo NAO e o lugar da foto, 'modelo' diz o que ele e.",
+   "catedral": {
+    "arquivo": "modelos/locais/catedral.glb",
+    "modelo": "Catedral de São Vito (malha do jogo, simplificada)",
+    "medidas_m": [
+     128.6,
+     96.6,
+     59.2
+    ],
+    "rotulos": [
+     "comprimento",
+     "torre sul",
+     "largura"
+    ],
+    "chao": -2.07,
+    "fonte": "Altura: cs.wikipedia (Katedrála svatého Víta), torre sul 96,6 m e torres da frente 82 m. Comprimento e largura: medidos no modelo do jogo.",
+    "credito": "Modelo do jogo BESTIAL, gerado por código; pedra procedural feita para o site."
+   },
+   "campanario": {
+    "arquivo": "modelos/locais/catedral.glb",
+    "modelo": "A torre sul de São Vito, o campanário (em destaque na catedral)",
+    "medidas_m": [
+     128.6,
+     96.6,
+     59.2
+    ],
+    "rotulos": [
+     "comprimento da catedral",
+     "torre sul",
+     "largura da catedral"
+    ],
+    "chao": -2.07,
+    "destaque": "torre_sul",
+    "fonte": "cs.wikipedia (Katedrála svatého Víta), infobox: torre sul (Jižní věž) 96,6 m. Comprimento e largura: medidos no modelo do jogo.",
+    "credito": "Modelo do jogo BESTIAL, gerado por código; pedra procedural feita para o site."
+   },
+   "mala_strana": {
+    "arquivo": "modelos/locais/mala_strana.glb",
+    "modelo": "Torre da Ponte de Malá Strana (não é a igreja de São Nicolau da foto)",
+    "medidas_m": [
+     12.38,
+     43.95,
+     12.79
+    ],
+    "rotulos": [
+     "planta",
+     "cumeeira",
+     "planta"
+    ],
+    "chao": 0,
+    "fonte": "IPR Praha, cumeeira 43,95 m; planta pelo contorno do OpenStreetMap (way 839278891), sem a galeria; com mastros a caixa chega a 47,45 m.",
+    "credito": "Modelo do jogo BESTIAL, gerado por código; pedra procedural feita para o site."
+   },
+   "rua_dourada": {
+    "arquivo": "modelos/locais/rua_dourada.glb",
+    "modelo": "Daliborka, a torre na ponta leste da Rua Dourada (não a rua)",
+    "medidas_m": [
+     10.68,
+     21.7,
+     10.46
+    ],
+    "rotulos": [
+     "planta",
+     "altura",
+     "planta"
+    ],
+    "chao": 0,
+    "fonte": "IPR Praha (cumeeira 21,7 m, beiral 16,53 m); cs.wikipedia/Daliborka (1496, Benedikt Ried).",
+    "credito": "Modelo do jogo BESTIAL, gerado por código; pedra procedural feita para o site."
+   },
+   "fosso": {
+    "arquivo": "modelos/locais/fosso.glb",
+    "modelo": "Prašná věž (Mihulka), a torre vizinha ao Fosso dos Cervos (não o túnel da foto)",
+    "medidas_m": [
+     18.16,
+     42.94,
+     18.06
+    ],
+    "rotulos": [
+     "planta",
+     "altura",
+     "planta"
+    ],
+    "chao": 0,
+    "fonte": "IPR Praha (cumeeira 42,94 m, beiral 34,94 m).",
+    "credito": "Modelo do jogo BESTIAL, gerado por código; pedra procedural feita para o site."
+   },
+   "ponte_carlos": {
+    "arquivo": "modelos/locais/ponte_carlos.glb",
+    "modelo": "Estátua de São João Nepomuceno da Ponte Carlos (não a ponte)",
+    "medidas_m": [
+     0.66,
+     2.21,
+     0.79
+    ],
+    "rotulos": [
+     "largura",
+     "altura",
+     "profundidade"
+    ],
+    "chao": 0,
+    "em_jogo": "img/props/estatua_nepomuk.webp",
+    "fonte": "Medida da PEÇA do jogo (caixa 0,66 × 0,79 × 2,21 m); a altura real da estátua não está no projeto.",
+    "credito": "Peça do acervo do projeto (estatua_nepomuk.glb), reduzida para o site."
+   },
+   "cripta": {
+    "arquivo": "modelos/locais/cripta.glb",
+    "modelo": "O Mestre Encapuzado, a efígie de bronze da cripta do jogo (a foto é a tampa de esgoto)",
+    "medidas_m": [
+     1.78,
+     5.06,
+     1.59
+    ],
+    "rotulos": [
+     "largura",
+     "altura",
+     "profundidade"
+    ],
+    "chao": 0,
+    "em_jogo": "img/props/mestre_encapuzado.webp",
+    "fonte": "Medida do JOGO (efígie de bronze de 5,06 m): é ficção, não há medida real.",
+    "credito": "Peça do acervo do projeto (estatua_mestre_encapuzado.glb), reduzida para o site."
+   }
+  }
+ },
+ "tabloide_fotos": {
+  "_leia": "Foto por lenda do tabloide: a chave e um trecho da manchete. So imagens que ja existem em img/.",
+  "LEÃO": {
+   "imagem": "img/props/leao_vermelho.webp",
+   "legenda": "O Leão Vermelho, modelo do jogo",
+   "recorte": true
+  },
+  "COROA": {
+   "imagem": "img/lobby_nave_cima.jpg",
+   "legenda": "A nave de São Vito, no jogo"
+  },
+  "ESPADA": {
+   "imagem": "img/estatua_judas_tadeu.jpg",
+   "legenda": "Estátua da Ponte Carlos, modelo do jogo",
+   "recorte": true
+  }
+ },
+ "passe_trilho": {
+  "_leia": "Marcas desenhadas nas duas trilhas do passe. Vem de passe.trilhas_detalhe (projeto.json): dossies nos degraus 1 a 25, 50 tokens a cada dez degraus do 30 ao 100, mochilas do 28 ao 96; na dourada, o degrau 53 (ja devolveu os 790) e o 100 (colecao completa). Os 15 degraus de 100 tokens da dourada nao tem posicao no texto e por isso nao sao desenhados.",
+  "prateada": [
+   {
+    "de": 1,
+    "ate": 25,
+    "rotulo": "5 dossiês do beta",
+    "icone": "dossie"
+   },
+   {
+    "pontos": [
+     30,
+     40,
+     50,
+     60,
+     70,
+     80,
+     90,
+     100
+    ],
+    "rotulo": "+50 tokens",
+    "icone": "token"
+   }
+  ],
+  "dourada": [
+   {
+    "de": 1,
+    "ate": 100,
+    "rotulo": "moedas em dobro · 22 peças exclusivas",
+    "icone": "moedas"
+   },
+   {
+    "ponto": 53,
+    "rotulo": "degrau 53: já se pagou",
+    "icone": "pago"
+   },
+   {
+    "ponto": 100,
+    "rotulo": "coleção completa",
+    "fim": true,
+    "icone": "coroa"
+   }
+  ]
+ },
+ "moda_looks": {},
+ "passe_resumo": {
+  "_leia": "Faixa de numeros grandes antes das trilhas. Tudo sai de passe.trilhas_detalhe (projeto.json): 1.500 tokens devolvidos, 22 pecas, 5 titulos, moedas em dobro; custo 790 tokens, pago no degrau 53.",
+  "rotulo": "VIP =",
+  "custo": "790 tokens por temporada · no degrau 53 já se pagou",
+  "itens": [
+   {
+    "n": "+1.500",
+    "t": "tokens de volta",
+    "d": "a trilha livre devolve 400",
+    "icone": "token"
+   },
+   {
+    "n": "+22",
+    "t": "peças exclusivas",
+    "d": "traje, cabelo, máscara, tatuagens, gestos",
+    "icone": "peca"
+   },
+   {
+    "n": "5",
+    "t": "títulos próprios",
+    "d": "de PADRINHO a SANGUE DOURADO",
+    "icone": "titulo"
+   },
+   {
+    "n": "2×",
+    "t": "moedas por degrau",
+    "d": "200 + 10 × degrau",
+    "icone": "moedas"
+   }
+  ]
+ },
+ "bestial": {
+  "senescal": "img/gemini/bestial_senescal.jpg",
+  "anfitria": "img/gemini/bestial_anfitria.jpg",
+  "calice": "img/gemini/bestial_calice.jpg",
+  "krysa": "img/gemini/bestial_krysa.jpg",
+  "faisca": "img/gemini/bestial_faisca.jpg",
+  "vlk": "img/gemini/bestial_vlk.jpg",
+  "confessora": "img/gemini/bestial_confessora.jpg",
+  "andarilho": "img/gemini/bestial_andarilho.jpg"
+ },
+ "alta_noite_trajes": [
+  "img/gemini/moda_alta_noite_1.jpg",
+  "img/gemini/moda_alta_noite_2.jpg",
+  "img/gemini/moda_alta_noite_3.jpg"
+ ],
+ "compartilhar": {
+  "_leia": "Redes de 'Passar o convite adiante'. {url} e {texto} são trocados pelos valores de site.url e site.texto_de_convite (encodeURIComponent). Ícones monocromáticos em img/redes/<id>.svg (formas genéricas desenhadas para o site). Instagram não tem link de compartilhar na web: copia o texto e abre o Instagram.",
+  "redes": [
+   {
+    "id": "whatsapp",
+    "nome": "WhatsApp",
+    "icone": "img/redes/whatsapp.svg",
+    "url": "https://wa.me/?text={texto}%20{url}"
+   },
+   {
+    "id": "x",
+    "nome": "X",
+    "icone": "img/redes/x.svg",
+    "url": "https://twitter.com/intent/tweet?text={texto}&url={url}"
+   },
+   {
+    "id": "facebook",
+    "nome": "Facebook",
+    "icone": "img/redes/facebook.svg",
+    "url": "https://www.facebook.com/sharer/sharer.php?u={url}"
+   },
+   {
+    "id": "telegram",
+    "nome": "Telegram",
+    "icone": "img/redes/telegram.svg",
+    "url": "https://t.me/share/url?url={url}&text={texto}"
+   },
+   {
+    "id": "instagram",
+    "nome": "Instagram",
+    "icone": "img/redes/instagram.svg",
+    "acao": "copiar",
+    "url": "https://www.instagram.com/",
+    "nota": "copia texto + link e abre o Instagram"
+   },
+   {
+    "id": "email",
+    "nome": "E-mail",
+    "icone": "img/redes/email.svg",
+    "url": "mailto:?subject=BESTIAL&body={texto}%20{url}"
+   },
+   {
+    "id": "copiar",
+    "nome": "Copiar link",
+    "icone": "img/redes/copiar.svg",
+    "acao": "copiar"
+   }
+  ]
+ },
+ "cursor": {
+  "_leia": "O ponteiro dos menus do jogo NÃO é uma cruz desenhada à parte: é a LANÇA GÓTICA (Source/GameAnimationSample/UI/GasCursorGotico.cpp/.h, U7 de 02/10) — lâmina em folha, guarda, haste e pomo em losango, em osso, a 70° — que de ponta para cima lê como uma cruz invertida. Os SVG redesenham os nove triângulos do jogo. O ponto quente é a PONTA da lâmina, como no jogo (o mouse está exatamente na ponta), e não o centro: com a ponta no centro a lança caberia em 16 px. A mira da partida (4 traços em cruz, GasHUD.cpp:4138) está em cursor_mira.svg, com ponto quente no centro.",
+  "normal": {
+   "arquivo": "img/cursor_cruz.svg",
+   "ponto_quente": [
+    4,
+    3
+   ],
+   "css": "url(img/cursor_cruz.svg) 4 3, auto"
+  },
+  "sobre_link": {
+   "arquivo": "img/cursor_cruz_ativa.svg",
+   "ponto_quente": [
+    4,
+    3
+   ],
+   "css": "url(img/cursor_cruz_ativa.svg) 4 3, pointer",
+   "nota": "no jogo, sobre algo clicável a ponta ganha um brilho vermelho e a lâmina tinge até 60 %"
+  },
+  "mira": {
+   "arquivo": "img/cursor_mira.svg",
+   "ponto_quente": [
+    16,
+    16
+   ],
+   "css": "url(img/cursor_mira.svg) 16 16, crosshair"
+  },
+  "cores": {
+   "lanca": "#E8E9EE (GasEstilo::Texto)",
+   "sombra": "#000 a 0,70, deslocada (1,4; 1,8)",
+   "brilho": "#FF0033 e #FF3355"
+  }
+ },
+ "cria": {
+  "olhos": [
+   [
+    39,
+    43
+   ],
+   [
+    61,
+    43
+   ]
+  ],
+  "rosto": "img/gemini/cria_rosto.jpg",
+  "brasa": "img/gemini/cria_rosto_brasa.jpg",
+  "branco": "img/gemini/cria_rosto_branco.jpg"
+ },
+ "atendente": {
+  "neutra": "img/gemini/atendente_1.jpg",
+  "sorriso_presas": "img/gemini/atendente_2.jpg",
+  "falando": "img/gemini/atendente_3.jpg",
+  "piscadela": "img/gemini/atendente_4.jpg"
+ },
+ "carro": {
+  "painel": "img/gemini/carro_painel.jpg"
+ },
+ "cripta": "",
+ "convite": {
+  "envelope": "img/gemini/convite_envelope.jpg"
+ },
+ "cripta_cibernetica": {
+  "imagem": "img/cripta/cripta_cibernetica.webp",
+  "imagem_1200": "img/cripta/cripta_cibernetica_1200.webp",
+  "tamanho_px": [
+   1376,
+   768
+  ],
+  "monitores_pct": [
+   {
+    "id": 1,
+    "x": 43.97,
+    "y": 15.23,
+    "w": 12.14,
+    "h": 12.24
+   },
+   {
+    "id": 2,
+    "x": 32.19,
+    "y": 34.24,
+    "w": 8.94,
+    "h": 10.03
+   },
+   {
+    "id": 3,
+    "x": 58.94,
+    "y": 34.24,
+    "w": 8.94,
+    "h": 10.03
+   },
+   {
+    "id": 4,
+    "x": 15.77,
+    "y": 38.41,
+    "w": 11.63,
+    "h": 13.15
+   },
+   {
+    "id": 5,
+    "x": 72.6,
+    "y": 38.54,
+    "w": 11.63,
+    "h": 12.5
+   },
+   {
+    "id": 6,
+    "x": 16.57,
+    "y": 63.54,
+    "w": 8.21,
+    "h": 8.33
+   },
+   {
+    "id": 7,
+    "x": 74.42,
+    "y": 63.54,
+    "w": 8.5,
+    "h": 8.33
+   },
+   {
+    "id": 8,
+    "x": 53.27,
+    "y": 70.18,
+    "w": 5.45,
+    "h": 5.73
+   }
+  ],
+  "fonte": "cripta do Gemini (rodada 9, v4); monitores medidos na imagem por limiar de luminancia"
+ }
+}
