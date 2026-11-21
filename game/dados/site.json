@@ -388,7 +388,7 @@
    }
   },
   "modelos_dos_lugares": {
-   "_leia": "Rodada 9 (18/11): o modelo 3D de cada alfinete no modal do lugar. medidas_m = [largura (X), altura, profundidade (Z)] da peca ou do lugar real; 'rotulos' diz o que cada cota mede; 'chao' corta o que fica abaixo do nivel da rua (a malha da catedral traz a fundacao). Origem: D:/WaruraseIntro/site_r7/modelos3d.json. Onde o modelo NAO e o lugar da foto, 'modelo' diz o que ele e.",
+   "_leia": "Rodada 9 (18/11): o modelo 3D de cada alfinete no modal do lugar. medidas_m = [largura (X), altura, profundidade (Z)] da peca ou do lugar real; 'rotulos' diz o que cada cota mede; 'chao' corta o que fica abaixo do nivel da rua (a malha da catedral traz a fundacao). Onde o modelo NAO e o lugar da foto, 'modelo' diz o que ele e.",
    "catedral": {
     "arquivo": "modelos/locais/catedral.glb",
     "modelo": "Catedral de São Vito (malha do jogo, simplificada)",
@@ -797,5 +797,95 @@
    }
   ],
   "fonte": "cripta do Gemini (rodada 9, v4); monitores medidos na imagem por limiar de luminancia"
+ },
+ "capturas_jogo": {
+  "_leia": "Capturas reais do jogo (WAR.ModelSheet, vista de frente) aprovadas pelo revisor. Rodada 3 (21/11): entram da captura nova senescal bestial, anfitria humana e bestial, krysa humana, vlk bestial e confessora humana; ficam da rodada de 20/11 senescal humana, faisca humana e vlk humana (a captura nova dessas foi reprovada). Sairam calice (calca atravessando o casaco, ja visivel na de 20/11), krysa bestial e confessora bestial (cabeca virada para o teto, igual na de 20/11). So entra aqui imagem aprovada; cla sem imagem aprovada fica fora da grade e vai para 'em_ajuste'.",
+  "legenda": "captura do jogo em desenvolvimento - fase alfa",
+  "clas": [
+   {
+    "morador": "senescal",
+    "humana": "img/personagens/senescal_humana.webp",
+    "bestial": "img/personagens/senescal_bestial.webp"
+   },
+   {
+    "morador": "anfitria",
+    "humana": "img/personagens/anfitria_humana.webp",
+    "bestial": "img/personagens/anfitria_bestial.webp"
+   },
+   {
+    "morador": "krysa",
+    "humana": "img/personagens/krysa_humana.webp"
+   },
+   {
+    "morador": "faisca",
+    "humana": "img/personagens/faisca_humana.webp"
+   },
+   {
+    "morador": "vlk",
+    "humana": "img/personagens/vlk_humana.webp",
+    "bestial": "img/personagens/vlk_bestial.webp"
+   },
+   {
+    "morador": "confessora",
+    "humana": "img/personagens/confessora_humana.webp"
+   }
+  ],
+  "em_ajuste": [
+   "arcanos",
+   "andarilhos"
+  ]
+ },
+ "inquisicao": {
+  "_leia": "Secao curta da Inquisicao. Capturas dos soldados: nenhuma vista de frente aprovada pelo revisor em 21/11 (rodada 3: arma duplicada flutuando ao lado de todos os quatro), entao a secao mostra so as armas. Soldado com frente aprovada ganha o campo img.",
+  "soldados": [
+   {
+    "nome": "ASSALTO",
+    "papel": "Pressão de frente. Recupera o colete ao derrubar um inimigo.",
+    "armas": "fuzil 5.56 · pistola 9mm · granada"
+   },
+   {
+    "nome": "CAÇADOR",
+    "papel": "Persegue quem fugiu pelo rastro de sangue e solta um drone que marca quem está à vista.",
+    "armas": "fuzil 5.56 · pistola pesada .357 · fumaça"
+   },
+   {
+    "nome": "CONTROLADOR",
+    "papel": "Nega espaço: fecha ruas com bloqueios de gás que duram mais.",
+    "armas": "escopeta 12GA · pistola 9mm · fumaça"
+   },
+   {
+    "nome": "SUPORTE",
+    "papel": "Segura o time de pé: cura e levanta quem caiu.",
+    "armas": "pistola 9mm · fumaça"
+   }
+  ],
+  "armas": [
+   {
+    "nome": "PISTOLA 9MM",
+    "img": "img/armas/pistola_mini.png",
+    "uso": "arma de serviço de toda a tropa"
+   },
+   {
+    "nome": "PISTOLA PESADA .357",
+    "img": "img/armas/revolver_mini.png",
+    "uso": "secundária do Caçador"
+   },
+   {
+    "nome": "FUZIL 5.56",
+    "img": "img/armas/fuzil_mini.png",
+    "uso": "primária do Assalto e do Caçador"
+   },
+   {
+    "nome": "ESCOPETA 12GA",
+    "img": "img/armas/escopeta_mini.png",
+    "uso": "primária do Controlador"
+   },
+   {
+    "nome": "GRANADA E FUMAÇA",
+    "img": "img/armas/granadas_mini.png",
+    "uso": "explosiva do Assalto; fumaça dos outros"
+   }
+  ],
+  "estado": "Fase alfa: os soldados ainda não entram na partida e o uniforme está em ajuste. As armas já existem no jogo."
  }
 }

@@ -870,6 +870,38 @@ html:not(.preso) .sent .res-fx{display:none}
 /* 03 · clãs: nome acima da cabeça, ponto na cor do clã, símbolo em fumaça, setas na imagem */
 .clas{padding-top:clamp(64px,9vw,120px)}
 .clas-sub{margin:14px 0 0}
+/* 05b · em jogo: cartão por clã com a captura humana e a bestial lado a lado. A grade cai para uma coluna no celular, e cada par
+   continua lado a lado (duas figuras de ~160 px em 375 px), porque a comparação é o motivo do cartão */
+.ej{padding-top:clamp(48px,7vw,96px);padding-bottom:clamp(56px,8vw,110px)}
+.ej-grade{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,300px),1fr));gap:clamp(18px,2.4vw,32px)}
+.ej-grade li{min-width:0;padding:16px 16px 14px;background:var(--carvao);border:1px solid var(--linha);border-top:2px solid var(--c,#fff)}
+.ej-cla{display:flex;align-items:center;gap:8px;margin:0;font-size:11px;letter-spacing:.22em;color:var(--osso)}
+.ej-cla i{flex:none;width:18px;height:7px;background:var(--c,#fff)}
+.ej-grade h3{margin:10px 0 0;font:600 22px/1.05 var(--titulo);text-transform:uppercase;letter-spacing:.03em;color:var(--osso);overflow-wrap:anywhere}
+.ej-papel{margin:2px 0 12px;font:italic 400 18px/1.2 var(--serifa);color:var(--texto)}
+.ej-par{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+.ej-par figure{margin:0;min-width:0;background:#2a2a2d}
+.ej-par img{width:100%;height:auto;aspect-ratio:520/966;object-fit:cover}
+.ej-par figcaption{padding:6px 8px;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--cinza);background:var(--carvao)}
+.ej-falta{display:grid;place-items:center;aspect-ratio:520/1000;border:1px dashed var(--linha);background:transparent !important}
+.ej-falta span{font-size:10px;letter-spacing:.16em;text-transform:uppercase;text-align:center;color:var(--cinza)}
+.ej-leg{margin:10px 0 0;font-size:10px;letter-spacing:.12em;color:var(--cinza)}
+.ej-nota{margin:18px 0 0;font-size:11px;letter-spacing:.12em;color:var(--cinza)}
+/* a Inquisição: seção curta, sem animação; os soldados em lista e o arsenal em faixa de cartões */
+.inq{background:linear-gradient(180deg,var(--preto),#0b0708 60%,var(--preto));padding-block:clamp(64px,9vw,120px)}
+.inq-txt{margin-top:22px}
+.inq-sold{list-style:none;margin:32px 0 0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,240px),1fr));gap:1px;background:var(--linha);border:1px solid var(--linha)}
+.inq-sold li{min-width:0;padding:18px 16px;background:var(--preto)}
+.inq-sold b{display:block;font:600 24px/1 var(--titulo);letter-spacing:.06em;color:var(--osso)}
+.inq-sold b::before{content:"";display:inline-block;width:10px;height:10px;margin-right:10px;background:#E0223A;vertical-align:.08em}
+.inq-sold span{display:block;margin-top:8px;font-size:15px;line-height:1.5}
+.inq-sold small{display:block;margin-top:10px;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--cinza)}
+.inq-rot{margin-top:clamp(40px,6vw,72px)}
+.inq-armas{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,180px),1fr));gap:14px}
+.inq-armas li{min-width:0;padding:10px 12px 14px;background:var(--carvao);border:1px solid var(--linha)}
+.inq-armas img{width:100%;height:auto;aspect-ratio:16/10;object-fit:contain}
+.inq-armas b{display:block;margin-top:8px;font-size:11px;letter-spacing:.16em;color:var(--osso)}
+.inq-armas span{display:block;margin-top:4px;font-size:14px;line-height:1.4}
 .pt{position:absolute;z-index:2;translate:-50% -100%;display:flex;flex-direction:column;align-items:center;gap:5px;padding:6px 8px 0;border:0;background:none;cursor:var(--cur-at);opacity:0;transition:opacity .6s calc(var(--k) * 90ms),translate .6s calc(var(--k) * 90ms)}
 .chegou .pt{opacity:1}
 .pt-nome{padding:4px 8px 3px;background:rgba(3,3,4,.72);border-bottom:2px solid var(--c);font:700 9.5px/1 var(--mono);letter-spacing:.2em;text-transform:uppercase;color:#fff;white-space:nowrap}
@@ -3181,7 +3213,7 @@ html.rvl-on [data-rvl]:not(.rvl-ok){opacity:0}
   <ul class="tr-lista">
     <li class="tr-item" data-grupo="inicio"><button type="button" class="tr-bt" aria-controls="tr-sub-inicio" aria-expanded="false"><span class="tr-ic" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M19.5 14.6A8 8 0 1 1 9.4 4.5a6.4 6.4 0 0 0 10.1 10.1z"/><path d="M16.5 4.5v3M15 6h3"/></svg></span><span class="tr-rot">Início</span></button><div class="tr-drop" id="tr-sub-inicio" hidden><p class="tr-cab">A proposta</p><ul class="tr-sub" aria-label="A proposta"><li><a href="#abertura" style="--i:0">A proposta em uma frase</a></li><li><a href="#cinematica" style="--i:1">Ver a cinemática</a></li></ul></div></li>
     <li class="tr-item" data-grupo="jogo"><button type="button" class="tr-bt" aria-controls="tr-sub-jogo" aria-expanded="false"><span class="tr-ic" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 8.5c2.8 2.2 5.8 3.2 9 3.2s6.2-1 9-3.2"/><path d="M7.6 10.6l1.3 5.6 1.6-4.8M13.5 11.4l1.6 4.8 1.3-5.6"/></svg></span><span class="tr-rot">O jogo</span></button><div class="tr-drop" id="tr-sub-jogo" hidden><p class="tr-cab">Um vampiro em Praga</p><ul class="tr-sub" aria-label="Um vampiro em Praga"><li><a href="#vampiro" style="--i:0">A ideia do vampiro</a></li><li><a href="#cria" style="--i:1">A Cria da Aurora</a></li><li><a href="#leis" style="--i:2">O pacto e a caçada</a></li><li><a href="#campanha" style="--i:3">A campanha</a></li></ul></div></li>
-    <li class="tr-item" data-grupo="jogar"><button type="button" class="tr-bt" aria-controls="tr-sub-jogar" aria-expanded="false"><span class="tr-ic" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4.5 12s2.7-4.6 7.5-4.6 7.5 4.6 7.5 4.6-2.7 4.6-7.5 4.6S4.5 12 4.5 12z"/><circle cx="12" cy="12" r="1.9"/><path d="M2 8.4a5.6 5.6 0 0 0 0 7.2M22 8.4a5.6 5.6 0 0 1 0 7.2"/></svg></span><span class="tr-rot">Jogar</span></button><div class="tr-drop" id="tr-sub-jogar" hidden><p class="tr-cab">Como se joga</p><ul class="tr-sub" aria-label="Como se joga"><li><a href="#sentidos" style="--i:0">Sentidos aguçados</a></li><li><a href="#armas" style="--i:1">As armas</a></li><li><a href="#custom" style="--i:2">Customizar a arma</a></li><li><a href="#clas" style="--i:3">Os clãs</a></li></ul></div></li>
+    <li class="tr-item" data-grupo="jogar"><button type="button" class="tr-bt" aria-controls="tr-sub-jogar" aria-expanded="false"><span class="tr-ic" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4.5 12s2.7-4.6 7.5-4.6 7.5 4.6 7.5 4.6-2.7 4.6-7.5 4.6S4.5 12 4.5 12z"/><circle cx="12" cy="12" r="1.9"/><path d="M2 8.4a5.6 5.6 0 0 0 0 7.2M22 8.4a5.6 5.6 0 0 1 0 7.2"/></svg></span><span class="tr-rot">Jogar</span></button><div class="tr-drop" id="tr-sub-jogar" hidden><p class="tr-cab">Como se joga</p><ul class="tr-sub" aria-label="Como se joga"><li><a href="#sentidos" style="--i:0">Sentidos aguçados</a></li><li><a href="#armas" style="--i:1">As armas</a></li><li><a href="#custom" style="--i:2">Customizar a arma</a></li><li><a href="#clas" style="--i:3">Os clãs</a></li><li><a href="#em-jogo" style="--i:4">Os clãs em jogo</a></li><li><a href="#inquisicao" style="--i:5">A Inquisição</a></li></ul></div></li>
     <li class="tr-item" data-grupo="mundo"><button type="button" class="tr-bt" aria-controls="tr-sub-mundo" aria-expanded="false"><span class="tr-ic" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 6.5l5-2 8 2.6 5-2v13l-5 2-8-2.6-5 2z"/><path d="M8 4.5v13M16 7.1v13"/><path d="M12 10.2c0-1.4 1-2.3 2.2-2.3s2.2.9 2.2 2.3c0 1.7-2.2 3.6-2.2 3.6S12 11.9 12 10.2z" transform="translate(-2.2 .2)"/></svg></span><span class="tr-rot">O mundo</span></button><div class="tr-drop" id="tr-sub-mundo" hidden><p class="tr-cab">Praga sob lei marcial</p><ul class="tr-sub" aria-label="Praga sob lei marcial"><li><a href="#cidade" style="--i:0">A cidade</a></li><li><a href="#sala" style="--i:1">Sala de operações</a></li><li><a href="#subsolo" style="--i:2">O subsolo</a></li><li><a href="#elenco" style="--i:3">Personagens dos contos</a></li></ul></div></li>
     <li class="tr-item" data-grupo="evoluir"><button type="button" class="tr-bt" aria-controls="tr-sub-evoluir" aria-expanded="false"><span class="tr-ic" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M10.2 6.4a1.8 1.8 0 1 1 2.6 1.6c-.5.3-.8.7-.8 1.3v.5"/><path d="M12 9.8l8.4 6c.9.6.4 1.9-.6 1.9H4.2c-1 0-1.5-1.3-.6-1.9z"/></svg></span><span class="tr-rot">Evoluir</span></button><div class="tr-drop" id="tr-sub-evoluir" hidden><p class="tr-cab">Progressão e economia</p><ul class="tr-sub" aria-label="Progressão e economia"><li><a href="#loja" style="--i:0">A loja</a></li><li><a href="#passe" style="--i:1">O passe de batalha</a></li><li><a href="#patente" style="--i:2">Patente e ranking</a></li></ul></div></li>
     <li class="tr-item" data-grupo="trilha"><button type="button" class="tr-bt" aria-controls="tr-sub-trilha" aria-expanded="false"><span class="tr-ic" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M9 17.5V5.4l10.5-2v12"/><circle cx="6.6" cy="17.6" r="2.5"/><circle cx="17.1" cy="15.5" r="2.5"/><path d="M9 9.4l10.5-2"/></svg></span><span class="tr-rot">Trilha</span></button><div class="tr-drop" id="tr-sub-trilha" hidden><p class="tr-cab">A trilha sonora</p><ul class="tr-sub" aria-label="A trilha sonora"><li><a href="#carro" style="--i:0">ERDOP no rádio</a></li><li><a href="#banda-fim" style="--i:1">A banda</a></li></ul></div></li>
@@ -3402,6 +3434,25 @@ html.rvl-on [data-rvl]:not(.rvl-ok){opacity:0}
     <button class="seta bar-seta d" type="button" data-d="1" aria-label="Próximo morador">&#8594;</button>
     <p class="bar-dica mono" id="bar-dica">Clique num morador</p>
     <aside class="ficha-m" id="ficha-m" role="dialog" aria-label="História do morador" tabindex="-1"></aside>
+  </div>
+  <!-- rodada de correção (20/11): abaixo da ilustração do bar, o que o jogo desenha hoje. Só entra captura aprovada pelo revisor
+       (dados/site.json -> capturas_jogo); o clã sem captura aprovada não ganha cartão, para nunca ir a público uma imagem com defeito -->
+  <div class="env ej" id="em-jogo" hidden>
+    <p class="rot">Em jogo · forma humana e forma bestial</p>
+    <ul class="ej-grade" id="ej-grade"></ul>
+    <p class="mono ej-nota" id="ej-nota"></p>
+  </div>
+</section>
+
+<section class="sec inq" id="inquisicao" hidden>
+  <div class="env">
+    <p class="rot">Como se joga · o inimigo</p>
+    <h2 class="tit m">A <em>Inquisição</em></h2>
+    <p class="txt inq-txt">Humanos, não vampiros. Na tela aparecem como ENTIDADES DE DEFESA: a tropa que a cidade solta atrás de quem caça à noite.</p>
+    <ul class="inq-sold" id="inq-sold"></ul>
+    <p class="rot inq-rot">O arsenal da tropa</p>
+    <ul class="inq-armas" id="inq-armas"></ul>
+    <p class="mono ej-nota" id="inq-estado"></p>
   </div>
 </section>
 
@@ -4394,11 +4445,11 @@ function abrirCria(D,S){
    modo de mistura que a assenta na pele (color na íris, multiply na tinta, screen na luz, soft-light na palidez). As fotos novas são
    alinhadas aos olhos do retrato original por translação e escala, então trocar de rosto é um crossfade de 350 ms e as camadas
    deslizam junto (transição no transform de cada grupo). Os pontos do retrato original foram medidos à mão nesta rodada
-   (cria_rosto.jpg 928 x 1152, régua em D:/WaruraseIntro/site_r7/r10/orig_olhos.jpg). A boca de rostos.json caía no queixo em 5 fotos:
+   (cria_rosto.jpg 928 x 1152). A boca de rostos.json caía no queixo em 5 fotos:
    aqui vale a fenda remedida (perfil de luminância abaixo do nariz; 5 conferidas e corrigidas a olho em folha_boca.jpg) ---------- */
 var CRIA_PONTOS={olho_e:[40.1,37.9],olho_d:[61.5,37.9],iris:2.02,sobrancelha_e:[40.1,34.1],sobrancelha_d:[61.5,34.1],testa:[50.6,27.5],nariz:[51,50.4],
   boca:[51.1,57.8],bochecha_e:[37,47.5],bochecha_d:[65.5,47.5],orelha_e:[28,45],orelha_d:[74,45],
-  /* acabamento (20/11): pontos de joia e de pescoço marcados a olho sobre grade de 1% (D:/WaruraseIntro/site_r7/acabamento/grade/) */
+  /* acabamento (20/11): pontos de joia e de pescoço marcados a olho sobre grade de 1% */
   manual:true,lobulo_e:[28,48.5],lobulo_d:[73.5,48.5],queixo:[50.5,68.3],pescoco:[50.5,77],septo:[51,51.5],sobr_ext_e:[32,34],sobr_ext_d:[69.5,33.5],labio_inf:[51.5,59.8]};
 var PTS_MANUAIS=['lobulo_e','lobulo_d','queixo','pescoco','septo','sobr_ext_e','sobr_ext_d','labio_inf'];
 var CRIA_BOCA={r01_curto:61.5,r01_trancas:61.5,r02_curto:62.19,r02_longo:62.11,r03_moicano:62.03,r03_ondulado:62.9,r04_cachos:61,r04_raspado:61.6,
@@ -6265,6 +6316,33 @@ function abrirBar(D,S){
   naTela(palco,function(v){if(v)palco.classList.add('chegou');else fechar(false)},'-12% 0px');
 }
 
+/* ---------- 3b · em jogo: a captura real de cada morador, humana e bestial lado a lado. Os nomes saem de projeto.json (clas.lista e
+   tregua.moradores), para o cartão dizer o mesmo que o bar; sem dado, a seção fica escondida em vez de mostrar cartão vazio ---------- */
+function abrirEmJogo(D,S){
+  var CJ=S.capturas_jogo||{},L=CJ.clas||[],CL=D.clas||{},porId={},mor={};
+  (CL.lista||[]).forEach(function(c){porId[c.id]=c});((CL.tregua||{}).moradores||[]).forEach(function(m){mor[m.id]=m});
+  var leg=esc(CJ.legenda||'captura do jogo em desenvolvimento - fase alfa');
+  var fig=function(src,forma,m){return src?'<figure><img src="'+esc(src)+'" alt="'+esc(m.nome)+', forma '+forma+', '+leg+'" width="520" height="966" loading="lazy" decoding="async"><figcaption class="mono">forma '+forma+'</figcaption></figure>'
+    :'<figure class="ej-falta"><span class="mono">forma '+forma+'<br>captura em ajuste</span></figure>'};
+  var html=L.map(function(k){var m=mor[k.morador];if(!m||(!k.humana&&!k.bestial))return '';var c=porId[m.cla]||{};
+    return '<li style="--c:'+esc(c.cor||'#fff')+'"><p class="ej-cla mono"><i></i>'+esc(c.nome||'')+'</p><h3>'+esc(m.nome)+'</h3><p class="ej-papel">'+esc(m.papel)+'</p>'+
+      '<div class="ej-par">'+fig(k.humana,'humana',m)+fig(k.bestial,'bestial',m)+'</div><p class="ej-leg mono">'+leg+'</p></li>'}).join('');
+  if(!html)return;
+  $('#ej-grade').innerHTML=html;
+  var aj=(CJ.em_ajuste||[]).map(function(id){return (porId[id]||{}).nome}).filter(Boolean);
+  $('#ej-nota').textContent=aj.length?aj.join(' e ')+': captura em ajuste, entra aqui quando estiver aprovada.':'';
+  $('#em-jogo').hidden=false;
+}
+/* ---------- 3c · a Inquisição: os quatro tipos de soldado e as armas deles. As armas reaproveitam os renders da seção de armas;
+   as capturas dos soldados só entram quando houver captura aprovada (inquisicao.soldados[].img) ---------- */
+function abrirInquisicao(S){
+  var Q=S.inquisicao||{};if(!(Q.soldados||[]).length)return;
+  $('#inq-sold').innerHTML=Q.soldados.map(function(s){return '<li>'+(s.img?'<img src="'+esc(s.img)+'" alt="Soldado '+esc(s.nome)+'" loading="lazy">':'')+'<b>'+esc(s.nome)+'</b><span>'+esc(s.papel)+'</span><small class="mono">'+esc(s.armas)+'</small></li>'}).join('');
+  $('#inq-armas').innerHTML=(Q.armas||[]).map(function(a){return '<li><img src="'+esc(a.img)+'" alt="'+esc(a.nome)+'" width="320" height="200" loading="lazy"><b class="mono">'+esc(a.nome)+'</b><span>'+esc(a.uso)+'</span></li>'}).join('');
+  $('#inq-estado').textContent=Q.estado||'';
+  $('#inquisicao').hidden=false;
+}
+
 /* ---------- 5 · o jornal: objeto na mesa e aba da sala; abre o flipbook de oito páginas, diagramado como jornal ---------- */
 function abrirJornal(D,S,X){
   var T=(D.cidade||{}).tabloide||{},R=T.rodada4||{},pgs=(R.paginas||[]).slice(0,8),N=pgs.length-(pgs.length%2);
@@ -7616,6 +7694,7 @@ function montar(D,S,M,AR,MO,X){
   abrirRevoada(D);abrirCria(D,S);abrirCampanha(D,X);
   abrirRessonancia(D,S);
   abrirBar(D,S);
+  abrirEmJogo(D,S);abrirInquisicao(S);
 
   // cidade
   var CI=D.cidade||{};
