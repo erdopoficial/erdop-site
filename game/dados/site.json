@@ -799,7 +799,7 @@
   "fonte": "cripta do Gemini (rodada 9, v4); monitores medidos na imagem por limiar de luminancia"
  },
  "capturas_jogo": {
-  "_leia": "Capturas reais do jogo (WAR.ModelSheet, vista de frente) aprovadas pelo revisor. Rodada 3 (21/11): entram da captura nova senescal bestial, anfitria humana e bestial, krysa humana, vlk bestial e confessora humana; ficam da rodada de 20/11 senescal humana, faisca humana e vlk humana (a captura nova dessas foi reprovada). Sairam calice (calca atravessando o casaco, ja visivel na de 20/11), krysa bestial e confessora bestial (cabeca virada para o teto, igual na de 20/11). So entra aqui imagem aprovada; cla sem imagem aprovada fica fora da grade e vai para 'em_ajuste'.",
+  "_leia": "Capturas reais do jogo (WAR.ModelSheet, vista de frente) aprovadas na revisao e marcadas para publico. Rodada 4 (21/11): entram da captura nova senescal humana e bestial, anfitria humana e bestial, krysa bestial, faisca humana e vlk bestial; ficam da rodada de 20/11 vlk humana (a nova saiu em passo), krysa humana (a nova saiu com a cabeca virada) e confessora humana (na nova os bracos furam as mangas). Seguem fora calice, faisca bestial, confessora bestial e andarilho. So entra aqui imagem aprovada; cla sem imagem aprovada fica fora da grade e vai para 'em_ajuste'.",
   "legenda": "captura do jogo em desenvolvimento - fase alfa",
   "clas": [
    {
@@ -814,7 +814,8 @@
    },
    {
     "morador": "krysa",
-    "humana": "img/personagens/krysa_humana.webp"
+    "humana": "img/personagens/krysa_humana.webp",
+    "bestial": "img/personagens/krysa_bestial.webp"
    },
    {
     "morador": "faisca",
