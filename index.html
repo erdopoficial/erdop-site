@@ -996,7 +996,7 @@ function karLine(lyric,chords){
 function karInit(i){
   KAR.i=i;KAR.g=-1;KAR.li=-1;KAR.tl=[];KAR.ch=[];
   const box=document.getElementById('mkar');if(!box)return;
-  if(!TABS[i]){box.innerHTML='<div class="empty">A cifra de <b>'+esc(TRACKS[i].t)+'</b> ainda não foi cadastrada. Quando estiver pronta, o modo acompanhar aparece aqui.</div>';return;}
+  if(!TABS[i]){box.innerHTML='<div class="kbar2"><button type="button" id="kplay">▶ Tocar com a música</button></div><div class="empty" style="margin-top:12px">A cifra de <b>'+esc(TRACKS[i].t)+'</b> ainda não foi cadastrada. A música toca normalmente; o visor de acordes aparece quando a cifra estiver pronta.</div>';document.getElementById('kplay').onclick=karToggle;audio.addEventListener('play',karBtn);audio.addEventListener('pause',karBtn);return;}
   const p=karParse(TABS[i]);KAR.bpm=p.bpm;KAR.lines=p.lines;
   let g=0;let html='';
   p.lines.forEach((ln,li)=>{
