@@ -1057,7 +1057,7 @@ document.getElementById('copy-mail').onclick=async()=>{try{await navigator.clipb
 
 /* ===== player (Wix Music streams) + social bar ===== */
 const MP3=['afab9efe50ac46a787b0b910ea19413b','33a9ffcfd64f4599ac0dd01eb20d3017','80d4960d545a4039af6cf924a6e921a3','a289e2e5bacb45719d22638e52373e49','1070edc71d61488aa5d3a37b83618acd','04facb6bfb23427ab0d4f6db8eeaa4be','b2cddf49f25d4a13b9c05487a610f33c','b41f798ee65441db851d131b4cff7948','8f6d90e35a7b47e494f7bfcd6d7eda8d'].map(h=>`https://static.wixstatic.com/preview/3a294f_${h}-128.mp3`);
-const AUD={on:false,lvl:0,idx:0,an:null,td:null,fd:null,cors:true};const audio=new Audio();audio.crossOrigin='anonymous';audio.preload='none';audio.setAttribute('playsinline','');
+const AUD={on:false,lvl:0,idx:0,an:null,td:null,fd:null,cors:false};const audio=new Audio();audio.preload='none';audio.setAttribute('playsinline','');
 const pbar=document.getElementById('pbar'),pplay=document.getElementById('pplay'),pt=document.getElementById('pt'),ptm=document.getElementById('ptm'),pcv=document.getElementById('pcv'),pwave=document.getElementById('pwave');const pcx=pcv.getContext('2d');
 const fmt=x=>isFinite(x)?Math.floor(x/60)+':'+String(Math.floor(x%60)).padStart(2,'0'):'0:00';
 const ptl=document.getElementById('ptl');TRACKS.forEach((tr,i)=>{const b=document.createElement('button');b.type='button';b.setAttribute('role','listitem');b.setAttribute('aria-label','Tocar '+tr.t);b.innerHTML='<b>'+String(i+1).padStart(2,'0')+'</b>'+tr.t;b.onclick=()=>{play(i);openLyrics(i);};b.setAttribute('aria-label','Tocar e ler a letra de '+tr.t);ptl.appendChild(b);});
