@@ -362,7 +362,7 @@ a.s .tip{position:absolute;right:46px;white-space:nowrap;font-size:9px;letter-sp
 .mtabs button[aria-selected="true"]{background:var(--red);border-color:var(--red);color:#fff}
 .mpanel[hidden]{display:none!important}
 .mpanel .empty{font-family:'Space Mono',monospace;font-size:13px;line-height:1.7;color:#cfcfcf;border:1px dashed rgba(255,60,60,.5);padding:16px;background:rgba(0,0,0,.5)}
-.tabpre{font-family:'Space Mono',monospace;font-size:13px;line-height:1.5;white-space:pre;overflow-x:auto;background:rgba(0,0,0,.6);border:1px solid #333;padding:14px;color:#f2f2f2}
+.klist{max-height:52vh;overflow:auto;padding-right:6px;font-family:'Space Mono',monospace;font-size:14px;line-height:1.5}.kl{padding:4px 8px;margin:6px 0;border-left:2px solid transparent;opacity:.5;transition:opacity .2s,background .2s;white-space:pre-wrap;cursor:pointer}.kl.hasch{padding-top:24px}.kl.on{opacity:1;background:rgba(204,0,0,.14);border-left-color:var(--red)}.kl .w{position:relative;display:inline-block}.kl .chs{position:absolute;left:0;top:-1.45em;white-space:nowrap}.kl .chonly{display:inline-block;margin-right:10px}.kl .chonly .ch{position:static}.ch{color:#ff4d4d;font-weight:700;font-size:12px;padding:0 2px}.ch.hi{background:#ff4d4d;color:#000}.ksec{font-family:'Space Mono',monospace;font-size:11px;letter-spacing:2px;text-transform:uppercase;color:#aaa;margin-top:14px}.kbar2{display:flex;gap:10px;align-items:center;flex-wrap:wrap}.kbar2 button{font-family:'Space Mono',monospace;font-size:11px;letter-spacing:2px;text-transform:uppercase;background:var(--red);color:#fff;border:0;padding:9px 12px;cursor:pointer;min-height:40px}.kbarn{font-family:'Space Mono',monospace;font-size:12px;color:#bbb}.kh{font-size:13px;color:#aaa}.tabpre{font-family:'Space Mono',monospace;font-size:13px;line-height:1.5;white-space:pre;overflow-x:auto;background:rgba(0,0,0,.6);border:1px solid #333;padding:14px;color:#f2f2f2}
 .clip{position:relative;aspect-ratio:16/9;width:100%;background:#000;border:1px solid rgba(255,42,42,.5);overflow:hidden;margin-top:6px}
 .clip video{width:100%;height:100%;display:block;background:#000}
 .clip .sbimg{position:absolute;inset:-6%;background-size:cover;background-position:center;transition:transform 4.2s linear,filter .6s}
@@ -468,7 +468,7 @@ a.s .tip{position:absolute;right:46px;white-space:nowrap;font-size:9px;letter-sp
   </div>
 </section>
 <div class="hint" id="hint">role para desdobrar<i></i></div>
-<div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="mt"><div class="sheet"><button class="x" id="mx" type="button">Fechar ×</button><div class="k" id="mk"></div><h4 id="mt"></h4><div class="note" id="mn"></div><div class="mtabs" role="tablist" aria-label="Conteúdo da faixa"><button type="button" role="tab" data-p="letra" aria-selected="true">Letra</button><button type="button" role="tab" data-p="tab" aria-selected="false">Tablatura</button><button type="button" role="tab" data-p="hist" aria-selected="false">História</button><button type="button" role="tab" data-p="clipe" aria-selected="false">Clipe</button></div><div class="mpanel" data-p="letra"><div id="mb"></div></div><div class="mpanel" data-p="tab" hidden><div id="mtab"></div></div><div class="mpanel" data-p="hist" hidden><div id="mhist"></div></div><div class="mpanel" data-p="clipe" hidden><div id="mclip"></div></div></div></div>
+<div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="mt"><div class="sheet"><button class="x" id="mx" type="button">Fechar ×</button><div class="k" id="mk"></div><h4 id="mt"></h4><div class="note" id="mn"></div><div class="mtabs" role="tablist" aria-label="Conteúdo da faixa"><button type="button" role="tab" data-p="letra" aria-selected="true">Letra</button><button type="button" role="tab" data-p="tab" aria-selected="false">Tablatura</button><button type="button" role="tab" data-p="kar" aria-selected="false">Acompanhar</button><button type="button" role="tab" data-p="hist" aria-selected="false">História</button><button type="button" role="tab" data-p="clipe" aria-selected="false">Clipe</button></div><div class="mpanel" data-p="letra"><div id="mb"></div></div><div class="mpanel" data-p="tab" hidden><div id="mtab"></div></div><div class="mpanel" data-p="kar" hidden><div id="mkar"></div></div><div class="mpanel" data-p="hist" hidden><div id="mhist"></div></div><div class="mpanel" data-p="clipe" hidden><div id="mclip"></div></div></div></div>
 <div class="toast" id="toast">E-mail copiado</div>
 <div id="spacer"></div>
 
@@ -922,7 +922,7 @@ const THEME=[
  {c:'rgba(150,0,20,.55)',g:'saturate(1.2) contrast(1.1)'},{c:'rgba(200,0,0,.45)',g:'contrast(1.25)'},{c:'rgba(20,20,40,.6)',g:'grayscale(.5) hue-rotate(-10deg)'},
  {c:'rgba(90,0,60,.55)',g:'saturate(1.1)'},{c:'rgba(60,60,60,.45)',g:'grayscale(.3) brightness(1.1)'},{c:'rgba(0,0,0,.6)',g:'grayscale(.4) contrast(1.3)'}];
 const TABS=["CIFRA — ARMADILHA\nTom: Dm · 87 BPM\n\nAcordes lidos da trilha de acordes do Moises, um acorde por compasso. A cifra está alinhada às seções da letra, então confira a sequência ao tocar.\n\n[Verse]\nF    A#    Gm    Am    Dm\nPreso no vício\nComo um salto no vazio\nMeu cérebro é um labirinto\nSem começo, sem destino\n\nFarto de estar disperso\nAgora eu sou o pássaro\nVoando baixo sobre as cinzas\nSem saber onde pousar\n\n[Pre-Chorus]\nF    A#    Gm    Am\nToda porta se fecha\nQuando eu penso em voltar\nToda sombra me chama\nPra nunca mais acordar\n\n[Chorus]\nA#maj7    D#maj7    Dm7    Gm7    Am7    Dm\nFarto...\nIsso é um fato...\nUm fato...\n\nEstou vivendo\nNo mundo real\n\nAndar com a equipe errada\nPode ser uma armadilha mortal\nUma armadilha mortal...\n(Pode ser!)\n\n[Verse]\nF    A#    Gm    Am    Dm\nEstou perdido\nNum mundo cinza\nCada esquina que eu viro\nLeva um pedaço da minha vida\n\nOs monstros continuam\nMesmo depois de acordar\nFecho os olhos\nMas eles ainda estão lá\n\n[Bridge]\nDm    F    A#    Gm    A    Dm\nSe tudo muda\nPor que eu continuo igual?\n\nSe tudo passa\nPor que isso não vai passar?\n\n[Chorus]\nA#maj7    D#maj7    Dm7    Gm7    Am7    Dm\nFarto...\nIsso é um fato...\nUm fato...\n\nEstou vivendo\nNo mundo real\n\nAndar com a equipe errada\nPode ser uma armadilha mortal\n\nUma armadilha...\nUma armadilha...\nMortal...\n\n(Pode ser!)\n\n[Outro]\nDm    D    Dm    D    Dm\nFarto...\nFato...\nMundo real...\n",null,"CIFRA — CINZAS DE OURO\nTom: G · 92 BPM\n\nAcordes lidos da trilha de acordes do Moises, um acorde por compasso. A cifra está alinhada às seções da letra, então confira a sequência ao tocar.\n\n[Verse 1]\nA    D#    B    C    D#    B    C    Cm\nAcordo cansado\nCom o rosto pesado\nUm café, um cigarro\n\n[Chorus]\nCm    D#    C    D#    G    D#    Bm    C\nPra quê? Pra quê?\nA troco de quê?\nA gente vende o tempo pra poder esquecer\n\nPra quê? Pra quê?\nA troco de quê?\nAs cinzas de ouro queimam você\n\n[Verse 2]\nA    D#    B    C    D#    B    C    Cm\nO relógio me prende\nE o tempo me entende\n\n[Chorus]\nCm    D#    C    D#    G    D#    Bm    C\nPra quê? Pra quê?\nA troco de quê?\nA gente vende o corpo pra não enlouquecer\n\nPra quê? Pra quê?\nA troco de quê?\nAs cinzas de ouro vão te corroer\n\n[Bridge]\nBm    Cm    Bm    C    B    C    B    Bm\nSomos só números\nSomos só máquinas\nNão tem quem domine\n\n[Chorus]\nCm    D#    C    D#    G    D#    Bm    C\nPra quê? Pra quê?\nA troco de quê?\nA gente morre vivo pra sobreviver\n\nPra quê? Pra quê?\nA troco de quê?\nAs cinzas de ouro brilham e somem\n\nBrilham e somem\nBrilham e somem\nA troco de quê?\nA troco de quê?\n\n[Outro]\nG    Bm    C    D#    B    C    A#    G    C    D#    B    F    G\nCinzas de ouro\nCinzas de ouro\n","CIFRA — BEIJO NA PELE\nTom: C#m · 89 BPM\n\nAcordes lidos da trilha de acordes do Moises, um acorde por compasso. A cifra está alinhada às seções da letra, então confira a sequência ao tocar.\n\n[Verse]\nC#m    B    A    F#m\nEu vejo você na noite que cai\nSeu medo dança e você não sai\nNo brilho pálido da lua cheia\nA sede escorre como areia\n\nVem cá, baby, sente o frio\nA gente dança nesse vazio\nSede não é só de sangue, é de querer\nE quem tá perdido sabe o que é viver\n\n[Pre-Chorus]\nC#m    B    A    F#m\nSe entrega no escuro, você vai ver\nQue às vezes morrer é só renascer\n\n[Chorus]\nC#m    B    A    F#m    G#m    C#m    B    A\nSente o beijo na pele (vai, vai)\nÉ doce e cruel, não sai (não sai)\nNa sombra se aprende que o prazer só acende\nQuando tudo é pra sempre, nunca mais\n\n[Chorus]\nC#m    B    A    F#m    G#m    C#m    B    A\nSente o beijo na pele (vai, vai)\nÉ doce e cruel, não sai (não sai)\nNa sombra se aprende que o prazer só acende\nQuando tudo é pra sempre, nunca mais\n\n[Bridge]\nC#m    B    A    F#m    G#m    C#m    B    A\nO mundo é nosso, a noite é lei\nNa dança lenta você se perde, eu sei\nNos olhos um convite que não dá pra negar\nQuem prova do veneno nunca quer voltar\n\nChama isso de perigo, eu chamo de lar\nO vazio me preenche, eu vou te ensinar\n\n[Chorus]\nC#m    B    A    F#m    G#m    C#m    B    A\nSente o beijo na pele (vai, vai)\nÉ doce e cruel, não sai (não sai)\nNa sombra se aprende que o prazer só acende\nQuando tudo é pra sempre, nunca mais\n\n[Outro]\nG#    C#m    B    G#    C#\nNunca mais\nNunca mais\nPra sempre\n",null,"CIFRA — NUNCA FUI SEU\nTom: A#m (Bbm) · 85 BPM\n\nAcordes lidos da trilha de acordes do Moises, um acorde por compasso. A cifra está alinhada às seções da letra, então confira a sequência ao tocar.\n\n[Verse]\nD#    F#    A#    F#    A#m    F#\nVejo quebrado\nde tudo errado\nA dor me consome...\n\n(yeah!)\n\n[Chorus]\nF#    C#    D#    A#    C#    D#\nMas você não\nme deixou ser...\n\nEu sei que errei.\nMas você não\nme deixou ser...\n\nnunca fui seu!\nnunca fui seu!\n\n[Verse]\nD#    F#    A#    F#    A#m    F#\nAs palavras se perdem\nO tempo se vai\nE o meu passo\ne você não vai?\n\n[Chorus]\nF#    C#    D#    A#    C#    D#\nSei que errei.\nMas você não\nme deixou ser...\n\nnunca fui seu!\nnunca fui seu!\n\n[Outro]\nC#    D#    C#    D#    F#    A#m\nVocê não vê?\nA realidade!\n\n[Chorus]\nF#    C#    D#    A#    C#    D#\nMas você não\nme deixou ser...\n\nnunca fui seu!\nnunca fui seu!\n\nVocê não vê?\nA realidade!\n","CIFRA — VENENO\nTom: Fm · 75 BPM\n\nAcordes lidos da trilha de acordes do Moises, um acorde por compasso. A cifra está alinhada às seções da letra, então confira a sequência ao tocar.\n\n[Verse]\nFm    G#    C#    A#m    Fm    G#    C#    Fm\nO espelho reflete\no que passou\nMas eu gosto\ndo que diz\nReflete o teu mistério\nA beleza e o que me diz\nTeu perfume é promessa\nSua sombra é tentação\nVocê fala com os olhos\nE o tempo perde a razão\n\n[Chorus]\nG#    C#    A#m    G#    Fm    G#    C#    A#m\nQuando o paraíso chegar\nEu já sei não é dor de febre\nMe faz acreditar\n(Acreditar)\n\n[Verse]\nFm    G#    C#    A#m    Fm    G#    C#    Fm\nO mundo gira lento\nmas teu corpo não\nCada passo teu\né pura combustão\nTua pele tem um ritmo\nque só eu sei seguir\nTeu sorriso é perigo\nmas eu quero cair\n\n[Chorus]\nG#    C#    A#m    G#    Fm    G#    C#    A#m\nSem medo e o tempo esquece de girar\nTeu toque é o início e o lugar\nVocê é meu veneno e me faz\nMe faz acreditar\nQue viver é sentir\ne sentir é queimar\n(Aaah)\n",null,null]; // tablaturas: preencher quando a banda enviar (texto no formato e|---)
-const HIST=[null,null,null,null,null,null,null,null,null]; // história narrada pela banda
+const HIST=["A faixa fala de estar preso no vício, numa queda sem fundo que se vende como salto. O refrão é a queda; a ponte é o instante em que alguém estende a mão.", "Uma rua de Ubá numa madrugada, um gato preto e o que a rua faz quando alguém cai: várias mãos aparecem para levantar. A música é sobre a comunidade da cena independente, em que ninguém levanta sozinho.", "Sobre vender o tempo para poder esquecer: despertador cedo, a linha de produção, o café e o cigarro. A ideia é que a recompensa vira cinza dourada na mão de quem a recebe.", "Um desejo que se veste de noite e deixa marca. A faixa trata do encanto que é doce e cruel, de algo prometido para sempre que acaba virando lembrança.", "A virada do disco e a única faixa que devolve a pessoa a si mesma. O grito NÃO CAIA é o ponto em que se decide segurar o peso de um dia difícil.", "Sobre pertencer a outra pessoa e dizer não. O vidro trincado é a relação que se quebra, e o refrão é o momento em que a própria voz aparece.", "Sobre a tentação que a gente escolhe beber: perfume, sombra e promessa. A faixa diz que sentir pode ser uma forma de queimar, e que às vezes a gente sabe e bebe mesmo assim.", "Um olhar para quem a banda era no começo, em fitas VHS, e para o que ficou dos mesmos lugares. É o desejo de que tudo fique bem, mesmo com o contraste entre antes e depois.", "Sobre a fama que é encenação: tapete vermelho sem ninguém, anjos com asas queimadas. Warurase surge como sombra, e o grito final apaga todas as luzes."]; // história narrada pela banda (rascunho para aprovação)
 const CLIPS=[null,null,null,null,null,null,null,null,null]; // URL do videoclipe quando existir
 const SB=[
  [['0:00','Gancho','Close nos olhos de Warurase sob luz vermelha piscando; a câmera recua e revela que ele está dentro de um labirinto de grades.','close → travelling para trás'],['0:20','Verso','Corredores de metal que se repetem; ele corre e sempre volta ao mesmo ponto. Cortes secos no ritmo da batida.','câmera na mão, cortes no bumbo'],['0:45','Refrão','Saltos no vazio: ele cai em câmera lenta num poço escuro com faíscas subindo.','plongée, câmera lenta'],['1:15','Ponte','Um pássaro de papel queimado atravessa as grades; ele estende a mão.','plano detalhe'],['1:40','Final','As grades se abrem em forma de asas; ele sai para a luz branca, a banda toca no fundo.','grua subindo']],
@@ -953,11 +953,94 @@ function fillModal(i){const sheet=modal.querySelector('.sheet');const th=THEME[i
   const vid=CLIPS[i]?`<div class="clip"><video src="${esc(CLIPS[i])}" controls playsinline preload="metadata"></video></div>`:`<div class="clip"><div class="sbimg" id="sbimg" style="background-image:url(${panelURL(i)})"></div><span class="badge">Storyboard · clipe em produção</span><div class="sbtx" id="sbtx"></div></div><div class="sbctl"><button type="button" id="sbprev" aria-label="Cena anterior">◄</button><button type="button" id="sbplay">▶ Assistir storyboard</button><button type="button" id="sbnext" aria-label="Próxima cena">►</button><div class="sbdots" id="sbdots">${SB[i].map(()=>'<i></i>').join('')}</div></div>`;
   document.getElementById('mclip').innerHTML=vid+`<div class="sec">Roteiro do clipe · ${esc(tr.t)}</div><ol class="sblist">${SB[i].map((s,k)=>`<li><b>${k+1} · ${esc(s[0])}<br>${esc(s[1])}</b><span>${esc(s[2])}<em>Câmera: ${esc(s[3])}</em></span></li>`).join('')}</ol><div class="sbstat">Status: ideia aguardando aprovação da banda. Depois de aprovada, cada cena vira um vídeo no Higgsfield e o clipe entra neste player.</div>`;
   if(!CLIPS[i]){sbShow(0);document.getElementById('sbplay').onclick=()=>sbPlay(!sbTimer);document.getElementById('sbprev').onclick=()=>{sbPlay(false);sbShow(sbIdx-1);};document.getElementById('sbnext').onclick=()=>{sbPlay(false);sbShow(sbIdx+1);};}
+  karInit(i);
   selTab('letra');}
-function selTab(p){modal.querySelectorAll('.mtabs button').forEach(b=>b.setAttribute('aria-selected',b.dataset.p===p?'true':'false'));modal.querySelectorAll('.mpanel').forEach(x=>x.hidden=x.dataset.p!==p);if(p!=='clipe')sbPlay(false);const sh=modal.querySelector('.sheet');if(sh)sh.scrollTop=0;}
+const KAR={i:-1,bpm:90,off:0,tl:[],lines:[],g:-1,li:-1,tmr:0};
+const CHRE=/^[A-G](#|b)?(m|M|maj|min|sus|dim|aug|add)?\d*(\/[A-G](#|b)?)?$/;
+function karParse(txt){
+  const bpm=+((txt.match(/(\d+)\s*BPM/)||[])[1])||90;
+  const L=txt.split('\n');let started=false;const lines=[];
+  for(let k=0;k<L.length;k++){
+    const s=L[k].replace(/\s+$/,'');const t=s.trim();
+    if(/^\[.*\]$/.test(t)){started=true;lines.push({sec:t.slice(1,-1)});continue;}
+    if(!started||!t)continue;
+    if(t.split(/\s+/).every(x=>CHRE.test(x))){
+      const chords=[];const re=/\S+/g;let m;while((m=re.exec(s)))chords.push({col:m.index,tok:m[0]});
+      const nx=(L[k+1]||'').replace(/\s+$/,'');const nt=nx.trim();
+      const hasLyric=nt&&!/^\[.*\]$/.test(nt)&&!nt.split(/\s+/).every(x=>CHRE.test(x));
+      lines.push({chords,lyric:hasLyric?nx:''});
+      if(hasLyric)k++;
+    }else lines.push({chords:[],lyric:s});
+  }
+  return {bpm,lines};
+}
+function chHTML(c){return `<b class="ch" data-g="${c.g}">${esc(c.tok)}</b>`;}
+function karLine(lyric,chords){
+  const words=[];const re=/\S+/g;let m;while((m=re.exec(lyric)))words.push({s:m.index,e:m.index+m[0].length,t:m[0],cs:[]});
+  if(!words.length)return `<span class="w chonly">${chords.map(chHTML).join(' ')}</span>`;
+  for(const c of chords){
+    let idx=words.findIndex(w=>c.col>=w.s&&c.col<w.e);
+    if(idx<0)idx=words.findIndex(w=>w.s>c.col);
+    if(idx<0)idx=words.length-1;
+    words[idx].cs.push(c);
+  }
+  let out='',last=0;
+  for(const w of words){
+    out+=esc(lyric.slice(last,w.s));
+    out+=`<span class="w">${w.cs.length?`<span class="chs">${w.cs.map(chHTML).join(' ')}</span>`:''}${esc(w.t)}</span>`;
+    last=w.e;
+  }
+  return out+esc(lyric.slice(last));
+}
+function karInit(i){
+  KAR.i=i;KAR.g=-1;KAR.li=-1;KAR.tl=[];
+  const box=document.getElementById('mkar');if(!box)return;
+  if(!TABS[i]){box.innerHTML='<div class="empty">A cifra de <b>'+esc(TRACKS[i].t)+'</b> ainda não foi cadastrada. Quando estiver pronta, o modo acompanhar aparece aqui.</div>';return;}
+  const p=karParse(TABS[i]);KAR.bpm=p.bpm;KAR.lines=p.lines;
+  let g=0;let html='';
+  p.lines.forEach((ln,li)=>{
+    if(ln.sec!==undefined){html+=`<div class="ksec">${esc(ln.sec)}</div>`;return;}
+    if(!ln.chords.length){html+=`<div class="kl" data-li="${li}">${esc(ln.lyric)}</div>`;return;}
+    const start=g;
+    ln.chords.forEach(c=>{c.g=g;KAR.tl[g]=li;g++;});
+    ln.start=start;
+    html+=`<div class="kl hasch" data-li="${li}" data-start="${start}">${karLine(ln.lyric,ln.chords)}</div>`;
+  });
+  box.innerHTML=`<div class="kbar2"><button type="button" id="kplay">▶ Tocar com a música</button><label class="koff">Ajuste <input type="range" id="koff" min="-5" max="5" step="0.1" value="0"> <span id="kofv">0,0 s</span></label><span id="kbar" class="kbarn"></span></div><p class="kh">Cada compasso tem um acorde. Toque um trecho da letra para ir até ele.</p><div id="klist" class="klist">${html}</div>`;
+  const bs=()=>240/KAR.bpm;
+  document.querySelectorAll('#klist .kl[data-start]').forEach(el=>el.onclick=()=>karSeek(+el.dataset.start));
+  document.getElementById('kplay').onclick=karToggle;
+  document.getElementById('koff').oninput=e=>{KAR.off=+e.target.value;document.getElementById('kofv').textContent=(KAR.off>=0?'+':'')+KAR.off.toFixed(1).replace('.',',')+' s';};
+  audio.addEventListener('play',karBtn);audio.addEventListener('pause',karBtn);
+  clearInterval(KAR.tmr);KAR.tmr=setInterval(karTick,150);
+}
+function karBtn(){const b=document.getElementById('kplay');if(b)b.textContent=audio.paused?'▶ Tocar com a música':'❚❚ Pausar';}
+function karSrc(){const want=new URL(MP3[KAR.i],location.href).href;if(audio.src!==want){audio.src=MP3[KAR.i];}}
+function karSeek(g){const li=KAR.tl[g];const st=(KAR.lines[li]||{}).start||0;karSrc();audio.currentTime=Math.max(0,st*(240/KAR.bpm)+KAR.off);audio.play().catch(()=>{});}
+function karToggle(){if(audio.paused){karSrc();audio.play().catch(()=>{});}else audio.pause();}
+function karTick(){
+  if(KAR.i<0||!KAR.tl.length)return;
+  const bs=240/KAR.bpm;const t=(audio.currentTime||0)-KAR.off;
+  const gi=Math.min(Math.max(0,Math.floor(t/bs)),KAR.tl.length-1);
+  if(gi!==KAR.g){
+    document.querySelectorAll('#klist .ch.hi').forEach(x=>x.classList.remove('hi'));
+    const el=document.querySelector(`#klist .ch[data-g="${gi}"]`);if(el)el.classList.add('hi');
+    KAR.g=gi;
+    document.getElementById('kbar').textContent='Compasso '+(gi+1)+' de '+KAR.tl.length;
+  }
+  const li=KAR.tl[gi];
+  if(li!==KAR.li){
+    document.querySelectorAll('#klist .kl.on').forEach(x=>x.classList.remove('on'));
+    const ln=document.querySelector(`#klist .kl[data-li="${li}"]`);
+    if(ln){ln.classList.add('on');ln.scrollIntoView({block:'center',behavior:reduce?'auto':'smooth'});}
+    KAR.li=li;
+  }
+}
+function karStop(){clearInterval(KAR.tmr);KAR.tmr=0;if(KAR.i>=0&&!audio.paused)audio.pause();KAR.i=-1;}
+function selTab(p){modal.querySelectorAll('.mtabs button').forEach(b=>b.setAttribute('aria-selected',b.dataset.p===p?'true':'false'));modal.querySelectorAll('.mpanel').forEach(x=>x.hidden=x.dataset.p!==p);if(p!=='clipe')sbPlay(false);if(p!=='kar'&&KAR.i>=0&&!audio.paused)audio.pause();const sh=modal.querySelector('.sheet');if(sh)sh.scrollTop=0;}
 modal.querySelectorAll('.mtabs button').forEach(b=>b.onclick=()=>selTab(b.dataset.p));
-document.getElementById('mx').onclick=()=>{modal.classList.remove('on');sbPlay(false);};
-modal.addEventListener('click',e=>{if(e.target===modal)modal.classList.remove('on');});
+document.getElementById('mx').onclick=()=>{modal.classList.remove('on');sbPlay(false);karStop();};
+modal.addEventListener('click',e=>{if(e.target===modal){modal.classList.remove('on');karStop();}});
 addEventListener('keydown',e=>{if(e.key==='Escape')modal.classList.remove('on');});
 document.getElementById('skipenc').onclick=()=>scrollTo({top:SC[7].start*innerHeight,behavior:'smooth'});
 document.querySelectorAll('#final a[href^="mailto:"]').forEach(a=>a.addEventListener('click',()=>{try{navigator.clipboard.writeText('erdop.oficial@gmail.com');}catch(e){}const tt2=document.getElementById('toast');const old=tt2.textContent;setTimeout(()=>{if(document.visibilityState==='visible'){tt2.textContent='Se o e-mail não abriu, o endereço foi copiado';tt2.classList.add('on');setTimeout(()=>{tt2.classList.remove('on');tt2.textContent=old;},2600);}},1200);}));
