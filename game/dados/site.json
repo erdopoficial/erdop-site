@@ -799,7 +799,7 @@
   "fonte": "cripta do Gemini (rodada 9, v4); monitores medidos na imagem por limiar de luminancia"
  },
  "capturas_jogo": {
-  "_leia": "Capturas reais do jogo (WAR.ModelSheet, vista de frente) aprovadas na revisao e marcadas para publico. Rodada 5 (21/11): entram da captura nova confessora humana (sem a lasca de pele no busto), confessora bestial (sem os fragmentos de pele nas mangas) e faisca bestial (sem os furos no top); seguem da rodada 4 senescal humana e bestial, anfitria humana e bestial, krysa bestial, faisca humana e vlk bestial (na rodada 5 sairam iguais ou reprovadas por pose: anfitria humana); ficam da rodada de 20/11 vlk humana e krysa humana (na rodada 5 sairam reprovadas). Seguem fora calice e andarilho. So entra aqui imagem aprovada; cla sem imagem aprovada fica fora da grade e vai para 'em_ajuste'.",
+  "_leia": "Capturas reais do jogo (WAR.ModelSheet, vista de frente) aprovadas na revisao e marcadas para publico. Rodada 5 (21/11): entram da captura nova confessora humana (sem a lasca de pele no busto), confessora bestial (sem os fragmentos de pele nas mangas) e faisca bestial (sem os furos no top); seguem da rodada 4 senescal humana e bestial, anfitria humana e bestial, krysa bestial, faisca humana e vlk bestial (na rodada 5 sairam iguais ou reprovadas por pose: anfitria humana); ficam da rodada de 20/11 vlk humana e krysa humana (na rodada 5 sairam reprovadas). Rodada 6 (21/11): entra calice humana e bestial, com os pesos da saia do casaco refeitos (a calca nao atravessa mais o casaco). Segue fora andarilho. So entra aqui imagem aprovada; cla sem imagem aprovada fica fora da grade e vai para 'em_ajuste'.",
   "legenda": "captura do jogo em desenvolvimento - fase alfa",
   "clas": [
    {
@@ -831,10 +831,14 @@
     "morador": "confessora",
     "humana": "img/personagens/confessora_humana.webp",
     "bestial": "img/personagens/confessora_bestial.webp"
+   },
+   {
+    "morador": "calice",
+    "humana": "img/personagens/calice_humana.webp",
+    "bestial": "img/personagens/calice_bestial.webp"
    }
   ],
   "em_ajuste": [
-   "arcanos",
    "andarilhos"
   ]
  },
