@@ -362,7 +362,7 @@ a.s .tip{position:absolute;right:46px;white-space:nowrap;font-size:9px;letter-sp
 .mtabs button[aria-selected="true"]{background:var(--red);border-color:var(--red);color:#fff}
 .mpanel[hidden]{display:none!important}
 .mpanel .empty{font-family:'Space Mono',monospace;font-size:13px;line-height:1.7;color:#cfcfcf;border:1px dashed rgba(255,60,60,.5);padding:16px;background:rgba(0,0,0,.5)}
-.klist{max-height:52vh;overflow:auto;padding-right:6px;font-family:'Space Mono',monospace;font-size:14px;line-height:1.5}.kl{padding:4px 8px;margin:6px 0;border-left:2px solid transparent;opacity:.5;transition:opacity .2s,background .2s;white-space:pre-wrap;cursor:pointer}.kl.hasch{padding-top:24px}.kl.on{opacity:1;background:rgba(204,0,0,.14);border-left-color:var(--red)}.kl .w{position:relative;display:inline-block}.kl .chs{position:absolute;left:0;top:-1.45em;white-space:nowrap}.kl .chonly{display:inline-block;margin-right:10px}.kl .chonly .ch{position:static}.ch{color:#ff4d4d;font-weight:700;font-size:12px;padding:0 2px}.ch.hi{background:#ff4d4d;color:#000}.ksec{font-family:'Space Mono',monospace;font-size:11px;letter-spacing:2px;text-transform:uppercase;color:#aaa;margin-top:14px}.kbar2{display:flex;gap:10px;align-items:center;flex-wrap:wrap}.kbar2 button{font-family:'Space Mono',monospace;font-size:11px;letter-spacing:2px;text-transform:uppercase;background:var(--red);color:#fff;border:0;padding:9px 12px;cursor:pointer;min-height:40px}.kbarn{font-family:'Space Mono',monospace;font-size:12px;color:#bbb}.kh{font-size:13px;color:#aaa}.tabpre{font-family:'Space Mono',monospace;font-size:13px;line-height:1.5;white-space:pre;overflow-x:auto;background:rgba(0,0,0,.6);border:1px solid #333;padding:14px;color:#f2f2f2}
+.klist{max-height:52vh;overflow:auto;padding-right:6px;font-family:'Space Mono',monospace;font-size:14px;line-height:1.5}.kl{padding:4px 8px;margin:6px 0;border-left:2px solid transparent;opacity:.5;transition:opacity .2s,background .2s;white-space:pre-wrap;cursor:pointer}.kl.hasch{padding-top:24px}.kl.on{opacity:1;background:rgba(204,0,0,.14);border-left-color:var(--red)}.kl .w{position:relative;display:inline-block}.kl .chs{position:absolute;left:0;top:-1.45em;white-space:nowrap}.kl .chonly{display:inline-block;margin-right:10px}.kl .chonly .ch{position:static}.ch{color:#ff4d4d;font-weight:700;font-size:12px;padding:0 2px}.ch.hi{background:#ff4d4d;color:#000}.ksec{font-family:'Space Mono',monospace;font-size:11px;letter-spacing:2px;text-transform:uppercase;color:#aaa;margin-top:14px}.kbar2{display:flex;gap:10px;align-items:center;flex-wrap:wrap}.kbar2 button{font-family:'Space Mono',monospace;font-size:11px;letter-spacing:2px;text-transform:uppercase;background:var(--red);color:#fff;border:0;padding:9px 12px;cursor:pointer;min-height:40px}.kbarn{font-family:'Space Mono',monospace;font-size:12px;color:#bbb}.kh{font-size:13px;color:#aaa}.visor{border:1px solid rgba(255,60,60,.5);background:rgba(0,0,0,.7);padding:16px;margin:12px 0;text-align:center}.vtop{display:flex;justify-content:space-between;gap:10px;font-family:'Space Mono',monospace;font-size:11px;letter-spacing:2px;color:#aaa;text-transform:uppercase}.vcur{font-family:'Space Mono',monospace;font-size:clamp(64px,18vw,120px);font-weight:700;color:#ff4d4d;line-height:1.1;text-shadow:0 0 18px rgba(255,40,40,.5)}.vnx{font-family:'Space Mono',monospace;font-size:13px;color:#aaa}.vnx b{color:#fff}.vlyr{margin-top:10px;font-size:16px;color:#e8e8e8;min-height:1.6em}.vprog{height:4px;background:#333;margin-top:12px}.vprog i{display:block;height:100%;width:0;background:var(--red);transition:width .15s linear}.kdet{margin-top:12px}.kdet summary{font-family:'Space Mono',monospace;font-size:11px;letter-spacing:2px;text-transform:uppercase;color:#ddd;cursor:pointer;padding:8px 0}.tabpre{font-family:'Space Mono',monospace;font-size:13px;line-height:1.5;white-space:pre;overflow-x:auto;background:rgba(0,0,0,.6);border:1px solid #333;padding:14px;color:#f2f2f2}
 .clip{position:relative;aspect-ratio:16/9;width:100%;background:#000;border:1px solid rgba(255,42,42,.5);overflow:hidden;margin-top:6px}
 .clip video{width:100%;height:100%;display:block;background:#000}
 .clip .sbimg{position:absolute;inset:-6%;background-size:cover;background-position:center;transition:transform 4.2s linear,filter .6s}
@@ -994,7 +994,7 @@ function karLine(lyric,chords){
   return out+esc(lyric.slice(last));
 }
 function karInit(i){
-  KAR.i=i;KAR.g=-1;KAR.li=-1;KAR.tl=[];
+  KAR.i=i;KAR.g=-1;KAR.li=-1;KAR.tl=[];KAR.ch=[];
   const box=document.getElementById('mkar');if(!box)return;
   if(!TABS[i]){box.innerHTML='<div class="empty">A cifra de <b>'+esc(TRACKS[i].t)+'</b> ainda não foi cadastrada. Quando estiver pronta, o modo acompanhar aparece aqui.</div>';return;}
   const p=karParse(TABS[i]);KAR.bpm=p.bpm;KAR.lines=p.lines;
@@ -1003,11 +1003,11 @@ function karInit(i){
     if(ln.sec!==undefined){html+=`<div class="ksec">${esc(ln.sec)}</div>`;return;}
     if(!ln.chords.length){html+=`<div class="kl" data-li="${li}">${esc(ln.lyric)}</div>`;return;}
     const start=g;
-    ln.chords.forEach(c=>{c.g=g;KAR.tl[g]=li;g++;});
+    ln.chords.forEach(c=>{c.g=g;KAR.tl[g]=li;KAR.ch[g]=c.tok;g++;});
     ln.start=start;
     html+=`<div class="kl hasch" data-li="${li}" data-start="${start}">${karLine(ln.lyric,ln.chords)}</div>`;
   });
-  box.innerHTML=`<div class="kbar2"><button type="button" id="kplay">▶ Tocar com a música</button><label class="koff">Ajuste <input type="range" id="koff" min="-5" max="5" step="0.1" value="0"> <span id="kofv">0,0 s</span></label><span id="kbar" class="kbarn"></span></div><p class="kh">Cada compasso tem um acorde. Toque um trecho da letra para ir até ele.</p><div id="klist" class="klist">${html}</div>`;
+  box.innerHTML=`<div class="visor"><div class="vtop"><span id="vsec"></span><span id="kbar" class="kbarn"></span></div><div id="vcur" class="vcur">–</div><div class="vnx">a seguir <b id="vnxt">–</b></div><div id="vlyr" class="vlyr"></div><div class="vprog"><i id="vbar"></i></div></div><div class="kbar2"><button type="button" id="kplay">▶ Tocar com a música</button><label class="koff">Ajuste <input type="range" id="koff" min="-5" max="5" step="0.1" value="0"> <span id="kofv">0,0 s</span></label></div><details class="kdet"><summary>Ver letra com acordes</summary><p class="kh">Toque um trecho da letra para ir até ele.</p><div id="klist" class="klist">${html}</div></details>`;
   const bs=()=>240/KAR.bpm;
   document.querySelectorAll('#klist .kl[data-start]').forEach(el=>el.onclick=()=>karSeek(+el.dataset.start));
   document.getElementById('kplay').onclick=karToggle;
@@ -1023,13 +1023,20 @@ function karTick(){
   if(KAR.i<0||!KAR.tl.length)return;
   const bs=240/KAR.bpm;const t=(audio.currentTime||0)-KAR.off;
   const gi=Math.min(Math.max(0,Math.floor(t/bs)),KAR.tl.length-1);
+  const li=KAR.tl[gi];
   if(gi!==KAR.g){
     document.querySelectorAll('#klist .ch.hi').forEach(x=>x.classList.remove('hi'));
     const el=document.querySelector(`#klist .ch[data-g="${gi}"]`);if(el)el.classList.add('hi');
     KAR.g=gi;
-    document.getElementById('kbar').textContent='Compasso '+(gi+1)+' de '+KAR.tl.length;
+    const set=(id,v)=>{const e=document.getElementById(id);if(e)e.textContent=v;};
+    let sec='';for(let k=li;k>=0;k--){if(KAR.lines[k]&&KAR.lines[k].sec!==undefined){sec=KAR.lines[k].sec;break;}}
+    set('kbar','Compasso '+(gi+1)+' de '+KAR.tl.length);
+    set('vsec',sec);
+    set('vcur',KAR.ch[gi]||'–');
+    set('vnxt',KAR.ch[gi+1]||'fim');
+    set('vlyr',(KAR.lines[li]&&KAR.lines[li].lyric)||'');
+    const vb=document.getElementById('vbar');if(vb)vb.style.width=((gi+1)/KAR.tl.length*100)+'%';
   }
-  const li=KAR.tl[gi];
   if(li!==KAR.li){
     document.querySelectorAll('#klist .kl.on').forEach(x=>x.classList.remove('on'));
     const ln=document.querySelector(`#klist .kl[data-li="${li}"]`);
