@@ -1170,7 +1170,8 @@ input::placeholder,textarea::placeholder{color:#8a8a8a;opacity:1}
         } else if (st.mode === 'criar') {
           if (st.senha.length < 6) return set({ busy: false, err: 'A senha precisa de pelo menos 6 caracteres.' });
           var cred = await auth.createUserWithEmailAndPassword(email, st.senha);
-          await cred.user.sendEmailVerification();
+          // a conta já existe aqui; se o envio do link falhar, a tela de confirmação oferece "Reenviar o link"
+          try { await cred.user.sendEmailVerification(); } catch (ev) { console.warn(ev); }
           set({ busy: false });
         } else {
           await auth.signInWithEmailAndPassword(email, st.senha);
@@ -1181,7 +1182,12 @@ input::placeholder,textarea::placeholder{color:#8a8a8a;opacity:1}
         var m = c === 'auth/email-already-in-use' ? 'Esse e-mail já tem senha. Use Entrar ou Esqueci a senha.' :
           (c === 'auth/invalid-credential' || c === 'auth/wrong-password' || c === 'auth/user-not-found' || c === 'auth/invalid-login-credentials') ? 'E-mail ou senha não conferem. Primeiro acesso? Toque em Criar senha.' :
           c === 'auth/too-many-requests' ? 'Muitas tentativas. Espere um pouco e tente de novo.' :
-          c === 'auth/weak-password' ? 'A senha precisa de pelo menos 6 caracteres.' : 'Não deu certo agora. Tente de novo.';
+          c === 'auth/weak-password' ? 'A senha precisa de pelo menos 6 caracteres.' :
+          c === 'auth/network-request-failed' ? 'Sem conexão com o servidor. Confira a internet (ou tente pelo 4G) e tente de novo.' :
+          c === 'auth/invalid-email' ? 'Esse e-mail não parece válido. Confira se digitou certo.' : 'Não deu certo agora. Tente de novo.';
+        // o código técnico aparece na tela para facilitar o suporte
+        if (c) m += ' [' + c + ']';
+        console.warn('login:', er);
         set({ busy: false, err: m });
       }
     }
