@@ -1280,7 +1280,9 @@ input::placeholder,textarea::placeholder{color:#8a8a8a;opacity:1}
         if (!u) return setState({ phase: 'login', me: null, error: '', verify: '' });
         var key = u.email ? MEMBERS[await sha(u.email.toLowerCase())] : null;
         if (!key) return setState({ phase: 'denied', me: null, error: '', verify: '' });
-        if (!u.emailVerified) return setState({ phase: 'verify', me: null, error: '', verify: u.email });
+        // quem entra pelo Google já tem o e-mail garantido pelo próprio Google: não pede confirmação
+        var viaGoogle = (u.providerData || []).some(function (pd) { return pd && pd.providerId === 'google.com'; });
+        if (!u.emailVerified && !viaGoogle) return setState({ phase: 'verify', me: null, error: '', verify: u.email });
         setState({ phase: 'app', me: key, error: '', verify: '' });
       });
     }, []);
